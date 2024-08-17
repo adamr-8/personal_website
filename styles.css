@@ -14,6 +14,7 @@ body {
     width: 90%;
     height: 80vh;
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .circle-container {
@@ -81,4 +82,23 @@ body {
 .details-panel p {
     font-size: 1.2em;
     line-height: 1.6;
+}
+/* Responsive layout for screens taller than they are wide */
+@media (max-aspect-ratio: 1/1) {
+    .container {
+        flex-direction: column;
+    }
+
+    .circle-container {
+        width: 70vmin;
+        height: 70vmin;
+        margin-bottom: 20px;
+    }
+
+    .details-panel {
+        max-width: 100%;
+        width: 90%;
+        border-left: none;
+        border-top: 2px solid #ccc;
+    }
 }

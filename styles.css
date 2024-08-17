@@ -83,10 +83,12 @@ body {
     font-size: 1.2em;
     line-height: 1.6;
 }
+
 /* Responsive layout for screens taller than they are wide */
 @media (max-aspect-ratio: 1/1) {
     .container {
         flex-direction: column;
+        align-items: flex-start;
     }
 
     .circle-container {

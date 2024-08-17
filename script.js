@@ -5,13 +5,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
-            // Move button to center
-            buttons.forEach(btn => btn.style.zIndex = "0"); // Reset z-index of all buttons
-            button.style.zIndex = "1"; // Bring the hovered button to the front
+            // Reset z-index of all buttons
+            buttons.forEach(btn => {
+                btn.style.zIndex = "0"; 
+                btn.style.transform = btn.dataset.initialTransform; // Reset position of all buttons
+            });
+
+            // Move hovered button to center
+            button.style.zIndex = "1"; 
+            button.style.transform = "translate(-50%, -50%) scale(1.25)"; 
 
             // Update details panel
             detailsTitle.innerText = button.innerText;
             detailsContent.innerText = button.getAttribute('data-info');
         });
+    });
+
+    buttons.forEach(button => {
+        // Store initial transform for reset purposes
+        button.dataset.initialTransform = button.style.transform;
     });
 });

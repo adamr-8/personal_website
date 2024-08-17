@@ -30,83 +30,82 @@ body {
     justify-content: center;
 }
 
-/* Proper circular positioning using top and left based on trigonometric calculations */
-
-#social-media {
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg) translate(0, -250px) rotate(0deg);
-    background-color: #0073e6; /* Blue */
-}
-
-#abm {
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(30deg) translate(0, -250px) rotate(-30deg);
-    background-color: #00b3b3; /* Teal */
-}
-
-#digital-marketing {
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(60deg) translate(0, -250px) rotate(-60deg);
-    background-color: #00cc66; /* Green */
-}
-
-#brand-management {
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg) translate(0, -250px) rotate(-90deg);
-    background-color: #99cc00; /* Lime */
-}
-
+/* Rotate layout so "Traditional Marketing" is at the top */
 #traditional-marketing {
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(120deg) translate(0, -250px) rotate(-120deg);
+    transform: translate(-50%, -50%) rotate(0deg) translate(0, -250px) rotate(0deg);
     background-color: #ffcc00; /* Yellow */
 }
 
 #ad-buying {
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(150deg) translate(0, -250px) rotate(-150deg);
+    transform: translate(-50%, -50%) rotate(30deg) translate(0, -250px) rotate(-30deg);
     background-color: #ff9900; /* Amber */
 }
 
 #event-marketing {
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(180deg) translate(0, -250px) rotate(-180deg);
+    transform: translate(-50%, -50%) rotate(60deg) translate(0, -250px) rotate(-60deg);
     background-color: #ff6600; /* Orange */
 }
 
 #public-relations {
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(210deg) translate(0, -250px) rotate(-210deg);
+    transform: translate(-50%, -50%) rotate(90deg) translate(0, -250px) rotate(-90deg);
     background-color: #ff3300; /* Coral */
 }
 
 #market-research {
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(240deg) translate(0, -250px) rotate(-240deg);
+    transform: translate(-50%, -50%) rotate(120deg) translate(0, -250px) rotate(-120deg);
     background-color: #e60000; /* Red */
 }
 
 #customer-loyalty {
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(270deg) translate(0, -250px) rotate(-270deg);
+    transform: translate(-50%, -50%) rotate(150deg) translate(0, -250px) rotate(-150deg);
     background-color: #cc0066; /* Magenta */
 }
 
 #marketing-technology {
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(300deg) translate(0, -250px) rotate(-300deg);
+    transform: translate(-50%, -50%) rotate(180deg) translate(0, -250px) rotate(-180deg);
     background-color: #9900cc; /* Purple */
 }
 
 #content-marketing {
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%) rotate(330deg) translate(0, -250px) rotate(-330deg);
+    transform: translate(-50%, -50%) rotate(210deg) translate(0, -250px) rotate(-210deg);
     background-color: #6600cc; /* Violet */
 }
 
-/* Improved rollover effect without disrupting the layout */
+#social-media {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(240deg) translate(0, -250px) rotate(-240deg);
+    background-color: #0073e6; /* Blue */
+}
+
+#abm {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(270deg) translate(0, -250px) rotate(-270deg);
+    background-color: #00b3b3; /* Teal */
+}
+
+#digital-marketing {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(300deg) translate(0, -250px) rotate(-300deg);
+    background-color: #00cc66; /* Green */
+}
+
+#brand-management {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) rotate(330deg) translate(0, -250px) rotate(-330deg);
+    background-color: #99cc00; /* Lime */
+}
+
+/* Hover effect: Expand to 125% */
 .button:hover {
-    transform: scale(1.1) translate(-50%, -50%);
+    transform: scale(1.25) translate(-50%, -50%);
     background-color: #555;
 }
 

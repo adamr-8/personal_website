@@ -44,22 +44,22 @@ body {
 }
 
 /* Define the positions of the buttons in a circular arrangement */
-#social-media { background-color: #0073e6; top: 10%; left: 50%; transform: translate(-50%, -50%); }
-#abm { background-color: #00b3b3; top: 25%; left: 80%; transform: translate(-50%, -50%); }
+#social-media { background-color: #0073e6; top: 20%; left: 50%; transform: translate(-50%, -50%); }
+#abm { background-color: #00b3b3; top: 35%; left: 80%; transform: translate(-50%, -50%); }
 #digital-marketing { background-color: #00cc66; top: 50%; left: 90%; transform: translate(-50%, -50%); }
-#brand-management { background-color: #99cc00; top: 75%; left: 80%; transform: translate(-50%, -50%); }
-#traditional-marketing { background-color: #ffcc00; top: 90%; left: 50%; transform: translate(-50%, -50%); }
-#ad-buying { background-color: #ff9900; top: 75%; left: 20%; transform: translate(-50%, -50%); }
+#brand-management { background-color: #99cc00; top: 65%; left: 80%; transform: translate(-50%, -50%); }
+#traditional-marketing { background-color: #ffcc00; top: 80%; left: 50%; transform: translate(-50%, -50%); }
+#ad-buying { background-color: #ff9900; top: 65%; left: 20%; transform: translate(-50%, -50%); }
 #event-marketing { background-color: #ff6600; top: 50%; left: 10%; transform: translate(-50%, -50%); }
-#public-relations { background-color: #ff3300; top: 25%; left: 20%; transform: translate(-50%, -50%); }
-#market-research { background-color: #e60000; top: 10%; left: 50%; transform: translate(-50%, -50%); }
+#public-relations { background-color: #ff3300; top: 35%; left: 20%; transform: translate(-50%, -50%); }
+#market-research { background-color: #e60000; top: 20%; left: 50%; transform: translate(-50%, -50%); }
 #customer-loyalty { background-color: #cc0066; top: 50%; left: 70%; transform: translate(-50%, -50%); }
 #marketing-technology { background-color: #9900cc; top: 50%; left: 30%; transform: translate(-50%, -50%); }
 #content-marketing { background-color: #6600cc; top: 70%; left: 50%; transform: translate(-50%, -50%); }
 
 .button:hover {
     z-index: 2;
-    transform: translate(-50%, -50%) scale(1.25) translate(50%, 50%);
+    transform: translate(-50%, -50%) scale(1.25);
     background-color: #555;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 -10px 30px rgba(255, 255, 255, 0.5);
 }

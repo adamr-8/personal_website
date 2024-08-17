@@ -14,13 +14,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getContent(id) {
         switch(id) {
-            case 'brand-management':
-                return 'Details about Brand Management...';
+            case 'social-media':
+                return 'Details about Social Media...';
             case 'abm':
-                return 'Details about Account-Based Marketing...';
+                return 'Details about ABM...';
             case 'digital-marketing':
                 return 'Details about Digital Marketing...';
-            // Add cases for other buttons
+            case 'brand-management':
+                return 'Details about Brand Management...';
+            case 'traditional-marketing':
+                return 'Details about Traditional Marketing...';
+            case 'ad-buying':
+                return 'Details about Ad Buying...';
+            case 'event-marketing':
+                return 'Details about Event Marketing...';
+            case 'public-relations':
+                return 'Details about Public Relations...';
+            case 'market-research':
+                return 'Details about Market Research...';
+            case 'customer-loyalty':
+                return 'Details about Customer Loyalty...';
+            case 'marketing-technology':
+                return 'Details about Marketing Technology...';
+            case 'content-marketing':
+                return 'Details about Content Marketing...';
             default:
                 return 'Content not found.';
         }

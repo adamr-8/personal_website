@@ -21,6 +21,7 @@ body {
     position: relative;
     width: 45vmin;
     height: 45vmin;
+    margin-top: 5vmin; /* Add some space from the top */
 }
 
 .button {
@@ -39,23 +40,21 @@ body {
     font-size: 1.2vmin;
     line-height: 1.2;
     z-index: 1;
-    /* 3D effect with shadows */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 -5px 15px rgba(255, 255, 255, 0.3);
 }
 
-/* Specific background colors for each button */
-#social-media { background-color: #0073e6; }
-#abm { background-color: #00b3b3; }
-#digital-marketing { background-color: #00cc66; }
-#brand-management { background-color: #99cc00; }
-#traditional-marketing { background-color: #ffcc00; }
-#ad-buying { background-color: #ff9900; }
-#event-marketing { background-color: #ff6600; }
-#public-relations { background-color: #ff3300; }
-#market-research { background-color: #e60000; }
-#customer-loyalty { background-color: #cc0066; }
-#marketing-technology { background-color: #9900cc; }
-#content-marketing { background-color: #6600cc; }
+#social-media { background-color: #0073e6; transform: translate(-50%, -70%); }
+#abm { background-color: #00b3b3; transform: translate(-10%, -50%); }
+#digital-marketing { background-color: #00cc66; transform: translate(-50%, -10%); }
+#brand-management { background-color: #99cc00; transform: translate(-90%, -50%); }
+#traditional-marketing { background-color: #ffcc00; transform: translate(-50%, -130%); }
+#ad-buying { background-color: #ff9900; transform: translate(-10%, -70%); }
+#event-marketing { background-color: #ff6600; transform: translate(-10%, -130%); }
+#public-relations { background-color: #ff3300; transform: translate(-90%, -130%); }
+#market-research { background-color: #e60000; transform: translate(-90%, -70%); }
+#customer-loyalty { background-color: #cc0066; transform: translate(-90%, -10%); }
+#marketing-technology { background-color: #9900cc; transform: translate(-50%, -50%); }
+#content-marketing { background-color: #6600cc; transform: translate(-50%, -130%); }
 
 .button:hover {
     z-index: 2;
@@ -84,17 +83,17 @@ body {
     line-height: 1.6;
 }
 
-/* Responsive layout for screens taller than they are wide */
 @media (max-aspect-ratio: 1/1) {
     .container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .circle-container {
         width: 70vmin;
         height: 70vmin;
         margin-bottom: 20px;
+        margin-top: 5vmin; /* Adjusts the position towards the top */
     }
 
     .details-panel {

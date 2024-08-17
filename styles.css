@@ -9,27 +9,17 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-around; /* Added to ensure space between circle and details */
+    justify-content: space-around;
     align-items: center;
-    width: 90%; /* Adjusted width to ensure everything fits within the viewport */
-    height: 80vh; /* Adjusted to give more vertical space */
+    width: 90%;
+    height: 80vh;
     margin: auto;
 }
 
 .circle-container {
     position: relative;
-    width: 45vmin; /* Adjusted for better fit */
-    height: 45vmin; /* Adjusted for better fit */
-}
-
-.details-panel {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-left: 2px solid #ccc;
-    min-width: 300px; /* Ensures the details panel has enough space */
-    max-width: 35%; /* Limits the size to prevent overlap */
-    text-align: left;
+    width: 45vmin;
+    height: 45vmin;
 }
 
 .button {
@@ -47,38 +37,39 @@ body {
     text-align: center;
     font-size: 1.2vmin;
     line-height: 1.2;
-    background: linear-gradient(145deg, #f6f6f6, #ddd); /* Creates a light source effect */
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), -3px -3px 5px rgba(255, 255, 255, 0.7); /* Adds depth */
-}
-/* Hover effect to increase 3D illusion */
-.button:hover {
     z-index: 1;
+}
+
+/* Specific background colors for s each button */
+#social-media { background-color: #0073e6; }
+#abm { background-color: #00b3b3; }
+#digital-marketing { background-color: #00cc66; }
+#brand-management { background-color: #99cc00; }
+#traditional-marketing { background-color: #ffcc00; }
+#ad-buying { background-color: #ff9900; }
+#event-marketing { background-color: #ff6600; }
+#public-relations { background-color: #ff3300; }
+#market-research { background-color: #e60000; }
+#customer-loyalty { background-color: #cc0066; }
+#marketing-technology { background-color: #9900cc; }
+#content-marketing { background-color: #6600cc; }
+
+.button:hover {
+    z-index: 2;
     transform: translate(-50%, -50%) scale(1.25);
     background-color: #555;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3), -5px -5px 7px rgba(255, 255, 255, 0.7);
 }
 
-/* Original positions around the circle */
-#traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -20vmin) rotate(0deg); background-color: #ffcc00; }
-#ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -20vmin) rotate(-30deg); background-color: #ff9900; }
-#event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -20vmin) rotate(-60deg); background-color: #ff6600; }
-#public-relations { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -20vmin) rotate(-90deg); background-color: #ff3300; }
-#market-research { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -20vmin) rotate(-120deg); background-color: #e60000; }
-#customer-loyalty { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -20vmin) rotate(-150deg); background-color: #cc0066; }
-#marketing-technology { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -20vmin) rotate(-180deg); background-color: #9900cc; }
-#content-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -20vmin) rotate(-210deg); background-color: #6600cc; }
-#social-media { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -20vmin) rotate(-240deg); background-color: #0073e6; }
-#abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -20vmin) rotate(-270deg); background-color: #00b3b3; }
-#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -20vmin) rotate(-300deg); background-color: #00cc66; }
-#brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -20vmin) rotate(-330deg); background-color: #99cc00; }
-
-/* Hover effect to move button to center */
-.button:hover {
-    z-index: 1;
-    transform: translate(-50%, -50%) scale(1.25);
-    background-color: #555;
-    transition: transform 0.5s ease;
+.details-panel {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 2px solid #ccc;
+    min-width: 300px;
+    max-width: 35%;
+    text-align: left;
 }
 
 .details-panel h2 {

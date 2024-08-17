@@ -19,11 +19,12 @@ body {
     height: 100px;
     border-radius: 50%;
     text-align: center;
-    line-height: 100px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    line-height: 100px; /* This centers the text vertically */
+    font-size: 14px;
     color: white;
     font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .button:hover {
@@ -31,101 +32,78 @@ body {
     background-color: #555;
 }
 
-/* Assigning colors and positions based on the color wheel */
+/* Placing buttons like hours on a clock face */
 
 #social-media {
-    top: 10%;
-    left: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -250%);
     background-color: #0073e6; /* Blue */
 }
 
 #abm {
-    top: 22%;
-    left: 10%;
+    top: 20%;
+    left: 73%;
+    transform: translate(-50%, -50%);
     background-color: #00b3b3; /* Teal */
 }
 
 #digital-marketing {
-    top: 40%;
-    left: 2%;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
     background-color: #00cc66; /* Green */
 }
 
 #brand-management {
-    top: 60%;
-    left: 10%;
+    top: 80%;
+    left: 73%;
+    transform: translate(-50%, -50%);
     background-color: #99cc00; /* Lime */
 }
 
 #traditional-marketing {
-    top: 75%;
-    left: 40%;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #ffcc00; /* Yellow */
 }
 
 #ad-buying {
-    top: 60%;
-    left: 70%;
+    top: 80%;
+    left: 27%;
+    transform: translate(-50%, -50%);
     background-color: #ff9900; /* Amber */
 }
 
 #event-marketing {
-    top: 40%;
-    left: 82%;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
     background-color: #ff6600; /* Orange */
 }
 
 #public-relations {
-    top: 22%;
-    left: 70%;
+    top: 20%;
+    left: 27%;
+    transform: translate(-50%, -50%);
     background-color: #ff3300; /* Coral */
 }
 
 #market-research {
-    top: 10%;
-    left: 40%;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #e60000; /* Red */
 }
 
 #customer-loyalty {
-    top: 22%;
-    left: 10%;
+    top: 20%;
+    left: 73%;
+    transform: translate(-50%, -50%);
     background-color: #cc0066; /* Magenta */
 }
 
 #marketing-technology {
-    top: 40%;
-    left: 2%;
-    background-color: #9900cc; /* Purple */
-}
-
-#content-marketing {
-    top: 60%;
-    left: 10%;
-    background-color: #6600cc; /* Violet */
-}
-
-.content-box {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 400px;
-    padding: 20px;
-    background-color: #fff;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.3s ease;
-}
-
-.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.visible {
-    opacity: 1;
-    visibility: visible;
-}
+    top: 50%;
+    left:

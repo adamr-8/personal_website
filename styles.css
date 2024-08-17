@@ -9,17 +9,15 @@ body {
 
 .circle-container {
     position: relative;
-    width: 60vmin;  /* Responsive width based on viewport size */
-    height: 60vmin; /* Responsive height based on viewport size */
+    width: 60vmin;
+    height: 60vmin;
 }
 
 .button {
     position: absolute;
-    width: 10vmin;  /* Button size scales with viewport */
-    height: 10vmin; /* Button size scales with viewport */
+    width: 10vmin;
+    height: 10vmin;
     border-radius: 50%;
-    text-align: center;
-    font-size: 1.2vmin; /* Font size scales with viewport */
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -27,9 +25,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    font-size: 1.2vmin;
+    line-height: 1.2;
 }
 
-/* Rotating buttons around the circle, adjusted for responsiveness */
+/* Rotating buttons around the circle */
 #traditional-marketing {
     top: 50%; left: 50%;
     transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg);
@@ -104,7 +105,7 @@ body {
 
 /* Hover effect: Expand to 125% */
 .button:hover {
-    transform: scale(1.25) translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.25) !important; /* Ensure scaling is prioritized */
     background-color: #555;
 }
 
@@ -137,14 +138,14 @@ body {
 /* Media queries for smaller screens */
 @media (max-width: 600px) {
     .circle-container {
-        width: 80vmin; /* Increase the size slightly for smaller screens */
+        width: 80vmin;
         height: 80vmin;
     }
 
     .button {
         width: 12vmin;
         height: 12vmin;
-        font-size: 1.5vmin; /* Adjust font size */
+        font-size: 1.5vmin;
     }
 
     #content-box {

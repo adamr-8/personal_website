@@ -107,3 +107,42 @@ body {
         text-align: center; /* Center text for better readability */
     }
 }
+/* Nucleus in the center */
+.nucleus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12vmin;
+    height: 12vmin;
+    border-radius: 50%;
+    background-color: #333; /* Dark color for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vmin;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft glow effect */
+}
+
+/* Orbiting animation */
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(20vmin) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(20vmin) rotate(-360deg);
+    }
+}
+
+.button {
+    animation: orbit 20s infinite linear; /* Slow orbit around the nucleus */
+}
+
+/* Individual orbits with different timings to make them look unique */
+#social-media { animation-duration: 18s; }
+#abm { animation-duration: 22s; }
+#digital-marketing { animation-duration: 20s; }
+#brand-management { animation-duration: 21s; }
+/* Add unique durations to the rest of the buttons as needed */

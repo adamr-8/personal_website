@@ -28,7 +28,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 5%; /* Add margin to shift the circle to the left */
+    padding-left: 20px; /* Add padding to move the circle away from the content */
 }
 
 /* Details Panel */

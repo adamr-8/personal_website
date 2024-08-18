@@ -123,7 +123,7 @@ html, body {
     .button {
         width: 13vmin;
         height: 13vmin;
-        font-size: 1.5vmin; /* Slightly larger font size */
+        font-size: 1.7vmin; /* Slightly larger font size */
     }
 
     .button:focus {

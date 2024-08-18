@@ -4,19 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailsContent = document.getElementById('details-content');
     const circleContainer = document.querySelector('.circle-container');
 
-    // Calculate the center of the circle arrangement
-    const centerX = circleContainer.offsetWidth / 2;
-    const centerY = circleContainer.offsetHeight / 2;
+    // Calculate the center of the circular arrangement within the container
+    const circleCenterX = circleContainer.offsetWidth / 2;
+    const circleCenterY = circleContainer.offsetHeight / 2;
 
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
-            const rect = button.getBoundingClientRect();
-            const buttonX = rect.left + rect.width / 2;
-            const buttonY = rect.top + rect.height / 2;
+            const buttonRect = button.getBoundingClientRect();
+            const containerRect = circleContainer.getBoundingClientRect();
 
-            // Calculate the translation needed to bring the button to the center of the circle arrangement
-            const deltaX = centerX - buttonX + circleContainer.getBoundingClientRect().left;
-            const deltaY = centerY - buttonY + circleContainer.getBoundingClientRect().top;
+            // Calculate the center of the button
+            const buttonCenterX = buttonRect.left + buttonRect.width / 2;
+            const buttonCenterY = buttonRect.top + buttonRect.height / 2;
+
+            // Calculate the exact difference needed to center the button in the circle
+            const translateX = (containerRect.left + circleCenterX) - buttonCenterX;
+            const translateY = (containerRect.top + circleCenterY) - buttonCenterY;
 
             // Reset all buttons
             buttons.forEach(btn => {
@@ -25,11 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.style.transform = btn.dataset.initialTransform;
             });
 
-            // Move the hovered button to the center and gradually increase its size
+            // Move the hovered button to the center of the circular arrangement and gradually increase its size
             button.classList.add('centered');
             button.style.zIndex = "10";
             button.style.transition = "transform 0.5s ease"; // Smooth transition
-            button.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(3)`; // Move to center and scale up
+            button.style.transform = `translate(${translateX}px, ${translateY}px) scale(3)`; // Move to the calculated center and scale up
 
             // Update details panel
             detailsTitle.innerText = button.innerText;

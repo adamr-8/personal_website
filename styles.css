@@ -1,4 +1,3 @@
-/* Existing styles */
 body {
     margin: 0;
     display: flex;
@@ -6,23 +5,21 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #fff;
-    flex-direction: column;
 }
 
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Added to ensure space between circle and details */
     align-items: center;
-    width: 90%;
-    height: 80vh;
+    width: 90%; /* Adjusted width to ensure everything fits within the viewport */
+    height: 80vh; /* Adjusted to give more vertical space */
     margin: auto;
-    flex-direction: row;
 }
 
 .circle-container {
     position: relative;
-    width: 45vmin;
-    height: 45vmin;
+    width: 45vmin; /* Adjusted for better fit */
+    height: 45vmin; /* Adjusted for better fit */
 }
 
 .details-panel {
@@ -30,35 +27,83 @@ body {
     padding: 20px;
     background-color: #f9f9f9;
     border-left: 2px solid #ccc;
-    min-width: 300px;
-    max-width: 35%;
+    min-width: 300px; /* Ensures the details panel has enough space */
+    max-width: 35%; /* Limits the size to prevent overlap */
     text-align: left;
+}
+
+.button {
+    position: absolute;
+    width: 9vmin;
+    height: 9vmin;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.5s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2vmin;
+    line-height: 1.2;
+}
+
+/* Original positions around the circle */
+#traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -20vmin) rotate(0deg); background-color: #ffcc00; }
+#ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -20vmin) rotate(-30deg); background-color: #ff9900; }
+#event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -20vmin) rotate(-60deg); background-color: #ff6600; }
+#public-relations { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -20vmin) rotate(-90deg); background-color: #ff3300; }
+#market-research { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -20vmin) rotate(-120deg); background-color: #e60000; }
+#customer-loyalty { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -20vmin) rotate(-150deg); background-color: #cc0066; }
+#marketing-technology { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -20vmin) rotate(-180deg); background-color: #9900cc; }
+#content-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -20vmin) rotate(-210deg); background-color: #6600cc; }
+#social-media { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -20vmin) rotate(-240deg); background-color: #0073e6; }
+#abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -20vmin) rotate(-270deg); background-color: #00b3b3; }
+#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -20vmin) rotate(-300deg); background-color: #00cc66; }
+#brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -20vmin) rotate(-330deg); background-color: #99cc00; }
+
+/* Hover effect to move button to center */
+.button:hover {
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(1.25);
+    background-color: #555;
+    transition: transform 0.5s ease;
+}
+
+.details-panel h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.details-panel p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.content-description {
+    font-size: 16px;
 }
 
 /* Media query for portrait mode or narrow screens */
 @media screen and (max-width: 768px) {
-    body {
-        height: auto; /* Allow height to be flexible */
-    }
-
     .container {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        height: auto;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the circle and details panel */
+        height: auto; /* Let the height adjust naturally */
     }
 
     .circle-container {
         width: 60vmin;
         height: 60vmin;
-        margin-bottom: 20px; /* Ensure space between the buttons and details */
+        margin-bottom: 20px; /* Add some space below the buttons */
     }
 
     .details-panel {
-        border-left: none;
-        border-top: 2px solid #ccc;
-        width: 90%;
-        max-width: 100%;
-        text-align: center; /* Center align text for better readability */
+        border-left: none; /* Remove the left border */
+        border-top: 2px solid #ccc; /* Add a top border instead */
+        max-width: 90%; /* Increase the width of the details panel */
+        width: 100%; /* Ensure it takes up full width */
+        text-align: center; /* Center text for better readability */
     }
 }

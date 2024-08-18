@@ -28,7 +28,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(-300px); /* Center between the left edge and details panel */
+    padding-right: 150px; /* Adjusted padding to shift content left */
 }
 
 /* Media query for portrait mode or narrow screens */
@@ -40,7 +40,7 @@ html, body {
     }
 
     .circle-container {
-        transform: translateX(0); /* Reset the translation when in portrait mode */
+        padding-right: 0; /* Remove padding in portrait mode */
         width: 90vmin;
         height: 90vmin;
         margin-bottom: 20px;
@@ -156,38 +156,4 @@ html, body {
 
 .content-description {
     font-size: 16px;
-}
-
-/* Media query for portrait mode or narrow screens */
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-    }
-
-    .circle-container {
-        width: 90vmin;
-        height: 90vmin;
-        margin-bottom: 20px;
-    }
-
-    .details-panel {
-        border-left: none;
-        border-top: 2px solid #ccc;
-        max-width: 90%;
-        width: 100%;
-        text-align: center;
-    }
-
-    .button {
-        width: 13vmin;
-        height: 13vmin;
-        font-size: 1.5vmin; /* Slightly larger font size */
-    }
-
-    .button:focus {
-        outline: none;
-        transform: translate(-50%, -50%) scale(2.5);
-    }
 }

@@ -13,19 +13,19 @@ html, body {
 /* Container Styles */
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Adjusted to increase space between elements */
     align-items: center;
     width: 90%;
-    height: 90vh;
+    height: 90vh; /* Increased height to take up more space */
     margin: auto;
 }
 
 /* Circle Container */
 .circle-container {
     position: relative;
-    width: 85vmin;
-    height: 85vmin;
-    margin-right: 5%;
+    width: 85vmin; /* Increased size for better fit */
+    height: 85vmin; /* Increased size for better fit */
+    margin-right: 5%; /* Added margin to create space between the circle and the info panel */
 }
 
 /* Details Panel */
@@ -37,8 +37,47 @@ html, body {
     min-width: 300px;
     max-width: 35%;
     text-align: left;
-    width: 400px; /* Fixed width to prevent layout shift */
-    box-sizing: border-box;
+    position: relative;
+}
+
+/* Branding Logo Container */
+.branding-logo {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(145deg, #4a90e2, #357ABD);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        inset -5px -5px 10px rgba(255, 255, 255, 0.5), 
+        inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+        5px 5px 10px rgba(0, 0, 0, 0.2), 
+        -5px -5px 10px rgba(255, 255, 255, 0.4);
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Branding Main Text */
+.branding-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.2), 
+        -1px -1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Branding Subtext */
+.branding-subtext {
+    font-size: 12px;
+    color: #ffffff;
+    text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.2), 
+        -1px -1px 2px rgba(255, 255, 255, 0.3);
+    margin-top: 5px;
 }
 
 /* Button Styles */
@@ -94,10 +133,7 @@ html, body {
 .details-panel p {
     font-size: 1.2em;
     line-height: 1.6;
-}
-
-.content-description {
-    font-size: 16px;
+    max-width: 350px; /* Ensures the text area doesn't expand beyond a certain width */
 }
 
 /* Media query for portrait mode or narrow screens */

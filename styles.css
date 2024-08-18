@@ -25,7 +25,7 @@ html, body {
     position: relative;
     width: 85vmin;
     height: 85vmin;
-    margin-right: 15%; /* Spacing between circle and info panel */
+    margin-right: 5%; /* Spacing between circle and info panel */
 }
 
 /* Details Panel */

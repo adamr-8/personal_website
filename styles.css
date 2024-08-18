@@ -1,77 +1,64 @@
-body, html {
+/* Existing styles */
+body {
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    background-color: #f4f4f4;
+    height: 100vh;
+    background-color: #fff;
+    flex-direction: column;
 }
 
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    max-width: 1200px;
+    width: 90%;
+    height: 80vh;
     margin: auto;
+    flex-direction: row;
 }
 
 .circle-container {
     position: relative;
-    width: 400px;
-    height: 400px;
-    margin-right: 50px;
+    width: 45vmin;
+    height: 45vmin;
 }
 
-.circle {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: lightgray;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.circle:hover {
-    transform: scale(1.25);
-    z-index: 10;
-}
-
-#digital-marketing { top: 0%; left: 50%; transform: translate(-50%, -50%); background-color: #4CAF50; }
-#market-research { top: 20%; left: 80%; transform: translate(-50%, -50%); background-color: #9C27B0; }
-#customer-loyalty { top: 50%; left: 100%; transform: translate(-50%, -50%); background-color: #E91E63; }
-#content-marketing { top: 80%; left: 80%; transform: translate(-50%, -50%); background-color: #FF5722; }
-#marketing-tech { top: 100%; left: 50%; transform: translate(-50%, -50%); background-color: #3F51B5; }
-#abm { top: 80%; left: 20%; transform: translate(-50%, -50%); background-color: #00BCD4; }
-#social-media { top: 50%; left: 0%; transform: translate(-50%, -50%); background-color: #2196F3; }
-#public-relations { top: 20%; left: 20%; transform: translate(-50%, -50%); background-color: #FF9800; }
-#event-marketing { top: 40%; left: 70%; transform: translate(-50%, -50%); background-color: #FFEB3B; }
-#traditional-marketing { top: 60%; left: 90%; transform: translate(-50%, -50%); background-color: #009688; }
-#brand-management { top: 70%; left: 30%; transform: translate(-50%, -50%); background-color: #673AB7; }
-#ad-buying { top: 90%; left: 50%; transform: translate(-50%, -50%); background-color: #FF5722; }
-
-.content-area {
-    width: 500px;
+.details-panel {
+    flex-grow: 1;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    border-left: 2px solid #ccc;
+    min-width: 300px;
+    max-width: 35%;
+    text-align: left;
 }
 
-#content-title {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
+/* Media query for portrait mode or narrow screens */
+@media screen and (max-width: 768px) {
+    body {
+        height: auto; /* Allow height to be flexible */
+    }
 
-#content-description {
-    font-size: 16px;
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .circle-container {
+        width: 60vmin;
+        height: 60vmin;
+        margin-bottom: 20px; /* Ensure space between the buttons and details */
+    }
+
+    .details-panel {
+        border-left: none;
+        border-top: 2px solid #ccc;
+        width: 90%;
+        max-width: 100%;
+        text-align: center; /* Center align text for better readability */
+    }
 }

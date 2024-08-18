@@ -3,13 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailsTitle = document.getElementById('details-title');
     const detailsContent = document.getElementById('details-content');
 
-    // An object to hold the detailed content for each button
+    // Only adding the content for "Ad Buying"
     const contentDetails = {
-        "Social Media": "Social Media Content: Social media marketing involves creating and sharing content on social media networks to achieve your marketing and branding goals. It includes posting text and image updates, videos, and other content that drives audience engagement.",
-        "ABM": "ABM Content: Account-Based Marketing (ABM) is a focused growth strategy in which Marketing and Sales collaborate to create personalized buying experiences for a mutually-identified set of high-value accounts.",
-        "Digital Marketing": "Digital Marketing Content: Digital marketing refers to advertising delivered through digital channels such as search engines, websites, social media, email, and mobile apps. It uses digital platforms to promote products or services.",
-        "Brand Management": "Brand Management Content: Brand management involves the analysis and planning on how a brand is perceived in the market. It is essential for maintaining and improving the reputation of a brand.",
-        "Traditional Marketing": "Traditional Marketing Content: Traditional marketing refers to any type of marketing that isn't online. This means print, broadcast, direct mail, phone, and outdoor advertising like billboards.",
         "Ad Buying": `
             <h3>Ad Buying</h3>
             <strong>Overview:</strong>
@@ -21,12 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li>Continuously optimized ad spend to maximize the effectiveness of campaigns, ensuring alignment with broader marketing strategies.</li>
             </ul>
         `,
-        "Event Marketing": "Event Marketing Content: Event marketing is the promotion of a product, brand, or service through in-person interactions. Examples include trade shows, fairs, product launches, and seminars.",
-        "Public Relations": "Public Relations Content: Public relations involves managing the spread of information between an individual or an organization and the public. PR efforts aim to build and maintain a positive image.",
-        "Market Research": "Market Research Content: Market research is the process of gathering, analyzing, and interpreting information about a market, about a product or service to be offered for sale in that market.",
-        "Customer Loyalty": "Customer Loyalty Content: Customer loyalty refers to a customer’s willingness to repeatedly return to a company to conduct some type of business due to the delightful experiences they have with that brand.",
-        "Marketing Technology": "Marketing Technology Content: Marketing technology (MarTech) is the use of software and tools to execute, manage, and measure marketing efforts.",
-        "Content Marketing": "Content Marketing Content: Content marketing involves creating and sharing valuable free content to attract and convert prospects into customers, and customers into repeat buyers."
     };
 
     buttons.forEach(button => {

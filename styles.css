@@ -25,7 +25,7 @@ html, body {
     position: relative;
     width: 85vmin;
     height: 85vmin;
-    margin-right: 5%; /* Spacing between circle and info panel */
+    margin-right: 5%; /* Added margin to create space between the circle and the info panel */
 }
 
 /* Details Panel */
@@ -37,6 +37,8 @@ html, body {
     min-width: 300px;
     max-width: 35%;
     text-align: left;
+    overflow: hidden; /* Prevent content from pushing the layout */
+    white-space: nowrap; /* Prevent text from causing the panel to expand */
 }
 
 /* Button Styles */
@@ -55,7 +57,7 @@ html, body {
     font-size: 1.7vmin;
     line-height: 1.2;
     transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
-
+    
     background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.1));
     box-shadow: 
         inset -2px -2px 8px rgba(0, 0, 0, 0.3), 
@@ -63,7 +65,7 @@ html, body {
         3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Original Colors Restored */
+/* Positioning of buttons around the circle */
 #traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #ffcc00; }
 #ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); background-color: #ff9900; }
 #event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); background-color: #ff6600; }

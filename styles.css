@@ -3,7 +3,6 @@ html, body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,20 +13,19 @@ html, body {
 /* Container Styles */
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
+    width: 90%;
+    height: 90vh;
     margin: auto;
 }
 
 /* Circle Container */
 .circle-container {
     position: relative;
-    width: 50vmin; /* Reduce size for better fit on desktop */
-    height: 50vmin;
-    margin-right: 2%;
-    flex-shrink: 0;
+    width: 85vmin; 
+    height: 85vmin; 
+    margin-right: 5%; 
 }
 
 /* Details Panel */
@@ -40,40 +38,14 @@ html, body {
     max-width: 35%;
     text-align: left;
     box-sizing: border-box;
-    height: 100%;
-}
-
-/* Branding Logo */
-.branding-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.branding-text {
-    font-size: 4em;
-    color: #fff;
-    background-color: #4a90e2;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-}
-
-.branding-subtext {
-    font-size: 1.5em;
-    color: #666;
-    text-align: center;
+    height: auto; /* Keep the height auto */
 }
 
 /* Button Styles */
 .button {
     position: absolute;
-    width: 12vmin;
-    height: 12vmin;
+    width: 14vmin;
+    height: 14vmin;
     border-radius: 50%;
     color: white;
     font-weight: bold;
@@ -82,7 +54,7 @@ html, body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1.5vmin;
+    font-size: 1.7vmin;
     line-height: 1.2;
     transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
     
@@ -94,23 +66,44 @@ html, body {
 }
 
 /* Positioning of buttons around the circle */
-#traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -20vmin) rotate(0deg); background-color: #ffcc00; }
-#ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -20vmin) rotate(-30deg); background-color: #ff9900; }
-#event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -20vmin) rotate(-60deg); background-color: #ff6600; }
-#public-relations { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -20vmin) rotate(-90deg); background-color: #ff3300; }
-#market-research { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -20vmin) rotate(-120deg); background-color: #e60000; }
-#customer-loyalty { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -20vmin) rotate(-150deg); background-color: #cc0066; }
-#marketing-technology { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -20vmin) rotate(-180deg); background-color: #9900cc; }
-#content-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -20vmin) rotate(-210deg); background-color: #6600cc; }
-#social-media { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -20vmin) rotate(-240deg); background-color: #0073e6; }
-#abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -20vmin) rotate(-270deg); background-color: #00b3b3; }
-#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -20vmin) rotate(-300deg); background-color: #00cc66; }
-#brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -20vmin) rotate(-330deg); background-color: #99cc00; }
+#traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #ffcc00; }
+#ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); background-color: #ff9900; }
+#event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); background-color: #ff6600; }
+#public-relations { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); background-color: #ff3300; }
+#market-research { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); background-color: #e60000; }
+#customer-loyalty { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); background-color: #cc0066; }
+#marketing-technology { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); background-color: #9900cc; }
+#content-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); background-color: #6600cc; }
+#social-media { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); background-color: #0073e6; }
+#abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); background-color: #00b3b3; }
+#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); background-color: #00cc66; }
+#brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); background-color: #99cc00; }
 
 /* Hover effect to move button to center and enlarge */
 .button.centered {
     z-index: 10;
     transform: translate(-50%, -50%) scale(2.5);
+}
+
+/* Branding Logo Styles */
+.branding-logo {
+    text-align: center;
+    margin-bottom: 20px;
+    background: #3d7fc0;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.branding-text {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.branding-subtext {
+    font-size: 1.5em;
+    font-weight: normal;
 }
 
 /* Details panel text styles */
@@ -153,7 +146,7 @@ html, body {
     .button {
         width: 13vmin;
         height: 13vmin;
-        font-size: 1.5vmin; /* Slightly larger font size */
+        font-size: 1.5vmin;
     }
 
     .button:focus {

@@ -20,12 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
             detailsTitle.innerText = 'Hover over a discipline';
             detailsContent.innerText = 'Details will appear here.';
         });
-
-        // Store initial transform for reset purposes
-        button.dataset.initialTransform = button.style.transform;
     });
 
-    // Optional: Reset the buttons when mouse leaves the circle-container
+    // Reset buttons when mouse leaves the circle-container
     const circleContainer = document.querySelector('.circle-container');
     circleContainer.addEventListener('mouseleave', () => {
         buttons.forEach(button => {

@@ -4,30 +4,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Calculate the center of the circle container
     const containerRect = circleContainer.getBoundingClientRect();
-    const circleCenterX = containerRect.width / 2;
-    const circleCenterY = containerRect.height / 2;
+    const circleCenterX = containerRect.left + containerRect.width / 2;
+    const circleCenterY = containerRect.top + containerRect.height / 2;
 
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
+            // Calculate the center of the button relative to the container
             const buttonRect = button.getBoundingClientRect();
-            const buttonCenterX = buttonRect.width / 2;
-            const buttonCenterY = buttonRect.height / 2;
+            const buttonCenterX = buttonRect.left + buttonRect.width / 2;
+            const buttonCenterY = buttonRect.top + buttonRect.height / 2;
 
-            // Calculate translation relative to the circle container itself
+            // Calculate translation needed to move the button's center to the circle's center
             const translateX = circleCenterX - buttonCenterX;
             const translateY = circleCenterY - buttonCenterY;
 
-            // Apply the transformation after resetting any initial transform
-            button.style.transform = ''; // Reset any existing transforms
+            // Apply the translation and scaling
             button.style.transform = `translate(${translateX}px, ${translateY}px) scale(3)`;
             button.style.zIndex = "10";
         });
+
+        button.addEventListener('mouseleave', () => {
+            // Reset transformation when mouse leaves the button
+            button.style.transform = ''; 
+            button.style.zIndex = "0";
+        });
     });
 
-    // Reset the centered button when hovering outside the circle-container
+    // Ensure only one button can be transformed at a time
     circleContainer.addEventListener('mouseleave', () => {
         buttons.forEach(button => {
-            button.style.transform = ''; // Clear transforms when mouse leaves
+            button.style.transform = ''; // Reset all buttons when mouse leaves the container
             button.style.zIndex = "0";
         });
     });

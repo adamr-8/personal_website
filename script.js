@@ -49,3 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
         detailsContent.innerText = "Details will appear here.";
     });
 });
+

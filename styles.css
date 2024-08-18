@@ -13,19 +13,19 @@ html, body {
 /* Container Styles */
 .container {
     display: flex;
-    justify-content: space-between; /* Adjusted to increase space between elements */
+    justify-content: space-between;
     align-items: center;
     width: 90%;
-    height: 90vh; /* Increased height to take up more space */
+    height: 90vh;
     margin: auto;
 }
 
 /* Circle Container */
 .circle-container {
     position: relative;
-    width: 85vmin; /* Increased size for better fit */
-    height: 85vmin; /* Increased size for better fit */
-    margin-right: 5%; /* Added margin to create space between the circle and the info panel */
+    width: 85vmin;
+    height: 85vmin;
+    margin-right: 5%;
 }
 
 /* Details Panel */
@@ -37,6 +37,8 @@ html, body {
     min-width: 300px;
     max-width: 35%;
     text-align: left;
+    width: 400px; /* Fixed width to prevent layout shift */
+    box-sizing: border-box;
 }
 
 /* Button Styles */

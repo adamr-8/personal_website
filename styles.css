@@ -103,4 +103,54 @@ html, body {
 /* Hover effect to move button to center and enlarge */
 .button.centered {
     z-index: 10;
-    transform: translate(-50%,
+    transform: translate(-50%, -50%) scale(2.5);
+}
+
+/* Details panel text styles */
+.details-panel h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.details-panel p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.content-description {
+    font-size: 16px;
+}
+
+/* Media query for portrait mode or narrow screens */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .circle-container {
+        width: 90vmin;
+        height: 90vmin;
+        margin-bottom: 20px;
+    }
+
+    .details-panel {
+        border-left: none;
+        border-top: 2px solid #ccc;
+        max-width: 90%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .button {
+        width: 13vmin;
+        height: 13vmin;
+        font-size: 1.5vmin; /* Slightly larger font size */
+    }
+
+    .button:focus {
+        outline: none;
+        transform: translate(-50%, -50%) scale(2.5);
+    }
+}

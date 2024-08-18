@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const circleCenterX = containerRect.left + containerRect.width / 2;
     const circleCenterY = containerRect.top + containerRect.height / 2;
 
+    console.log("Circle Center X:", circleCenterX);
+    console.log("Circle Center Y:", circleCenterY);
+
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
             const buttonRect = button.getBoundingClientRect();
@@ -15,9 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const buttonCenterX = buttonRect.left + buttonRect.width / 2;
             const buttonCenterY = buttonRect.top + buttonRect.height / 2;
 
+            console.log("Button Center X:", buttonCenterX);
+            console.log("Button Center Y:", buttonCenterY);
+
             // Calculate the exact translation needed to align the button's center with the circle's center
             const translateX = circleCenterX - buttonCenterX;
             const translateY = circleCenterY - buttonCenterY;
+
+            console.log("Translate X:", translateX);
+            console.log("Translate Y:", translateY);
 
             // Reset all buttons
             buttons.forEach(btn => {

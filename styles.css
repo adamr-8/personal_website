@@ -9,17 +9,17 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-around; /* Ensures space between circle and details */
+    justify-content: space-around;
     align-items: center;
-    width: 90%; /* Adjusted width to ensure everything fits within the viewport */
-    height: 80vh; /* Adjusted to give more vertical space */
+    width: 90%;
+    height: 85vh; /* Adjusted height to 85% of the viewport height */
     margin: auto;
 }
 
 .circle-container {
     position: relative;
-    width: 45vmin; /* Adjusted for better fit */
-    height: 45vmin; /* Adjusted for better fit */
+    width: 60vmin; /* Increased size for better fit */
+    height: 60vmin; /* Increased size for better fit */
 }
 
 .details-panel {
@@ -27,15 +27,15 @@ body {
     padding: 20px;
     background-color: #f9f9f9;
     border-left: 2px solid #ccc;
-    min-width: 300px; /* Ensures the details panel has enough space */
-    max-width: 35%; /* Limits the size to prevent overlap */
+    min-width: 300px;
+    max-width: 35%;
     text-align: left;
 }
 
 .button {
     position: absolute;
-    width: 9vmin;
-    height: 9vmin;
+    width: 12vmin; /* Increased button size */
+    height: 12vmin; /* Increased button size */
     border-radius: 50%;
     color: white;
     font-weight: bold;
@@ -44,35 +44,34 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1.2vmin;
+    font-size: 1.4vmin; /* Adjusted for larger buttons */
     line-height: 1.2;
     transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
 
-    /* 3D Sphere Effect with Color */
     background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.2));
     box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.2), 
                 inset 2px 2px 5px rgba(255, 255, 255, 0.3), 
                 3px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Restore original button colors */
-#traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -20vmin) rotate(0deg); background-color: #ffcc00; }
-#ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -20vmin) rotate(-30deg); background-color: #ff9900; }
-#event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -20vmin) rotate(-60deg); background-color: #ff6600; }
-#public-relations { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -20vmin) rotate(-90deg); background-color: #ff3300; }
-#market-research { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -20vmin) rotate(-120deg); background-color: #e60000; }
-#customer-loyalty { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -20vmin) rotate(-150deg); background-color: #cc0066; }
-#marketing-technology { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -20vmin) rotate(-180deg); background-color: #9900cc; }
-#content-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -20vmin) rotate(-210deg); background-color: #6600cc; }
-#social-media { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -20vmin) rotate(-240deg); background-color: #0073e6; }
-#abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -20vmin) rotate(-270deg); background-color: #00b3b3; }
-#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -20vmin) rotate(-300deg); background-color: #00cc66; }
-#brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -20vmin) rotate(-330deg); background-color: #99cc00; }
+/* Original positions around the circle */
+#traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -25vmin) rotate(0deg); background-color: #ffcc00; }
+#ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -25vmin) rotate(-30deg); background-color: #ff9900; }
+#event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -25vmin) rotate(-60deg); background-color: #ff6600; }
+#public-relations { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -25vmin) rotate(-90deg); background-color: #ff3300; }
+#market-research { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -25vmin) rotate(-120deg); background-color: #e60000; }
+#customer-loyalty { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -25vmin) rotate(-150deg); background-color: #cc0066; }
+#marketing-technology { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -25vmin) rotate(-180deg); background-color: #9900cc; }
+#content-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -25vmin) rotate(-210deg); background-color: #6600cc; }
+#social-media { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -25vmin) rotate(-240deg); background-color: #0073e6; }
+#abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -25vmin) rotate(-270deg); background-color: #00b3b3; }
+#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -25vmin) rotate(-300deg); background-color: #00cc66; }
+#brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -25vmin) rotate(-330deg); background-color: #99cc00; }
 
 /* Hover effect to move button to center and enlarge */
 .button.centered {
-    z-index: 10; /* Bring it to the front */
-    transform: translate(-50%, -50%) scale(2); /* Ensure smooth transformation and scaling */
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(2.5); /* Increased scale for larger size */
 }
 
 /* Details panel text styles */
@@ -93,22 +92,32 @@ body {
 /* Media query for portrait mode or narrow screens */
 @media screen and (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center the circle and details panel */
-        height: auto; /* Let the height adjust naturally */
+        flex-direction: column;
+        align-items: center;
+        height: auto;
     }
 
     .circle-container {
-        width: 60vmin;
-        height: 60vmin;
-        margin-bottom: 20px; /* Add some space below the buttons */
+        width: 85vmin; /* Adjusted to fill 85% of the width */
+        height: 85vmin; /* Adjusted to fill 85% of the height */
+        margin-bottom: 20px;
     }
 
     .details-panel {
-        border-left: none; /* Remove the left border */
-        border-top: 2px solid #ccc; /* Add a top border instead */
-        max-width: 90%; /* Increase the width of the details panel */
-        width: 100%; /* Ensure it takes up full width */
-        text-align: center; /* Center text for better readability */
+        border-left: none;
+        border-top: 2px solid #ccc;
+        max-width: 90%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .button {
+        width: 14vmin; /* Increased button size */
+        height: 14vmin; /* Increased button size */
+        font-size: 1.6vmin; /* Adjusted for larger buttons */
+    }
+
+    .button.centered {
+        transform: translate(-50%, -50%) scale(2.5); /* Increased scale for larger size */
     }
 }

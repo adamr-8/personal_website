@@ -1,40 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.button');
-    const circleContainer = document.querySelector('.circle-container');
-
-    // Calculate the center of the circle container
-    const containerRect = circleContainer.getBoundingClientRect();
-    const circleCenterX = containerRect.left + containerRect.width / 2;
-    const circleCenterY = containerRect.top + containerRect.height / 2;
+    const detailsTitle = document.getElementById('details-title');
+    const detailsContent = document.getElementById('details-content');
 
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
-            // Calculate the center of the button relative to the container
-            const buttonRect = button.getBoundingClientRect();
-            const buttonCenterX = buttonRect.left + buttonRect.width / 2;
-            const buttonCenterY = buttonRect.top + buttonRect.height / 2;
+            // Reset z-index of all buttons and move them back to original position
+            buttons.forEach(btn => {
+                btn.style.zIndex = "0"; 
+                btn.style.transform = btn.dataset.initialTransform; // Reset position of all buttons
+            });
 
-            // Calculate translation needed to move the button's center to the circle's center
-            const translateX = circleCenterX - buttonCenterX;
-            const translateY = circleCenterY - buttonCenterY;
+            // Move hovered button to center with scale
+            button.style.zIndex = "1"; 
+            button.style.transform = "translate(-50%, -50%) scale(1.25)"; 
 
-            // Apply the translation and scaling
-            button.style.transform = `translate(${translateX}px, ${translateY}px) scale(3)`;
-            button.style.zIndex = "10";
+            // Update details panel with content from the hovered button
+            detailsTitle.innerText = button.innerText;
+            detailsContent.innerText = button.getAttribute('data-info');
         });
 
-        button.addEventListener('mouseleave', () => {
-            // Reset transformation when mouse leaves the button
-            button.style.transform = ''; 
-            button.style.zIndex = "0";
-        });
+        // Store initial transform for reset purposes
+        button.dataset.initialTransform = button.style.transform;
     });
 
-    // Ensure only one button can be transformed at a time
+    // Optional: Reset the buttons when mouse leaves the circle-container
+    const circleContainer = document.querySelector('.circle-container');
     circleContainer.addEventListener('mouseleave', () => {
         buttons.forEach(button => {
-            button.style.transform = ''; // Reset all buttons when mouse leaves the container
             button.style.zIndex = "0";
+            button.style.transform = button.dataset.initialTransform;
         });
     });
 });

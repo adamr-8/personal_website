@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.style.transform = btn.dataset.initialTransform; // Reset position of all buttons
             });
 
-            // Move hovered button to center with scale
+            // Move hovered button to center with a larger scale
             button.style.zIndex = "1"; 
-            button.style.transform = "translate(-50%, -50%) scale(1.25)"; 
+            button.style.transform = "translate(-50%, -50%) scale(2)"; // Increased scale value for larger size
 
             // Update details panel with content from the hovered button
             detailsTitle.innerText = button.innerText;

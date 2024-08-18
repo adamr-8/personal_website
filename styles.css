@@ -1,7 +1,7 @@
 /* Global Styles */
 html, body {
     scroll-behavior: smooth;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-x: hidden;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -16,15 +16,15 @@ html, body {
     justify-content: space-around;
     align-items: center;
     width: 90%;
-    height: 90vh; /* Increased height to take up more space */
+    height: 90vh;
     margin: auto;
 }
 
 /* Circle Container */
 .circle-container {
     position: relative;
-    width: 85vmin; /* Increased size for better fit */
-    height: 85vmin; /* Increased size for better fit */
+    width: 85vmin;
+    height: 85vmin;
 }
 
 /* Details Panel */
@@ -41,8 +41,8 @@ html, body {
 /* Button Styles */
 .button {
     position: absolute;
-    width: 14vmin; /* Increased button size */
-    height: 14vmin; /* Increased button size */
+    width: 14vmin;
+    height: 14vmin;
     border-radius: 50%;
     color: white;
     font-weight: bold;
@@ -51,20 +51,15 @@ html, body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1.5vmin; /* Adjusted for larger buttons */
+    font-size: 1.7vmin;
     line-height: 1.2;
     transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
     
-    /* Enhanced 3D Effect */
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.15));
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.1));
     box-shadow: 
-        inset -5px -5px 15px rgba(0, 0, 0, 0.3), 
-        inset 5px 5px 15px rgba(255, 255, 255, 0.5), 
-        6px 6px 15px rgba(0, 0, 0, 0.6), 
-        -6px -6px 15px rgba(255, 255, 255, 0.5);
-    
-    /* Prevent tap highlight on mobile */
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+        inset -2px -2px 8px rgba(0, 0, 0, 0.3), 
+        inset 2px 2px 8px rgba(255, 255, 255, 0.4), 
+        3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Positioning of buttons around the circle */
@@ -84,7 +79,7 @@ html, body {
 /* Hover effect to move button to center and enlarge */
 .button.centered {
     z-index: 10;
-    transform: translate(-50%, -50%) scale(2.5); /* Increased scale for larger size */
+    transform: translate(-50%, -50%) scale(2.5);
 }
 
 /* Details panel text styles */
@@ -111,8 +106,8 @@ html, body {
     }
 
     .circle-container {
-        width: 90vmin; /* Adjusted to fill more width on mobile */
-        height: 90vmin; /* Adjusted to fill more height on mobile */
+        width: 90vmin;
+        height: 90vmin;
         margin-bottom: 20px;
     }
 
@@ -125,13 +120,13 @@ html, body {
     }
 
     .button {
-        width: 13vmin; /* Adjusted size to prevent overlap */
-        height: 13vmin; /* Adjusted size to prevent overlap */
-        font-size: 1.4vmin; /* Adjusted for larger buttons */
+        width: 13vmin;
+        height: 13vmin;
+        font-size: 1.5vmin; /* Slightly larger font size */
     }
 
     .button:focus {
-        outline: none; /* Remove focus outline */
-        transform: translate(-50%, -50%) scale(2.5); /* Maintain button size consistency on focus */
+        outline: none;
+        transform: translate(-50%, -50%) scale(2.5);
     }
 }

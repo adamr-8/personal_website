@@ -12,14 +12,14 @@ body {
     justify-content: space-around;
     align-items: center;
     width: 90%;
-    height: 90vh;
+    height: 90vh; 
     margin: auto;
 }
 
 .circle-container {
     position: relative;
-    width: 85vmin; 
-    height: 85vmin; 
+    width: 85vmin;
+    height: 85vmin;
 }
 
 .details-panel {
@@ -34,8 +34,8 @@ body {
 
 .button {
     position: absolute;
-    width: 14vmin;
-    height: 14vmin;
+    width: 13vmin; 
+    height: 13vmin; 
     border-radius: 50%;
     color: white;
     font-weight: bold;
@@ -44,15 +44,14 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: 1.2vmin; /* Adjusted font size */
     line-height: 1.2;
     transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
-    padding: 0 5%;
+    padding: 2px; /* Added padding */
     background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.2));
     box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.2), 
                 inset 2px 2px 5px rgba(255, 255, 255, 0.3), 
                 3px 3px 8px rgba(0, 0, 0, 0.3);
-    font-size: calc(2vw + 1vmin); /* Adjusted for larger text based on viewport size */
-    max-width: 80%; /* Ensure text does not overflow button */
 }
 
 /* Positioning of buttons around the circle */
@@ -72,7 +71,7 @@ body {
 /* Hover effect to move button to center and enlarge */
 .button.centered {
     z-index: 10;
-    transform: translate(-50%, -50%) scale(2.5); 
+    transform: translate(-50%, -50%) scale(2); 
 }
 
 /* Details panel text styles */
@@ -86,6 +85,10 @@ body {
     line-height: 1.6;
 }
 
+.content-description {
+    font-size: 16px;
+}
+
 /* Media query for portrait mode or narrow screens */
 @media screen and (max-width: 768px) {
     .container {
@@ -95,8 +98,8 @@ body {
     }
 
     .circle-container {
-        width: 90vmin; 
-        height: 90vmin; 
+        width: 90vmin;
+        height: 90vmin;
         margin-bottom: 20px;
     }
 
@@ -109,12 +112,12 @@ body {
     }
 
     .button {
-        width: 13vmin; 
-        height: 13vmin; 
-        font-size: calc(1.8vw + 1vmin); /* Adjusted size to fit in smaller screens */
+        width: 12vmin;
+        height: 12vmin;
+        font-size: 1.2vmin; /* Reduced font size slightly */
     }
 
     .button.centered {
-        transform: translate(-50%, -50%) scale(2.5); 
+        transform: translate(-50%, -50%) scale(2.5);
     }
 }

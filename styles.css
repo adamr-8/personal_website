@@ -28,7 +28,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(-550px); /* Move the circle container left by 550px */
+    transform: translateX(-250px); /* Move the circle container left by 250px */
 }
 
 /* Details Panel */

@@ -28,7 +28,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 150px; /* Adjusted padding to shift content left */
+    transform: translateX(-200px); /* Shift left to avoid overlapping */
 }
 
 /* Media query for portrait mode or narrow screens */
@@ -40,7 +40,7 @@ html, body {
     }
 
     .circle-container {
-        padding-right: 0; /* Remove padding in portrait mode */
+        transform: translateX(0); /* Reset the translation when in portrait mode */
         width: 90vmin;
         height: 90vmin;
         margin-bottom: 20px;

@@ -34,8 +34,8 @@ body {
 
 .button {
     position: absolute;
-    width: 13vmin; 
-    height: 13vmin; 
+    width: 14vmin; 
+    height: 14vmin; 
     border-radius: 50%;
     color: white;
     font-weight: bold;
@@ -44,10 +44,11 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1.2vmin; /* Adjusted font size */
-    line-height: 1.2;
+    font-size: 1.8vmin; /* Increased font size */
+    line-height: 1.1;
+    padding: 0.5vmin; /* Added padding */
     transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
-    padding: 2px; /* Added padding */
+
     background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6), rgba(0, 0, 0, 0.2));
     box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.2), 
                 inset 2px 2px 5px rgba(255, 255, 255, 0.3), 
@@ -71,7 +72,7 @@ body {
 /* Hover effect to move button to center and enlarge */
 .button.centered {
     z-index: 10;
-    transform: translate(-50%, -50%) scale(2); 
+    transform: translate(-50%, -50%) scale(2.5); 
 }
 
 /* Details panel text styles */
@@ -112,9 +113,9 @@ body {
     }
 
     .button {
-        width: 12vmin;
-        height: 12vmin;
-        font-size: 1.2vmin; /* Reduced font size slightly */
+        width: 13vmin;
+        height: 13vmin;
+        font-size: 1.6vmin; /* Increased font size */
     }
 
     .button.centered {

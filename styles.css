@@ -9,7 +9,7 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-around; /* Ensure space between circle and details */
+    justify-content: space-around; /* Ensures space between circle and details */
     align-items: center;
     width: 90%; /* Adjusted width to ensure everything fits within the viewport */
     height: 80vh; /* Adjusted to give more vertical space */
@@ -40,7 +40,7 @@ body {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.5s ease, background-color 0.3s ease;
+    transition: transform 0.5s ease, background-color 0.3s ease, width 0.5s ease, height 0.5s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,14 +63,14 @@ body {
 #digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -20vmin) rotate(-300deg); background-color: #00cc66; }
 #brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -20vmin) rotate(-330deg); background-color: #99cc00; }
 
-/* Hover effect to move button to center */
-.button:hover {
-    z-index: 1;
-    transform: translate(-50%, -50%) scale(1.25);
-    background-color: #555;
-    transition: transform 0.5s ease;
+/* Hover effect to move button to center and enlarge */
+.button.centered {
+    width: 27vmin; /* 300% size */
+    height: 27vmin; /* 300% size */
+    z-index: 10; /* Bring it to the front */
 }
 
+/* Details panel text styles */
 .details-panel h2 {
     font-size: 2em;
     margin-bottom: 10px;
@@ -106,66 +106,4 @@ body {
         width: 100%; /* Ensure it takes up full width */
         text-align: center; /* Center text for better readability */
     }
-}
-/* Nucleus in the center */
-.nucleus {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 12vmin;
-    height: 12vmin;
-    border-radius: 50%;
-    background-color: #333; /* Dark color for contrast */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3vmin;
-    color: white;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft glow effect */
-}
-
-/* Orbiting animation */
-@keyframes orbit {
-    0% {
-        transform: rotate(0deg) translateX(20vmin) rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg) translateX(20vmin) rotate(-360deg);
-    }
-}
-
-.button {
-    animation: orbit 20s infinite linear; /* Slow orbit around the nucleus */
-}
-
-/* Individual orbits with different timings to make them look unique */
-#social-media { animation-duration: 18s; }
-#abm { animation-duration: 22s; }
-#digital-marketing { animation-duration: 20s; }
-#brand-management { animation-duration: 21s; }
-/* Add unique durations to the rest of the buttons as needed */
-.button {
-    position: absolute;
-    width: 9vmin;
-    height: 9vmin;
-    border-radius: 50%;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.5s ease, background-color 0.3s ease, width 0.5s ease, height 0.5s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.2vmin;
-    line-height: 1.2;
-}
-
-/* Grow effect for the centered button */
-.button.centered {
-    width: 27vmin; /* 300% size */
-    height: 27vmin; /* 300% size */
-    z-index: 10; /* Bring it to the front */
 }

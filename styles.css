@@ -9,17 +9,17 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Ensures space between circle and details */
     align-items: center;
-    width: 90%;
-    height: 80vh;
+    width: 90%; /* Adjusted width to ensure everything fits within the viewport */
+    height: 80vh; /* Adjusted to give more vertical space */
     margin: auto;
 }
 
 .circle-container {
     position: relative;
-    width: 45vmin;
-    height: 45vmin;
+    width: 45vmin; /* Adjusted for better fit */
+    height: 45vmin; /* Adjusted for better fit */
 }
 
 .details-panel {
@@ -27,8 +27,8 @@ body {
     padding: 20px;
     background-color: #f9f9f9;
     border-left: 2px solid #ccc;
-    min-width: 300px;
-    max-width: 35%;
+    min-width: 300px; /* Ensures the details panel has enough space */
+    max-width: 35%; /* Limits the size to prevent overlap */
     text-align: left;
 }
 
@@ -66,6 +66,7 @@ body {
 /* Hover effect to move button to center and enlarge */
 .button.centered {
     z-index: 10; /* Bring it to the front */
+    transition: transform 0.5s ease; /* Ensure smooth transformation */
 }
 
 /* Details panel text styles */
@@ -74,4 +75,34 @@ body {
     margin-bottom: 10px;
 }
 
-.details-panel
+.details-panel p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.content-description {
+    font-size: 16px;
+}
+
+/* Media query for portrait mode or narrow screens */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center the circle and details panel */
+        height: auto; /* Let the height adjust naturally */
+    }
+
+    .circle-container {
+        width: 60vmin;
+        height: 60vmin;
+        margin-bottom: 20px; /* Add some space below the buttons */
+    }
+
+    .details-panel {
+        border-left: none; /* Remove the left border */
+        border-top: 2px solid #ccc; /* Add a top border instead */
+        max-width: 90%; /* Increase the width of the details panel */
+        width: 100%; /* Ensure it takes up full width */
+        text-align: center; /* Center text for better readability */
+    }
+}

@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailsTitle = document.getElementById('details-title');
     const detailsContent = document.getElementById('details-content');
     const circleContainer = document.querySelector('.circle-container');
-    const centerX = circleContainer.offsetWidth / 2;
-    const centerY = circleContainer.offsetHeight / 2;
 
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
@@ -13,12 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const buttonX = rect.left + rect.width / 2;
             const buttonY = rect.top + rect.height / 2;
 
-            const deltaX = (containerRect.left + centerX) - buttonX;
-            const deltaY = (containerRect.top + centerY) - buttonY;
+            // Calculate the center of the container
+            const centerX = containerRect.left + containerRect.width / 2;
+            const centerY = containerRect.top + containerRect.height / 2;
 
-            // Calculate the final position to move to the center
-            const translateX = deltaX;
-            const translateY = deltaY;
+            const deltaX = centerX - buttonX;
+            const deltaY = centerY - buttonY;
 
             // Reset all buttons
             buttons.forEach(btn => {
@@ -31,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.classList.add('centered');
             button.style.zIndex = "10";
             button.style.transition = "transform 0.5s ease"; // Smooth transition
-            button.style.transform = `translate(${translateX}px, ${translateY}px) scale(3)`; // Move to center and scale up
+            button.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(3)`; // Move to center and scale up
 
             // Update details panel
             detailsTitle.innerText = button.innerText;

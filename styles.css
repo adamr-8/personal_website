@@ -44,7 +44,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 1.5vmin; /* Adjusted for larger buttons */
+    font-size: 1.2vmin; /* Adjusted for larger buttons */
     line-height: 1.2;
     transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
 
@@ -52,6 +52,9 @@ body {
     box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.2), 
                 inset 2px 2px 5px rgba(255, 255, 255, 0.3), 
                 3px 3px 8px rgba(0, 0, 0, 0.3);
+
+    white-space: normal; /* Allow text to wrap */
+    text-align: center;
 }
 
 /* Positioning of buttons around the circle */
@@ -67,15 +70,6 @@ body {
 #abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); background-color: #00b3b3; }
 #digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); background-color: #00cc66; }
 #brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); background-color: #99cc00; }
-
-/* Buttons with two-line text */
-#digital-marketing, #brand-management, #ad-buying, #event-marketing, #public-relations, 
-#market-research, #customer-loyalty, #content-marketing, #social-media {
-    white-space: normal;
-    padding: 0 5px; /* Adjust padding if necessary */
-    text-align: center; /* Ensure text is centered */
-    font-size: 1.4vmin; /* Adjust font size if necessary */
-}
 
 /* Hover effect to move button to center and enlarge */
 .button.centered {
@@ -118,4 +112,15 @@ body {
         max-width: 90%;
         width: 100%;
         text-align: center;
-    
+    }
+
+    .button {
+        width: 13vmin; /* Adjusted size to prevent overlap */
+        height: 13vmin; /* Adjusted size to prevent overlap */
+        font-size: 1.4vmin; /* Adjusted for larger buttons */
+    }
+
+    .button.centered {
+        transform: translate(-50%, -50%) scale(2.5); /* Increased scale for larger size */
+    }
+}

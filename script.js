@@ -6,17 +6,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
-            buttons.forEach(btn => {
-                btn.classList.remove('centered');
-                brandingLogo.style.display = 'none';  // Hide branding logo on hover
-            });
-            button.classList.add('centered');
+            // Hide branding logo when hovering over a button
+            brandingLogo.style.display = 'none';
+
+            // Show details panel with content
             detailsTitle.innerText = button.innerText;
-            detailsContent.innerHTML = button.getAttribute('data-info');
+            detailsContent.innerText = button.getAttribute('data-info');
+
+            // Reset z-index and transform of all buttons
+            buttons.forEach(btn => {
+                btn.style.zIndex = "0";
+                btn.style.transform = btn.dataset.initialTransform;
+            });
+
+            // Move hovered button to center with larger scale
+            button.style.zIndex = "1";
+            button.style.transform = "translate(-50%, -50%) scale(2.5)";
         });
 
-        button.addEventListener('mouseleave', () => {
-            brandingLogo.style.display = 'block';  // Show branding logo on mouse leave
+        // Store initial transform for reset purposes
+        button.dataset.initialTransform = button.style.transform;
+    });
+
+    // Optional: Reset the buttons when mouse leaves the circle-container
+    const circleContainer = document.querySelector('.circle-container');
+    circleContainer.addEventListener('mouseleave', () => {
+        buttons.forEach(button => {
+            button.style.zIndex = "0";
+            button.style.transform = button.dataset.initialTransform;
         });
+
+        // Show branding logo when not hovering over a button
+        brandingLogo.style.display = 'flex';
+        detailsTitle.innerText = 'Hover over a discipline';
+        detailsContent.innerText = 'Details will appear here.';
     });
 });

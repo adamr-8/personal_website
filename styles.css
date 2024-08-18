@@ -26,9 +26,9 @@ html, body {
     flex: 1; /* Take up remaining space */
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Align the circle to the left */
     align-items: center;
-    padding-left: 20px; /* Add padding to move the circle away from the content */
+    padding-right: 50px; /* Add padding to move the circle away from the content */
 }
 
 /* Details Panel */

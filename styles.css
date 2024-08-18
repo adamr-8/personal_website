@@ -1,41 +1,45 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     background-color: #f4f4f4;
 }
 
 .container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .circle-container {
     position: relative;
-    width: 500px;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 400px;
+    height: 400px;
+    margin-right: 50px;
 }
 
 .circle {
     position: absolute;
-    width: 80px;
-    height: 80px;
-    background-color: #ffcc00;
-    color: white;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
+    background-color: lightgray;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    line-height: 1.2;
+    font-size: 14px;
     cursor: pointer;
-    transition: transform 0.3s ease, top 0.3s ease, left 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 .circle:hover {
@@ -43,40 +47,31 @@ body {
     z-index: 10;
 }
 
-/* Positions for the circles in a clock layout */
-.circle:nth-child(1) { top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #4caf50; }
-.circle:nth-child(2) { top: 19%; left: 50%; transform: translate(-50%, -50%); background-color: #2196f3; }
-.circle:nth-child(3) { top: 30%; left: 85%; transform: translate(-50%, -50%); background-color: #9c27b0; }
-.circle:nth-child(4) { top: 70%; left: 85%; transform: translate(-50%, -50%); background-color: #00bcd4; }
-.circle:nth-child(5) { top: 81%; left: 50%; transform: translate(-50%, -50%); background-color: #8bc34a; }
-.circle:nth-child(6) { top: 70%; left: 15%; transform: translate(-50%, -50%); background-color: #ffeb3b; }
-.circle:nth-child(7) { top: 30%; left: 15%; transform: translate(-50%, -50%); background-color: #ff9800; }
-.circle:nth-child(8) { top: 19%; left: 50%; transform: translate(-50%, -50%); background-color: #f44336; }
-.circle:nth-child(9) { top: 50%; left: 30%; transform: translate(-50%, -50%); background-color: #e91e63; }
-.circle:nth-child(10) { top: 50%; left: 70%; transform: translate(-50%, -50%); background-color: #673ab7; }
-.circle:nth-child(11) { top: 19%; left: 30%; transform: translate(-50%, -50%); background-color: #ff5722; }
-.circle:nth-child(12) { top: 19%; left: 70%; transform: translate(-50%, -50%); background-color: #3f51b5; }
+#digital-marketing { top: 0%; left: 50%; transform: translate(-50%, -50%); background-color: #4CAF50; }
+#market-research { top: 20%; left: 80%; transform: translate(-50%, -50%); background-color: #9C27B0; }
+#customer-loyalty { top: 50%; left: 100%; transform: translate(-50%, -50%); background-color: #E91E63; }
+#content-marketing { top: 80%; left: 80%; transform: translate(-50%, -50%); background-color: #FF5722; }
+#marketing-tech { top: 100%; left: 50%; transform: translate(-50%, -50%); background-color: #3F51B5; }
+#abm { top: 80%; left: 20%; transform: translate(-50%, -50%); background-color: #00BCD4; }
+#social-media { top: 50%; left: 0%; transform: translate(-50%, -50%); background-color: #2196F3; }
+#public-relations { top: 20%; left: 20%; transform: translate(-50%, -50%); background-color: #FF9800; }
+#event-marketing { top: 40%; left: 70%; transform: translate(-50%, -50%); background-color: #FFEB3B; }
+#traditional-marketing { top: 60%; left: 90%; transform: translate(-50%, -50%); background-color: #009688; }
+#brand-management { top: 70%; left: 30%; transform: translate(-50%, -50%); background-color: #673AB7; }
+#ad-buying { top: 90%; left: 50%; transform: translate(-50%, -50%); background-color: #FF5722; }
 
-.content {
-    width: 40vw;
+.content-area {
+    width: 500px;
     padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-aspect-ratio: 1/1) {
-    .container {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
+#content-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
 
-    .circle-container {
-        order: 2;
-        margin-top: 20px;
-    }
-
-    .content {
-        order: 1;
-        width: 90vw;
-        text-align: center;
-    }
+#content-description {
+    font-size: 16px;
 }

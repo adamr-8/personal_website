@@ -146,3 +146,26 @@ body {
 #digital-marketing { animation-duration: 20s; }
 #brand-management { animation-duration: 21s; }
 /* Add unique durations to the rest of the buttons as needed */
+.button {
+    position: absolute;
+    width: 9vmin;
+    height: 9vmin;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.5s ease, background-color 0.3s ease, width 0.5s ease, height 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2vmin;
+    line-height: 1.2;
+}
+
+/* Grow effect for the centered button */
+.button.centered {
+    width: 27vmin; /* 300% size */
+    height: 27vmin; /* 300% size */
+    z-index: 10; /* Bring it to the front */
+}

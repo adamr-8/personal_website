@@ -4,17 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailsContent = document.getElementById('details-content');
     const circleContainer = document.querySelector('.circle-container');
 
+    // Calculate the center of the container only once
+    const containerRect = circleContainer.getBoundingClientRect();
+    const centerX = containerRect.left + containerRect.width / 2;
+    const centerY = containerRect.top + containerRect.height / 2;
+
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
             const rect = button.getBoundingClientRect();
-            const containerRect = circleContainer.getBoundingClientRect();
             const buttonX = rect.left + rect.width / 2;
             const buttonY = rect.top + rect.height / 2;
 
-            // Calculate the center of the container
-            const centerX = containerRect.left + containerRect.width / 2;
-            const centerY = containerRect.top + containerRect.height / 2;
-
+            // Calculate the exact translation needed to bring the button to the center
             const deltaX = centerX - buttonX;
             const deltaY = centerY - buttonY;
 

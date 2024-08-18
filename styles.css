@@ -68,6 +68,7 @@ body {
     width: 27vmin; /* 300% size */
     height: 27vmin; /* 300% size */
     z-index: 10; /* Bring it to the front */
+    transform: translate(-50%, -50%) !important; /* Force move to the center without rotation */
 }
 
 /* Details panel text styles */

@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // Move the hovered button to the center and enlarge it
-            button.classList.add('centered'); 
-            button.style.transform = "translate(-50%, -50%)"; // Move to center
+            button.classList.add('centered');
+            button.style.transform = "translate(-50%, -50%)"; // Move directly to center
 
             // Update details panel
             detailsTitle.innerText = button.innerText;

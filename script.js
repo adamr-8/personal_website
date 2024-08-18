@@ -1,17 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.button');
-    const detailsTitle = document.getElementById('details-title');
-    const detailsContent = document.getElementById('details-content');
     const circleContainer = document.querySelector('.circle-container');
 
     // Calculate the center of the circular arrangement within the container
-    const circleCenterX = circleContainer.offsetLeft + circleContainer.offsetWidth / 2;
-    const circleCenterY = circleContainer.offsetTop + circleContainer.offsetHeight / 2;
+    const containerRect = circleContainer.getBoundingClientRect();
+    const circleCenterX = containerRect.left + containerRect.width / 2;
+    const circleCenterY = containerRect.top + containerRect.height / 2;
 
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
             const buttonRect = button.getBoundingClientRect();
-            const containerRect = circleContainer.getBoundingClientRect();
 
             // Calculate the center of the button relative to the container
             const buttonCenterX = buttonRect.left + buttonRect.width / 2;
@@ -33,10 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
             button.style.zIndex = "10";
             button.style.transition = "transform 0.5s ease"; // Smooth transition
             button.style.transform = `translate(${translateX}px, ${translateY}px) scale(3)`; // Move to the calculated center and scale up
-
-            // Update details panel
-            detailsTitle.innerText = button.innerText;
-            detailsContent.innerText = button.getAttribute('data-info');
         });
     });
 

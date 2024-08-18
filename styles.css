@@ -13,52 +13,28 @@ html, body {
 /* Container Styles */
 .container {
     display: flex;
-    justify-content: space-between; /* Ensure space between elements */
-    align-items: center;
-    width: 90%;
-    height: 90vh;
+    width: 100%; /* Take up the full width of the screen */
+    height: 100vh; /* Full height */
     margin: auto;
 }
 
 /* Circle Container */
 .circle-container {
     position: relative;
-    width: 85vmin;
-    height: 85vmin;
-    margin-right: 5%;
+    width: 50%; /* Take up 50% of the screen width */
+    height: 85vmin; /* Keep the original height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Details Panel */
 .details-panel {
-    flex-grow: 1;
+    width: 50%; /* Fixed width to prevent shifting */
     padding: 20px;
     background-color: #f9f9f9;
     border-left: 2px solid #ccc;
-    min-width: 300px;
-    max-width: 35%;
     text-align: left;
-}
-
-/* Branding Logo */
-.branding-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #4c7ea9;
-    color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-.branding-text {
-    font-size: 3em;
-    font-weight: bold;
-}
-
-.branding-subtext {
-    font-size: 1.5em;
 }
 
 /* Button Styles */
@@ -105,6 +81,26 @@ html, body {
     transform: translate(-50%, -50%) scale(2.5);
 }
 
+/* Branding Logo Styles */
+.branding-logo {
+    text-align: center;
+    background-color: #6ca0dc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.branding-text {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+}
+
+.branding-subtext {
+    font-size: 1.2em;
+    color: white;
+}
+
 /* Details panel text styles */
 .details-panel h2 {
     font-size: 2em;
@@ -145,7 +141,7 @@ html, body {
     .button {
         width: 13vmin;
         height: 13vmin;
-        font-size: 1.5vmin;
+        font-size: 1.5vmin; /* Slightly larger font size */
     }
 
     .button:focus {

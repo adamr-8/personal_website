@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "sales": { title: "Sales", content: "Sales & Business Development Content" },
         "product": { title: "Product", content: "Product Development Content" },
         "brand": { title: "Brand", content: "Brand Management Content" },
-        "automation": { title: "Automation", content: "Marketing Automation & CRM Content" },
+        "crm": { title: "Customer Experience", content: "Marketing Automation and CRM. <br> Salesforce, Hubspot, Marketing Cloud." },
         "analytics": { title: "Analytics", content: "Analytics & Reporting Content" },
         "projects": { title: "Projects", content: "Project Management Content" },
         "startup": { title: "Startup", content: "Entrepreneurship Content" },
         "content": { title: "Content", content: "Content Creation Content" },
-        "seo": { title: "Digital", content: "SEO & PPC Content" },
-        "research": { title: "Research", content: "Market Research Content" },
-        "pr": { title: "PR", content: "Public Relations Content" },
+        "digital": { title: "Digital", content: "Digital Marketing including SEO & PPC Content" },
+        "ecommerce": { title: "E-commerce", content: "Market Research Content" },
+        "cx": { title: "Customer Experience", content: "Customer experince stuff<br> Reviews feedback, lifetime value, engagement" },
     };
 
     buttons.forEach(button => {

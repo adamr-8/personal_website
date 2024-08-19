@@ -132,11 +132,14 @@ html, body {
     }
 
     .circle-container {
-        transform: translateX(0); /* Reset the translation when in portrait mode */
+        transform: translateX(0); /* Reset the translation */
         width: 100vw;
         height: auto; /* Auto height to fit content */
         margin-bottom: 20px;
         justify-content: center;
+        position: relative; /* Add this */
+        top: 0; /* Align to the top */
+        margin-top: 20px; /* Optional: add some spacing from the top */
     }
 
     .details-panel {
@@ -144,6 +147,7 @@ html, body {
         border-top: 2px solid #ccc;
         width: 100%;
         text-align: center;
+        margin-top: 100px; /* Adjust this value as needed (100-200px) */
     }
 
     .button {

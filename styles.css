@@ -12,17 +12,17 @@ html, body {
     background-color: #2c3e50; /* Dark Blue-Grey Background */
     background-image: 
         /* Atomic Orbitals */
-        radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.05), transparent 20%), 
-        radial-gradient(circle at 60% 60%, rgba(255, 255, 255, 0.1), transparent 20%),
-        radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.05), transparent 20%), 
+        radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.05), transparent 30%), 
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05), transparent 30%), 
+        radial-gradient(circle at 60% 20%, rgba(255, 255, 255, 0.05), transparent 30%), 
 
         /* Connected Nodes */
-        radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 2px),
-        radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
         
-        /* Tech Grid */
-        repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255, 255, 255, 0.03) 21px, rgba(255, 255, 255, 0.03) 40px),
-        repeating-linear-gradient(135deg, transparent, transparent 20px, rgba(255, 255, 255, 0.03) 21px, rgba(255, 255, 255, 0.03) 40px);
+        /* Subtle Tech Grid */
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 100% 100%, 100% 100%, 100% 100%, 50px 50px, 50px 50px, 100px 100px, 100px 100px;
 }
 

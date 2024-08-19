@@ -145,7 +145,7 @@ html, body {
         border-top: 2px solid #ccc;
         width: 100%;
         text-align: center;
-        margin-top: 340px; /* Further increase space between sections */
+        margin-top: 200px; /* Further increase space between sections */
     }
 
     .button {

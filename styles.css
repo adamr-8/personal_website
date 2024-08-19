@@ -140,18 +140,18 @@ html, body {
         margin-top: 0; /* Align to the top without extra margin */
         width: 100%; /* Full width in portrait mode */
         justify-content: center;
-        padding-top: 5px; /* Increase padding to push it down slightly */
-        min-height: calc(100vh - 300px); /* Add a min-height to ensure the circle stays in view */
+        padding-top: 5px; /* Reduced padding to tighten space */
+        min-height: calc(100vh - 250px); /* Adjusted min-height to balance space */
     }
 
     .details-panel {
-        min-height: 250px; /* Ensure consistent height to prevent shift */
+        min-height: 200px; /* Reduce height to better balance layout */
         border-left: none;
         border-top: 2px solid #ccc;
         width: 100%;
         text-align: center;
-        margin-top: 20px; /* Adjusted margin */
-        padding-bottom: 100px; /* Add padding to prevent overflow */
+        margin-top: 10px; /* Reduced margin to close gap */
+        padding-bottom: 50px; /* Reduced padding to tighten space */
     }
 
     .button.centered {

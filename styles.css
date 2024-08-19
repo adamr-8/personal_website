@@ -42,13 +42,9 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 250px; /* Set a minimum height to prevent content shift */
-    overflow: hidden; /* Prevent overflow that could cause shifting */
-    border-left: none;
-    border-top: 2px solid #ccc;
+    overflow: hidden;
     width: 100%;
     text-align: center;
-    margin-top: 200px; /* Further increase space between sections */
 }
 
 /* Button Styles */
@@ -155,15 +151,21 @@ html, body {
         text-align: center;
         margin-top: 200px; /* Further increase space between sections */
     }
+}
 
-    .button {
-        width: 14vmin; /* Restore original size */
-        height: 14vmin; /* Restore original size */
-        font-size: 1.7vmin; /* Restore original font size */
+/* Media query for landscape mode and larger screens */
+@media screen and (min-width: 769px) {
+    .container {
+        flex-direction: row; /* Ensure row layout on larger screens */
     }
 
-    .button:focus {
-        outline: none;
-        transform: translate(-50%, -50%) scale(2.5);
+    .circle-container {
+        transform: translateX(-200px); /* Maintain original shift */
+        padding-top: 0; /* Remove padding added for mobile */
+    }
+
+    .details-panel {
+        min-height: auto; /* Remove minimum height restriction for larger screens */
+        margin-top: 0; /* Reset margin for larger screens */
     }
 }

@@ -88,18 +88,18 @@ html, body {
 }
 
 /* Positioning of buttons around the circle */
-#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #00cc66; }
-#traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(0deg); background-color: #ffcc00; }
-#content-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(0deg); background-color: #6600cc; }
-#social-media { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(0deg); background-color: #0073e6; }
-#brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(0deg); background-color: #99cc00; }
-#marketing-technology { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(0deg); background-color: #9900cc; }
-#abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(0deg); background-color: #00b3b3; }
-#market-research { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(0deg); background-color: #e60000; }
-#customer-loyalty { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(0deg); background-color: #cc0066; }
-#public-relations { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(0deg); background-color: #ff3300; }
-#ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(0deg); background-color: #ff9900; }
-#event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(0deg); background-color: #ff6600; }
+#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #00cc66; } /* Green */
+#social-media { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); background-color: #0073e6; } /* Blue */
+#content-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); background-color: #6600cc; } /* Indigo */
+#marketing-technology { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); background-color: #9900cc; } /* Violet */
+#brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); background-color: #cc0066; } /* Magenta */
+#abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); background-color: #ff3300; } /* Red */
+#public-relations { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); background-color: #ff6600; } /* Orange */
+#event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); background-color: #ff9900; } /* Yellow-Orange */
+#ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); background-color: #ffcc00; } /* Yellow */
+#traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); background-color: #99cc00; } /* Yellow-Green */
+#customer-loyalty { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); background-color: #33cc66; } /* Yellowish-Green */
+#market-research { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); background-color: #00b3b3; } /* Cyan */
 
 /* Hover effect to move button to center and enlarge */
 .button.centered {
@@ -107,6 +107,7 @@ html, body {
     transform: translate(-50%, -50%) scale(2.5);
     transform-origin: center center; /* Ensure scaling happens from the center */
 }
+
 
 /* Branding Logo Styles */
 .branding-logo {

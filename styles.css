@@ -9,7 +9,11 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #2c3e50; /* Dark Blue-Grey Background */
+    background-image: 
+        radial-gradient(circle at 0.5px 0.5px, rgba(255, 255, 255, 0.1) 1px, transparent 1px), 
+        radial-gradient(circle at 50px 50px, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 100px 100px; /* Subtle dot pattern */
 }
 
 /* Container Styles */
@@ -36,7 +40,7 @@ html, body {
     flex: 1; /* Fixed width to prevent shifting */
     height: auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(249, 249, 249, 0.9); /* Slightly transparent light background */
     border-left: 2px solid #ccc;
     box-sizing: border-box;
     display: flex;

@@ -86,6 +86,7 @@ html, body {
 .button.centered {
     z-index: 10;
     transform: translate(-50%, -50%) scale(2.5);
+    /* Removing the centered scale effect on hover */
 }
 
 /* Branding Logo Styles */

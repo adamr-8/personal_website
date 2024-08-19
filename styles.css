@@ -88,18 +88,18 @@ html, body {
 }
 
 /* Positioning of buttons around the circle */
+#sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); background-color: #99cc00; } /* 1 o'clock */
+#product { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); background-color: #00cc66; } /* 2 o'clock */
+#brand { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); background-color: #00b3b3; } /* 3 o'clock */
+#automation { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); background-color: #ff3300; } /* 4 o'clock */
+#analytics { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); background-color: #e60000; } /* 5 o'clock */
+#projects { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); background-color: #cc0066; } /* 6 o'clock */
+#startup { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); background-color: #9900cc; } /* 7 o'clock */
+#content { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); background-color: #6600cc; } /* 8 o'clock */
+#seo { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); background-color: #0073e6; } /* 9 o'clock */
+#ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); background-color: #ff6600; } /* 10 o'clock */
+#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); background-color: #ff9900; } /* 11 o'clock */
 #traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #ffcc00; } /* 12 o'clock */
-#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); background-color: #ff9900; } /* 1 o'clock */
-#ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); background-color: #ff6600; } /* 2 o'clock */
-#automation { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); background-color: #ff3300; } /* 3 o'clock */
-#analytics { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); background-color: #e60000; } /* 4 o'clock */
-#projects { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); background-color: #cc0066; } /* 5 o'clock */
-#startup { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); background-color: #9900cc; } /* 6 o'clock */
-#content { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); background-color: #6600cc; } /* 7 o'clock */
-#seo { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); background-color: #0073e6; } /* 8 o'clock */
-#brand { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); background-color: #00b3b3; } /* 9 o'clock */
-#product { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); background-color: #00cc66; } /* 10 o'clock */
-#sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); background-color: #99cc00; } /* 11 o'clock */
 
 /* Hover effect to move button to center and enlarge */
 .button.centered {

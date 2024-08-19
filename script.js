@@ -1,13 +1,10 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.button');
-    const detailsTitle = document.getElementById('details-title');
+ const detailsTitle = document.getElementById('details-title');
     const detailsContent = document.getElementById('details-content');
     const brandingLogo = document.getElementById('branding-logo');
     const detailsPanel = document.getElementById('details-panel');
 
     let activeButton = null;
-
-    buttons.forEach(button => {
+ buttons.forEach(button => {
         const buttonId = button.id;
 
         // Handle hover effect on desktop
@@ -16,15 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (activeButton !== button) {
                     // Reset any previous active button
                     resetActiveButton();
-
                     // Center the hovered button
                     brandingLogo.style.display = 'none';
                     detailsPanel.classList.add('active');
-
                     button.style.zIndex = "1";
                     button.style.transform = "translate(-50%, -50%) scale(2.5)";
                     updateDetails(buttonId);
-
                     activeButton = button;
                 }
             }

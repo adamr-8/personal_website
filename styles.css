@@ -42,9 +42,23 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
+    overflow-y: auto; /* Make the panel scrollable */
+    max-height: 50vh; /* Limit the height */
     width: 100%;
     text-align: center;
+}
+
+/* Additional styles for active state */
+.details-panel.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.details-panel:not(.active) {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 /* Button Styles */
@@ -110,21 +124,6 @@ html, body {
 .branding-subtext {
     font-size: 1.2em;
     color: white;
-}
-
-/* Details panel text styles */
-.details-panel h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.details-panel p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-.content-description {
-    font-size: 16px;
 }
 
 /* Media query for portrait mode or narrow screens */

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailsTitle = document.getElementById('details-title');
     const detailsContent = document.getElementById('details-content');
     const brandingLogo = document.getElementById('branding-logo');
+    const detailsPanel = document.getElementById('details-panel');
 
     // Store details for each button
     const buttonDetails = {
@@ -20,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     buttons.forEach(button => {
-        button.addEventListener('mouseover', () => {
-            // Hide branding logo when hovering over a button
+        button.addEventListener('click', () => {
+            // Hide branding logo when clicking a button
             brandingLogo.style.display = 'none';
 
             // Show details panel with content
@@ -40,26 +41,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.style.transform = btn.dataset.initialTransform;
             });
 
-            // Move hovered button to center with larger scale
+            // Move clicked button to center with larger scale
             button.style.zIndex = "1";
             button.style.transform = "translate(-50%, -50%) scale(2.5)";
-        });
 
-        // Store initial transform for reset purposes
-        button.dataset.initialTransform = button.style.transform;
+            // Ensure details panel is visible
+            detailsPanel.classList.add('active');
+        });
     });
 
-    // Optional: Reset the buttons when mouse leaves the circle-container
-    const circleContainer = document.querySelector('.circle-container');
-    circleContainer.addEventListener('mouseleave', () => {
-        buttons.forEach(button => {
-            button.style.zIndex = "0";
-            button.style.transform = button.dataset.initialTransform;
-        });
-
-        // Show branding logo when not hovering over a button
-        brandingLogo.style.display = 'flex';
-        detailsTitle.innerText = 'Hover over a discipline';
-        detailsContent.innerText = 'Details will appear here.';
+    // Add a click event to close the details panel when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!detailsPanel.contains(e.target) && !e.target.classList.contains('button')) {
+            detailsPanel.classList.remove('active');
+            brandingLogo.style.display = 'flex';
+            buttons.forEach(button => {
+                button.style.zIndex = "0";
+                button.style.transform = button.dataset.initialTransform;
+            });
+        }
     });
 });

@@ -28,7 +28,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(-300px); /* Shift left to avoid overlapping */
+    transform: translateX(-200px); /* Shift left to avoid overlapping */
 }
 
 /* Details Panel */
@@ -134,7 +134,7 @@ html, body {
     .circle-container {
         transform: translateX(0); /* Reset the translation when in portrait mode */
         width: 100vw;
-        height: 100vw; /* Make the height equal to the width */
+        height: auto; /* Auto height to fit content */
         margin-bottom: 20px;
         justify-content: center;
     }

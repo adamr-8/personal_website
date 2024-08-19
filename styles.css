@@ -42,17 +42,9 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow-y: auto; /* Make the panel scrollable */
+    overflow: hidden;
     width: 100%;
     text-align: center;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.details-panel.active {
-    visibility: visible;
-    opacity: 1;
 }
 
 /* Button Styles */
@@ -120,6 +112,21 @@ html, body {
     color: white;
 }
 
+/* Details panel text styles */
+.details-panel h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.details-panel p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.content-description {
+    font-size: 16px;
+}
+
 /* Media query for portrait mode or narrow screens */
 @media screen and (max-width: 768px) {
     .container {
@@ -143,7 +150,6 @@ html, body {
         width: 100%;
         text-align: center;
         margin-top: 200px; /* Further increase space between sections */
-        display: none; /* Hide by default, shown on click */
     }
 }
 
@@ -161,6 +167,5 @@ html, body {
     .details-panel {
         min-height: auto; /* Remove minimum height restriction for larger screens */
         margin-top: 0; /* Reset margin for larger screens */
-        display: flex; /* Ensure the panel is always displayed on desktop */
     }
 }

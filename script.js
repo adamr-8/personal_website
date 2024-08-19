@@ -3,95 +3,63 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailsTitle = document.getElementById('details-title');
     const detailsContent = document.getElementById('details-content');
     const brandingLogo = document.getElementById('branding-logo');
-    const detailsPanel = document.getElementById('details-panel');
 
-    let activeButton = null;
+    // Store details for each button
+    const buttonDetails = {
+        "ad-buying": {
+            title: "Ad Buying",
+            content: `Overview:
+            With over 15 years of experience in purchasing and managing both digital and traditional advertising, I have consistently delivered high-impact campaigns that drive brand visibility and customer engagement. My proficiency spans across PPC ad campaigns, social media ads, and select traditional media placements.
 
-    function resetActiveButton() {
-        if (activeButton) {
-            activeButton.style.transform = activeButton.dataset.initialTransform;
-            activeButton.style.zIndex = "0";
-            activeButton = null;
-        }
-    }
-
-    function setActiveButton(button) {
-        resetActiveButton();
-        brandingLogo.style.display = 'none';
-        detailsPanel.classList.add('active');
-        button.style.zIndex = "1";
-        button.style.transform = "translate(-50%, -50%) scale(2.5)";
-        activeButton = button;
-    }
+            Highlight:
+            - Managed PPC ad campaigns across platforms like Google Ads and Bing, consistently achieving high ROI and increasing click-through rates by up to 15%.
+            - Strategically placed ads in industry-specific publications, contributing to a 20% increase in brand recognition within targeted markets.
+            - Continuously optimized ad spend to maximize the effectiveness of campaigns, ensuring alignment with broader marketing strategies.`
+        },
+        // Add similar details for other buttons if needed
+    };
 
     buttons.forEach(button => {
-        const buttonId = button.id;
+        button.addEventListener('mouseover', () => {
+            // Hide branding logo when hovering over a button
+            brandingLogo.style.display = 'none';
 
-        // Handle hover effect on desktop
-        button.addEventListener('mouseenter', () => {
-            if (window.innerWidth > 768) {
-                setActiveButton(button);
-                updateDetails(buttonId);
+            // Show details panel with content
+            const buttonId = button.id;
+            if (buttonDetails[buttonId]) {
+                detailsTitle.innerText = buttonDetails[buttonId].title;
+                detailsContent.innerText = buttonDetails[buttonId].content;
+            } else {
+                detailsTitle.innerText = button.innerText;
+                detailsContent.innerText = button.getAttribute('data-info');
             }
+
+            // Reset z-index and transform of all buttons
+            buttons.forEach(btn => {
+                btn.style.zIndex = "0";
+                btn.style.transform = btn.dataset.initialTransform;
+            });
+
+            // Move hovered button to center with larger scale
+            button.style.zIndex = "1";
+            button.style.transform = "translate(-50%, -50%) scale(2.5)";
         });
 
-        // Handle tap effect on mobile
-        button.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                if (activeButton === button) {
-                    resetActiveButton();
-                    brandingLogo.style.display = 'flex';
-                    detailsPanel.classList.remove('active');
-                } else {
-                    setActiveButton(button);
-                    updateDetails(buttonId);
-                }
-            }
-        });
+        // Store initial transform for reset purposes
+        button.dataset.initialTransform = button.style.transform;
     });
 
-    // Reset transformations when mouse leaves the circle container on desktop
+    // Optional: Reset the buttons when mouse leaves the circle-container
     const circleContainer = document.querySelector('.circle-container');
     circleContainer.addEventListener('mouseleave', () => {
-        if (window.innerWidth > 768) {
-            resetActiveButton();
-            brandingLogo.style.display = 'flex';
-            detailsPanel.classList.remove('active');
-            detailsTitle.innerText = 'Hover over a discipline';
-            detailsContent.innerText = 'Details will appear here.';
-        }
-    });
+        buttons.forEach(button => {
+            button.style.zIndex = "0";
+            button.style.transform = button.dataset.initialTransform;
+        });
 
-    function updateDetails(buttonId) {
-        const buttonDetails = {
-            "ad-buying": {
-                title: "Ad Buying",
-                content: `Overview:
-                With over 15 years of experience in purchasing and managing both digital and traditional advertising, I have consistently delivered high-impact campaigns that drive brand visibility and customer engagement. My proficiency spans across PPC ad campaigns, social media ads, and select traditional media placements.
-
-                Highlight:
-                - Managed PPC ad campaigns across platforms like Google Ads and Bing, consistently achieving high ROI and increasing click-through rates by up to 15%.
-                - Strategically placed ads in industry-specific publications, contributing to a 20% increase in brand recognition within targeted markets.
-                - Continuously optimized ad spend to maximize the effectiveness of campaigns, ensuring alignment with broader marketing strategies.`
-            },
-            // Add similar details for other buttons if needed
-        };
-
-        if (buttonDetails[buttonId]) {
-            detailsTitle.innerText = buttonDetails[buttonId].title;
-            detailsContent.innerText = buttonDetails[buttonId].content;
-        } else {
-            detailsTitle.innerText = 'Hover over a discipline';
-            detailsContent.innerText = 'Details will appear here.';
-        }
-    }
-
-    // Close the details panel when clicking outside
-    document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768 && activeButton && !circleContainer.contains(e.target) && !detailsPanel.contains(e.target)) {
-            resetActiveButton();
-            brandingLogo.style.display = 'flex';
-            detailsPanel.classList.remove('active');
-        }
+        // Show branding logo when not hovering over a button
+        brandingLogo.style.display = 'flex';
+        detailsTitle.innerText = 'Hover over a discipline';
+        detailsContent.innerText = 'Details will appear here.';
     });
 });

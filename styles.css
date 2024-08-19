@@ -17,10 +17,8 @@ html, body {
     display: flex;
     width: 100%;
     height: 100%;
-    max-width: 1200px;
+    max-width: 1200px; /* Set a maximum width to control layout */
     margin: auto;
-    align-items: center; /* Center vertically */
-    justify-content: space-around; /* Center horizontally */
 }
 
 /* Circle Container */
@@ -30,11 +28,12 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateX(-200px); /* Shift left to avoid overlapping */
 }
 
 /* Details Panel */
 .details-panel {
-    flex: 1;
+    flex: 1; /* Fixed width to prevent shifting */
     height: 100%;
     padding: 20px;
     background-color: #f9f9f9;
@@ -43,7 +42,6 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Center content */
 }
 
 /* Button Styles */
@@ -62,7 +60,6 @@ html, body {
     font-size: 1.7vmin;
     line-height: 1.2;
     transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
-    transform-origin: center center; /* Ensure scaling from center */
     
     background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.1));
     box-shadow: 
@@ -71,10 +68,25 @@ html, body {
         3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Hover effect to enlarge without shifting */
-.button:hover {
+/* Positioning of buttons around the circle */
+#traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #ffcc00; }
+#ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); background-color: #ff9900; }
+#event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); background-color: #ff6600; }
+#public-relations { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); background-color: #ff3300; }
+#market-research { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); background-color: #e60000; }
+#customer-loyalty { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); background-color: #cc0066; }
+#marketing-technology { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); background-color: #9900cc; }
+#content-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); background-color: #6600cc; }
+#social-media { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); background-color: #0073e6; }
+#abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); background-color: #00b3b3; }
+#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); background-color: #00cc66; }
+#brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); background-color: #99cc00; }
+
+/* Hover effect to move button to center and enlarge */
+.button.centered {
     z-index: 10;
-    transform: scale(2.5); /* Only scale, no translate */
+    transform: translate(-50%, -50%) scale(2.5);
+    /* Removing the centered scale effect on hover */
 }
 
 /* Branding Logo Styles */
@@ -108,6 +120,10 @@ html, body {
     line-height: 1.6;
 }
 
+.content-description {
+    font-size: 16px;
+}
+
 /* Media query for portrait mode or narrow screens */
 @media screen and (max-width: 768px) {
     .container {
@@ -117,10 +133,14 @@ html, body {
     }
 
     .circle-container {
+        transform: translateX(0); /* Reset the translation */
         width: 100vw;
-        height: auto;
+        height: auto; /* Auto height to fit content */
         margin-bottom: 20px;
         justify-content: center;
+        position: relative;
+        top: 0;
+        margin-top: 0;
     }
 
     .details-panel {
@@ -128,16 +148,17 @@ html, body {
         border-top: 2px solid #ccc;
         width: 100%;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 50px; /* Space between the circle container and details panel */
     }
 
     .button {
         width: 13vmin;
         height: 13vmin;
-        font-size: 1.5vmin;
+        font-size: 1.5vmin; /* Slightly larger font size */
     }
 
-    .button:hover {
-        transform: scale(2.5); /* Maintain scaling effect */
+    .button:focus {
+        outline: none;
+        transform: translate(-50%, -50%) scale(2.5);
     }
 }

@@ -137,7 +137,7 @@ html, body {
         margin-top: 0; /* Align to the top without extra margin */
         width: 100%; /* Full width in portrait mode */
         justify-content: center;
-        padding-top: 20px; /* Add padding to ensure separation from the top */
+        padding-top: 40px; /* Increase padding to push it down slightly */
     }
 
     .details-panel {
@@ -145,13 +145,13 @@ html, body {
         border-top: 2px solid #ccc;
         width: 100%;
         text-align: center;
-        margin-top: 100px; /* Increase space between the circle and details panel */
+        margin-top: 120px; /* Further increase space between sections */
     }
 
     .button {
-        width: 13vmin;
-        height: 13vmin;
-        font-size: 1.5vmin; /* Adjust size for mobile */
+        width: 12vmin; /* Slightly reduce size */
+        height: 12vmin; /* Slightly reduce size */
+        font-size: 1.4vmin; /* Adjust font size to match button size */
     }
 
     .button:focus {

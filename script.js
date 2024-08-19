@@ -6,17 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Store details for each button
     const buttonDetails = {
-        "ad-buying": {
-            title: "Ad Buying",
-            content: `Overview:
-            With over 15 years of experience in purchasing and managing both digital and traditional advertising, I have consistently delivered high-impact campaigns that drive brand visibility and customer engagement. My proficiency spans across PPC ad campaigns, social media ads, and select traditional media placements.
-
-            Highlight:
-            - Managed PPC ad campaigns across platforms like Google Ads and Bing, consistently achieving high ROI and increasing click-through rates by up to 15%.
-            - Strategically placed ads in industry-specific publications, contributing to a 20% increase in brand recognition within targeted markets.
-            - Continuously optimized ad spend to maximize the effectiveness of campaigns, ensuring alignment with broader marketing strategies.`
-        },
-        // Add similar details for other buttons if needed
+        "traditional": { title: "Traditional", content: "Traditional Marketing Content" },
+        "sales": { title: "Sales", content: "Sales & Business Development Content" },
+        "product": { title: "Product", content: "Product Development Content" },
+        "brand": { title: "Brand", content: "Brand Management Content" },
+        "automation": { title: "Automation", content: "Marketing Automation & CRM Content" },
+        "analytics": { title: "Analytics", content: "Analytics & Reporting Content" },
+        "projects": { title: "Projects", content: "Project Management Content" },
+        "startup": { title: "Startup", content: "Entrepreneurship Content" },
+        "content": { title: "Content", content: "Content Creation Content" },
+        "seo": { title: "SEO", content: "SEO & PPC Content" },
+        "research": { title: "Research", content: "Market Research Content" },
+        "pr": { title: "PR", content: "Public Relations Content" },
     };
 
     buttons.forEach(button => {

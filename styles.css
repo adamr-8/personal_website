@@ -34,7 +34,7 @@ html, body {
 /* Details Panel */
 .details-panel {
     flex: 1; /* Fixed width to prevent shifting */
-    height: 100%;
+    height: auto;
     padding: 20px;
     background-color: #f9f9f9;
     border-left: 2px solid #ccc;
@@ -42,6 +42,13 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 250px; /* Set a minimum height to prevent content shift */
+    overflow: hidden; /* Prevent overflow that could cause shifting */
+    border-left: none;
+    border-top: 2px solid #ccc;
+    width: 100%;
+    text-align: center;
+    margin-top: 200px; /* Further increase space between sections */
 }
 
 /* Button Styles */
@@ -141,6 +148,7 @@ html, body {
     }
 
     .details-panel {
+        min-height: 250px; /* Ensure consistent height to prevent shift */
         border-left: none;
         border-top: 2px solid #ccc;
         width: 100%;
@@ -159,4 +167,3 @@ html, body {
         transform: translate(-50%, -50%) scale(2.5);
     }
 }
-detail

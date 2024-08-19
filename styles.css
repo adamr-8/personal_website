@@ -45,7 +45,14 @@ html, body {
     overflow-y: auto; /* Make the panel scrollable */
     width: 100%;
     text-align: center;
-    display: none; /* Start hidden on mobile */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.details-panel.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Button Styles */

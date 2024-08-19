@@ -4,7 +4,78 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailsContent = document.getElementById('details-content');
     const brandingLogo = document.getElementById('branding-logo');
     const detailsPanel = document.getElementById('details-panel');
+
     let activeButton = null;
+
+    buttons.forEach(button => {
+        const buttonId = button.id;
+
+        // Handle hover effect on desktop
+        button.addEventListener('mouseenter', () => {
+            if (window.innerWidth > 768) {
+                if (activeButton !== button) {
+                    // Reset any previous active button
+                    if (activeButton) {
+                        activeButton.style.transform = activeButton.dataset.initialTransform;
+                        activeButton.style.zIndex = "0";
+                    }
+
+                    // Center the hovered button
+                    brandingLogo.style.display = 'none';
+                    detailsPanel.classList.add('active');
+
+                    button.style.zIndex = "1";
+                    button.style.transform = "translate(-50%, -50%) scale(2.5)";
+                    updateDetails(buttonId);
+                }
+            }
+        });
+
+        // Handle tap effect on mobile
+        button.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                if (activeButton !== button) {
+                    // Reset any previous active button
+                    if (activeButton) {
+                        activeButton.style.transform = activeButton.dataset.initialTransform;
+                        activeButton.style.zIndex = "0";
+                    }
+
+                    // Center the clicked button and show details
+                    brandingLogo.style.display = 'none';
+                    detailsPanel.style.display = 'block';
+
+                    button.style.zIndex = "1";
+                    button.style.transform = "translate(-50%, -50%) scale(2.5)";
+                    updateDetails(buttonId);
+
+                    activeButton = button;
+                } else {
+                    // If the same button is clicked, close the panel
+                    detailsPanel.style.display = 'none';
+                    button.style.transform = button.dataset.initialTransform;
+                    button.style.zIndex = "0";
+                    activeButton = null;
+                }
+            }
+        });
+    });
+
+    // Reset transformations when mouse leaves the circle container on desktop
+    const circleContainer = document.querySelector('.circle-container');
+    circleContainer.addEventListener('mouseleave', () => {
+        if (window.innerWidth > 768) {
+            if (activeButton) {
+                activeButton.style.transform = activeButton.dataset.initialTransform;
+                activeButton.style.zIndex = "0";
+            }
+            brandingLogo.style.display = 'flex';
+            detailsPanel.classList.remove('active');
+            detailsTitle.innerText = 'Hover over a discipline';
+            detailsContent.innerText = 'Details will appear here.';
+            activeButton = null;
+        }
+    });
 
     function updateDetails(buttonId) {
         const buttonDetails = {
@@ -24,59 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (buttonDetails[buttonId]) {
             detailsTitle.innerText = buttonDetails[buttonId].title;
             detailsContent.innerText = buttonDetails[buttonId].content;
-        }
-    }
-
-    buttons.forEach(button => {
-        const buttonId = button.id;
-
-        button.addEventListener('mouseover', () => {
-            if (window.innerWidth > 768) {
-                // Desktop hover effect
-                brandingLogo.style.display = 'none';
-                updateDetails(buttonId);
-
-                buttons.forEach(btn => {
-                    btn.style.zIndex = "0";
-                    btn.style.transform = btn.dataset.initialTransform;
-                });
-
-                button.style.zIndex = "1";
-                button.style.transform = "translate(-50%, -50%) scale(2.5)";
-            }
-        });
-
-        button.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                // Mobile tap effect
-                if (activeButton === button) {
-                    // Collapse if the same button is tapped
-                    detailsPanel.style.display = 'none';
-                    activeButton = null;
-                } else {
-                    // Expand and show details
-                    brandingLogo.style.display = 'none';
-                    updateDetails(buttonId);
-                    detailsPanel.style.display = 'block';
-
-                    activeButton = button;
-                }
-            }
-        });
-    });
-
-    // Reset button transformations and details panel when not hovering (for desktop)
-    const circleContainer = document.querySelector('.circle-container');
-    circleContainer.addEventListener('mouseleave', () => {
-        if (window.innerWidth > 768) {
-            buttons.forEach(button => {
-                button.style.zIndex = "0";
-                button.style.transform = button.dataset.initialTransform;
-            });
-
-            brandingLogo.style.display = 'flex';
+        } else {
             detailsTitle.innerText = 'Hover over a discipline';
             detailsContent.innerText = 'Details will appear here.';
         }
-    });
+    }
 });

@@ -88,24 +88,23 @@ html, body {
 }
 
 /* Positioning of buttons around the circle */
-#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #ffcc00; } /* Yellow at 12 o'clock */
+#traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #ffcc00; } /* Yellow at 12 o'clock */
 
-#content-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); background-color: #99cc00; } /* Green at 1:30 o'clock */
-#social-media { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); background-color: #00cc66; } /* Green at 3 o'clock */
+#event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); background-color: #ff9900; } /* Yellow-Orange at 1 o'clock */
+#market-research { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); background-color: #ff6600; } /* Orange at 2 o'clock */
+#public-relations { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); background-color: #ff3300; } /* Red-Orange at 3 o'clock */
 
-#abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); background-color: #0073e6; } /* Blue at 4:30 o'clock */
+#marketing-technology { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); background-color: #e60000; } /* Red at 4 o'clock */
+#customer-loyalty { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); background-color: #cc0066; } /* Red-Violet at 5 o'clock */
 
-#customer-loyalty { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); background-color: #6600cc; } /* Purple at 6 o'clock */
+#content-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); background-color: #6600cc; } /* Purple at 6 o'clock */
+#social-media { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); background-color: #6600cc; } /* Blue-Violet at 7 o'clock */
 
-#public-relations { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); background-color: #9900cc; } /* Purple at 7:30 o'clock */
-#market-research { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); background-color: #ff6600; } /* Orange at 9 o'clock */
-#event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); background-color: #ff3300; } /* Red at 10:30 o'clock */
-#ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); background-color: #e60000; } /* Red at 12 o'clock */
+#abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); background-color: #0073e6; } /* Blue at 8 o'clock */
+#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); background-color: #00cc66; } /* Blue-Green at 9 o'clock */
 
-#traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); background-color: #00b3b3; } /* Cyan at 1:30 o'clock */
-
-#brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); background-color: #0073e6; } /* Blue at 3 o'clock */
-#marketing-technology { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); background-color: #0073e6; } /* Blue at 4:30 o'clock */
+#brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); background-color: #99cc00; } /* Green at 10 o'clock */
+#ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); background-color: #99cc00; } /* Yellow-Green at 11 o'clock */
 
 /* Hover effect to move button to center and enlarge */
 .button.centered {
@@ -113,6 +112,7 @@ html, body {
     transform: translate(-50%, -50%) scale(2.5);
     transform-origin: center center; /* Ensure scaling happens from the center */
 }
+
 
 
 

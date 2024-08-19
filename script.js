@@ -3,122 +3,63 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailsTitle = document.getElementById('details-title');
     const detailsContent = document.getElementById('details-content');
     const brandingLogo = document.getElementById('branding-logo');
-    const detailsPanel = document.getElementById('details-panel');
 
-    let activeButton = null;
+    // Store details for each button
+    const buttonDetails = {
+        "ad-buying": {
+            title: "Ad Buying",
+            content: `Overview:
+            With over 15 years of experience in purchasing and managing both digital and traditional advertising, I have consistently delivered high-impact campaigns that drive brand visibility and customer engagement. My proficiency spans across PPC ad campaigns, social media ads, and select traditional media placements.
+
+            Highlight:
+            - Managed PPC ad campaigns across platforms like Google Ads and Bing, consistently achieving high ROI and increasing click-through rates by up to 15%.
+            - Strategically placed ads in industry-specific publications, contributing to a 20% increase in brand recognition within targeted markets.
+            - Continuously optimized ad spend to maximize the effectiveness of campaigns, ensuring alignment with broader marketing strategies.`
+        },
+        // Add similar details for other buttons if needed
+    };
 
     buttons.forEach(button => {
-        const buttonId = button.id;
+        button.addEventListener('mouseover', () => {
+            // Hide branding logo when hovering over a button
+            brandingLogo.style.display = 'none';
 
-        // Handle hover effect on desktop
-        button.addEventListener('mouseenter', () => {
-            if (window.innerWidth > 768) {
-                if (activeButton !== button) {
-                    // Reset any previous active button
-                    resetActiveButton();
-
-                    // Center the hovered button
-                    brandingLogo.style.display = 'none';
-                    detailsPanel.classList.add('active');
-
-                    button.style.zIndex = "1";
-                    button.style.transform = "translate(-50%, -50%) scale(2.5)";
-                    updateDetails(buttonId);
-
-                    activeButton = button;
-                }
+            // Show details panel with content
+            const buttonId = button.id;
+            if (buttonDetails[buttonId]) {
+                detailsTitle.innerText = buttonDetails[buttonId].title;
+                detailsContent.innerText = buttonDetails[buttonId].content;
+            } else {
+                detailsTitle.innerText = button.innerText;
+                detailsContent.innerText = button.getAttribute('data-info');
             }
+
+            // Reset z-index and transform of all buttons
+            buttons.forEach(btn => {
+                btn.style.zIndex = "0";
+                btn.style.transform = btn.dataset.initialTransform;
+            });
+
+            // Move hovered button to center with larger scale
+            button.style.zIndex = "1";
+            button.style.transform = "translate(-50%, -50%) scale(2.5)";
         });
 
-        // Handle tap effect on mobile
-        button.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                if (activeButton !== button) {
-                    // Reset any previous active button
-                    resetActiveButton();
-
-                    // Center the clicked button and show details
-                    brandingLogo.style.display = 'none';
-                    detailsPanel.style.display = 'block';
-
-                    setActiveButton(button);
-
-                    activeButton = button;
-                } else {
-                    // If the same button is clicked, close the panel
-                    resetActiveButton();
-                }
-            }
-        });
+        // Store initial transform for reset purposes
+        button.dataset.initialTransform = button.style.transform;
     });
 
-    // Reset transformations when mouse leaves the circle container on desktop
+    // Optional: Reset the buttons when mouse leaves the circle-container
     const circleContainer = document.querySelector('.circle-container');
     circleContainer.addEventListener('mouseleave', () => {
-        if (window.innerWidth > 768) {
-            resetActiveButton();
-        }
-    });
+        buttons.forEach(button => {
+            button.style.zIndex = "0";
+            button.style.transform = button.dataset.initialTransform;
+        });
 
-    function resetActiveButton() {
-        if (activeButton) {
-            activeButton.style.transform = activeButton.dataset.initialTransform;
-            activeButton.style.zIndex = "0";
-            brandingLogo.style.display = 'flex';
-            detailsPanel.classList.remove('active');
-            detailsPanel.style.display = 'none';
-            detailsTitle.innerText = 'Hover over a discipline';
-            detailsContent.innerText = 'Details will appear here.';
-            activeButton = null;
-        }
-    }
-
-    function setActiveButton(button) {
-        const isPortraitMobile = window.innerWidth <= 768 && window.innerHeight > window.innerWidth;
-
-        brandingLogo.style.display = 'none';
-        detailsPanel.classList.add('active');
-
-        if (isPortraitMobile) {
-            // Adjust translation to prevent the button from moving too far off-screen in portrait mode
-            button.style.transform = "translate(-50%, -20%) scale(2.5)";
-        } else {
-            button.style.transform = "translate(-50%, -50%) scale(2.5)";
-        }
-
-        button.style.zIndex = "1";
-        updateDetails(button.id);
-        activeButton = button;
-    }
-
-    function updateDetails(buttonId) {
-        const buttonDetails = {
-            "ad-buying": {
-                title: "Ad Buying",
-                content: `Overview:
-                With over 15 years of experience in purchasing and managing both digital and traditional advertising, I have consistently delivered high-impact campaigns that drive brand visibility and customer engagement. My proficiency spans across PPC ad campaigns, social media ads, and select traditional media placements.
-
-                Highlight:
-                - Managed PPC ad campaigns across platforms like Google Ads and Bing, consistently achieving high ROI and increasing click-through rates by up to 15%.
-                - Strategically placed ads in industry-specific publications, contributing to a 20% increase in brand recognition within targeted markets.
-                - Continuously optimized ad spend to maximize the effectiveness of campaigns, ensuring alignment with broader marketing strategies.`
-            },
-            // Add similar details for other buttons if needed
-        };
-
-        if (buttonDetails[buttonId]) {
-            detailsTitle.innerText = buttonDetails[buttonId].title;
-            detailsContent.innerText = buttonDetails[buttonId].content;
-        } else {
-            detailsTitle.innerText = 'Hover over a discipline';
-            detailsContent.innerText = 'Details will appear here.';
-        }
-    }
-
-    // Close the details panel when clicking outside on mobile
-    document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768 && activeButton && !circleContainer.contains(e.target) && !detailsPanel.contains(e.target)) {
-            resetActiveButton();
-        }
+        // Show branding logo when not hovering over a button
+        brandingLogo.style.display = 'flex';
+        detailsTitle.innerText = 'Hover over a discipline';
+        detailsContent.innerText = 'Details will appear here.';
     });
 });

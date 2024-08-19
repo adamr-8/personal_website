@@ -140,18 +140,18 @@ html, body {
         margin-top: 0; /* Align to the top without extra margin */
         width: 100%; /* Full width in portrait mode */
         justify-content: center;
-        padding-top: 5px; /* Reduced padding to tighten space */
-        min-height: calc(100vh - 250px); /* Adjusted min-height to balance space */
+        padding-top: 2vh; /* Use viewport height units for more control */
+        min-height: 50vh; /* Use viewport height units for better proportioning */
     }
 
     .details-panel {
-        min-height: 200px; /* Reduce height to better balance layout */
+        min-height: 20vh; /* Adjust height based on viewport */
         border-left: none;
         border-top: 2px solid #ccc;
         width: 100%;
         text-align: center;
-        margin-top: 10px; /* Reduced margin to close gap */
-        padding-bottom: 50px; /* Reduced padding to tighten space */
+        margin-top: 5vh; /* Reduced margin to close gap */
+        padding-bottom: 10vh; /* Adjust padding for better spacing */
     }
 
     .button.centered {

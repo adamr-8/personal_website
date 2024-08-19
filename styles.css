@@ -19,6 +19,7 @@ html, body {
     height: 100%;
     max-width: 1200px; /* Set a maximum width to control layout */
     margin: auto;
+    flex-direction: column; /* Ensures stacking in portrait mode */
 }
 
 /* Circle Container */
@@ -28,13 +29,15 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(-200px); /* Shift left to avoid overlapping */
+    transform: translateX(0); /* Remove the shift to the left */
+    margin-top: 20px; /* Adjust margin to ensure no overlap */
+    width: 100%;
 }
 
 /* Details Panel */
 .details-panel {
     flex: 1; /* Fixed width to prevent shifting */
-    height: 100%;
+    height: auto; /* Adjust height for responsive design */
     padding: 20px;
     background-color: #f9f9f9;
     border-left: 2px solid #ccc;
@@ -42,6 +45,8 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 20px; /* Space between the circle container and details panel */
+    text-align: center;
 }
 
 /* Button Styles */
@@ -133,14 +138,12 @@ html, body {
     }
 
     .circle-container {
-        transform: translateX(0); /* Reset the translation */
-        width: 100vw;
-        height: auto; /* Auto height to fit content */
-        margin-bottom: 20px;
+        width: 100%;
+        margin-top: 0; /* Ensure it is flush with the top */
         justify-content: center;
         position: relative;
         top: 0;
-        margin-top: 0;
+        margin-bottom: 20px; /* Ensure space between the circle and details panel */
     }
 
     .details-panel {

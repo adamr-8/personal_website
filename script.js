@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "projects": { title: "Projects", content: "Project Management Content" },
         "startup": { title: "Startup", content: "Entrepreneurship Content" },
         "content": { title: "Content", content: "Content Creation Content" },
-        "seo": { title: "SEO", content: "SEO & PPC Content" },
+        "seo": { title: "Digital", content: "SEO & PPC Content" },
         "research": { title: "Research", content: "Market Research Content" },
         "pr": { title: "PR", content: "Public Relations Content" },
     };

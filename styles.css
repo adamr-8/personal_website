@@ -96,7 +96,7 @@ html, body {
 #projects { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); background-color: #cc0066; } /* 6 o'clock */
 #startup { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); background-color: #9900cc; } /* 7 o'clock */
 #content { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); background-color: #6600cc; } /* 8 o'clock */
-#seo { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); background-color: #0073e6; } /* 9 o'clock */
+#digital { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); background-color: #0073e6; } /* 9 o'clock */
 #ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); background-color: #ff6600; } /* 10 o'clock */
 #digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); background-color: #ff9900; } /* 11 o'clock */
 #traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #ffcc00; } /* 12 o'clock */

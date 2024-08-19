@@ -8,16 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttonDetails = {
         "traditional": { title: "Traditional", content: "Traditional Marketing Content<b>Print, Tradeshows, Events, Mailers, Catalogs, Print Ads, Billboards" },
         "sales": { title: "1", content: "Sales & Business Development Content" },
-        "product": { title: "2", content: "Product Development Content" },
-        "brand": { title: "3", content: "Brand Management Content" },
-        "crm": { title: "4", content: "Marketing Automation and CRM. <br> Salesforce, Hubspot, Marketing Cloud." },
-        "analytics": { title: "5", content: "Analytics & Reporting Content" },
-        "projects": { title: "6", content: "Project Management Content" },
-        "startup": { title: "7", content: "Entrepreneurship Content" },
-        "content": { title: "8", content: "Content Creation Content" },
+        "product": { title: "Product", content: "Product Development Content" },
+        "brand": { title: "Brand Management", content: "Brand Management Content" },
+        "content": { title: "Content", content: "Marketing Automation and CRM. <br> Salesforce, Hubspot, Marketing Cloud." },
+        "Startup": { title: "Startup", content: "Start-up and Entrepreneurship" },
+        "projects": { title: "Project<br>Management", content: "Project Management Content" },
+        "analytics": { title: "Analytics", content: "Analytics" },
+        "crm": { title: "CRM", content: "CRM" },
+        "cx": { title: "Customer Experience", content: "ABM, Customer experince stuff<br> Reviews feedback, lifetime value, engagement" },
+        "ecommerce": { title: "E-commerce", content: "Market Research Content" },
         "digital": { title: "Digital", content: "Digital Marketing including SEO & PPC Content" },
-        "ecommerce": { title: "10", content: "Market Research Content" },
-        "cx": { title: "11", content: "Customer experince stuff<br> Reviews feedback, lifetime value, engagement" },
     };
 
     buttons.forEach(button => {

@@ -45,6 +45,7 @@ html, body {
     overflow: hidden;
     width: 100%;
     text-align: center;
+    min-height: 150px; /* Set a minimum height to prevent jumping */
 }
 
 /* Button Styles */
@@ -145,7 +146,7 @@ html, body {
     }
 
     .details-panel {
-        min-height: 20vh; /* Adjust height based on viewport */
+        min-height: 150px; /* Set a minimum height to prevent jumping */
         border-left: none;
         border-top: 2px solid #ccc;
         width: 100%;

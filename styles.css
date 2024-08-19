@@ -137,6 +137,7 @@ html, body {
         margin-top: 0; /* Align to the top without extra margin */
         width: 100%; /* Full width in portrait mode */
         justify-content: center;
+        padding-top: 20px; /* Add padding to ensure separation from the top */
     }
 
     .details-panel {
@@ -144,7 +145,7 @@ html, body {
         border-top: 2px solid #ccc;
         width: 100%;
         text-align: center;
-        margin-top: 50px; /* Ensure spacing between sections */
+        margin-top: 100px; /* Increase space between the circle and details panel */
     }
 
     .button {

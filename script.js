@@ -7,55 +7,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let activeButton = null;
 
+    function resetActiveButton() {
+        if (activeButton) {
+            activeButton.style.transform = activeButton.dataset.initialTransform;
+            activeButton.style.zIndex = "0";
+            activeButton = null;
+        }
+    }
+
+    function setActiveButton(button) {
+        resetActiveButton();
+        brandingLogo.style.display = 'none';
+        detailsPanel.classList.add('active');
+        button.style.zIndex = "1";
+        button.style.transform = "translate(-50%, -50%) scale(2.5)";
+        activeButton = button;
+    }
+
     buttons.forEach(button => {
         const buttonId = button.id;
 
         // Handle hover effect on desktop
         button.addEventListener('mouseenter', () => {
             if (window.innerWidth > 768) {
-                if (activeButton !== button) {
-                    // Reset any previous active button
-                    if (activeButton) {
-                        activeButton.style.transform = activeButton.dataset.initialTransform;
-                        activeButton.style.zIndex = "0";
-                    }
-
-                    // Center the hovered button
-                    brandingLogo.style.display = 'none';
-                    detailsPanel.classList.add('active');
-
-                    button.style.zIndex = "1";
-                    button.style.transform = "translate(-50%, -50%) scale(2.5)";
-                    updateDetails(buttonId);
-                }
+                setActiveButton(button);
+                updateDetails(buttonId);
             }
         });
 
         // Handle tap effect on mobile
         button.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
-                if (activeButton !== button) {
-                    // Reset any previous active button
-                    if (activeButton) {
-                        activeButton.style.transform = activeButton.dataset.initialTransform;
-                        activeButton.style.zIndex = "0";
-                    }
-
-                    // Center the clicked button and show details
-                    brandingLogo.style.display = 'none';
-                    detailsPanel.style.display = 'block';
-
-                    button.style.zIndex = "1";
-                    button.style.transform = "translate(-50%, -50%) scale(2.5)";
-                    updateDetails(buttonId);
-
-                    activeButton = button;
+                if (activeButton === button) {
+                    resetActiveButton();
+                    brandingLogo.style.display = 'flex';
+                    detailsPanel.classList.remove('active');
                 } else {
-                    // If the same button is clicked, close the panel
-                    detailsPanel.style.display = 'none';
-                    button.style.transform = button.dataset.initialTransform;
-                    button.style.zIndex = "0";
-                    activeButton = null;
+                    setActiveButton(button);
+                    updateDetails(buttonId);
                 }
             }
         });
@@ -65,15 +54,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const circleContainer = document.querySelector('.circle-container');
     circleContainer.addEventListener('mouseleave', () => {
         if (window.innerWidth > 768) {
-            if (activeButton) {
-                activeButton.style.transform = activeButton.dataset.initialTransform;
-                activeButton.style.zIndex = "0";
-            }
+            resetActiveButton();
             brandingLogo.style.display = 'flex';
             detailsPanel.classList.remove('active');
             detailsTitle.innerText = 'Hover over a discipline';
             detailsContent.innerText = 'Details will appear here.';
-            activeButton = null;
         }
     });
 
@@ -100,4 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
             detailsContent.innerText = 'Details will appear here.';
         }
     }
+
+    // Close the details panel when clicking outside
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && activeButton && !circleContainer.contains(e.target) && !detailsPanel.contains(e.target)) {
+            resetActiveButton();
+            brandingLogo.style.display = 'flex';
+            detailsPanel.classList.remove('active');
+        }
+    });
 });

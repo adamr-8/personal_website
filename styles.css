@@ -28,7 +28,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(-200px); /* Shift left to avoid overlapping */
+    transform: translateX(-300px); /* Shift left to avoid overlapping */
 }
 
 /* Details Panel */
@@ -136,7 +136,6 @@ html, body {
         width: 90vmin;
         height: 90vmin;
         margin-bottom: 20px;
-        justify-content: space-between;
     }
 
     .details-panel {

@@ -19,7 +19,6 @@ html, body {
     height: 100%;
     max-width: 1200px; /* Set a maximum width to control layout */
     margin: auto;
-    flex-direction: column; /* Ensures stacking in portrait mode */
 }
 
 /* Circle Container */
@@ -29,15 +28,13 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(0); /* Remove the shift to the left */
-    margin-top: 20px; /* Adjust margin to ensure no overlap */
-    width: 100%;
+    transform: translateX(-200px); /* Shift left to avoid overlapping */
 }
 
 /* Details Panel */
 .details-panel {
     flex: 1; /* Fixed width to prevent shifting */
-    height: auto; /* Adjust height for responsive design */
+    height: 100%;
     padding: 20px;
     background-color: #f9f9f9;
     border-left: 2px solid #ccc;
@@ -45,8 +42,6 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 20px; /* Space between the circle container and details panel */
-    text-align: center;
 }
 
 /* Button Styles */
@@ -138,12 +133,10 @@ html, body {
     }
 
     .circle-container {
-        width: 100%;
-        margin-top: 0; /* Ensure it is flush with the top */
+        transform: translateX(0); /* Remove left shift */
+        margin-top: 0; /* Align to the top without extra margin */
+        width: 100%; /* Full width in portrait mode */
         justify-content: center;
-        position: relative;
-        top: 0;
-        margin-bottom: 20px; /* Ensure space between the circle and details panel */
     }
 
     .details-panel {
@@ -151,13 +144,13 @@ html, body {
         border-top: 2px solid #ccc;
         width: 100%;
         text-align: center;
-        margin-top: 50px; /* Space between the circle container and details panel */
+        margin-top: 50px; /* Ensure spacing between sections */
     }
 
     .button {
         width: 13vmin;
         height: 13vmin;
-        font-size: 1.5vmin; /* Slightly larger font size */
+        font-size: 1.5vmin; /* Adjust size for mobile */
     }
 
     .button:focus {

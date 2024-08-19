@@ -137,9 +137,9 @@ html, body {
         height: auto; /* Auto height to fit content */
         margin-bottom: 20px;
         justify-content: center;
-        position: relative; /* Add this */
-        top: 0; /* Align to the top */
-        margin-top: 20px; /* Optional: add some spacing from the top */
+        position: relative;
+        top: 0;
+        margin-top: 0;
     }
 
     .details-panel {
@@ -147,7 +147,7 @@ html, body {
         border-top: 2px solid #ccc;
         width: 100%;
         text-align: center;
-        margin-top: 100px; /* Adjust this value as needed (100-200px) */
+        margin-top: 50px; /* Space between the circle container and details panel */
     }
 
     .button {

@@ -88,23 +88,18 @@ html, body {
 }
 
 /* Positioning of buttons around the circle */
-#digital-marketing { top: 15%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -35vmin) rotate(0deg); background-color: #00cc66; } /* North */
-#traditional-marketing { top: 85%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -35vmin) rotate(0deg); background-color: #ffcc00; } /* South */
-
-#brand-management { top: 50%; left: 20%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -35vmin) rotate(0deg); background-color: #99cc00; } /* West */
-#customer-loyalty { top: 50%; left: 80%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -35vmin) rotate(0deg); background-color: #cc0066; } /* East */
-
-#content-marketing { top: 25%; left: 30%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -35vmin) rotate(0deg); background-color: #6600cc; } /* North-West */
-#social-media { top: 35%; left: 30%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -35vmin) rotate(0deg); background-color: #0073e6; } /* North-West */
-
-#abm { top: 25%; left: 70%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -35vmin) rotate(0deg); background-color: #00b3b3; } /* North-East */
-
-#ad-buying { top: 75%; left: 30%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -35vmin) rotate(0deg); background-color: #ff9900; } /* South-West */
-#event-marketing { top: 65%; left: 30%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -35vmin) rotate(0deg); background-color: #ff6600; } /* South-West */
-
-#public-relations { top: 75%; left: 70%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -35vmin) rotate(0deg); background-color: #ff3300; } /* South-East */
-#market-research { top: 65%; left: 70%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -35vmin) rotate(0deg); background-color: #e60000; } /* South-East */
-
+#digital-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #00cc66; }
+#traditional-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(0deg); background-color: #ffcc00; }
+#content-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(0deg); background-color: #6600cc; }
+#social-media { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(0deg); background-color: #0073e6; }
+#brand-management { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(0deg); background-color: #99cc00; }
+#marketing-technology { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(0deg); background-color: #9900cc; }
+#abm { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(0deg); background-color: #00b3b3; }
+#market-research { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(0deg); background-color: #e60000; }
+#customer-loyalty { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(0deg); background-color: #cc0066; }
+#public-relations { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(0deg); background-color: #ff3300; }
+#ad-buying { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(0deg); background-color: #ff9900; }
+#event-marketing { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(0deg); background-color: #ff6600; }
 
 /* Hover effect to move button to center and enlarge */
 .button.centered {

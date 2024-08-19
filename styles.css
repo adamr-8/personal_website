@@ -43,22 +43,9 @@ html, body {
     flex-direction: column;
     justify-content: center;
     overflow-y: auto; /* Make the panel scrollable */
-    max-height: 50vh; /* Limit the height */
     width: 100%;
     text-align: center;
-}
-
-/* Additional styles for active state */
-.details-panel.active {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-.details-panel:not(.active) {
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    display: none; /* Start hidden on mobile */
 }
 
 /* Button Styles */
@@ -149,6 +136,7 @@ html, body {
         width: 100%;
         text-align: center;
         margin-top: 200px; /* Further increase space between sections */
+        display: none; /* Hide by default, shown on click */
     }
 }
 
@@ -166,5 +154,6 @@ html, body {
     .details-panel {
         min-height: auto; /* Remove minimum height restriction for larger screens */
         margin-top: 0; /* Reset margin for larger screens */
+        display: flex; /* Ensure the panel is always displayed on desktop */
     }
 }

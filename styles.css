@@ -42,11 +42,10 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Center content vertically */
     overflow: hidden;
     width: 100%;
     text-align: center;
-    min-height: 250px; /* Further increase minimum height */
+    min-height: 200px; /* Increase minimum height */
     padding-bottom: 50px; /* Ensure consistent bottom padding */
 }
 
@@ -148,7 +147,7 @@ html, body {
     }
 
     .details-panel {
-        min-height: 250px; /* Further increase minimum height */
+        min-height: 200px; /* Increase minimum height */
         border-left: none;
         border-top: 2px solid #ccc;
         width: 100%;
@@ -174,7 +173,7 @@ html, body {
     }
 
     .details-panel {
-        min-height: 250px; /* Maintain consistent minimum height */
+        min-height: 200px; /* Maintain consistent minimum height */
         margin-top: 0; /* Reset margin for larger screens */
     }
 }

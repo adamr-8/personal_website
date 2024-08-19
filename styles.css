@@ -17,10 +17,10 @@ html, body {
     display: flex;
     width: 100%;
     height: 100%;
-    max-width: 1200px; /* Set a maximum width to control layout */
+    max-width: 1200px;
     margin: auto;
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Center vertically */
+    justify-content: space-around; /* Center horizontally */
 }
 
 /* Circle Container */
@@ -30,7 +30,6 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(0); /* Center the circle container */
 }
 
 /* Details Panel */
@@ -44,7 +43,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Center text content in the panel */
+    align-items: center; /* Center content */
 }
 
 /* Button Styles */
@@ -63,7 +62,7 @@ html, body {
     font-size: 1.7vmin;
     line-height: 1.2;
     transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
-    transform-origin: center center; /* Scale from the center */
+    transform-origin: center center; /* Ensure scaling from center */
     
     background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.1));
     box-shadow: 
@@ -72,10 +71,10 @@ html, body {
         3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Hover effect to move button to center and enlarge */
+/* Hover effect to enlarge without shifting */
 .button:hover {
     z-index: 10;
-    transform: scale(2.5); /* Remove translate to avoid shifting */
+    transform: scale(2.5); /* Only scale, no translate */
 }
 
 /* Branding Logo Styles */
@@ -118,12 +117,10 @@ html, body {
     }
 
     .circle-container {
-        transform: translateX(0); /* Reset the translation */
         width: 100vw;
-        height: auto; /* Auto height to fit content */
+        height: auto;
         margin-bottom: 20px;
         justify-content: center;
-        position: relative;
     }
 
     .details-panel {
@@ -131,17 +128,16 @@ html, body {
         border-top: 2px solid #ccc;
         width: 100%;
         text-align: center;
-        margin-top: 50px; /* Space between the circle container and details panel */
+        margin-top: 50px;
     }
 
     .button {
         width: 13vmin;
         height: 13vmin;
-        font-size: 1.5vmin; /* Slightly larger font size */
+        font-size: 1.5vmin;
     }
 
-    .button:focus {
-        outline: none;
-        transform: scale(2.5);
+    .button:hover {
+        transform: scale(2.5); /* Maintain scaling effect */
     }
 }

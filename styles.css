@@ -133,15 +133,15 @@ html, body {
 
     .circle-container {
         transform: translateX(0); /* Reset the translation when in portrait mode */
-        width: 90vmin;
-        height: 90vmin;
+        width: 100vw;
+        height: 100vw; /* Make the height equal to the width */
         margin-bottom: 20px;
+        justify-content: center;
     }
 
     .details-panel {
         border-left: none;
         border-top: 2px solid #ccc;
-        max-width: 90%;
         width: 100%;
         text-align: center;
     }

@@ -45,8 +45,8 @@ html, body {
     overflow: hidden;
     width: 100%;
     text-align: center;
-    min-height: 150px; /* Set a minimum height to prevent jumping */
-    transition: min-height 0.3s ease, padding 0.3s ease; /* Smooth transition */
+    min-height: 200px; /* Increase minimum height */
+    padding-bottom: 50px; /* Ensure consistent bottom padding */
 }
 
 /* Button Styles */
@@ -147,14 +147,13 @@ html, body {
     }
 
     .details-panel {
-        min-height: 150px; /* Set a minimum height to prevent jumping */
+        min-height: 200px; /* Increase minimum height */
         border-left: none;
         border-top: 2px solid #ccc;
         width: 100%;
         text-align: center;
         margin-top: 5vh; /* Reduced margin to close gap */
-        padding-bottom: 10vh; /* Adjust padding for better spacing */
-        transition: min-height 0.3s ease, padding 0.3s ease; /* Smooth transition */
+        padding-bottom: 50px; /* Consistent padding for better spacing */
     }
 
     .button.centered {
@@ -174,7 +173,7 @@ html, body {
     }
 
     .details-panel {
-        min-height: auto; /* Remove minimum height restriction for larger screens */
+        min-height: 200px; /* Maintain consistent minimum height */
         margin-top: 0; /* Reset margin for larger screens */
     }
 }

@@ -46,6 +46,7 @@ html, body {
     width: 100%;
     text-align: center;
     min-height: 150px; /* Set a minimum height to prevent jumping */
+    transition: min-height 0.3s ease, padding 0.3s ease; /* Smooth transition */
 }
 
 /* Button Styles */
@@ -153,6 +154,7 @@ html, body {
         text-align: center;
         margin-top: 5vh; /* Reduced margin to close gap */
         padding-bottom: 10vh; /* Adjust padding for better spacing */
+        transition: min-height 0.3s ease, padding 0.3s ease; /* Smooth transition */
     }
 
     .button.centered {

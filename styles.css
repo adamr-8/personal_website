@@ -140,7 +140,7 @@ html, body {
         margin-top: 0; /* Align to the top without extra margin */
         width: 100%; /* Full width in portrait mode */
         justify-content: center;
-        padding-top: 80px; /* Increase padding to push it down slightly */
+        padding-top: 30px; /* Increase padding to push it down slightly */
         min-height: calc(100vh - 300px); /* Add a min-height to ensure the circle stays in view */
     }
 
@@ -150,7 +150,7 @@ html, body {
         border-top: 2px solid #ccc;
         width: 100%;
         text-align: center;
-        margin-top: 100px; /* Adjusted margin */
+        margin-top: 20px; /* Adjusted margin */
         padding-bottom: 100px; /* Add padding to prevent overflow */
     }
 

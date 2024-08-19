@@ -140,7 +140,7 @@ html, body {
         margin-top: 0; /* Align to the top without extra margin */
         width: 100%; /* Full width in portrait mode */
         justify-content: center;
-        padding-top: 30px; /* Increase padding to push it down slightly */
+        padding-top: 5px; /* Increase padding to push it down slightly */
         min-height: calc(100vh - 300px); /* Add a min-height to ensure the circle stays in view */
     }
 

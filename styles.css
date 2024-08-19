@@ -129,12 +129,29 @@ html, body {
 
 /* Media query for portrait mode or narrow screens */
 @media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
+    .circle-container {
+        transform: translateX(0); /* Remove left shift */
+        margin-top: 0; /* Align to the top without extra margin */
+        width: 100%; /* Full width in portrait mode */
+        justify-content: center;
+        padding-top: 80px; /* Increase padding to push it down slightly */
+        min-height: calc(100vh - 250px); /* Add a min-height to ensure the circle stays in view */
     }
 
+    .details-panel {
+        min-height: 250px; /* Ensure consistent height to prevent shift */
+        border-left: none;
+        border-top: 2px solid #ccc;
+        width: 100%;
+        text-align: center;
+        margin-top: 200px; /* Further increase space between sections */
+        padding-bottom: 100px; /* Add padding to prevent overflow */
+    }
+
+    .button.centered {
+        transform-origin: center center; /* Keep scaling centered */
+    }
+}
     .circle-container {
         transform: translateX(0); /* Remove left shift */
         margin-top: 0; /* Align to the top without extra margin */

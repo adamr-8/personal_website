@@ -1,4 +1,4 @@
-// JavaScript for updating the details panel with actual content and managing 3D effects
+// JavaScript for smoother text transitions and hover effects
 
 const details = {
     traditional: {
@@ -26,9 +26,19 @@ const details = {
 document.querySelectorAll('.button').forEach(button => {
     button.addEventListener('mouseenter', () => {
         const id = button.id;
-        document.getElementById('details-title').textContent = details[id].title;
-        document.getElementById('details-content').textContent = details[id].content;
-        
+        const panel = document.querySelector('.details-panel');
+
+        // Fade out the content
+        panel.classList.remove('active');
+
+        setTimeout(() => {
+            document.getElementById('details-title').textContent = details[id].title;
+            document.getElementById('details-content').textContent = details[id].content;
+
+            // Fade in the new content
+            panel.classList.add('active');
+        }, 500); // Matches the duration of the fade-out effect
+
         document.querySelectorAll('.button').forEach(b => {
             if (b !== button) {
                 b.style.transform = 'translateZ(10px)';

@@ -46,7 +46,15 @@ html, body {
     text-align: center;
     font-size: 1em;
     color: #333;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), 
+                box-shadow 0.5s ease-in-out, 
+                background 0.5s ease-in-out;
+}
+
+/* Hover Effect */
+.button:hover {
+    transform: translateZ(50px) scale(1.1);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.8);
 }
 
 /* Positioning of buttons around the circle */
@@ -55,12 +63,6 @@ html, body {
 #button3 { top: 80%; left: 50%; transform: translate(-50%, -50%) rotate(144deg) translateZ(10px); }
 #button4 { top: 50%; left: 25%; transform: translate(-50%, -50%) rotate(216deg) translateZ(20px); }
 #button5 { top: 20%; left: 50%; transform: translate(-50%, -50%) rotate(288deg) translateZ(30px); }
-
-/* Hover Effect */
-.button:hover {
-    transform: translateZ(50px) scale(1.1);
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.8);
-}
 
 /* Details Panel */
 .details-panel {
@@ -74,4 +76,14 @@ html, body {
     justify-content: center;
     text-align: center;
     border-radius: 10px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.details-panel h2, .details-panel p {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.details-panel.active h2, .details-panel.active p {
+    opacity: 1;
 }

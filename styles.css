@@ -51,18 +51,19 @@ html, body {
                 background 0.5s ease-in-out;
 }
 
+/* Positioning of buttons around the circle */
+#traditional { top: 30%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translateZ(30px); }
+#sales { top: 50%; left: 70%; transform: translate(-50%, -50%) rotate(72deg) translateZ(20px); }
+#product { top: 70%; left: 50%; transform: translate(-50%, -50%) rotate(144deg) translateZ(10px); }
+#brand { top: 50%; left: 30%; transform: translate(-50%, -50%) rotate(216deg) translateZ(20px); }
+#automation { top: 30%; left: 50%; transform: translate(-50%, -50%) rotate(288deg) translateZ(30px); }
+
 /* Hover Effect */
 .button:hover {
     transform: translateZ(50px) scale(1.1);
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.8);
+    z-index: 10;
 }
-
-/* Positioning of buttons around the circle */
-#button1 { top: 20%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translateZ(30px); }
-#button2 { top: 50%; left: 75%; transform: translate(-50%, -50%) rotate(72deg) translateZ(20px); }
-#button3 { top: 80%; left: 50%; transform: translate(-50%, -50%) rotate(144deg) translateZ(10px); }
-#button4 { top: 50%; left: 25%; transform: translate(-50%, -50%) rotate(216deg) translateZ(20px); }
-#button5 { top: 20%; left: 50%; transform: translate(-50%, -50%) rotate(288deg) translateZ(30px); }
 
 /* Details Panel */
 .details-panel {

@@ -47,14 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>`
         },
         "automation": { 
-            title: "Automation & CRM", 
-            content: `
-                <i class="fa-sharp fa-solid fa-filters" style="font-size: 40px; color: #333;"></i>
-                <p>I have extensive experience with CRM systems, particularly Salesforce, where I've managed customer relationships to drive engagement and retention. My work in this area has led to significant improvements in lead nurturing and customer satisfaction.</p>
-                <ul>
-                    <li>Implemented Salesforce Marketing Cloud, leading to a 25% increase in email open rates.</li>
-                    <li>Streamlined CRM processes that reduced lead response time by 40%.</li>
-                </ul>`
+        title: "Automation & CRM", 
+        content: `
+            <i class="fas fa-cogs" style="font-size: 40px; color: #333;"></i>
+            <p>I have extensive experience with CRM systems, particularly Salesforce, where I've managed customer relationships to drive engagement and retention. My work in this area has led to significant improvements in lead nurturing and customer satisfaction.</p>
+            <ul>
+                <li>Implemented Salesforce Marketing Cloud, leading to a 25% increase in email open rates.</li>
+                <li>Streamlined CRM processes that reduced lead response time by 40%.</li>
+            </ul>`
         },
         "analytics": { 
             title: "Analytics & Reporting", 

@@ -85,7 +85,7 @@ html, body {
         3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-//* Positioning of buttons around the circle */
+/* Positioning of buttons around the circle */
 #traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #ffcc00; }
 #sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); background-color: #ff9900; }
 #product { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); background-color: #ff6600; }

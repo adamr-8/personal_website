@@ -95,11 +95,6 @@ html, body {
 }
 
 /* Positioning Buttons in a Circle */
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
 .circle-container::before {
     content: '';
     position: absolute;
@@ -107,7 +102,6 @@ html, body {
     height: 35vmin;
     border-radius: 50%;
     border: 2px dashed #555;
-    animation: rotate 20s linear infinite;
 }
 
 .button:nth-child(1) { transform: rotate(0deg) translate(0, -17.5vmin) rotate(0deg); }
@@ -122,30 +116,6 @@ html, body {
 .button:nth-child(10) { transform: rotate(270deg) translate(0, -17.5vmin) rotate(-270deg); }
 .button:nth-child(11) { transform: rotate(300deg) translate(0, -17.5vmin) rotate(-300deg); }
 .button:nth-child(12) { transform: rotate(330deg) translate(0, -17.5vmin) rotate(-330deg); }
-
-/* Branding Logo Styles */
-.branding-logo {
-    background-color: #0056d2;
-    padding: 10px 20px;
-    border-radius: 8px;
-    color: #ffffff;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* Headings */
-h2 {
-    font-weight: bold;
-    margin: 20px 0;
-    color: #ffffff;
-}
-
-/* Paragraphs */
-p {
-    color: #cccccc;
-    font-size: 1.1em;
-    margin: 10px 0;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -163,16 +133,31 @@ p {
 
     .circle-container {
         margin-bottom: 20px;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     .button {
-        width: 15vmin;
-        height: 15vmin;
-        font-size: 0.9em;
+        width: 18vmin; /* Increase size for better visibility on small screens */
+        height: 18vmin;
+        font-size: 1.1em;
     }
 
     .circle-container::before {
-        width: 40vmin;
-        height: 40vmin;
+        width: 50vmin;
+        height: 50vmin;
     }
+
+    .button:nth-child(1) { transform: rotate(0deg) translate(0, -25vmin) rotate(0deg); }
+    .button:nth-child(2) { transform: rotate(30deg) translate(0, -25vmin) rotate(-30deg); }
+    .button:nth-child(3) { transform: rotate(60deg) translate(0, -25vmin) rotate(-60deg); }
+    .button:nth-child(4) { transform: rotate(90deg) translate(0, -25vmin) rotate(-90deg); }
+    .button:nth-child(5) { transform: rotate(120deg) translate(0, -25vmin) rotate(-120deg); }
+    .button:nth-child(6) { transform: rotate(150deg) translate(0, -25vmin) rotate(-150deg); }
+    .button:nth-child(7) { transform: rotate(180deg) translate(0, -25vmin) rotate(-180deg); }
+    .button:nth-child(8) { transform: rotate(210deg) translate(0, -25vmin) rotate(-210deg); }
+    .button:nth-child(9) { transform: rotate(240deg) translate(0, -25vmin) rotate(-240deg); }
+    .button:nth-child(10) { transform: rotate(270deg) translate(0, -25vmin) rotate(-270deg); }
+    .button:nth-child(11) { transform: rotate(300deg) translate(0, -25vmin) rotate(-300deg); }
+    .button:nth-child(12) { transform: rotate(330deg) translate(0, -25vmin) rotate(-330deg); }
 }

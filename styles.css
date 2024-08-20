@@ -43,10 +43,11 @@ html, body {
     text-align: center;
     font-size: 1em;
     color: #333;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform-origin: center; /* Ensures scaling from the center */
 }
 
-/* Adjusted Positioning of buttons around the circle */
+/* Positioning of buttons around the circle */
 #traditional { top: 10%; left: 50%; transform: translate(-50%, -50%); }
 #sales { top: 30%; left: 80%; transform: translate(-50%, -50%); }
 #product { top: 60%; left: 70%; transform: translate(-50%, -50%); }
@@ -55,8 +56,8 @@ html, body {
 
 /* Hover Effect */
 .button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.8);
+    transform: scale(1.05); /* Smaller scale to minimize shift */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.7);
     z-index: 10;
 }
 

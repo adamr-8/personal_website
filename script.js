@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li>Developed and implemented KPIs that improved reporting accuracy and decision-making efficiency.</li>
             </ul>`
         },
-        "crm": { 
-            title: "CRM", 
+        "automation": { 
+            title: "Automation & CRM", 
             content: `I have extensive experience with CRM systems, particularly Salesforce, where I've managed customer relationships to drive engagement and retention. My work in this area has led to significant improvements in lead nurturing and customer satisfaction. Key contributions include:
             <ul>
                 <li>Implemented Salesforce Marketing Cloud, leading to a 25% increase in email open rates.</li>

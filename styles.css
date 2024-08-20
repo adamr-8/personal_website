@@ -101,7 +101,6 @@ html, body {
     width: 35vmin;
     height: 35vmin;
     border-radius: 50%;
-    border: 2px dashed #555;
 }
 
 .button:nth-child(1) { transform: rotate(0deg) translate(0, -17.5vmin) rotate(0deg); }
@@ -124,23 +123,16 @@ html, body {
         height: auto;
     }
 
-    .circle-container, .details-panel {
-        flex: none;
-        width: 100%;
-        padding: 20px;
-        transform: none;
-    }
-
     .circle-container {
         margin-bottom: 20px;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center; /* Center align for smaller screens */
+        align-items: center;
     }
 
     .button {
-        width: 18vmin; /* Increase size for better visibility on small screens */
-        height: 18vmin;
-        font-size: 1.1em;
+        width: 20vmin; /* Increase size for better visibility on small screens */
+        height: 20vmin;
+        font-size: 1.2em;
     }
 
     .circle-container::before {
@@ -148,6 +140,7 @@ html, body {
         height: 50vmin;
     }
 
+    /* Positioning buttons for smaller screens */
     .button:nth-child(1) { transform: rotate(0deg) translate(0, -25vmin) rotate(0deg); }
     .button:nth-child(2) { transform: rotate(30deg) translate(0, -25vmin) rotate(-30deg); }
     .button:nth-child(3) { transform: rotate(60deg) translate(0, -25vmin) rotate(-60deg); }

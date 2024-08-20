@@ -9,18 +9,18 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2c3e50; /* Dark Blue-Grey Background */
+    background-color: #f5f5f5; /* Very light grey */
     background-image: 
         /* Atomic Orbitals */
-        radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.05), transparent 30%), 
-        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05), transparent 30%), 
-        radial-gradient(circle at 60% 20%, rgba(255, 255, 255, 0.05), transparent 30%), 
+        radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.1), transparent 30%), 
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1), transparent 30%), 
+        radial-gradient(circle at 60% 20%, rgba(255, 255, 255, 0.1), transparent 30%), 
         /* Connected Nodes */
-        radial-gradient(circle, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
-        radial-gradient(circle, rgba(255, 255, 255, 0.15) 2px, transparent 2px),
+        radial-gradient(circle, rgba(0, 0, 0, 0.05) 2px, transparent 2px),
+        radial-gradient(circle, rgba(0, 0, 0, 0.05) 2px, transparent 2px),
         /* Subtle Tech Grid */
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
     background-size: 100% 100%, 100% 100%, 100% 100%, 50px 50px, 50px 50px, 100px 100px, 100px 100px;
 }
 
@@ -67,7 +67,7 @@ html, body {
     width: 14vmin; /* Restoring original size */
     height: 14vmin; /* Restoring original size */
     border-radius: 50%;
-    color: white;
+    color: #333; /* Dark grey text for better contrast */
     font-weight: bold;
     cursor: pointer;
     display: flex;
@@ -75,30 +75,29 @@ html, body {
     justify-content: center;
     text-align: center;
     font-size: 2.5vmin; /* Increased font size for better readability */
-    /* other styles remain unchanged */
     line-height: 1.2;
     transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
     
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.1));
+    background: radial-gradient(circle at 30% 30%, rgba(240, 240, 240, 0.9), rgba(0, 0, 0, 0.1)); /* Lighter, softer gradient */
     box-shadow: 
-        inset -2px -2px 8px rgba(0, 0, 0, 0.3), 
+        inset -2px -2px 8px rgba(0, 0, 0, 0.1), 
         inset 2px 2px 8px rgba(255, 255, 255, 0.4), 
-        3px 3px 10px rgba(0, 0, 0, 0.3);
+        3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Positioning of buttons around the circle */
-#traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #cca300; }
-#sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); background-color: #ff9900; }
-#product { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); background-color: #ff6600; }
-#brand { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); background-color: #ff3300; }
-#automation { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); background-color: #e60000; }
-#analytics { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); background-color: #cc0066; }
-#projects { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); background-color: #9900cc; }
-#startup { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); background-color: #6600cc; }
-#content { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); background-color: #0073e6; }
-#digital { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); background-color: #00b3b3; }
-#cx { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); background-color: #00cc66; }
-#ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); background-color: #99cc00; }
+#traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); background-color: #d1b700; }
+#sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); background-color: #e69500; }
+#product { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); background-color: #cc5800; }
+#brand { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); background-color: #b33100; }
+#automation { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); background-color: #cc0000; }
+#analytics { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); background-color: #b3004d; }
+#projects { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); background-color: #800080; }
+#startup { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); background-color: #550099; }
+#content { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); background-color: #005db3; }
+#digital { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); background-color: #009999; }
+#cx { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); background-color: #00b366; }
+#ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); background-color: #7ab300; }
 
 /* Hover effect to move button to center and enlarge */
 .button.centered {
@@ -136,6 +135,11 @@ html, body {
 .details-panel p {
     font-size: 1.2em;
     line-height: 1.6;
+}
+
+.details-panel i {
+    color: #b0b0b0; /* Soft grey */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .content-description {

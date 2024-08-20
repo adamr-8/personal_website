@@ -29,17 +29,16 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform-style: preserve-3d;
     height: 400px; /* Ensure the container has sufficient height */
     width: 400px;  /* Ensure the container has sufficient width */
 }
 
 /* Positioning of buttons around the circle */
-#traditional { top: 20%; left: 50%; transform: translate(-50%, -50%) rotate(0deg); }
-#sales { top: 35%; left: 85%; transform: translate(-50%, -50%) rotate(72deg); }
-#product { top: 70%; left: 70%; transform: translate(-50%, -50%) rotate(144deg); }
-#brand { top: 70%; left: 30%; transform: translate(-50%, -50%) rotate(216deg); }
-#automation { top: 35%; left: 15%; transform: translate(-50%, -50%) rotate(288deg); }
+#traditional { top: 20%; left: 50%; transform: translate(-50%, -50%); }
+#sales { top: 35%; left: 85%; transform: translate(-50%, -50%); }
+#product { top: 70%; left: 70%; transform: translate(-50%, -50%); }
+#brand { top: 70%; left: 30%; transform: translate(-50%, -50%); }
+#automation { top: 35%; left: 15%; transform: translate(-50%, -50%); }
 
 /* Button Styles */
 .button {
@@ -55,7 +54,7 @@ html, body {
     text-align: center;
     font-size: 1em;
     color: #333;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Hover Effect */

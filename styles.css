@@ -10,49 +10,83 @@ html, body {
     scroll-behavior: smooth;
 }
 
-/* Container */
+/* Container Styles */
 .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Circle Container */
+.circle-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-200px);
+}
+
+/* Details Panel */
+.details-panel {
+    flex: 1;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-left: 2px solid #444444;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    overflow: hidden;
     text-align: center;
+    min-height: 200px;
+    padding-bottom: 50px;
+    border-radius: 10px;
 }
 
-/* Headings */
-h1, h2, h3 {
-    font-weight: bold;
-    margin: 20px 0;
-    color: #ffffff; /* Keep headings white */
-}
-
-/* Paragraphs */
-p {
-    color: #cccccc; /* Light grey for secondary text */
-    font-size: 1.1em;
-    margin: 10px 0;
-}
-
-/* Buttons */
+/* Button Styles */
 .button {
-    background-color: #333333; /* Dark grey buttons */
-    color: #ffffff; /* White text */
-    border: none;
-    border-radius: 8px; /* Slightly rounded edges */
-    padding: 12px 24px;
-    font-size: 1.2em;
+    position: absolute;
+    width: 14vmin;
+    height: 14vmin;
+    border-radius: 50%;
+    background-color: #333333;
+    color: #ffffff;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: none;
 }
 
 .button:hover {
-    background-color: #555555; /* Slightly lighter on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #555555;
+    transform: scale(1.1);
 }
 
-/* Branding */
+/* Positioning of buttons around the circle */
+#traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); }
+#sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); }
+#product { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); }
+#brand { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); }
+#automation { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); }
+#analytics { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); }
+#projects { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); }
+#startup { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); }
+#content { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); }
+#digital { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); }
+#cx { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); }
+#ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); }
+
+/* Branding Logo Styles */
 .branding-logo {
+    text-align: center;
     background-color: #0056d2; /* Accent color similar to Apple's blue */
     padding: 10px;
     border-radius: 8px;
@@ -61,52 +95,40 @@ p {
     margin-bottom: 20px;
 }
 
-/* Details Panel */
-.details-panel {
-    background-color: #1a1a1a; /* Dark panel background */
-    border-left: 2px solid #444444; /* Subtle border for contrast */
-    padding: 20px;
-    border-radius: 10px;
-    color: #eaeaea; /* Light grey text */
-    max-width: 80%;
-    margin-top: 20px;
+/* Headings */
+h1, h2, h3 {
+    font-weight: bold;
+    margin: 20px 0;
+    color: #ffffff;
 }
 
-/* Icon Styling */
-.details-panel i {
-    color: #ffffff; /* White icons */
-    font-size: 2em;
-    margin-bottom: 10px;
+/* Paragraphs */
+p {
+    color: #cccccc;
+    font-size: 1.1em;
+    margin: 10px 0;
 }
 
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
     .container {
-        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
     }
 
-    h1, h2, h3 {
-        font-size: 1.5em;
+    .circle-container {
+        transform: translateX(0);
+        margin-top: 20px;
     }
 
     .button {
-        padding: 10px 20px;
+        width: 12vmin;
+        height: 12vmin;
         font-size: 1em;
     }
 
     .details-panel {
-        max-width: 100%;
         padding: 15px;
     }
-}
-
-/* Additional Subtle Effects */
-a {
-    color: #0056d2; /* Link color matches accent */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #0080ff; /* Slightly brighter on hover */
 }

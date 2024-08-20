@@ -27,9 +27,6 @@ html, body {
     position: relative;
     width: 400px;
     height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Button Styles */
@@ -46,16 +43,15 @@ html, body {
     text-align: center;
     font-size: 1em;
     color: #333;
-    transform-origin: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Positioning of buttons around the circle */
-#traditional { top: 20%; left: 50%; transform: translate(-50%, -50%); }
-#sales { top: 35%; left: 85%; transform: translate(-50%, -50%); }
-#product { top: 70%; left: 70%; transform: translate(-50%, -50%); }
-#brand { top: 70%; left: 30%; transform: translate(-50%, -50%); }
-#automation { top: 35%; left: 15%; transform: translate(-50%, -50%); }
+#traditional { top: 20%; left: 50%; }
+#sales { top: 35%; left: 85%; }
+#product { top: 70%; left: 70%; }
+#brand { top: 70%; left: 30%; }
+#automation { top: 35%; left: 15%; }
 
 /* Hover Effect */
 .button:hover {

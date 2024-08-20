@@ -45,12 +45,12 @@ html, body {
     color: #333;
 }
 
-/* Positioning of buttons around the circle */
-#traditional { top: 10%; left: 50%; transform: translate(-50%, -50%); }
-#sales { top: 30%; left: 80%; transform: translate(-50%, -50%); }
-#product { top: 60%; left: 70%; transform: translate(-50%, -50%); }
-#brand { top: 60%; left: 30%; transform: translate(-50%, -50%); }
-#automation { top: 30%; left: 20%; transform: translate(-50%, -50%); }
+/* Positioning of buttons around the circle (No Transforms) */
+#traditional { top: 40px; left: 150px; }
+#sales { top: 120px; left: 280px; }
+#product { top: 260px; left: 230px; }
+#brand { top: 260px; left: 70px; }
+#automation { top: 120px; left: 20px; }
 
 /* Details Panel */
 .details-panel {

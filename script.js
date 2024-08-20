@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li>Increased organic traffic by 25% through targeted SEO strategies.</li>
                 <li>Managed PPC campaigns with a focus on ROI, achieving up to 15% click-through rates.</li>
             </ul>`
-        },
+        }
     };
 
     buttons.forEach(button => {

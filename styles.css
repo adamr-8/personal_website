@@ -19,6 +19,7 @@ html, body {
     height: 100%;
     max-width: 1200px;
     margin: auto;
+    flex-direction: row; /* Keep side-by-side for larger screens */
 }
 
 /* Circle Container */
@@ -28,8 +29,41 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(-200px); /* Shift left for larger screens */
+    height: 100%; /* Ensure it takes full height */
+    min-width: 50%; /* Ensure it takes at least half the screen width */
 }
+
+/* Button Styles */
+.button {
+    position: absolute;
+    width: 14vmin;
+    height: 14vmin;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Positioning of buttons around the circle */
+#traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); }
+#sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); }
+#product { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); }
+#brand { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); }
+#automation { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); }
+#analytics { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); }
+#projects { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); }
+#startup { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); }
+#content { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); }
+#digital { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); }
+#cx { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); }
+#ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); }
 
 /* Details Panel */
 .details-panel {
@@ -44,49 +78,29 @@ html, body {
     overflow: hidden;
     text-align: center;
     min-height: 200px;
+    min-width: 50%; /* Ensure it takes at least half the screen width */
     padding-bottom: 50px;
 }
 
-/* Responsive Design Adjustments */
+/* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
     .container {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
+        flex-direction: column; /* Stack vertically */
     }
 
     .circle-container {
-        transform: translateX(0); /* Center for smaller screens */
+        transform: translateX(0);
         margin-top: 0;
-        width: 100%; /* Full width */
+        width: 100%; /* Full width in portrait mode */
         justify-content: center;
-        padding-top: 2vh; /* Top padding for spacing */
-        min-height: 50vh; /* Adjust height for better balance */
+        padding-top: 2vh;
+        min-height: 50vh;
     }
 
     .details-panel {
-        min-height: 200px;
         border-left: none;
         border-top: 2px solid #ccc;
         width: 100%;
-        text-align: center;
-        margin-top: 5vh; /* Small gap between circle and info */
-        padding-bottom: 50px;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    .container {
-        flex-direction: row; /* Side by side layout for larger screens */
-    }
-
-    .circle-container {
-        transform: translateX(-200px); /* Original shift */
-        padding-top: 0; /* Remove mobile padding */
-    }
-
-    .details-panel {
-        min-height: 200px;
-        margin-top: 0; /* Reset margin for larger screens */
+        margin-top: 5vh;
     }
 }

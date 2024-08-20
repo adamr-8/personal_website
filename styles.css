@@ -43,8 +43,6 @@ html, body {
     text-align: center;
     font-size: 1em;
     color: #333;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    transform-origin: center; /* Ensures scaling from the center */
 }
 
 /* Positioning of buttons around the circle */
@@ -53,13 +51,6 @@ html, body {
 #product { top: 60%; left: 70%; transform: translate(-50%, -50%); }
 #brand { top: 60%; left: 30%; transform: translate(-50%, -50%); }
 #automation { top: 30%; left: 20%; transform: translate(-50%, -50%); }
-
-/* Hover Effect */
-.button:hover {
-    transform: scale(1.05); /* Smaller scale to minimize shift */
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.7);
-    z-index: 10;
-}
 
 /* Details Panel */
 .details-panel {
@@ -73,14 +64,4 @@ html, body {
     justify-content: center;
     text-align: center;
     border-radius: 10px;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.details-panel h2, .details-panel p {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.details-panel.active h2, .details-panel.active p {
-    opacity: 1;
 }

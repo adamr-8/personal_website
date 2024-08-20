@@ -30,7 +30,17 @@ html, body {
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
+    height: 400px; /* Ensure the container has sufficient height */
+    width: 400px;  /* Ensure the container has sufficient width */
 }
+
+/* Positioning of buttons around the circle */
+#traditional { top: 10%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translateZ(30px); }
+#sales { top: 35%; left: 90%; transform: translate(-50%, -50%) rotate(72deg) translateZ(20px); }
+#product { top: 75%; left: 75%; transform: translate(-50%, -50%) rotate(144deg) translateZ(10px); }
+#brand { top: 75%; left: 25%; transform: translate(-50%, -50%) rotate(216deg) translateZ(20px); }
+#automation { top: 35%; left: 10%; transform: translate(-50%, -50%) rotate(288deg) translateZ(30px); }
+
 
 /* Button Styles */
 .button {

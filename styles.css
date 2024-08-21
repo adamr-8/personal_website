@@ -1,124 +1,130 @@
-/* General Body Styles */
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  background-color: #1a1a1a;
-  color: #f0f0f0;
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* Circle Container Styles */
+/* Container for the entire layout */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Circle container */
 .circle-container {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  margin: auto;
-  padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-right: 50px;
 }
 
-/* General Button Styles */
+/* Buttons in a circular arrangement */
 .button {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 100px;
-  color: white;
-  font-size: 1.2rem;
-  font-family: 'Poppins', sans-serif;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+    width: 80px;
+    height: 80px;
+    background-color: #ff7f0e;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
-/* Hover Effects */
 .button:hover {
-  transform: scale(1.2);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Positioning Buttons in Circle Layout */
-.circle-container .button {
-  position: absolute;
-  transform-origin: 250px 250px;
+/* Layout for the details panel */
+.details-panel {
+    width: 100%;
+    max-width: 600px;
+    background-color: #252525;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
 }
 
-.circle-container .button:nth-child(1) { transform: rotate(0deg) translate(200px); }
-.circle-container .button:nth-child(2) { transform: rotate(30deg) translate(200px); }
-.circle-container .button:nth-child(3) { transform: rotate(60deg) translate(200px); }
-.circle-container .button:nth-child(4) { transform: rotate(90deg) translate(200px); }
-.circle-container .button:nth-child(5) { transform: rotate(120deg) translate(200px); }
-.circle-container .button:nth-child(6) { transform: rotate(150deg) translate(200px); }
-.circle-container .button:nth-child(7) { transform: rotate(180deg) translate(200px); }
-.circle-container .button:nth-child(8) { transform: rotate(210deg) translate(200px); }
-.circle-container .button:nth-child(9) { transform: rotate(240deg) translate(200px); }
-.circle-container .button:nth-child(10) { transform: rotate(270deg) translate(200px); }
-.circle-container .button:nth-child(11) { transform: rotate(300deg) translate(200px); }
-.circle-container .button:nth-child(12) { transform: rotate(330deg) translate(200px); }
-
-/* Specific Font Size Adjustment for "E-commerce" Button */
-.button.ecommerce {
-  font-size: 1.1rem;
-}
-
-/* Details Section Styles */
-.details-section {
-  padding: 20px;
-  text-align: center;
-}
-
-.details-section h1 {
-  font-size: 2.5rem;
-  color: #3f51b5;
-  margin-bottom: 20px;
-}
-
-.details-section p {
-  font-size: 1.2rem;
-}
-
-.details-section .icon {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-/* Adjustments for Mobile Screens */
-@media only screen and (max-width: 768px) {
-  .circle-container {
-    width: 350px;
-    height: 350px;
-  }
-  
-  .circle-container .button {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    font-size: 1rem;
-    transform-origin: 175px 175px;
-  }
-  
-  .circle-container .button:nth-child(1) { transform: rotate(0deg) translate(140px); }
-  .circle-container .button:nth-child(2) { transform: rotate(30deg) translate(140px); }
-  .circle-container .button:nth-child(3) { transform: rotate(60deg) translate(140px); }
-  .circle-container .button:nth-child(4) { transform: rotate(90deg) translate(140px); }
-  .circle-container .button:nth-child(5) { transform: rotate(120deg) translate(140px); }
-  .circle-container .button:nth-child(6) { transform: rotate(150deg) translate(140px); }
-  .circle-container .button:nth-child(7) { transform: rotate(180deg) translate(140px); }
-  .circle-container .button:nth-child(8) { transform: rotate(210deg) translate(140px); }
-  .circle-container .button:nth-child(9) { transform: rotate(240deg) translate(140px); }
-  .circle-container .button:nth-child(10) { transform: rotate(270deg) translate(140px); }
-  .circle-container .button:nth-child(11) { transform: rotate(300deg) translate(140px); }
-  .circle-container .button:nth-child(12) { transform: rotate(330deg) translate(140px); }
-
-  .details-section h1 {
+#title {
     font-size: 2rem;
-  }
+    margin-bottom: 1rem;
+    color: #3b82f6;
+}
 
-  .details-section p {
+#discipline-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#discipline-description {
     font-size: 1rem;
-  }
+    color: #dddddd;
+}
 
-  .details-section .icon {
-    font-size: 2.5rem;
-  }
+#icon-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circle-container {
+        width: 300px;
+        height: 300px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .details-panel {
+        width: 90%;
+        max-width: 300px;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    #title {
+        font-size: 1.5rem;
+    }
+
+    #discipline-title {
+        font-size: 1.25rem;
+    }
+
+    #discipline-description {
+        font-size: 0.875rem;
+    }
 }

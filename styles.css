@@ -1,53 +1,38 @@
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #1e1e1e;
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    position: relative;
-    width: 80vmin;
-    height: 80vmin;
-    max-width: 100%;
-    max-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.circle-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
 }
 
 .circle-button {
     position: absolute;
-    width: 8vmin;
-    height: 8vmin;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ff5722;
-    color: #fff;
-    font-size: 1.5vmin;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.4s ease;
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
 }
 
 .circle-button:hover {
-    transform: scale(1.2);
+    cursor: pointer;
 }
 
-#btn1 { transform: translate(-40vmin, 0vmin); }
-#btn2 { transform: translate(-32vmin, -24vmin); }
-#btn3 { transform: translate(-18vmin, -36vmin); }
-#btn4 { transform: translate(0vmin, -40vmin); }
-#btn5 { transform: translate(18vmin, -36vmin); }
-#btn6 { transform: translate(32vmin, -24vmin); }
-#btn7 { transform: translate(40vmin, 0vmin); }
-#btn8 { transform: translate(32vmin, 24vmin); }
-#btn9 { transform: translate(18vmin, 36vmin); }
-#btn10 { transform: translate(0vmin, 40vmin); }
-#btn11 { transform: translate(-18vmin, 36vmin); }
-#btn12 { transform: translate(-32vmin, 24vmin); }
+#ecommerce { top: 10%; left: 45%; }
+#traditional { top: 25%; left: 70%; }
+#sales { top: 50%; left: 85%; }
+#digital { top: 10%; left: 25%; }
+#content { top: 35%; left: 10%; }
+#startup { top: 65%; left: 15%; }
+#projects { top: 85%; left: 35%; }
+#analytics { top: 85%; left: 65%; }
+#automation { top: 65%; left: 85%; }
+#brand { top: 45%; left: 90%; }
+#product { top: 35%; left: 10%; }
+#cx { top: 50%; left: 50%; } /* Center button */

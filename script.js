@@ -1,20 +1,23 @@
-const buttons = document.querySelectorAll('.circle-button');
+document.querySelectorAll('.circle-button').forEach(button => {
+    button.addEventListener('click', function() {
+        document.querySelector('.circle-button.active')?.classList.remove('active');
+        this.classList.add('active');
 
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        buttons.forEach(btn => {
-            if (btn !== button) {
-                btn.style.transform = 'scale(0)'; // Hide other buttons
+        // Move clicked button to center
+        this.style.transform = 'translate(-50%, -50%) scale(3)';
+        this.style.zIndex = '10';
+
+        // Move other buttons back to their original positions
+        document.querySelectorAll('.circle-button').forEach(otherButton => {
+            if (otherButton !== this) {
+                otherButton.style.transform = '';
+                otherButton.style.zIndex = '1';
             }
         });
-        button.style.transform = 'scale(5)'; // Enlarge clicked button
-    });
 
-    button.addEventListener('transitionend', () => {
-        buttons.forEach(btn => {
-            if (btn !== button) {
-                btn.style.transform = ''; // Reset other buttons
-            }
-        });
+        // Display corresponding content
+        const contentId = this.getAttribute('id') + '-content';
+        document.querySelector('.content.active')?.classList.remove('active');
+        document.getElementById(contentId)?.classList.add('active');
     });
 });

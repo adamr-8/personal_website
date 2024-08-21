@@ -1,130 +1,172 @@
-/* Basic resets */
-* {
+revery to v 8
+4911438
+styles.css
+@@ -1,76 +1,154 @@
+/* Global Styles */
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
     height: 100vh;
-    overflow: hidden;
+    background-color: #1c1c1c; /* Dark background */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    scroll-behavior: smooth;
+
+
 }
 
-/* Container for the entire layout */
+/* Container Styles */
 .container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+
     width: 100%;
+    height: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: auto;
+    flex-direction: row; /* Default side-by-side for larger screens */
 }
 
-/* Circle container */
+/* Circle Container */
 .circle-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    gap: 20px;
+    flex: 1;
     position: relative;
-    width: 400px;
-    height: 400px;
-    margin-right: 50px;
-}
-
-/* Buttons in a circular arrangement */
-.button {
-    width: 80px;
-    height: 80px;
-    background-color: #ff7f0e;
-    color: white;
-    font-size: 12px;  /* Adjusted font size to fit on buttons */
-    font-weight: 600;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
+    transform: translateX(-200px); /* Original positioning */
 }
+
+/* Details Panel */
+.details-panel {
+    flex: 1;
+    padding: 20px;
+    background-color: #292929; /* Dark grey panel background */
+    border-left: 2px solid #555555;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    min-height: 200px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+
+/* Button Styles */
+.button {
+    position: absolute;
+    width: 14vmin;
+    height: 14vmin;
+    border-radius: 50%;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific Button Colors */
+#traditional { background-color: #ffcc00; }
+#sales { background-color: #ff9900; }
+#product { background-color: #ff6600; }
+#brand { background-color: #ff3300; }
+#automation { background-color: #e60000; }
+#analytics { background-color: #cc0066; }
+#projects { background-color: #9900cc; }
+#startup { background-color: #6600cc; }
+#content { background-color: #0073e6; }
+#digital { background-color: #00b3b3; }
+#cx { background-color: #00cc66; }
+#ecommerce { background-color: #99cc00; }
+
 
 .button:hover {
-    transform: scale(1.2);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+
+
 }
 
-/* Layout for the details panel */
-.details-panel {
-    width: 100%;
-    max-width: 600px;
-    background-color: #252525;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+/* Positioning of buttons around the circle */
+#traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); }
+#sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); }
+#product { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); }
+#brand { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); }
+#automation { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); }
+#analytics { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); }
+#projects { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); }
+#startup { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); }
+#content { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); }
+#digital { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); }
+#cx { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); }
+#ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); }
+
+/* Branding Logo Styles */
+.branding-logo {
+
+
+
+
+
+
+
+
+    text-align: center;
+    background-color: #0056d2; /* Accent color */
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-#title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #3b82f6;
+/* Headings */
+h1, h2, h3 {
+    font-weight: bold;
+    margin: 20px 0;
+    color: #ffffff;
 }
 
-#discipline-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+/* Paragraphs */
+p {
+    color: #cccccc;
+    font-size: 1.1em;
+    margin: 10px 0;
 }
 
-#discipline-description {
-    font-size: 1rem;
-    color: #dddddd;
-}
-
-#icon-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
+/* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Stack vertically on smaller screens */
         align-items: center;
-        justify-content: center;
+        height: auto;
+        padding: 20px 0; /* Add vertical padding */
     }
 
     .circle-container {
-        width: 300px;
-        height: 300px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        transform: translateX(0);
+        margin-top: 20px;
+        justify-content: center; /* Center circle on small screens */
+        min-height: 40vh; /* Ensure enough space for buttons */
+        padding: 20px; /* Add padding */
+    }
+
+    .button {
+        width: 12vmin; /* Scale buttons down slightly */
+        height: 12vmin;
+        font-size: 1em;
     }
 
     .details-panel {
-        width: 90%;
-        max-width: 300px;
-        margin-top: 20px;
         padding: 20px;
-    }
-
-    #title {
-        font-size: 1.5rem;
-    }
-
-    #discipline-title {
-        font-size: 1.25rem;
-    }
-
-    #discipline-description {
-        font-size: 0.875rem;
+        margin-top: 20px; /* Add margin between circle and info panel */
+        width: 90%; /* Restrict width for better spacing */
     }
 }

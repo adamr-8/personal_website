@@ -1,8 +1,9 @@
+@ -1,55 +1,174 @@
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.button');
-    const detailsTitle = document.getElementById('discipline-title');
-    const detailsContent = document.getElementById('discipline-description');
-    const brandingLogo = document.getElementById('icon-container');
+    const detailsTitle = document.getElementById('details-title');
+    const detailsContent = document.getElementById('details-content');
+    const brandingLogo = document.getElementById('branding-logo');
 
     // Store details for each button
     const buttonDetails = {

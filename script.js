@@ -32,17 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to expand the button and move it to the center
     function expandButtonToCenter(button) {
-        // Store the original position
         if (!button.dataset.originalTop) {
             const rect = button.getBoundingClientRect();
             button.dataset.originalTop = button.style.top;
             button.dataset.originalLeft = button.style.left;
         }
 
-        // Set new position to center
         button.style.top = '50%';
         button.style.left = '50%';
-        button.style.transform = 'translate(-50%, -50%) scale(3)';
         button.classList.add('expand');
     }
 });

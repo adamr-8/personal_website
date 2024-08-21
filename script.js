@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.button');
     const detailsTitle = document.getElementById('details-title');
     const detailsContent = document.getElementById('details-content');
-    const brandingLogo = document.getElementById('branding-logo');
 
     // Store details for each button
     const buttonDetails = {
@@ -130,9 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
-            // Hide branding logo when hovering over a button
-            brandingLogo.style.display = 'none';
-
             // Show details panel with content
             const buttonId = button.id.toLowerCase(); // Ensuring consistency with ID case
             if (buttonDetails[buttonId]) {
@@ -156,19 +152,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Store initial transform for reset purposes
         button.dataset.initialTransform = button.style.transform;
-    });
-
-    // Optional: Reset the buttons when mouse leaves the circle-container
-    const circleContainer = document.querySelector('.circle-container');
-    circleContainer.addEventListener('mouseleave', () => {
-        buttons.forEach(button => {
-            button.style.zIndex = "0";
-            button.style.transform = button.dataset.initialTransform;
-        });
-
-        // Show branding logo when not hovering over a button
-        brandingLogo.style.display = 'flex';
-        detailsTitle.innerText = 'Hover over a discipline';
-        detailsContent.innerText = 'Details will appear here.';
     });
 });

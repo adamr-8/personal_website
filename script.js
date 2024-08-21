@@ -3,23 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            // Check if button is already expanded
-            if (button.classList.contains('expand')) {
-                // Shrink the button back to its original size and position, and show all buttons
-                buttons.forEach(btn => {
-                    btn.classList.remove('hidden');
-                });
-                button.classList.remove('expand');
-                resetButtonPositions(button);
-            } else {
-                // Hide all other buttons and expand the clicked button
-                buttons.forEach(btn => {
-                    if (btn !== button) {
-                        btn.classList.add('hidden');
-                    }
-                });
-                expandButtonToCenter(button);
-            }
+            // Close any already expanded button
+            buttons.forEach(btn => {
+                if (btn.classList.contains('expand')) {
+                    btn.classList.remove('expand');
+                }
+            });
+
+            // Expand the clicked button
+            expandButtonToCenter(button);
         });
     });
 

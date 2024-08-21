@@ -60,8 +60,8 @@ html, body {
 
 /* Expanded Button */
 .button.expand {
-    width: 40vmin;
-    height: 40vmin;
+    width: 80vmin;
+    height: 80vmin;
     z-index: 100;
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6);
     transform: translate(-50%, -50%) scale(1.5);

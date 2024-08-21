@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const originalLeft = button.dataset.originalLeft;
         button.style.top = originalTop;
         button.style.left = originalLeft;
-        button.style.transform = 'translate(0, 0) scale(1)';
+        button.style.transform = 'translate(-50%, -50%) scale(1)';
     }
 
     // Function to expand the button and move it to the center
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const deltaX = centerX - rect.left - rect.width / 2;
         const deltaY = centerY - rect.top - rect.height / 2;
 
-        button.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(8)`;
+        button.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(10)`;
         button.style.transition = 'transform 1s ease-in-out';
         button.classList.add('expand');
     }

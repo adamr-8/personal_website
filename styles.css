@@ -22,8 +22,8 @@ html, body {
 /* Circle Container */
 .circle-container {
     position: relative;
-    width: 60vmin;
-    height: 60vmin;
+    width: 85vmin; /* Adjusted to give more space between buttons */
+    height: 85vmin; /* Adjusted to give more space between buttons */
     display: flex;
     justify-content: center;
     align-items: center;

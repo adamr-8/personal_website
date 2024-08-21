@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            // Toggle between expanding and shrinking
+            // Check if button is already expanded
             if (button.classList.contains('expand')) {
-                // Shrink the button back and show all buttons
+                // Shrink the button back to its original size and position, and show all buttons
                 buttons.forEach(btn => {
                     btn.classList.remove('hidden');
                 });

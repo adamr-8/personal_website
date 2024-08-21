@@ -47,21 +47,21 @@ html, body {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Specific Button Positions and Colors */
-#ecommerce { background-color: #99cc00; top: 10%; left: 50%; transform: translate(-50%, -50%); }
-#traditional { background-color: #ffcc00; top: 30%; left: 70%; transform: translate(-50%, -50%); }
-#sales { background-color: #ff9900; top: 50%; left: 90%; transform: translate(-50%, -50%); }
-#cx { background-color: #00cc66; top: 70%; left: 70%; transform: translate(-50%, -50%); }
-#digital { background-color: #00b3b3; top: 90%; left: 50%; transform: translate(-50%, -50%); }
-#content { background-color: #0073e6; top: 70%; left: 30%; transform: translate(-50%, -50%); }
-#startup { background-color: #9900cc; top: 50%; left: 10%; transform: translate(-50%, -50%); }
-#projects { background-color: #6600cc; top: 30%; left: 30%; transform: translate(-50%, -50%); }
-#analytics { background-color: #cc0066; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+/* Specific Button Colors and Positioning */
+#ecommerce { background-color: #99cc00; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); }
+#traditional { background-color: #ffcc00; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); }
+#sales { background-color: #ff9900; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); }
+#cx { background-color: #00cc66; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); }
+#digital { background-color: #00b3b3; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); }
+#content { background-color: #0073e6; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); }
+#startup { background-color: #9900cc; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); }
+#projects { background-color: #6600cc; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); }
+#analytics { background-color: #cc0066; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); }
 
 /* Expanded Button */
 .button.expand {
-    width: 80vmin;
-    height: 80vmin;
+    width: 40vmin;
+    height: 40vmin;
     z-index: 100;
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6);
     transform: translate(-50%, -50%) scale(1.5);

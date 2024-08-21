@@ -1,93 +1,45 @@
-/* Global Styles */
-html, body {
+body {
     margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #1c1c1c; /* Dark background */
-    font-family: 'Poppins', sans-serif;
-    color: #ffffff;
-    scroll-behavior: smooth;
+    overflow: hidden;
+    background-color: #1d1d1d;
 }
 
-/* Container Styles */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-/* Circle Container */
-.circle-container {
-    position: relative;
-    width: 80vmin; /* Adjusted to give more space between buttons */
-    height: 80vmin; /* Adjusted to give more space between buttons */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Button Styles */
 .button {
     position: absolute;
-    width: 12vmin;
-    height: 12vmin;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    color: #ffffff;
-    font-weight: bold;
-    cursor: pointer;
+    color: white;
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    font-size: 1.2em;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out, top 0.6s ease-in-out, left 0.6s ease-in-out;
 }
 
-/* Position buttons in a circular layout */
-#ecommerce { background-color: #99cc00; top: 10%; left: 50%; transform: translate(-50%, -50%); }
-#traditional { background-color: #ffcc00; top: 24%; left: 76%; transform: translate(-50%, -50%); }
-#sales { background-color: #ff9900; top: 50%; left: 90%; transform: translate(-50%, -50%); }
-#cx { background-color: #00cc66; top: 76%; left: 76%; transform: translate(-50%, -50%); }
-#digital { background-color: #00b3b3; top: 90%; left: 50%; transform: translate(-50%, -50%); }
-#content { background-color: #0073e6; top: 76%; left: 24%; transform: translate(-50%, -50%); }
-#startup { background-color: #9900cc; top: 50%; left: 10%; transform: translate(-50%, -50%); }
-#projects { background-color: #6600cc; top: 24%; left: 24%; transform: translate(-50%, -50%); }
-#analytics { background-color: #cc0066; top: 10%; left: 50%; transform: translate(-50%, -50%); }
-#automation { background-color: #e74c3c; top: 35%; left: 15%; transform: translate(-50%, -50%); }
-#product { background-color: #e67e22; top: 76%; left: 76%; transform: translate(-50%, -50%); }
-#brand { background-color: #d35400; top: 24%; left: 50%; transform: translate(-50%, -50%); }
-
-/* Expanded Button */
-.button.expand {
-    z-index: 100;
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6);
-    /* Transformation handled via JS for dynamic sizing */
-}
-
-/* Hidden buttons during expansion */
 .button.hidden {
-    opacity: 0;
-    pointer-events: none;
+    visibility: hidden;
 }
 
-/* Responsive Design for Smaller Screens */
-@media screen and (max-width: 768px) {
-    .circle-container {
-        width: 80vmin;
-        height: 80vmin;
-    }
+.button.expand {
+    z-index: 1000;
+}
 
-    .button {
-        width: 12vmin;
-        height: 12vmin;
-    }
+.circle-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
 
-    .button.expand {
-        width: 60vmin;
-        height: 60vmin;
+@media (min-width: 800px) {
+    .circle-layout {
+        flex-wrap: wrap;
     }
+}
+
+.hidden {
+    display: none;
 }

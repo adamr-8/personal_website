@@ -52,6 +52,13 @@ html, body {
 #brand { top: 260px; left: 70px; }
 #automation { top: 120px; left: 20px; }
 
+/* Hover Effect - Subtle Scale */
+.button:hover {
+    transform: scale(1.05); /* Slightly scales the button */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.7); /* Adds a shadow */
+    z-index: 10; /* Ensures the hovered button is on top */
+}
+
 /* Details Panel */
 .details-panel {
     flex: 1;

@@ -79,12 +79,11 @@ html, body {
 #cx { background-color: #00cc66; }
 #ecommerce { background-color: #99cc00; }
 
-/* Dramatic Hover Effect with 3D Tilt */
+/* Hover Effect */
 .button:hover {
-    transform: scale(1.4) rotateX(25deg) rotateY(25deg); /* More dramatic tilt effect */
-    box-shadow: 0px 40px 50px rgba(0, 0, 0, 0.9); /* Stronger shadow */
+    transform: scale(1.2); /* Simple scale effect */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6);
     z-index: 10;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* Positioning of buttons around the circle */

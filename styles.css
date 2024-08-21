@@ -13,6 +13,7 @@ html, body {
 
 /* Circle Container */
 .circle-container {
+    transform: translateY(50vh); /* Move the entire circle down by 10% (50vh=50%) of viewport height */
     flex: 1;
     position: relative;
     display: flex;

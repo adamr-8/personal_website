@@ -4,12 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             // Check if button is already expanded
-            if (button.classList.contains('expanded')) {
-                // Shrink the button back and show all buttons
+            if (button.classList.contains('expand')) {
+                // Shrink the button back to its original size and position, and show all buttons
                 buttons.forEach(btn => {
                     btn.classList.remove('hidden');
                 });
-                button.classList.remove('expanded');
+                button.classList.remove('expand');
+                resetButtonPositions(button);
             } else {
                 // Hide all other buttons and expand the clicked button
                 buttons.forEach(btn => {
@@ -17,8 +18,29 @@ document.addEventListener('DOMContentLoaded', () => {
                         btn.classList.add('hidden');
                     }
                 });
-                button.classList.add('expanded');
+                expandButtonToCenter(button);
             }
         });
     });
+
+    // Function to reset the button's position after shrinking back
+    function resetButtonPositions(button) {
+        const originalTop = button.dataset.originalTop;
+        const originalLeft = button.dataset.originalLeft;
+        button.style.top = originalTop;
+        button.style.left = originalLeft;
+    }
+
+    // Function to expand the button and move it to the center
+    function expandButtonToCenter(button) {
+        // Store the original position
+        const rect = button.getBoundingClientRect();
+        button.dataset.originalTop = button.style.top;
+        button.dataset.originalLeft = button.style.left;
+
+        // Set new position to center
+        button.style.top = '50%';
+        button.style.left = '50%';
+        button.classList.add('expand');
+    }
 });

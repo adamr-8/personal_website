@@ -46,7 +46,7 @@ html, body {
 }
 
 /* Hover effects for atom-like behavior */
-.grid-button:hover {
+.grid-button.hovered {
     transform: scale(2.0);
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6);
     background-color: #ff4500; /* Highlighted color */
@@ -66,12 +66,12 @@ html, body {
     padding: 10px;
 }
 
-.grid-button:hover .button-content {
+.grid-button.hovered .button-content {
     display: block;
 }
 
 /* Hide the label when showing content */
-.grid-button:hover .button-label {
+.grid-button.hovered .button-label {
     display: none;
 }
 

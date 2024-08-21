@@ -47,7 +47,7 @@ html, body {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Specific Button Colors */
+/* Specific Button Positions and Colors */
 #ecommerce { background-color: #99cc00; top: 10%; left: 50%; transform: translate(-50%, -50%); }
 #traditional { background-color: #ffcc00; top: 30%; left: 70%; transform: translate(-50%, -50%); }
 #sales { background-color: #ff9900; top: 50%; left: 90%; transform: translate(-50%, -50%); }

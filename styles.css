@@ -1,16 +1,14 @@
-
 /* Global Styles */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
-    background-color: #1c1c1c;
+    background-color: #1c1c1c; /* Dark background */
     font-family: 'Poppins', sans-serif;
     color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    scroll-behavior: smooth;
+    overflow: hidden; /* Prevent scrollbars */
 }
 
 /* Container Styles */
@@ -18,80 +16,70 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     width: 100%;
-    position: relative;
+    height: 100%;
 }
 
-/* Circle Container */
 .circle-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    max-width: 80vmin;
-    max-height: 80vmin;
-    margin: auto;
+    width: 80vmin;
+    height: 80vmin;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10vmin;
 }
 
 /* Button Styles */
 .button {
-    position: relative;
-    width: 14vmin;
-    height: 14vmin;
+    width: 20vmin;
+    height: 20vmin;
     border-radius: 50%;
-    background-color: #ff6600;
     color: #ffffff;
     font-weight: bold;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
-}
-
-.button.expanded {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60vmin;
-    height: 60vmin;
-    z-index: 100;
-}
-
-.button .content {
-    display: none;
-}
-
-.button.expanded .content {
-    display: block;
     text-align: center;
+    font-size: 1.5em;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.button.expanded .inner-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    background-color: #1a1a1a;
-    border-radius: 50%;
-    padding: 20px;
-    box-sizing: border-box;
-    color: #ffffff;
-    overflow-y: auto;
-}
-
-/* Specific Button Colors */
 #ecommerce { background-color: #99cc00; }
 #traditional { background-color: #ffcc00; }
 #sales { background-color: #ff9900; }
 #cx { background-color: #00cc66; }
 #digital { background-color: #00b3b3; }
 #content { background-color: #0073e6; }
-#startup { background-color: #6600cc; }
-#projects { background-color: #9900cc; }
+#startup { background-color: #9900cc; }
+#projects { background-color: #6600cc; }
 #analytics { background-color: #cc0066; }
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.button.open {
+    position: absolute;
+    width: 70vmin;
+    height: 70vmin;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.button.open .button-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 1em;
+}
+
+.hidden {
+    display: none;
+}

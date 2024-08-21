@@ -1,19 +1,34 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.button');
+    let openButton = null;
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            // Toggle expansion on click
-            if (!button.classList.contains('expanded')) {
-                // Collapse any expanded button
-                buttons.forEach(btn => btn.classList.remove('expanded'));
+            if (openButton && openButton !== button) {
+                // Close the previously opened button
+                openButton.classList.remove('open');
+                openButton = null;
+            }
 
-                // Expand the clicked button
-                button.classList.add('expanded');
+            if (!button.classList.contains('open')) {
+                button.classList.add('open');
+                openButton = button;
+
+                // Hide other buttons
+                buttons.forEach(otherButton => {
+                    if (otherButton !== button) {
+                        otherButton.classList.add('hidden');
+                    }
+                });
+
             } else {
-                // Revert to original state
-                button.classList.remove('expanded');
+                button.classList.remove('open');
+                openButton = null;
+
+                // Show other buttons
+                buttons.forEach(otherButton => {
+                    otherButton.classList.remove('hidden');
+                });
             }
         });
     });

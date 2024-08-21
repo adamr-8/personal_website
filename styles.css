@@ -1,0 +1,130 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container for the entire layout */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Circle container */
+.circle-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-right: 50px;
+}
+
+/* Buttons in a circular arrangement */
+.button {
+    width: 80px;
+    height: 80px;
+    background-color: #ff7f0e;
+    color: white;
+    font-size: 12px;  /* Adjusted font size to fit on buttons */
+    font-weight: 600;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.button:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Layout for the details panel */
+.details-panel {
+    width: 100%;
+    max-width: 600px;
+    background-color: #252525;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+}
+
+#title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #3b82f6;
+}
+
+#discipline-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#discipline-description {
+    font-size: 1rem;
+    color: #dddddd;
+}
+
+#icon-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circle-container {
+        width: 300px;
+        height: 300px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .details-panel {
+        width: 90%;
+        max-width: 300px;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    #title {
+        font-size: 1.5rem;
+    }
+
+    #discipline-title {
+        font-size: 1.25rem;
+    }
+
+    #discipline-description {
+        font-size: 0.875rem;
+    }
+}

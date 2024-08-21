@@ -22,8 +22,8 @@ html, body {
 /* Circle Container */
 .circle-container {
     position: relative;
-    width: 90vmin; /* Adjusted to give more space between buttons */
-    height: 90vmin; /* Adjusted to give more space between buttons */
+    width: 80vmin; /* Adjusted to give more space between buttons */
+    height: 80vmin; /* Adjusted to give more space between buttons */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,8 +32,8 @@ html, body {
 /* Button Styles */
 .button {
     position: absolute;
-    width: 14vmin;
-    height: 14vmin;
+    width: 12vmin;
+    height: 12vmin;
     border-radius: 50%;
     color: #ffffff;
     font-weight: bold;
@@ -72,31 +72,6 @@ html, body {
 .button.hidden {
     opacity: 0;
     pointer-events: none;
-}
-
-/* Branding Logo Styles */
-.branding-logo {
-    text-align: center;
-    background-color: #0056d2; /* Accent color */
-    padding: 10px;
-    border-radius: 8px;
-    color: white;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* Headings */
-h1, h2, h3 {
-    font-weight: bold;
-    margin: 20px 0;
-    color: #ffffff;
-}
-
-/* Paragraphs */
-p {
-    color: #cccccc;
-    font-size: 1.1em;
-    margin: 10px 0;
 }
 
 /* Responsive Design for Smaller Screens */

@@ -3,26 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Circle</title>
+    <title>Interactive Marketing Skills</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="circle-container">
-        <div class="circle">
-            <div class="circle-item" id="ecommerce">E-commerce</div>
-            <div class="circle-item" id="traditional">Traditional</div>
-            <div class="circle-item" id="sales">Sales</div>
-            <div class="circle-item" id="product">Product</div>
-            <div class="circle-item" id="brand">Brand</div>
-            <div class="circle-item" id="automation">Automation</div>
-            <div class="circle-item" id="analytics">Analytics</div>
-            <div class="circle-item" id="projects">Projects</div>
-            <div class="circle-item" id="startup">Startup</div>
-            <div class="circle-item" id="content">Content</div>
-            <div class="circle-item" id="digital">Digital</div>
-            <div class="circle-item" id="cx">CX</div>
+    <div class="container">
+        <!-- Circle Container for Buttons -->
+        <div class="circle-container">
+            <div class="button" id="traditional" data-info="Traditional Marketing Content">Traditional</div>
+            <div class="button" id="sales" data-info="Sales & Business Development Content">Sales</div>
+            <div class="button" id="product" data-info="Product Development Content">Product</div>
+            <div class="button" id="brand" data-info="Brand Management Content">Brand</div>
+            <div class="button" id="automation" data-info="Marketing Automation & CRM Content">Automation</div>
+            <div class="button" id="analytics" data-info="Analytics & Reporting Content">Analytics</div>
+            <div class="button" id="projects" data-info="Project Management Content">Projects</div>
+            <div class="button" id="startup" data-info="Entrepreneurship Content">Startup</div>
+            <div class="button" id="content" data-info="Content Creation Content">Content</div>
+            <div class="button" id="digital" data-info="SEO & PPC Content">Digital</div>
+            <div class="button" id="cx" data-info="Customer Experience Content">CX</div>
+            <div class="button" id="ecommerce" data-info="E-commerce Content">E-commerce</div>
+        </div>
+
+        <!-- Details Panel -->
+        <div id="details-panel" class="details-panel">
+            <div id="branding-logo" class="branding-logo">
+                <div class="branding-text">AR</div>
+                <div class="branding-subtext">ADAM REED</div>
+            </div>
+            <h2 id="details-title">Hover over a discipline</h2>
+            <p id="details-content">Details will appear here.</p>
+            <div id="icon-container"></div>
         </div>
     </div>
+    
+    <!-- Script for interactions -->
     <script src="script.js"></script>
 </body>
 </html>

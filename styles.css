@@ -1,159 +1,124 @@
-/* Global Styles */
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #1c1c1c; /* Dark background */
-    font-family: 'Poppins', sans-serif;
-    color: #ffffff;
-    scroll-behavior: smooth;
+/* General Body Styles */
+body {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Container Styles */
-.container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    max-width: 1200px;
-    margin: auto;
-    flex-direction: row; /* Default side-by-side for larger screens */
-}
-
-/* Circle Container */
+/* Circle Container Styles */
 .circle-container {
-    flex: 1;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(-200px); /* Original positioning */
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  padding-top: 50px;
 }
 
-/* Details Panel */
-.details-panel {
-    flex: 1;
-    padding: 20px;
-    background-color: #292929; /* Dark grey panel background */
-    border-left: 2px solid #555555;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    text-align: center;
-    min-height: 200px;
-    padding-bottom: 50px;
-    border-radius: 10px;
-}
-
-/* Button Styles */
+/* General Button Styles */
 .button {
-    position: absolute;
-    width: 14vmin;
-    height: 14vmin;
-    border-radius: 50%;
-    color: #ffffff;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.2em;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
-/* Specific Button Colors */
-#traditional { background-color: #ffcc00; }
-#sales { background-color: #ff9900; }
-#product { background-color: #ff6600; }
-#brand { background-color: #ff3300; }
-#automation { background-color: #e60000; }
-#analytics { background-color: #cc0066; }
-#projects { background-color: #9900cc; }
-#startup { background-color: #6600cc; }
-#content { background-color: #0073e6; }
-#digital { background-color: #00b3b3; }
-#cx { background-color: #00cc66; }
-#ecommerce { background-color: #99cc00; }
-
-/* Hover Effect */
+/* Hover Effects */
 .button:hover {
-    transform: scale(1.2); /* Simple scale effect */
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6);
-    z-index: 10;
+  transform: scale(1.2);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Positioning of buttons around the circle */
-#traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); }
-#sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); }
-#product { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); }
-#brand { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); }
-#automation { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); }
-#analytics { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); }
-#projects { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); }
-#startup { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); }
-#content { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); }
-#digital { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); }
-#cx { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); }
-#ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); }
-
-/* Branding Logo Styles */
-.branding-logo {
-    text-align: center;
-    background-color: #0056d2; /* Accent color */
-    padding: 10px;
-    border-radius: 8px;
-    color: white;
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 20px;
+/* Positioning Buttons in Circle Layout */
+.circle-container .button {
+  position: absolute;
+  transform-origin: 250px 250px;
 }
 
-/* Headings */
-h1, h2, h3 {
-    font-weight: bold;
-    margin: 20px 0;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
+.circle-container .button:nth-child(1) { transform: rotate(0deg) translate(200px); }
+.circle-container .button:nth-child(2) { transform: rotate(30deg) translate(200px); }
+.circle-container .button:nth-child(3) { transform: rotate(60deg) translate(200px); }
+.circle-container .button:nth-child(4) { transform: rotate(90deg) translate(200px); }
+.circle-container .button:nth-child(5) { transform: rotate(120deg) translate(200px); }
+.circle-container .button:nth-child(6) { transform: rotate(150deg) translate(200px); }
+.circle-container .button:nth-child(7) { transform: rotate(180deg) translate(200px); }
+.circle-container .button:nth-child(8) { transform: rotate(210deg) translate(200px); }
+.circle-container .button:nth-child(9) { transform: rotate(240deg) translate(200px); }
+.circle-container .button:nth-child(10) { transform: rotate(270deg) translate(200px); }
+.circle-container .button:nth-child(11) { transform: rotate(300deg) translate(200px); }
+.circle-container .button:nth-child(12) { transform: rotate(330deg) translate(200px); }
+
+/* Specific Font Size Adjustment for "E-commerce" Button */
+.button.ecommerce {
+  font-size: 1.1rem;
 }
 
-/* Paragraphs */
-p {
-    color: #cccccc;
-    font-size: 1.2em;
-    margin: 10px 0;
-    font-family: 'Poppins', sans-serif;
+/* Details Section Styles */
+.details-section {
+  padding: 20px;
+  text-align: center;
 }
 
-/* Responsive Design for Smaller Screens */
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Stack vertically on smaller screens */
-        align-items: center;
-        height: auto;
-        padding: 20px 0; /* Add vertical padding */
-    }
+.details-section h1 {
+  font-size: 2.5rem;
+  color: #3f51b5;
+  margin-bottom: 20px;
+}
 
-    .circle-container {
-        transform: translateX(0);
-        margin-top: 20px;
-        justify-content: center; /* Center circle on small screens */
-        min-height: 40vh; /* Ensure enough space for buttons */
-        padding: 20px; /* Add padding */
-    }
+.details-section p {
+  font-size: 1.2rem;
+}
 
-    .button {
-        width: 12vmin; /* Scale buttons down slightly */
-        height: 12vmin;
-        font-size: 1em;
-    }
+.details-section .icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
 
-    .details-panel {
-        padding: 20px;
-        margin-top: 20px; /* Add margin between circle and info panel */
-        width: 90%; /* Restrict width for better spacing */
-    }
+/* Adjustments for Mobile Screens */
+@media only screen and (max-width: 768px) {
+  .circle-container {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .circle-container .button {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 1rem;
+    transform-origin: 175px 175px;
+  }
+  
+  .circle-container .button:nth-child(1) { transform: rotate(0deg) translate(140px); }
+  .circle-container .button:nth-child(2) { transform: rotate(30deg) translate(140px); }
+  .circle-container .button:nth-child(3) { transform: rotate(60deg) translate(140px); }
+  .circle-container .button:nth-child(4) { transform: rotate(90deg) translate(140px); }
+  .circle-container .button:nth-child(5) { transform: rotate(120deg) translate(140px); }
+  .circle-container .button:nth-child(6) { transform: rotate(150deg) translate(140px); }
+  .circle-container .button:nth-child(7) { transform: rotate(180deg) translate(140px); }
+  .circle-container .button:nth-child(8) { transform: rotate(210deg) translate(140px); }
+  .circle-container .button:nth-child(9) { transform: rotate(240deg) translate(140px); }
+  .circle-container .button:nth-child(10) { transform: rotate(270deg) translate(140px); }
+  .circle-container .button:nth-child(11) { transform: rotate(300deg) translate(140px); }
+  .circle-container .button:nth-child(12) { transform: rotate(330deg) translate(140px); }
+
+  .details-section h1 {
+    font-size: 2rem;
+  }
+
+  .details-section p {
+    font-size: 1rem;
+  }
+
+  .details-section .icon {
+    font-size: 2.5rem;
+  }
 }

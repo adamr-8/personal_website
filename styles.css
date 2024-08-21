@@ -52,12 +52,14 @@ html, body {
 #brand { top: 260px; left: 70px; }
 #automation { top: 120px; left: 20px; }
 
-/* Hover Effect - Subtle Scale */
+/* Hover Effect - Larger Scale and Color Change */
 .button:hover {
-    transform: scale(1.05); /* Slightly scales the button */
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.7); /* Adds a shadow */
+    transform: scale(1.2); /* Scales the button more noticeably */
+    background: linear-gradient(145deg, #ffd700, #ff8c00); /* Changes the color */
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.8); /* Adds a larger shadow */
     z-index: 10; /* Ensures the hovered button is on top */
 }
+
 
 /* Details Panel */
 .details-panel {

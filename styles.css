@@ -1,7 +1,3 @@
-revery to v 8
-4911438
-styles.css
-@@ -1,76 +1,154 @@
 /* Global Styles */
 html, body {
     margin: 0;
@@ -9,17 +5,14 @@ html, body {
     width: 100%;
     height: 100vh;
     background-color: #1c1c1c; /* Dark background */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     scroll-behavior: smooth;
-
-
 }
 
 /* Container Styles */
 .container {
     display: flex;
-
     width: 100%;
     height: 100%;
     max-width: 1200px;
@@ -86,12 +79,11 @@ html, body {
 #cx { background-color: #00cc66; }
 #ecommerce { background-color: #99cc00; }
 
-
+/* Hover Effect */
 .button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-
-
+    transform: scale(1.2); /* Simple scale effect */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6);
+    z-index: 10;
 }
 
 /* Positioning of buttons around the circle */
@@ -110,20 +102,13 @@ html, body {
 
 /* Branding Logo Styles */
 .branding-logo {
-
-
-
-
-
-
-
-
     text-align: center;
     background-color: #0056d2; /* Accent color */
     padding: 10px;
     border-radius: 8px;
     color: white;
-    font-size: 2em;
+    font-size: 2.5em;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
@@ -132,13 +117,15 @@ h1, h2, h3 {
     font-weight: bold;
     margin: 20px 0;
     color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Paragraphs */
 p {
     color: #cccccc;
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Responsive Design for Smaller Screens */

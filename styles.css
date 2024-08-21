@@ -49,17 +49,17 @@ html, body {
 
 /* Position buttons in a circular layout */
 #ecommerce { background-color: #99cc00; top: 10%; left: 50%; transform: translate(-50%, -50%); }
-#traditional { background-color: #ffcc00; top: 25%; left: 80%; transform: translate(-50%, -50%); }
+#traditional { background-color: #ffcc00; top: 24%; left: 76%; transform: translate(-50%, -50%); }
 #sales { background-color: #ff9900; top: 50%; left: 90%; transform: translate(-50%, -50%); }
-#cx { background-color: #00cc66; top: 75%; left: 80%; transform: translate(-50%, -50%); }
+#cx { background-color: #00cc66; top: 76%; left: 76%; transform: translate(-50%, -50%); }
 #digital { background-color: #00b3b3; top: 90%; left: 50%; transform: translate(-50%, -50%); }
-#content { background-color: #0073e6; top: 75%; left: 20%; transform: translate(-50%, -50%); }
+#content { background-color: #0073e6; top: 76%; left: 24%; transform: translate(-50%, -50%); }
 #startup { background-color: #9900cc; top: 50%; left: 10%; transform: translate(-50%, -50%); }
-#projects { background-color: #6600cc; top: 25%; left: 20%; transform: translate(-50%, -50%); }
+#projects { background-color: #6600cc; top: 24%; left: 24%; transform: translate(-50%, -50%); }
 #analytics { background-color: #cc0066; top: 10%; left: 50%; transform: translate(-50%, -50%); }
-#automation { background-color: #e74c3c; top: 50%; left: 25%; transform: translate(-50%, -50%); }
-#product { background-color: #e67e22; top: 75%; left: 75%; transform: translate(-50%, -50%); }
-#brand { background-color: #d35400; top: 25%; left: 50%; transform: translate(-50%, -50%); }
+#automation { background-color: #e74c3c; top: 35%; left: 15%; transform: translate(-50%, -50%); }
+#product { background-color: #e67e22; top: 76%; left: 76%; transform: translate(-50%, -50%); }
+#brand { background-color: #d35400; top: 24%; left: 50%; transform: translate(-50%, -50%); }
 
 /* Expanded Button */
 .button.expand {

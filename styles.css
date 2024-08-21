@@ -1,68 +1,53 @@
 body {
     margin: 0;
-    height: 100vh;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1a1a1a;
-    color: white;
+    height: 100vh;
+    background-color: #1e1e1e;
     font-family: Arial, sans-serif;
 }
 
 .container {
     position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80vmin; /* Adjusted to make it responsive */
-    height: 80vmin; /* Adjusted to make it responsive */
-    transform: translate(-50%, -50%);
+    width: 80vmin;
+    height: 80vmin;
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.circle-btn {
+.circle-button {
     position: absolute;
-    width: 10vmin;
-    height: 10vmin;
-    border-radius: 50%;
-    background-color: #ff4757;
+    width: 8vmin;
+    height: 8vmin;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #ff5722;
+    color: #fff;
     font-size: 1.5vmin;
-    color: white;
+    border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.4s ease-in-out, font-size 0.4s ease-in-out;
+    transition: transform 0.4s ease;
 }
 
-.circle-btn:nth-child(1) { transform: rotate(0deg) translateX(35vmin) rotate(0deg); }
-.circle-btn:nth-child(2) { transform: rotate(30deg) translateX(35vmin) rotate(-30deg); }
-.circle-btn:nth-child(3) { transform: rotate(60deg) translateX(35vmin) rotate(-60deg); }
-.circle-btn:nth-child(4) { transform: rotate(90deg) translateX(35vmin) rotate(-90deg); }
-.circle-btn:nth-child(5) { transform: rotate(120deg) translateX(35vmin) rotate(-120deg); }
-.circle-btn:nth-child(6) { transform: rotate(150deg) translateX(35vmin) rotate(-150deg); }
-.circle-btn:nth-child(7) { transform: rotate(180deg) translateX(35vmin) rotate(-180deg); }
-.circle-btn:nth-child(8) { transform: rotate(210deg) translateX(35vmin) rotate(-210deg); }
-.circle-btn:nth-child(9) { transform: rotate(240deg) translateX(35vmin) rotate(-240deg); }
-.circle-btn:nth-child(10) { transform: rotate(270deg) translateX(35vmin) rotate(-270deg); }
-.circle-btn:nth-child(11) { transform: rotate(300deg) translateX(35vmin) rotate(-300deg); }
-.circle-btn:nth-child(12) { transform: rotate(330deg) translateX(35vmin) rotate(-330deg); }
-
-.circle-btn:hover {
+.circle-button:hover {
     transform: scale(1.2);
 }
 
-.circle-btn.active {
-    transform: scale(10) !important;
-    z-index: 10;
-    font-size: 6vmin;
-}
-
+#btn1 { transform: translate(-40vmin, -0vmin); }
+#btn2 { transform: translate(-32vmin, -24vmin); }
+#btn3 { transform: translate(-18vmin, -36vmin); }
+#btn4 { transform: translate(0vmin, -40vmin); }
+#btn5 { transform: translate(18vmin, -36vmin); }
+#btn6 { transform: translate(32vmin, -24vmin); }
+#btn7 { transform: translate(40vmin, 0vmin); }
+#btn8 { transform: translate(32vmin, 24vmin); }
+#btn9 { transform: translate(18vmin, 36vmin); }
+#btn10 { transform: translate(0vmin, 40vmin); }
+#btn11 { transform: translate(-18vmin, 36vmin); }
+#btn12 { transform: translate(-32vmin, 24vmin); }

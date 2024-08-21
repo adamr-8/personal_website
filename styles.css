@@ -8,6 +8,7 @@ html, body {
     font-family: 'Poppins', sans-serif;
     color: #ffffff;
     scroll-behavior: smooth;
+    font-weight: 300; /* Default weight */
 }
 
 /* Container Styles */
@@ -77,7 +78,7 @@ html, body {
 #content { background-color: #0073e6; }
 #digital { background-color: #00b3b3; }
 #cx { background-color: #00cc66; }
-#ecommerce { background-color: #99cc00; }
+#ecommerce { background-color: #99cc00; font-size: 0.9em; word-break: break-word; } /* Adjusted for better fit */
 
 /* Hover Effect */
 .button:hover {
@@ -112,16 +113,35 @@ html, body {
 }
 
 /* Headings */
-h1, h2, h3 {
-    font-weight: bold;
+h1 {
+    font-weight: 700; /* Bold for main title */
     margin: 20px 0;
     color: #ffffff;
+    font-size: 2.5em; /* Slightly increase the size */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    font-weight: 600; /* Semi-bold for subheadings */
+    margin: 20px 0;
+    color: #ffffff;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+h3 {
+    font-weight: 600;
+    margin: 20px 0;
+    color: #ffffff;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 /* Paragraphs */
 p {
     color: #cccccc;
     font-size: 1.1em;
+    font-weight: 300; /* Light weight for easy readability */
     margin: 10px 0;
 }
 
@@ -152,5 +172,17 @@ p {
         padding: 20px;
         margin-top: 20px; /* Add margin between circle and info panel */
         width: 90%; /* Restrict width for better spacing */
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
     }
 }

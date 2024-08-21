@@ -1,33 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.grid-button');
-    const buttonPairs = {
-        "ecommerce": "cx",
-        "traditional": "digital",
-        "sales": "content",
-        "product": "startup",
-        "brand": "projects",
-        "automation": "analytics",
+    const buttons = document.querySelectorAll('.button');
+    const buttonDetails = {
+        "ecommerce": "Content for E-commerce",
+        "traditional": "Content for Traditional",
+        "sales": "Content for Sales",
+        "product": "Content for Product",
+        "brand": "Content for Brand",
+        "automation": "Content for Automation",
+        "analytics": "Content for Analytics",
+        "projects": "Content for Projects",
+        "startup": "Content for Startup",
+        "content": "Content for Content",
+        "digital": "Content for Digital",
+        "cx": "Content for CX"
     };
 
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
-            const buttonId = button.id;
-            const oppositeButtonId = buttonPairs[buttonId];
-            const oppositeButton = document.getElementById(oppositeButtonId);
+            const content = buttonDetails[button.id];
+            button.textContent = content;
 
-            // Scale the hovered button and shrink the opposite one
-            button.classList.add('hovered');
-            oppositeButton.classList.add('opposite');
+            // Shrink opposite button
+            const oppositeButtonId = getOppositeButton(button.id);
+            const oppositeButton = document.getElementById(oppositeButtonId);
+            oppositeButton.style.transform = 'scale(0.7) translate(-50%, -50%)';
+            oppositeButton.style.zIndex = '0';
         });
 
-        button.addEventListener('mouseleave', () => {
-            const buttonId = button.id;
-            const oppositeButtonId = buttonPairs[buttonId];
-            const oppositeButton = document.getElementById(oppositeButtonId);
+        button.addEventListener('mouseout', () => {
+            button.textContent = button.id.charAt(0).toUpperCase() + button.id.slice(1);
 
-            // Reset the scales
-            button.classList.remove('hovered');
-            oppositeButton.classList.remove('opposite');
+            // Reset opposite button
+            const oppositeButtonId = getOppositeButton(button.id);
+            const oppositeButton = document.getElementById(oppositeButtonId);
+            oppositeButton.style.transform = 'translate(-50%, -50%)';
+            oppositeButton.style.zIndex = '1';
         });
     });
+
+    function getOppositeButton(buttonId) {
+        const oppositeButtons = {
+            "ecommerce": "brand",
+            "traditional": "analytics",
+            "sales": "projects",
+            "product": "startup",
+            "brand": "ecommerce",
+            "automation": "content",
+            "analytics": "traditional",
+            "projects": "sales",
+            "startup": "product",
+            "content": "automation",
+            "digital": "cx",
+            "cx": "digital"
+        };
+        return oppositeButtons[buttonId];
+    }
 });

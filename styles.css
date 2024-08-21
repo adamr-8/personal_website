@@ -39,7 +39,7 @@ body {
     transform: scale(1.2);
 }
 
-#btn1 { transform: translate(-40vmin, -0vmin); }
+#btn1 { transform: translate(-40vmin, 0vmin); }
 #btn2 { transform: translate(-32vmin, -24vmin); }
 #btn3 { transform: translate(-18vmin, -36vmin); }
 #btn4 { transform: translate(0vmin, -40vmin); }

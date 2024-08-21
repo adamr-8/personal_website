@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
-            // Check if button is already expanded
+            // Check if the button is already expanded
             if (button.classList.contains('expand')) {
                 // Shrink the button back to its original size and position, and show all buttons
                 buttons.forEach(btn => {
@@ -25,21 +25,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to reset the button's position after shrinking back
     function resetButtonPositions(button) {
-        button.style.top = button.dataset.originalTop;
-        button.style.left = button.dataset.originalLeft;
-        button.style.transform = 'translate(-50%, -50%)';
+        const originalTop = button.dataset.originalTop;
+        const originalLeft = button.dataset.originalLeft;
+        button.style.top = originalTop;
+        button.style.left = originalLeft;
+        button.style.transform = 'translate(0, 0) scale(1)';
     }
 
     // Function to expand the button and move it to the center
     function expandButtonToCenter(button) {
-        if (!button.dataset.originalTop) {
-            const rect = button.getBoundingClientRect();
-            button.dataset.originalTop = button.style.top;
-            button.dataset.originalLeft = button.style.left;
-        }
+        // Store the original position
+        const rect = button.getBoundingClientRect();
+        button.dataset.originalTop = button.style.top;
+        button.dataset.originalLeft = button.style.left;
 
-        button.style.top = '50%';
-        button.style.left = '50%';
+        // Set new position to center and scale it up
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        // Calculate the trajectory to create a 3D illusion
+        const deltaX = centerX - rect.left - rect.width / 2;
+        const deltaY = centerY - rect.top - rect.height / 2;
+
+        button.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(8)`;
+        button.style.transition = 'transform 1s ease-in-out';
         button.classList.add('expand');
     }
 });

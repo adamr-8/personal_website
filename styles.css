@@ -26,8 +26,8 @@ html, body {
 /* Button Styles */
 .button {
     position: absolute;
-    width: 14vmin;
-    height: 14vmin;
+    width: 12vmin;
+    height: 12vmin;
     border-radius: 50%;
     color: #ffffff;
     font-weight: bold;
@@ -43,6 +43,7 @@ html, body {
 }
 
 /* Specific Button Colors */
+#ecommerce { background-color: #99cc00; }
 #traditional { background-color: #ffcc00; }
 #sales { background-color: #ff9900; }
 #product { background-color: #ff6600; }
@@ -54,7 +55,6 @@ html, body {
 #content { background-color: #0073e6; }
 #digital { background-color: #00b3b3; }
 #cx { background-color: #00cc66; }
-#ecommerce { background-color: #99cc00; }
 
 /* Hover Effect */
 .button:hover {
@@ -64,16 +64,15 @@ html, body {
 }
 
 /* Positioning of buttons around the circle */
-#ecommerce { top: 0%; left: 50%; transform: translate(-50%, -50%); }
-#traditional { top: 25%; left: 75%; transform: translate(-50%, -50%); }
+#ecommerce { top: 10%; left: 50%; transform: translate(-50%, -50%); }
+#traditional { top: 25%; left: 85%; transform: translate(-50%, -50%); }
 #sales { top: 50%; left: 100%; transform: translate(-50%, -50%); }
-#product { top: 75%; left: 75%; transform: translate(-50%, -50%); }
-#brand { top: 100%; left: 50%; transform: translate(-50%, -50%); }
-#automation { top: 75%; left: 25%; transform: translate(-50%, -50%); }
+#product { top: 75%; left: 85%; transform: translate(-50%, -50%); }
+#brand { top: 90%; left: 50%; transform: translate(-50%, -50%); }
+#automation { top: 75%; left: 15%; transform: translate(-50%, -50%); }
 #analytics { top: 50%; left: 0%; transform: translate(-50%, -50%); }
-#projects { top: 25%; left: 25%; transform: translate(-50%, -50%); }
+#projects { top: 25%; left: 15%; transform: translate(-50%, -50%); }
 #startup { top: 50%; left: 50%; transform: translate(-50%, -50%); }
-#content { top: 0%; left: 50%; transform: translate(-50%, -50%); }
+#content { top: 25%; left: 50%; transform: translate(-50%, -50%); }
 #digital { top: 25%; left: 75%; transform: translate(-50%, -50%); }
-#cx { top: 50%; left: 100%; transform: translate(-50%, -50%); }
-
+#cx { top: 50%; left: 25%; transform: translate(-50%, -50%); }

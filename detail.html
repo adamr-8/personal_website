@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail View</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="detail-container">
+        <h1 id="detail-title">Detail Title</h1>
+        <p id="detail-content">Detailed information about the selected topic.</p>
+        <a href="index.html">Back to Main Page</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const detail = params.get('detail');
+
+            if (detail) {
+                document.getElementById('detail-title').textContent = detail.charAt(0).toUpperCase() + detail.slice(1);
+                document.getElementById('detail-content').textContent = `Detailed information about ${detail}.`;
+            }
+        });
+    </script>
+</body>
+</html>

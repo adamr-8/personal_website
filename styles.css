@@ -4,185 +4,85 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100vh;
-    background-color: #1c1c1c; /* Dark background */
+    background-color: #1c1c1c;
     font-family: 'Poppins', sans-serif;
     color: #ffffff;
     scroll-behavior: smooth;
-    font-weight: 300; /* Default weight */
-}
-
-/* Container Styles */
-.container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    max-width: 1200px;
-    margin: auto;
-    flex-direction: row; /* Default side-by-side for larger screens */
-}
-
-/* Circle Container */
-.circle-container {
-    flex: 1;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(-200px); /* Original positioning */
 }
 
-/* Details Panel */
-.details-panel {
-    flex: 1;
-    padding: 20px;
-    background-color: #292929; /* Dark grey panel background */
-    border-left: 2px solid #555555;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    text-align: center;
-    min-height: 200px;
-    padding-bottom: 50px;
-    border-radius: 10px;
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 80vmin;
+    height: 80vmin;
+    position: relative;
 }
 
 /* Button Styles */
-.button {
-    position: absolute;
-    width: 14vmin;
-    height: 14vmin;
-    border-radius: 50%;
-    color: #ffffff;
-    font-weight: bold;
-    cursor: pointer;
+.grid-button {
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    font-size: 1.2em;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Specific Button Colors */
-#traditional { background-color: #ffcc00; }
-#sales { background-color: #ff9900; }
-#product { background-color: #ff6600; }
-#brand { background-color: #ff3300; }
-#automation { background-color: #e60000; }
-#analytics { background-color: #cc0066; }
-#projects { background-color: #9900cc; }
-#startup { background-color: #6600cc; }
-#content { background-color: #0073e6; }
-#digital { background-color: #00b3b3; }
-#cx { background-color: #00cc66; }
-#ecommerce { background-color: #99cc00; font-size: 0.9em; word-break: break-word; } /* Adjusted for better fit */
-
-/* Hover Effect */
-.button:hover {
-    transform: scale(1.2); /* Simple scale effect */
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6);
-    z-index: 10;
-}
-
-/* Positioning of buttons around the circle */
-#traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); }
-#sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); }
-#product { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -30vmin) rotate(-60deg); }
-#brand { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -30vmin) rotate(-90deg); }
-#automation { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -30vmin) rotate(-120deg); }
-#analytics { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -30vmin) rotate(-150deg); }
-#projects { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -30vmin) rotate(-180deg); }
-#startup { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -30vmin) rotate(-210deg); }
-#content { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -30vmin) rotate(-240deg); }
-#digital { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -30vmin) rotate(-270deg); }
-#cx { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); }
-#ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); }
-
-/* Branding Logo Styles */
-.branding-logo {
-    text-align: center;
-    background-color: #0056d2; /* Accent color */
-    padding: 10px;
-    border-radius: 8px;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ff7f0e;
     color: white;
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    overflow: hidden;
 }
 
-/* Headings */
-h1 {
-    font-weight: 700; /* Bold for main title */
-    margin: 20px 0;
-    color: #ffffff;
-    font-size: 2.5em; /* Slightly increase the size */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+.grid-button:hover {
+    z-index: 2;
 }
 
-h2 {
-    font-weight: 600; /* Semi-bold for subheadings */
-    margin: 20px 0;
-    color: #ffffff;
-    font-size: 2em;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+/* Hover effects for atom-like behavior */
+.grid-button:hover {
+    transform: scale(2.0);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6);
+    background-color: #ff4500; /* Highlighted color */
 }
 
-h3 {
-    font-weight: 600;
-    margin: 20px 0;
-    color: #ffffff;
-    font-size: 1.5em;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+/* Opposite button shrinking */
+.grid-button.opposite {
+    transform: scale(0.7);
+    z-index: 1;
 }
 
-/* Paragraphs */
-p {
-    color: #cccccc;
-    font-size: 1.1em;
-    font-weight: 300; /* Light weight for easy readability */
-    margin: 10px 0;
+/* Content styles */
+.grid-button .button-content {
+    display: none;
+    font-size: 1em;
+    text-align: center;
+    padding: 10px;
 }
 
-/* Responsive Design for Smaller Screens */
+.grid-button:hover .button-content {
+    display: block;
+}
+
+/* Hide the label when showing content */
+.grid-button:hover .button-label {
+    display: none;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Stack vertically on smaller screens */
-        align-items: center;
-        height: auto;
-        padding: 20px 0; /* Add vertical padding */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 
-    .circle-container {
-        transform: translateX(0);
-        margin-top: 20px;
-        justify-content: center; /* Center circle on small screens */
-        min-height: 40vh; /* Ensure enough space for buttons */
-        padding: 20px; /* Add padding */
-    }
-
-    .button {
-        width: 12vmin; /* Scale buttons down slightly */
-        height: 12vmin;
-        font-size: 1em;
-    }
-
-    .details-panel {
-        padding: 20px;
-        margin-top: 20px; /* Add margin between circle and info panel */
-        width: 90%; /* Restrict width for better spacing */
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    p {
+    .grid-button {
         font-size: 1em;
     }
 }

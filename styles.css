@@ -79,10 +79,15 @@ html, body {
 #cx { background-color: #00cc66; }
 #ecommerce { background-color: #99cc00; }
 
+/* Hover Effect for Buttons */
 .button:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.2); /* Slight scale for hover effect */
+    background: linear-gradient(145deg, #ffd700, #ff8c00); /* Change color on hover */
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.8); /* Add shadow */
+    z-index: 10; /* Ensures the hovered button is on top */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
+
 
 /* Positioning of buttons around the circle */
 #traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); }

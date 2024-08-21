@@ -1,10 +1,11 @@
+
 /* Global Styles */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
-    background-color: #1c1c1c; /* Dark background */
+    background-color: #1c1c1c;
     font-family: 'Poppins', sans-serif;
     color: #ffffff;
     display: flex;
@@ -12,66 +13,85 @@ html, body {
     align-items: center;
 }
 
-/* Circle Container */
-.circle-container {
-    position: relative;
-    width: 80vmin;
-    height: 80vmin;
+/* Container Styles */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* Circle Container */
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 80vmin;
+    max-height: 80vmin;
+    margin: auto;
 }
 
 /* Button Styles */
 .button {
-    position: absolute;
-    width: 10vmin;
-    height: 10vmin;
+    position: relative;
+    width: 14vmin;
+    height: 14vmin;
     border-radius: 50%;
+    background-color: #ff6600;
     color: #ffffff;
     font-weight: bold;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.button.expanded {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vmin;
+    height: 60vmin;
+    z-index: 100;
+}
+
+.button .content {
+    display: none;
+}
+
+.button.expanded .content {
+    display: block;
     text-align: center;
-    font-size: 1.2em;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    z-index: 1;
+}
+
+.button.expanded .inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: #1a1a1a;
+    border-radius: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    overflow-y: auto;
 }
 
 /* Specific Button Colors */
 #ecommerce { background-color: #99cc00; }
 #traditional { background-color: #ffcc00; }
 #sales { background-color: #ff9900; }
-#product { background-color: #ff6600; }
-#brand { background-color: #ff3300; }
-#automation { background-color: #e60000; }
-#analytics { background-color: #cc0066; }
-#projects { background-color: #9900cc; }
-#startup { background-color: #6600cc; }
-#content { background-color: #0073e6; }
-#digital { background-color: #00b3b3; }
 #cx { background-color: #00cc66; }
-
-/* Hover Effect */
-.button:hover {
-    transform: scale(1.5); /* Slightly enlarge the button */
-    z-index: 10;
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.6);
-}
-
-/* Positioning of buttons around the circle */
-#ecommerce { top: 10%; left: 50%; transform: translate(-50%, -50%); }
-#traditional { top: 27%; left: 73%; transform: translate(-50%, -50%); }
-#sales { top: 50%; left: 90%; transform: translate(-50%, -50%); }
-#product { top: 73%; left: 73%; transform: translate(-50%, -50%); }
-#brand { top: 90%; left: 50%; transform: translate(-50%, -50%); }
-#automation { top: 73%; left: 27%; transform: translate(-50%, -50%); }
-#analytics { top: 50%; left: 10%; transform: translate(-50%, -50%); }
-#projects { top: 27%; left: 27%; transform: translate(-50%, -50%); }
-#startup { top: 50%; left: 50%; transform: translate(-50%, -50%); }
-#content { top: 15%; left: 50%; transform: translate(-50%, -50%); }
-#digital { top: 75%; left: 75%; transform: translate(-50%, -50%); }
-#cx { top: 50%; left: 25%; transform: translate(-50%, -50%); }
+#digital { background-color: #00b3b3; }
+#content { background-color: #0073e6; }
+#startup { background-color: #6600cc; }
+#projects { background-color: #9900cc; }
+#analytics { background-color: #cc0066; }

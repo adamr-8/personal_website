@@ -45,15 +45,18 @@ html, body {
 }
 
 /* Circular Layout */
-.button:nth-child(1) { top: 10%; left: 50%; transform: translate(-50%, -50%); background-color: #99cc00; }
-.button:nth-child(2) { top: 30%; left: 75%; transform: translate(-50%, -50%); background-color: #ffcc00; }
-.button:nth-child(3) { top: 50%; left: 90%; transform: translate(-50%, -50%); background-color: #ff9900; }
-.button:nth-child(4) { top: 70%; left: 75%; transform: translate(-50%, -50%); background-color: #00cc66; }
-.button:nth-child(5) { top: 90%; left: 50%; transform: translate(-50%, -50%); background-color: #00b3b3; }
-.button:nth-child(6) { top: 70%; left: 25%; transform: translate(-50%, -50%); background-color: #0073e6; }
-.button:nth-child(7) { top: 50%; left: 10%; transform: translate(-50%, -50%); background-color: #9900cc; }
-.button:nth-child(8) { top: 30%; left: 25%; transform: translate(-50%, -50%); background-color: #6600cc; }
-.button:nth-child(9) { top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #cc0066; }
+.circle-container .button:nth-child(1) { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translateX(30vmin) rotate(0deg); background-color: #99cc00; }
+.circle-container .button:nth-child(2) { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translateX(30vmin) rotate(-30deg); background-color: #ffcc00; }
+.circle-container .button:nth-child(3) { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translateX(30vmin) rotate(-60deg); background-color: #ff9900; }
+.circle-container .button:nth-child(4) { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translateX(30vmin) rotate(-90deg); background-color: #00cc66; }
+.circle-container .button:nth-child(5) { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translateX(30vmin) rotate(-120deg); background-color: #00b3b3; }
+.circle-container .button:nth-child(6) { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translateX(30vmin) rotate(-150deg); background-color: #0073e6; }
+.circle-container .button:nth-child(7) { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translateX(30vmin) rotate(-180deg); background-color: #9900cc; }
+.circle-container .button:nth-child(8) { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translateX(30vmin) rotate(-210deg); background-color: #6600cc; }
+.circle-container .button:nth-child(9) { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translateX(30vmin) rotate(-240deg); background-color: #cc0066; }
+.circle-container .button:nth-child(10) { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translateX(30vmin) rotate(-270deg); background-color: #8e44ad; }
+.circle-container .button:nth-child(11) { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translateX(30vmin) rotate(-300deg); background-color: #3498db; }
+.circle-container .button:nth-child(12) { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translateX(30vmin) rotate(-330deg); background-color: #f39c12; }
 
 /* Expanded Button */
 .button.expand {

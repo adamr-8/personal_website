@@ -13,7 +13,7 @@ html, body {
 
 /* Circle Container */
 .circle-container {
-    transform: translateY(50vh); /* Move the entire circle down by 10% (50vh=50%) of viewport height */
+    transform: translateY(50vh); /* Move the entire circle down by 50% of viewport height */
     flex: 1;
     position: relative;
     display: flex;
@@ -38,8 +38,6 @@ html, body {
     transition: transform 0.5s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
-
-
 
 /* Specific Button Colors */
 #traditional { background-color: #ffcc00; }
@@ -98,5 +96,9 @@ html, body {
         width: 12vmin; /* Scale buttons down slightly */
         height: 12vmin;
         font-size: 1em;
+    }
+
+    .button:hover {
+        transform: scale(5); /* Increase scale to 500% for larger effect */
     }
 }

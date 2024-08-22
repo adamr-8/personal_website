@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>`
         },
         "automation": { 
-            title: "Automation & CRM", 
-            content: `
-                <i class="fas fa-cogs" style="font-size: 40px; color: #333;"></i>
-                <p>I have extensive experience with CRM systems, particularly Salesforce, where I've managed customer relationships to drive engagement and retention. My work in this area has led to significant improvements in lead nurturing and customer satisfaction.</p>
-                <ul>
-                    <li>Implemented Salesforce Marketing Cloud, leading to a 25% increase in email open rates.</li>
-                    <li>Streamlined CRM processes that reduced lead response time by 40%.</li>
-                </ul>`
+        title: "Automation & CRM", 
+        content: `
+            <i class="fas fa-cogs" style="font-size: 40px; color: #333;"></i>
+            <p>I have extensive experience with CRM systems, particularly Salesforce, where I've managed customer relationships to drive engagement and retention. My work in this area has led to significant improvements in lead nurturing and customer satisfaction.</p>
+            <ul>
+                <li>Implemented Salesforce Marketing Cloud, leading to a 25% increase in email open rates.</li>
+                <li>Streamlined CRM processes that reduced lead response time by 40%.</li>
+            </ul>`
         },
         "analytics": { 
             title: "Analytics & Reporting", 
@@ -156,6 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             if (button.style.transform.includes('scale(8)')) {
                 button.style.transform = button.dataset.initialTransform; // Reset to initial state
+            } else {
+                button.style.zIndex = "1";
+                button.style.transform = "translate(-50%, -50%) scale(8)"; // Increase scale to 800% on tap
             }
         });
     });

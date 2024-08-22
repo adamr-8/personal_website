@@ -13,7 +13,7 @@ html, body {
 
 /* Circle Container */
 .circle-container {
-    transform: translateY(50vh); /* Move the entire circle down by 10% (50vh=50%) of viewport height */
+    transform: translateY(40vh); /* Move the entire circle down by 40% of viewport height */
     flex: 1;
     position: relative;
     display: flex;
@@ -77,22 +77,22 @@ html, body {
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Stack vertically on smaller screens */
         align-items: center;
         height: auto;
-        padding: 20px 0;
+        padding: 20px 0; /* Add vertical padding */
     }
 
     .circle-container {
-        transform: translateX(0) translateY(60vh); /* Center circle on small screens */
-        justify-content: center;
-        min-height: 40vh;
-        padding: 20px;
+        transform: translateY(30vh); /* Move the circle slightly down */
+        justify-content: center; /* Center circle on small screens */
+        min-height: 40vh; /* Ensure enough space for buttons */
+        padding: 20px; /* Add padding */
     }
 
     .button {
-        width: 18vmin; /* Increase button size on mobile */
-        height: 18vmin;
-        font-size: 1.2em;
+        width: 12vmin; /* Scale buttons down slightly */
+        height: 12vmin;
+        font-size: 1em;
     }
 }

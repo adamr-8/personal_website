@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Move hovered button to center with larger scale
             button.style.zIndex = "1";
-            button.style.transform = "translate(-50%, -50%) scale(8)"; // Increase scale to 375%
+            button.style.transform = "translate(-50%, -50%) scale(8)"; // Increase scale to 800%
         });
 
         // Store initial transform for reset purposes
@@ -157,6 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (button.style.transform.includes('scale(8)')) {
                 button.style.transform = button.dataset.initialTransform; // Reset to initial state
             }
+        });
+
+        // Handle touch events for mobile devices
+        button.addEventListener('touchstart', () => {
+            button.dispatchEvent(new Event('mouseover'));
         });
     });
 });

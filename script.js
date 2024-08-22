@@ -2,14 +2,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.button');
     let expandedButton = null;
 
-    buttons.forEach(button => {
-        button.addEventListener('mouseover', () => {
-            if (!expandedButton) { // Only animate if no button is expanded
-                const buttonId = button.id.toLowerCase();
-                button.style.zIndex = "1";
-                button.style.transform = "translate(-50%, -50%) scale(3)"; // 300% scale
-            }
+// Adjust hover behavior
+buttons.forEach(button => {
+    button.addEventListener('mouseover', () => {
+        // Show details panel with content
+        const buttonId = button.id.toLowerCase();
+        if (buttonDetails[buttonId]) {
+            detailsTitle.innerText = buttonDetails[buttonId].title;
+            detailsContent.innerHTML = buttonDetails[buttonId].content;
+        } else {
+            detailsTitle.innerText = button.innerText;
+            detailsContent.innerText = button.getAttribute('data-info');
+        }
+
+        // Reset z-index and transform of all buttons
+        buttons.forEach(btn => {
+            btn.style.zIndex = "0";
+            btn.style.transform = btn.dataset.initialTransform;
         });
+
+        // Move hovered button to center with larger scale
+        button.style.zIndex = "1";
+        button.style.transform = "translate(-50%, -50%) scale(3)"; // Increased scale
+    });
+
+    // Store initial transform for reset purposes
+    button.dataset.initialTransform = button.style.transform;
+});
+
 
         button.addEventListener('click', () => {
             if (expandedButton) { // Close the expanded button

@@ -13,7 +13,7 @@ html, body {
 
 /* Circle Container */
 .circle-container {
-    transform: translateY(40vh); /* Adjust the position vertically to center on the screen */
+    transform: translateY(50vh); /* Move the entire circle down by 10% (50vh=50%) of viewport height */
     flex: 1;
     position: relative;
     display: flex;
@@ -39,6 +39,8 @@ html, body {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+
+
 /* Specific Button Colors */
 #traditional { background-color: #ffcc00; }
 #sales { background-color: #ff9900; }
@@ -59,6 +61,7 @@ html, body {
     transition: transform 0.6s ease; /* Slow down animation */
     z-index: 10;
 }
+
 
 /* Positioning of buttons around the circle */
 #traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); }
@@ -84,7 +87,7 @@ html, body {
     }
 
     .circle-container {
-        transform: translateY(50vh); /* Adjust the position vertically to center on smaller screens */
+        transform: translateX(0);
         margin-top: 20px;
         justify-content: center; /* Center circle on small screens */
         min-height: 40vh; /* Ensure enough space for buttons */

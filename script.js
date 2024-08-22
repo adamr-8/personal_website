@@ -147,14 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Move hovered button to center with larger scale
             button.style.zIndex = "1";
-            button.style.transform = "translate(-50%, -50%) scale(3.75)"; // Increase scale to 375%
+            button.style.transform = "translate(-50%, -50%) scale(5)"; // Increase scale to 375%
         });
 
         // Store initial transform for reset purposes
         button.dataset.initialTransform = button.style.transform;
 
         button.addEventListener('click', () => {
-            if (button.style.transform.includes('scale(3.75)')) {
+            if (button.style.transform.includes('scale(5)')) {
                 button.style.transform = button.dataset.initialTransform; // Reset to initial state
             }
         });

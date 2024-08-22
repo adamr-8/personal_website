@@ -9,6 +9,7 @@ html, body {
     color: #ffffff;
     scroll-behavior: smooth;
     font-weight: 300; /* Default weight */
+    overflow: hidden; /* Prevent scrolling when button is expanded */
 }
 
 /* Circle Container */
@@ -88,6 +89,7 @@ html, body {
         justify-content: center; /* Center circle on small screens */
         min-height: 40vh; /* Ensure enough space for buttons */
         padding: 20px; /* Add padding */
+        overflow: hidden; /* Ensure button expands beyond the viewport */
     }
 
     .button {
@@ -97,6 +99,8 @@ html, body {
     }
 
     .button.active {
-        transform: scale(6); /* Scale up for full screen on tap */
+        transform: scale(12); /* Increase the scale to expand beyond the screen */
+        transition: transform 0.5s ease; /* Adjust transition for the scaling effect */
+        z-index: 10;
     }
 }

@@ -9,12 +9,10 @@ html, body {
     color: #ffffff;
     scroll-behavior: smooth;
     font-weight: 300; /* Default weight */
-    overflow: hidden; /* Prevent scrolling when button is expanded */
 }
 
 /* Circle Container */
 .circle-container {
-    transform: translateY(50vh); /* Center the container vertically */
     flex: 1;
     position: relative;
     display: flex;
@@ -77,19 +75,12 @@ html, body {
 
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Stack vertically on smaller screens */
-        align-items: center;
-        height: auto;
-        padding: 20px 0; /* Add vertical padding */
-    }
-
     .circle-container {
-        transform: translateY(40vh); /* Adjust container position for mobile */
+        transform: translateY(20vh); /* Move the entire circle down by 20% of viewport height */
+        margin-top: 20px;
         justify-content: center; /* Center circle on small screens */
         min-height: 40vh; /* Ensure enough space for buttons */
         padding: 20px; /* Add padding */
-        overflow: hidden; /* Ensure button expands beyond the viewport */
     }
 
     .button {
@@ -98,9 +89,9 @@ html, body {
         font-size: 1em;
     }
 
-    .button.active {
-        transform: scale(12); /* Increase the scale to expand beyond the screen */
-        transition: transform 0.5s ease; /* Adjust transition for the scaling effect */
-        z-index: 10;
+    .button.clicked {
+        transform: scale(10) translate(-50%, -50%); /* Scale button to fill screen */
+        z-index: 1000; /* Bring to front */
+        border-radius: 50%;
     }
 }

@@ -130,10 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
             // Show details panel with content
-            const buttonId = button.id.toLowerCase(); // Ensuring consistency with ID case
+            const buttonId = button.id.toLowerCase();
             if (buttonDetails[buttonId]) {
                 detailsTitle.innerText = buttonDetails[buttonId].title;
-                detailsContent.innerHTML = buttonDetails[buttonId].content; // Using innerHTML to allow HTML tags
+                detailsContent.innerHTML = buttonDetails[buttonId].content;
             } else {
                 detailsTitle.innerText = button.innerText;
                 detailsContent.innerText = button.getAttribute('data-info');
@@ -142,12 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Reset z-index and transform of all buttons
             buttons.forEach(btn => {
                 btn.style.zIndex = "0";
-                btn.style.transform = btn.dataset.initialTransform;
+                btn.style.transform = "translate(-50%, -50%) scale(1)"; // Reset to original size first
             });
 
             // Move hovered button to center with larger scale
             button.style.zIndex = "1";
-            button.style.transform = "translate(-50%, -50%) scale(3.5)"; // Increased scale to 3.5x
+            button.style.transform = "translate(-50%, -50%) scale(4)"; // Increase the scale to 4
         });
 
         // Store initial transform for reset purposes

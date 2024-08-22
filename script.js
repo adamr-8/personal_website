@@ -147,19 +147,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Move hovered button to center with larger scale
             button.style.zIndex = "1";
-            button.style.transform = "translate(-50%, -50%) scale(8)"; // Increase scale to 800%
+            button.style.transform = "translate(-50%, -50%) scale(5)"; // Increase scale for open state
         });
 
         // Store initial transform for reset purposes
         button.dataset.initialTransform = button.style.transform;
 
         button.addEventListener('click', () => {
-            if (button.style.transform.includes('scale(8)')) {
+            if (button.style.transform.includes('scale(5)')) {
                 button.style.transform = button.dataset.initialTransform; // Reset to initial state
             } else {
-                button.style.zIndex = "1";
-                button.style.transform = "translate(-50%, -50%) scale(8)"; // Increase scale to 800% on tap
+                // Scale the clicked button up further on mobile
+                button.style.transform = "translate(-50%, -50%) scale(8)"; // Larger scale for click event
+                button.style.transition = "transform 0.8s ease";
             }
+        });
+    });
+
+    // Mobile tap event to open buttons
+    buttons.forEach(button => {
+        button.addEventListener('touchstart', () => {
+            const buttonId = button.id.toLowerCase();
+            if (buttonDetails[buttonId]) {
+                detailsTitle.innerText = buttonDetails[buttonId].title;
+                detailsContent.innerHTML = buttonDetails[buttonId].content;
+            } else {
+                detailsTitle.innerText = button.innerText;
+                detailsContent.innerText = button.getAttribute('data-info');
+            }
+
+            // Reset z-index and transform of all buttons
+            buttons.forEach(btn => {
+                btn.style.zIndex = "0";
+                btn.style.transform = btn.dataset.initialTransform;
+            });
+
+            // Move tapped button to center with larger scale
+            button.style.zIndex = "1";
+            button.style.transform = "translate(-50%, -50%) scale(5)"; // Tap scale effect
+            button.style.transition = "transform 0.8s ease";
         });
     });
 });

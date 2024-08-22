@@ -13,7 +13,7 @@ html, body {
 
 /* Circle Container */
 .circle-container {
-    transform: translateY(40vh); /* Move the entire circle down by 40% of viewport height */
+    transform: translateY(40vh); /* Adjust the position vertically to center on the screen */
     flex: 1;
     position: relative;
     display: flex;
@@ -84,7 +84,8 @@ html, body {
     }
 
     .circle-container {
-        transform: translateY(30vh); /* Move the circle slightly down */
+        transform: translateY(50vh); /* Adjust the position vertically to center on smaller screens */
+        margin-top: 20px;
         justify-content: center; /* Center circle on small screens */
         min-height: 40vh; /* Ensure enough space for buttons */
         padding: 20px; /* Add padding */

@@ -13,7 +13,7 @@ html, body {
 
 /* Circle Container */
 .circle-container {
-    transform: translateY(50vh); /* Move the entire circle down by 50% of viewport height */
+    transform: translateY(50vh); /* Move the entire circle down by 10% (50vh=50%) of viewport height */
     flex: 1;
     position: relative;
     display: flex;
@@ -60,7 +60,6 @@ html, body {
     z-index: 10;
 }
 
-
 /* Positioning of buttons around the circle */
 #traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -30vmin) rotate(0deg); }
 #sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -30vmin) rotate(-30deg); }
@@ -78,27 +77,22 @@ html, body {
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack vertically on smaller screens */
+        flex-direction: column;
         align-items: center;
         height: auto;
-        padding: 20px 0; /* Add vertical padding */
+        padding: 20px 0;
     }
 
     .circle-container {
-        transform: translateX(0);
-        margin-top: 20px;
-        justify-content: center; /* Center circle on small screens */
-        min-height: 40vh; /* Ensure enough space for buttons */
-        padding: 20px; /* Add padding */
+        transform: translateX(0) translateY(60vh); /* Center circle on small screens */
+        justify-content: center;
+        min-height: 40vh;
+        padding: 20px;
     }
 
     .button {
-        width: 12vmin; /* Scale buttons down slightly */
-        height: 12vmin;
-        font-size: 1em;
-    }
-
-    .button:hover {
-        transform: scale(5); /* Increase scale to 500% for larger effect */
+        width: 18vmin; /* Increase button size on mobile */
+        height: 18vmin;
+        font-size: 1.2em;
     }
 }

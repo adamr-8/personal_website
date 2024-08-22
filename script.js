@@ -130,10 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
             // Show details panel with content
-            const buttonId = button.id.toLowerCase();
+            const buttonId = button.id.toLowerCase(); // Ensuring consistency with ID case
             if (buttonDetails[buttonId]) {
                 detailsTitle.innerText = buttonDetails[buttonId].title;
-                detailsContent.innerHTML = buttonDetails[buttonId].content;
+                detailsContent.innerHTML = buttonDetails[buttonId].content; // Using innerHTML to allow HTML tags
             } else {
                 detailsTitle.innerText = button.innerText;
                 detailsContent.innerText = button.getAttribute('data-info');
@@ -142,15 +142,21 @@ document.addEventListener('DOMContentLoaded', () => {
             // Reset z-index and transform of all buttons
             buttons.forEach(btn => {
                 btn.style.zIndex = "0";
-                btn.style.transform = "translate(-50%, -50%) scale(1)"; // Reset to original size first
+                btn.style.transform = btn.dataset.initialTransform;
             });
 
             // Move hovered button to center with larger scale
             button.style.zIndex = "1";
-            button.style.transform = "translate(-50%, -50%) scale(4)"; // Increase the scale to 4
+            button.style.transform = "translate(-50%, -50%) scale(3.75)"; // Increase scale to 375%
         });
 
         // Store initial transform for reset purposes
         button.dataset.initialTransform = button.style.transform;
+
+        button.addEventListener('click', () => {
+            if (button.style.transform.includes('scale(3.75)')) {
+                button.style.transform = button.dataset.initialTransform; // Reset to initial state
+            }
+        });
     });
 });

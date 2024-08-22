@@ -129,11 +129,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
+            console.log(`Hovered over ${button.id}`);
+            
             // Show details panel with content
-            const buttonId = button.id.toLowerCase(); // Ensuring consistency with ID case
+            const buttonId = button.id.toLowerCase();
             if (buttonDetails[buttonId]) {
                 detailsTitle.innerText = buttonDetails[buttonId].title;
-                detailsContent.innerHTML = buttonDetails[buttonId].content; // Using innerHTML to allow HTML tags
+                detailsContent.innerHTML = buttonDetails[buttonId].content;
             } else {
                 detailsTitle.innerText = button.innerText;
                 detailsContent.innerText = button.getAttribute('data-info');
@@ -147,7 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Move hovered button to center with larger scale
             button.style.zIndex = "1";
-            button.style.transform = "translate(-50%, -50%) scale(3.0)";
+            button.style.transition = "transform 1s ease";  // Slow down transition
+            button.style.transform = "translate(-50%, -50%) scale(4.0)"; // Further increase scale
         });
 
         // Store initial transform for reset purposes

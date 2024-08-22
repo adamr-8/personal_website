@@ -13,7 +13,7 @@ html, body {
 
 /* Circle Container */
 .circle-container {
-    transform: translateY(50vh); /* Move the entire circle down by 10% (50vh=50%) of viewport height */
+    transform: translateY(50vh); /* Center the container vertically */
     flex: 1;
     position: relative;
     display: flex;
@@ -84,8 +84,7 @@ html, body {
     }
 
     .circle-container {
-        transform: translateY(20vh); /* Move the entire circle down by 20% of viewport height */
-        margin-top: 20px;
+        transform: translateY(40vh); /* Adjust container position for mobile */
         justify-content: center; /* Center circle on small screens */
         min-height: 40vh; /* Ensure enough space for buttons */
         padding: 20px; /* Add padding */
@@ -95,5 +94,9 @@ html, body {
         width: 12vmin; /* Scale buttons down slightly */
         height: 12vmin;
         font-size: 1em;
+    }
+
+    .button.active {
+        transform: scale(6); /* Scale up for full screen on tap */
     }
 }

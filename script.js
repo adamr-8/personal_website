@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>`
         },
         "automation": { 
-        title: "Automation & CRM", 
-        content: `
+            title: "Automation & CRM", 
+            content: `
             <i class="fas fa-cogs" style="font-size: 40px; color: #333;"></i>
             <p>I have extensive experience with CRM systems, particularly Salesforce, where I've managed customer relationships to drive engagement and retention. My work in this area has led to significant improvements in lead nurturing and customer satisfaction.</p>
             <ul>

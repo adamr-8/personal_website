@@ -77,31 +77,23 @@ html, body {
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Stack vertically on smaller screens */
         align-items: center;
         height: auto;
-        padding: 20px 0;
+        padding: 20px 0; /* Add vertical padding */
     }
 
     .circle-container {
-        transform: translateY(20vh); /* Adjust this to move the circle higher */
-        margin-top: 0;
-        justify-content: center;
-        min-height: 40vh;
-        padding: 0;
+        transform: translateY(25vh); /* Move the entire circle down by 25% of viewport height */
+        margin-top: 20px;
+        justify-content: center; /* Center circle on small screens */
+        min-height: 40vh; /* Ensure enough space for buttons */
+        padding: 20px; /* Add padding */
     }
 
     .button {
-        width: 12vmin;
+        width: 12vmin; /* Scale buttons down slightly */
         height: 12vmin;
         font-size: 1em;
     }
-}
-
-/* Open button state */
-.button.open {
-    transform: translate(-50%, -50%) scale(12); /* Adjust scale to fit mobile better */
-    top: 50%;
-    left: 50%;
-    z-index: 100; /* Bring it to the forefront */
 }

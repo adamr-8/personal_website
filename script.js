@@ -154,10 +154,14 @@ document.addEventListener('DOMContentLoaded', () => {
         button.dataset.initialTransform = button.style.transform;
 
         button.addEventListener('click', () => {
-            if (window.innerWidth <= 768) { // For mobile
-                button.style.transform = "translate(-50%, -50%) scale(12)";
+            if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
+                button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
             } else {
-                button.style.transform = "translate(-50%, -50%) scale(8)"; // Default for larger screens
+                if (window.innerWidth <= 768) { // For mobile
+                    button.style.transform = "translate(-50%, -50%) scale(12)";
+                } else {
+                    button.style.transform = "translate(-50%, -50%) scale(8)"; // Default for larger screens
+                }
             }
         });
     });

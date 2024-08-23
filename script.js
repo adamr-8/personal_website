@@ -128,8 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     buttons.forEach(button => {
-        button.addEventListener('mouseover', () => {
-            // Show details panel with content
+        // Store initial transform for reset purposes
+        button.dataset.initialTransform = button.style.transform;
+
+        // Add a touchstart event listener to detect the first tap on mobile
+        button.addEventListener('touchstart', () => {
             const buttonId = button.id.toLowerCase(); // Ensuring consistency with ID case
             if (buttonDetails[buttonId]) {
                 detailsTitle.innerText = buttonDetails[buttonId].title;
@@ -145,18 +148,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.style.transform = btn.dataset.initialTransform;
             });
 
-            // Move hovered button to center with larger scale
+            // Move tapped button to center with larger scale
             button.style.zIndex = "1";
             button.style.transform = "translate(-50%, -50%) scale(8)";
-        });
 
-        // Store initial transform for reset purposes
-        button.dataset.initialTransform = button.style.transform;
+            document.body.style.overflow = "hidden"; // Disable scroll on body
+        });
 
         button.addEventListener('click', () => {
             if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
-                button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
-                document.body.style.overflow = "hidden"; // Disable scroll on body
+                button.style.transform = button.dataset.initialTransform; // Reset to initial state on second tap
+                document.body.style.overflow = "hidden"; // Keep scroll disabled while open
             } else {
                 if (window.innerWidth <= 768) { // For mobile
                     button.style.transform = "translate(-50%, -50%) scale(12)";

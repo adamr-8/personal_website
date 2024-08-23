@@ -115,8 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li>Developed loyalty programs that increased repeat purchases by 20%.</li>
                 </ul>`
         },
-        "ecommerce": { 
-            title: "E-commerce", 
+        "ecom": { 
+            title: "E-Commerce", 
             content: `
                 <i class="fa-sharp fa-solid fa-shopping-cart" style="font-size: 40px; color: #333;"></i>
                 <p>My e-commerce expertise spans from website optimization to managing multi-channel online stores. I’ve consistently driven growth in this area through strategic marketing and operational efficiencies.</p>

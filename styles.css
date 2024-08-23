@@ -9,17 +9,20 @@ html, body {
     color: #ffffff;
     scroll-behavior: smooth;
     font-weight: 300; /* Default weight */
-    overflow: hidden; /* Prevent scrollbars from appearing */
+    overflow: hidden; /* Prevents scrolling */
 }
 
 /* Circle Container */
 .circle-container {
-    transform: translateY(50vh); /* Move the entire circle down by 50% of viewport height */
-    flex: 1;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: auto;
 }
 
 /* Button Styles */
@@ -77,24 +80,22 @@ html, body {
 
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Stack vertically on smaller screens */
-        align-items: center;
-        height: auto;
-        padding: 20px 0; /* Add vertical padding */
-    }
-
     .circle-container {
-        transform: translateY(25vh); /* Move the entire circle down by 25% of viewport height */
-        margin-top: 20px;
-        justify-content: center; /* Center circle on small screens */
-        min-height: 40vh; /* Ensure enough space for buttons */
-        padding: 20px; /* Add padding */
+        width: 90vmin;
+        height: 90vmin;
     }
 
     .button {
-        width: 12vmin; /* Scale buttons down slightly */
-        height: 12vmin;
+        width: 13vmin; /* Scale buttons slightly */
+        height: 13vmin;
         font-size: 1em;
+    }
+
+    .button.open {
+        width: 100vmin;
+        height: 100vmin;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

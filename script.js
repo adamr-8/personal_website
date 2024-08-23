@@ -156,13 +156,32 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
                 button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
+                document.body.style.overflow = "hidden"; // Disable scroll on body
             } else {
                 if (window.innerWidth <= 768) { // For mobile
                     button.style.transform = "translate(-50%, -50%) scale(12)";
                 } else {
                     button.style.transform = "translate(-50%, -50%) scale(8)"; // Default for larger screens
                 }
+                document.body.style.overflow = "hidden"; // Disable scroll on body
             }
         });
+    });
+
+    // Prevent scrolling on mobile when button is clicked and open
+    window.addEventListener('touchmove', (e) => {
+        if (document.body.style.overflow === 'hidden') {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    // Re-enable scrolling when no buttons are enlarged
+    document.addEventListener('click', () => {
+        const isAnyButtonEnlarged = [...buttons].some(button => 
+            button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')
+        );
+        if (!isAnyButtonEnlarged) {
+            document.body.style.overflow = "";
+        }
     });
 });

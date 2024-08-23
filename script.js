@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>`
         },
         "automation": { 
-            title: "Automation & CRM", 
-            content: `
+        title: "Automation & CRM", 
+        content: `
             <i class="fas fa-cogs" style="font-size: 40px; color: #333;"></i>
             <p>I have extensive experience with CRM systems, particularly Salesforce, where I've managed customer relationships to drive engagement and retention. My work in this area has led to significant improvements in lead nurturing and customer satisfaction.</p>
             <ul>
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>`
         },
         "ecommerce": { 
-            title: "E-com", 
+            title: "E-commerce", 
             content: `
                 <i class="fa-sharp fa-solid fa-shopping-cart" style="font-size: 40px; color: #333;"></i>
                 <p>My e-commerce expertise spans from website optimization to managing multi-channel online stores. I’ve consistently driven growth in this area through strategic marketing and operational efficiencies.</p>
@@ -154,34 +154,15 @@ document.addEventListener('DOMContentLoaded', () => {
         button.dataset.initialTransform = button.style.transform;
 
         button.addEventListener('click', () => {
-            if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(6)')) {
+            if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
                 button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
-                document.body.style.overflow = "hidden"; // Disable scroll on body
             } else {
                 if (window.innerWidth <= 768) { // For mobile
-                    button.style.transform = "translate(-50%, -50%) scale(6)";
+                    button.style.transform = "translate(-50%, -50%) scale(12)";
                 } else {
                     button.style.transform = "translate(-50%, -50%) scale(8)"; // Default for larger screens
                 }
-                document.body.style.overflow = "hidden"; // Disable scroll on body
             }
         });
-    });
-
-    // Prevent scrolling on mobile when button is clicked and open
-    window.addEventListener('touchmove', (e) => {
-        if (document.body.style.overflow === 'hidden') {
-            e.preventDefault();
-        }
-    }, { passive: false });
-
-    // Re-enable scrolling when no buttons are enlarged
-    document.addEventListener('click', () => {
-        const isAnyButtonEnlarged = [...buttons].some(button => 
-            button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(6)')
-        );
-        if (!isAnyButtonEnlarged) {
-            document.body.style.overflow = "";
-        }
     });
 });

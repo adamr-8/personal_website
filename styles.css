@@ -9,20 +9,17 @@ html, body {
     color: #ffffff;
     scroll-behavior: smooth;
     font-weight: 300; /* Default weight */
-    overflow: hidden; /* Prevents scrolling */
+    overflow: hidden; /* Prevent scrollbars from appearing */
 }
 
 /* Circle Container */
 .circle-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(50vh); /* Move the entire circle down by 50% of viewport height */
+    flex: 1;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: auto;
 }
 
 /* Button Styles */
@@ -55,7 +52,7 @@ html, body {
 #content { background-color: #0073e6; }
 #digital { background-color: #00b3b3; }
 #cx { background-color: #00cc66; }
-#ecommerce { background-color: #99cc00; } /* removed Adjustment for better fit when e-commerce changed to e-com */ 
+#ecommerce { background-color: #99cc00; font-size: 0.9em; word-break: break-word; } /* Adjusted for better fit */
 
 /* Adjust hover effect */
 .button:hover {
@@ -80,22 +77,24 @@ html, body {
 
 /* Responsive Design for Smaller Screens */
 @media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: center;
+        height: auto;
+        padding: 20px 0; /* Add vertical padding */
+    }
+
     .circle-container {
-        width: 90vmin;
-        height: 90vmin;
+        transform: translateY(25vh); /* Move the entire circle down by 25% of viewport height */
+        margin-top: 20px;
+        justify-content: center; /* Center circle on small screens */
+        min-height: 40vh; /* Ensure enough space for buttons */
+        padding: 20px; /* Add padding */
     }
 
     .button {
-        width: 13vmin; /* Scale buttons slightly */
-        height: 13vmin;
+        width: 12vmin; /* Scale buttons down slightly */
+        height: 12vmin;
         font-size: 1em;
-    }
-
-    .button.open {
-        width: 100vmin;
-        height: 100vmin;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 }

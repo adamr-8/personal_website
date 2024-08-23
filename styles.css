@@ -56,8 +56,6 @@ html, body {
 #digital { background-color: #00b3b3; }
 #cx { background-color: #00cc66; }
 #ecommerce { background-color: #99cc00; } /* removed Adjustment for better fit when e-commerce changed to e-com */ 
-} 
-
 
 /* Adjust hover effect */
 .button:hover {

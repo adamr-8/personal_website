@@ -9,6 +9,7 @@ html, body {
     color: #ffffff;
     scroll-behavior: smooth;
     font-weight: 300; /* Default weight */
+    overflow: hidden; /* Prevent scrollbars from appearing */
 }
 
 /* Circle Container */

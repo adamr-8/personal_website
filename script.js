@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>`
         },
         "ecommerce": { 
-            title: "E-commerce", 
+            title: "E-com", 
             content: `
                 <i class="fa-sharp fa-solid fa-shopping-cart" style="font-size: 40px; color: #333;"></i>
                 <p>My e-commerce expertise spans from website optimization to managing multi-channel online stores. I’ve consistently driven growth in this area through strategic marketing and operational efficiencies.</p>
@@ -154,12 +154,12 @@ document.addEventListener('DOMContentLoaded', () => {
         button.dataset.initialTransform = button.style.transform;
 
         button.addEventListener('click', () => {
-            if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
+            if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(6)')) {
                 button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
                 document.body.style.overflow = "hidden"; // Disable scroll on body
             } else {
                 if (window.innerWidth <= 768) { // For mobile
-                    button.style.transform = "translate(-50%, -50%) scale(12)";
+                    button.style.transform = "translate(-50%, -50%) scale(6)";
                 } else {
                     button.style.transform = "translate(-50%, -50%) scale(8)"; // Default for larger screens
                 }
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Re-enable scrolling when no buttons are enlarged
     document.addEventListener('click', () => {
         const isAnyButtonEnlarged = [...buttons].some(button => 
-            button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')
+            button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(6)')
         );
         if (!isAnyButtonEnlarged) {
             document.body.style.overflow = "";

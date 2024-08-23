@@ -55,7 +55,7 @@ html, body {
 #content { background-color: #0073e6; }
 #digital { background-color: #00b3b3; }
 #cx { background-color: #00cc66; }
-#ecommerce { background-color: #99cc00; font-size: 0.9em; word-break: break-word; } /* Adjusted for better fit */
+#ecommerce { background-color: #99cc00; /* font-size: 0.9em; word-break: break-word; } Adjusted for better fit */
 
 /* Adjust hover effect */
 .button:hover {

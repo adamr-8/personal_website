@@ -168,8 +168,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // For mobile: Open on first tap
-        button.addEventListener('touchstart', () => {
-            button.click(); // Trigger the click event
+        button.addEventListener('touchend', () => {
+            button.click(); // Trigger the click event on touchend
         });
     });
 

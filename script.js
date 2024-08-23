@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>`
         },
         "ecommerce": { 
-            title: "E-commerce", 
+            title: "E-com", 
             content: `
                 <i class="fa-sharp fa-solid fa-shopping-cart" style="font-size: 40px; color: #333;"></i>
                 <p>My e-commerce expertise spans from website optimization to managing multi-channel online stores. I’ve consistently driven growth in this area through strategic marketing and operational efficiencies.</p>
@@ -128,11 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     buttons.forEach(button => {
-        // Store initial transform for reset purposes
-        button.dataset.initialTransform = button.style.transform;
-
-        // Add a touchstart event listener to detect the first tap on mobile
-        button.addEventListener('touchstart', () => {
+        button.addEventListener('mouseover', () => {
+            // Show details panel with content
             const buttonId = button.id.toLowerCase(); // Ensuring consistency with ID case
             if (buttonDetails[buttonId]) {
                 detailsTitle.innerText = buttonDetails[buttonId].title;
@@ -148,17 +145,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.style.transform = btn.dataset.initialTransform;
             });
 
-            // Move tapped button to center with larger scale
+            // Move hovered button to center with larger scale
             button.style.zIndex = "1";
             button.style.transform = "translate(-50%, -50%) scale(8)";
-
-            document.body.style.overflow = "hidden"; // Disable scroll on body
         });
+
+        // Store initial transform for reset purposes
+        button.dataset.initialTransform = button.style.transform;
 
         button.addEventListener('click', () => {
             if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
-                button.style.transform = button.dataset.initialTransform; // Reset to initial state on second tap
-                document.body.style.overflow = "hidden"; // Keep scroll disabled while open
+                button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
+                document.body.style.overflow = "hidden"; // Disable scroll on body
             } else {
                 if (window.innerWidth <= 768) { // For mobile
                     button.style.transform = "translate(-50%, -50%) scale(12)";
@@ -167,6 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 document.body.style.overflow = "hidden"; // Disable scroll on body
             }
+        });
+
+        // For mobile: Open on first tap
+        button.addEventListener('touchstart', () => {
+            button.click(); // Trigger the click event
         });
     });
 

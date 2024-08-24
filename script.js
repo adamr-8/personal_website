@@ -146,4 +146,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Move clicked button to center with larger scale
             if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
-                button.style.transform
+                button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
+                document.body.style.overflow = "hidden"; // Disable scroll on body
+            } else {
+                if (window.innerWidth <= 768) { // For mobile
+                    button.style.transform = "translate(-50%, -50%) scale(12)";
+                } else {
+                    button.style.transform = "translate(-50%, -50%) scale(8)"; // Default for larger screens
+                }
+                document.body.style.overflow = "hidden"; // Disable scroll on body
+            }
+        });
+
+        // Store initial transform for reset purposes
+        button.dataset.initialTransform = button.style.transform;
+
+        // For mobile: Trigger click on touchend
+        button.addEventListener('touchend', () => {
+            button.click();
+        });
+
+        // For desktop: Hover functionality
+        button.addEventListener('mouseover', () => {
+            if (window.innerWidth > 768) {
+                button.style.zIndex = "1";
+                button.style.transform = "translate(-50%, -50%) scale(8)";
+            }
+        });
+    });
+
+    // Prevent scrolling on mobile when button is clicked and open
+    window.addEventListener('touchmove', (e) => {
+        if (document.body.style.overflow === 'hidden') {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    // Re-enable scrolling when no buttons are enlarged
+    document.addEventListener('click', () => {
+        const isAnyButtonEnlarged = [...buttons].some(button => 
+            button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')
+        );
+        if (!isAnyButtonEnlarged) {
+            document.body.style.overflow = "";
+        }
+    });
+});

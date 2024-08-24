@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.button');
-    const detailsTitle = document.getElementById('details-title');
-    const detailsContent = document.getElementById('details-content');
 
-    // Store details for each button
     const buttonDetails = {
         "traditional": { 
             title: "Traditional Marketing", 
@@ -137,13 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             console.log(`Button ${buttonId} clicked`);  // Debugging line to confirm click
 
-            if (buttonDetails[buttonId] && contentDiv) {
-                contentDiv.innerHTML = buttonDetails[buttonId].content;
-                contentDiv.style.display = "block"; // Ensure content is displayed
-            }
-
             if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
                 button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
+                contentDiv.innerHTML = ""; // Clear content when resetting
                 document.body.style.overflow = "hidden"; // Disable scroll on body
             } else {
                 if (window.innerWidth <= 768) { // For mobile
@@ -167,9 +160,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const buttonId = button.id.toLowerCase();
             const contentDiv = button.querySelector('.button-content');
 
-            if (buttonDetails[buttonId] && contentDiv && button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
+            if (buttonDetails[buttonId] && contentDiv && (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)'))) {
                 contentDiv.innerHTML = buttonDetails[buttonId].content;
                 contentDiv.style.display = "block"; // Display content after transformation is complete
+
+                // Adjust the size and overflow to fit within the button
+                contentDiv.style.overflow = "auto";
+                contentDiv.style.maxHeight = "100%";
+                contentDiv.style.maxWidth = "100%";
+                contentDiv.style.fontSize = "smaller"; // Adjust font size further if needed
             }
         });
     });

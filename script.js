@@ -161,21 +161,17 @@ document.addEventListener('DOMContentLoaded', () => {
             
             console.log(`Button ${buttonId} clicked`);  // Debugging line to confirm click
 
+            // Ensure the contentDiv exists and is populated
+            if (buttonDetails[buttonId] && contentDiv) {
+                contentDiv.innerHTML = buttonDetails[buttonId].content;
+                contentDiv.style.display = "block"; // Ensure content is displayed
+            }
+
+            // Handle button scaling and transformation
             if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
                 button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
-                if (contentDiv) {
-                    contentDiv.innerHTML = ""; // Clear content when closing
-                    contentDiv.style.display = "none"; // Hide content
-                }
                 document.body.style.overflow = "hidden"; // Disable scroll on body
             } else {
-                if (buttonDetails[buttonId]) {
-                    console.log(`Populating content for ${buttonId}`);  // Debugging line before populating content
-                    if (contentDiv) {
-                        contentDiv.innerHTML = buttonDetails[buttonId].content; // Populate with content
-                        contentDiv.style.display = "block"; // Show content
-                    }
-                }
                 if (window.innerWidth <= 768) { // For mobile
                     button.style.transform = "translate(-50%, -50%) scale(12)";
                 } else {

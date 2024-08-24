@@ -43,6 +43,23 @@ html, body {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Button Content Styles */
+.button-content {
+    padding: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 0.9em;
+    color: #fff;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    display: none; /* Hide content by default */
+}
+
+.button.open .button-content {
+    display: block;
+    /* Additional styling for when a button is open */
+}
+
 /* Specific Button Colors */
 #traditional { background-color: #ffcc00; }
 #sales { background-color: #ff9900; }

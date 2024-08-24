@@ -129,43 +129,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
     buttons.forEach(button => {
         button.addEventListener('mouseover', () => {
-            // Show details panel with content
-            const buttonId = button.id.toLowerCase(); // Ensuring consistency with ID case
-            if (buttonDetails[buttonId]) {
-                detailsTitle.innerText = buttonDetails[buttonId].title;
-                detailsContent.innerHTML = buttonDetails[buttonId].content; // Using innerHTML to allow HTML tags
-            } else {
-                detailsTitle.innerText = button.innerText;
-                detailsContent.innerText = button.getAttribute('data-info');
+            if (window.innerWidth > 768) {  // Hover effect only for desktop
+                const buttonId = button.id.toLowerCase();
+                if (buttonDetails[buttonId]) {
+                    detailsTitle.innerText = buttonDetails[buttonId].title;
+                    detailsContent.innerHTML = buttonDetails[buttonId].content;
+                } else {
+                    detailsTitle.innerText = button.innerText;
+                    detailsContent.innerText = button.getAttribute('data-info');
+                }
+
+                // Reset z-index and transform of all buttons
+                buttons.forEach(btn => {
+                    btn.style.zIndex = "0";
+                    btn.style.transform = btn.dataset.initialTransform;
+                });
+
+                // Move hovered button to center with larger scale
+                button.style.zIndex = "1";
+                button.style.transform = "translate(-50%, -50%) scale(8)";
             }
+        });
 
-            // Reset z-index and transform of all buttons
-            buttons.forEach(btn => {
-                btn.style.zIndex = "0";
-                btn.style.transform = btn.dataset.initialTransform;
-            });
+        button.addEventListener('click', () => {
+            const isMobile = window.innerWidth <= 768;
 
-            // Move hovered button to center with larger scale
-            button.style.zIndex = "1";
-            button.style.transform = "translate(-50%, -50%) scale(8)";
+            if (isMobile && !button.style.transform.includes('scale(12)')) {
+                // Open button on mobile with one tap
+                button.style.transform = "translate(-50%, -50%) scale(12)";
+            } else if (!isMobile && button.style.transform.includes('scale(8)')) {
+                // Reset to initial state on desktop with a second click
+                button.style.transform = button.dataset.initialTransform;
+            } else {
+                // Default behavior for desktop or reset on mobile
+                button.style.transform = isMobile ? "translate(-50%, -50%) scale(12)" : "translate(-50%, -50%) scale(8)";
+            }
+            document.body.style.overflow = "hidden"; // Disable scroll on body when button is open
         });
 
         // Store initial transform for reset purposes
         button.dataset.initialTransform = button.style.transform;
-
-        button.addEventListener('click', () => {
-            if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
-                button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
-                document.body.style.overflow = "hidden"; // Disable scroll on body
-            } else {
-                if (window.innerWidth <= 768) { // For mobile
-                    button.style.transform = "translate(-50%, -50%) scale(12)";
-                } else {
-                    button.style.transform = "translate(-50%, -50%) scale(8)"; // Default for larger screens
-                }
-                document.body.style.overflow = "hidden"; // Disable scroll on body
-            }
-        });
     });
 
     // Prevent scrolling on mobile when button is clicked and open
@@ -177,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Re-enable scrolling when no buttons are enlarged
     document.addEventListener('click', () => {
-        const isAnyButtonEnlarged = [...buttons].some(button => 
+        const isAnyButtonEnlarged = [...buttons].some(button =>
             button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')
         );
         if (!isAnyButtonEnlarged) {

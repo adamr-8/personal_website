@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </ul>`
         },
         "ecommerce": { 
-            title: "E-com", 
+            title: "E-commerce", 
             content: `
                 <i class="fa-sharp fa-solid fa-shopping-cart" style="font-size: 40px; color: #333;"></i>
                 <p>My e-commerce expertise spans from website optimization to managing multi-channel online stores. I’ve consistently driven growth in this area through strategic marketing and operational efficiencies.</p>
@@ -128,11 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const buttonId = button.id.toLowerCase();
+        button.addEventListener('mouseover', () => {
+            // Show details panel with content
+            const buttonId = button.id.toLowerCase(); // Ensuring consistency with ID case
             if (buttonDetails[buttonId]) {
                 detailsTitle.innerText = buttonDetails[buttonId].title;
-                detailsContent.innerHTML = buttonDetails[buttonId].content;
+                detailsContent.innerHTML = buttonDetails[buttonId].content; // Using innerHTML to allow HTML tags
             } else {
                 detailsTitle.innerText = button.innerText;
                 detailsContent.innerText = button.getAttribute('data-info');
@@ -144,7 +145,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.style.transform = btn.dataset.initialTransform;
             });
 
-            // Move clicked button to center with larger scale
+            // Move hovered button to center with larger scale
+            button.style.zIndex = "1";
+            button.style.transform = "translate(-50%, -50%) scale(8)";
+        });
+
+        // Store initial transform for reset purposes
+        button.dataset.initialTransform = button.style.transform;
+
+        button.addEventListener('click', () => {
             if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
                 button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
                 document.body.style.overflow = "hidden"; // Disable scroll on body
@@ -155,22 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     button.style.transform = "translate(-50%, -50%) scale(8)"; // Default for larger screens
                 }
                 document.body.style.overflow = "hidden"; // Disable scroll on body
-            }
-        });
-
-        // Store initial transform for reset purposes
-        button.dataset.initialTransform = button.style.transform;
-
-        // For mobile: Trigger click on touchend
-        button.addEventListener('touchend', () => {
-            button.click();
-        });
-
-        // For desktop: Hover functionality
-        button.addEventListener('mouseover', () => {
-            if (window.innerWidth > 768) {
-                button.style.zIndex = "1";
-                button.style.transform = "translate(-50%, -50%) scale(8)";
             }
         });
     });

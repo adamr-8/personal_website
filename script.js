@@ -12,32 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li>Successfully launched multiple direct mail campaigns with a response rate 20% above industry average.</li>
                 </ul>`
         },
-        // Additional button content omitted for brevity, same structure as before...
     };
 
     buttons.forEach(button => {
-        // Store initial transform for reset purposes
         button.dataset.initialTransform = button.style.transform;
 
         button.addEventListener('mouseover', () => {
             if (window.innerWidth > 768) { // Desktop only
-                const buttonId = button.id.toLowerCase();
-                const contentDiv = button.querySelector('.button-content');
-
                 button.style.zIndex = "1";
                 button.style.transform = "translate(-50%, -50%) scale(8)";
-                if (buttonDetails[buttonId] && contentDiv) {
-                    contentDiv.innerHTML = buttonDetails[buttonId].content;
-                    contentDiv.style.display = "block"; // Display content after transformation is complete
-
-                    // Adjust the size and overflow to fit within the button
-                    contentDiv.style.overflow = "hidden"; // Prevent overflowing of content
-                    contentDiv.style.padding = "10px"; // Add padding for better spacing
-                    contentDiv.style.boxSizing = "border-box"; // Ensure padding is within the button
-                    contentDiv.style.maxHeight = "100%";
-                    contentDiv.style.maxWidth = "100%";
-                    contentDiv.style.fontSize = "smaller"; // Adjust font size further if needed
-                }
             }
         });
 
@@ -68,14 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = "hidden"; // Disable scroll on body
             }
         });
-
-        // Enable one-tap opening on mobile
-        if (window.innerWidth <= 768) {
-            button.addEventListener('touchstart', (e) => {
-                e.preventDefault();
-                button.click();
-            }, { passive: false });
-        }
 
         button.addEventListener('transitionend', () => {
             const buttonId = button.id.toLowerCase();

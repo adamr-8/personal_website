@@ -128,12 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     buttons.forEach(button => {
-        button.addEventListener('mouseover', () => {
-            // Show details panel with content
-            const buttonId = button.id.toLowerCase(); // Ensuring consistency with ID case
+        button.addEventListener('click', () => {
+            const buttonId = button.id.toLowerCase();
             if (buttonDetails[buttonId]) {
                 detailsTitle.innerText = buttonDetails[buttonId].title;
-                detailsContent.innerHTML = buttonDetails[buttonId].content; // Using innerHTML to allow HTML tags
+                detailsContent.innerHTML = buttonDetails[buttonId].content;
             } else {
                 detailsTitle.innerText = button.innerText;
                 detailsContent.innerText = button.getAttribute('data-info');
@@ -145,48 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.style.transform = btn.dataset.initialTransform;
             });
 
-            // Move hovered button to center with larger scale
-            button.style.zIndex = "1";
-            button.style.transform = "translate(-50%, -50%) scale(8)";
-        });
-
-        // Store initial transform for reset purposes
-        button.dataset.initialTransform = button.style.transform;
-
-        button.addEventListener('click', () => {
+            // Move clicked button to center with larger scale
             if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
-                button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
-                document.body.style.overflow = "hidden"; // Disable scroll on body
-            } else {
-                if (window.innerWidth <= 768) { // For mobile
-                    button.style.transform = "translate(-50%, -50%) scale(12)";
-                } else {
-                    button.style.transform = "translate(-50%, -50%) scale(8)"; // Default for larger screens
-                }
-                document.body.style.overflow = "hidden"; // Disable scroll on body
-            }
-        });
-
-        // For mobile: Open on first tap
-        button.addEventListener('touchend', () => {
-            button.click(); // Trigger the click event on touchend
-        });
-    });
-
-    // Prevent scrolling on mobile when button is clicked and open
-    window.addEventListener('touchmove', (e) => {
-        if (document.body.style.overflow === 'hidden') {
-            e.preventDefault();
-        }
-    }, { passive: false });
-
-    // Re-enable scrolling when no buttons are enlarged
-    document.addEventListener('click', () => {
-        const isAnyButtonEnlarged = [...buttons].some(button => 
-            button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')
-        );
-        if (!isAnyButtonEnlarged) {
-            document.body.style.overflow = "";
-        }
-    });
-});
+                button.style.transform

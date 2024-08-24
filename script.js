@@ -1,37 +1,46 @@
-// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.button');
+    const container = document.querySelector('.circle-container');
 
-// Function to handle button click
-function handleButtonClick(event) {
-    const clickedButton = event.currentTarget;
-    const isOpen = clickedButton.classList.contains('open');
+    buttons.forEach(button => {
+        // Store the initial transformation state of each button
+        button.dataset.initialTransform = button.style.transform;
+        button.dataset.initialTransformStyle = button.style.transformStyle;
 
-    // Close all other buttons
-    document.querySelectorAll('.button').forEach(button => {
-        button.classList.remove('open');
-        button.style.transform = '';  // Reset transform
-        button.querySelector('.button-content').style.display = 'none'; // Hide content
-    });
+        button.addEventListener('click', function() {
+            // Remove the 'open' class from all buttons except the clicked one
+            buttons.forEach(btn => {
+                if (btn !== button) {
+                    btn.classList.remove('open');
+                    btn.style.transform = btn.dataset.initialTransform; // Reset to initial position
+                    btn.style.zIndex = 1; // Reset z-index
+                }
+            });
 
-    // Toggle the clicked button
-    if (!isOpen) {
-        clickedButton.classList.add('open');
-        clickedButton.style.transform = 'scale(3)'; // Ensure it scales correctly
-        clickedButton.querySelector('.button-content').style.display = 'block'; // Show content
-    }
-}
+            // Toggle 'open' class on the clicked button
+            if (button.classList.contains('open')) {
+                button.classList.remove('open');
+                button.style.transform = button.dataset.initialTransform; // Reset to initial position
+                button.style.zIndex = 1; // Reset z-index
+            } else {
+                button.classList.add('open');
+                button.style.transform = 'scale(3)'; // Adjust scaling as needed
+                button.style.zIndex = 10; // Bring to the front
+            }
+        });
 
-// Apply the click event to each button
-document.querySelectorAll('.button').forEach(button => {
-    button.addEventListener('click', handleButtonClick);
-});
+        button.addEventListener('mouseenter', function() {
+            if (!button.classList.contains('open')) {
+                button.style.transform = 'scale(3)';
+                button.style.zIndex = 10; // Bring to the front
+            }
+        });
 
-// Function to ensure content is loaded only after expansion
-document.querySelectorAll('.button').forEach(button => {
-    button.addEventListener('transitionend', (event) => {
-        if (button.classList.contains('open')) {
-            button.querySelector('.button-content').style.display = 'block';
-        } else {
-            button.querySelector('.button-content').style.display = 'none';
-        }
+        button.addEventListener('mouseleave', function() {
+            if (!button.classList.contains('open')) {
+                button.style.transform = button.dataset.initialTransform; // Reset to initial position
+                button.style.zIndex = 1; // Reset z-index
+            }
+        });
     });
 });

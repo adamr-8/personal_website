@@ -25,7 +25,106 @@ document.addEventListener('DOMContentLoaded', () => {
                     <li>Led the expansion of new business channels, increasing overall market share by 25%.</li>
                 </ul>`
         },
-        // Add the rest of the buttons here...
+        "product": { 
+            title: "Product Development", 
+            content: `
+                <i class="fa-sharp fa-solid fa-box-open" style="font-size: 40px; color: #333;"></i>
+                <p>My experience in product development spans from concept to launch, focusing on customer needs and market trends. I've been instrumental in launching successful products that meet market demands.</p>
+                <ul>
+                    <li>Led the development of the Opti-Rite Dry Erase Wallcoverings, which became a significant revenue driver.</li>
+                    <li>Spearheaded product rebranding efforts that resulted in a 20% increase in market penetration.</li>
+                </ul>`
+        },
+        "brand": { 
+            title: "Brand Management", 
+            content: `
+                <i class="fa-sharp fa-solid fa-flag" style="font-size: 40px; color: #333;"></i>
+                <p>Brand management has been a core part of my career, where I've worked to build, protect, and enhance brand equity across various markets. I’ve successfully managed brand strategies that have strengthened market position and customer loyalty.</p>
+                <ul>
+                    <li>Led a comprehensive rebranding effort at OptiMA Inc., resulting in a 50% increase in brand loyalty.</li>
+                    <li>Implemented brand consistency across all marketing channels, leading to a 15% improvement in brand recognition.</li>
+                </ul>`
+        },
+        "automation": { 
+        title: "Automation & CRM", 
+        content: `
+            <i class="fas fa-cogs" style="font-size: 40px; color: #333;"></i>
+            <p>I have extensive experience with CRM systems, particularly Salesforce, where I've managed customer relationships to drive engagement and retention. My work in this area has led to significant improvements in lead nurturing and customer satisfaction.</p>
+            <ul>
+                <li>Implemented Salesforce Marketing Cloud, leading to a 25% increase in email open rates.</li>
+                <li>Streamlined CRM processes that reduced lead response time by 40%.</li>
+            </ul>`
+        },
+        "analytics": { 
+            title: "Analytics & Reporting", 
+            content: `
+                <i class="fa-sharp fa-solid fa-chart-line" style="font-size: 40px; color: #333;"></i>
+                <p>Data-driven decision-making has been at the heart of my marketing strategies. My proficiency in analytics tools has enabled me to optimize campaigns and drive measurable business results.</p>
+                <ul>
+                    <li>Utilized Google Analytics and Salesforce CRM to derive actionable insights, leading to a 15% increase in conversion rates.</li>
+                    <li>Developed and implemented KPIs that improved reporting accuracy and decision-making efficiency.</li>
+                </ul>`
+        },
+        "projects": { 
+            title: "Project Management", 
+            content: `
+                <i class="fa-sharp fa-solid fa-project-diagram" style="font-size: 40px; color: #333;"></i>
+                <p>Project management has been a critical skill throughout my career, where I've successfully led cross-functional teams to deliver projects on time and within budget.</p>
+                <ul>
+                    <li>Managed the end-to-end development of new product lines, from ideation to market launch.</li>
+                    <li>Led the migration of e-commerce platforms, ensuring a seamless transition with minimal downtime.</li>
+                </ul>`
+        },
+        "startup": { 
+            title: "Startup Experience", 
+            content: `
+                <i class="fa-sharp fa-solid fa-rocket" style="font-size: 40px; color: #333;"></i>
+                <p>As a co-founder of Goat Trading LLC, I navigated the challenges of building a startup from the ground up. My entrepreneurial journey has been marked by the successful launch of a niche e-commerce platform.</p>
+                <ul>
+                    <li>Grew the company from concept to a profitable business within two years.</li>
+                    <li>Implemented a successful digital marketing strategy that drove a 30% increase in sales.</li>
+                </ul>`
+        },
+        "content": { 
+            title: "Content Creation", 
+            content: `
+                <i class="fa-sharp fa-solid fa-pencil-alt" style="font-size: 40px; color: #333;"></i>
+                <p>Content creation has been central to my marketing strategies, with a focus on creating high-quality, engaging content that resonates with target audiences.</p>
+                <ul>
+                    <li>Created a series of high-impact blog posts and white papers that increased website traffic by 22%.</li>
+                    <li>Developed instructional videos that enhanced customer understanding and led to a 10% reduction in support inquiries.</li>
+                </ul>`
+        },
+        "digital": { 
+            title: "Digital Marketing", 
+            content: `
+                <i class="fa-sharp fa-solid fa-desktop" style="font-size: 40px; color: #333;"></i>
+                <p>In the digital marketing space, I've led successful SEO and PPC campaigns that have driven significant traffic and conversions.</p>
+                <ul>
+                    <li>Increased organic traffic by 25% through targeted SEO strategies.</li>
+                    <li>Managed PPC campaigns with a focus on ROI, achieving up to 15% click-through rates.</li>
+                </ul>`
+        },
+        "cx": { 
+            title: "Customer Experience", 
+            content: `
+                <i class="fa-sharp fa-solid fa-smile" style="font-size: 40px; color: #333;"></i>
+                <p>Customer experience has been a major focus of my work, where I’ve implemented strategies to enhance engagement and retention. My efforts in this area have led to substantial improvements in customer satisfaction and loyalty.</p>
+                <ul>
+                    <li>Led initiatives to reduce whiteboard shipping damage, improving customer satisfaction by 30%.</li>
+                    <li>Developed loyalty programs that increased repeat purchases by 20%.</li>
+                </ul>`
+        },
+        "ecommerce": { 
+            title: "E-Com", 
+            content: `
+                <i class="fa-sharp fa-solid fa-shopping-cart" style="font-size: 40px; color: #333;"></i>
+                <p>My e-commerce expertise spans from website optimization to managing multi-channel online stores. I’ve consistently driven growth in this area through strategic marketing and operational efficiencies.</p>
+                <ul>
+                    <li>Managed the flagship e-commerce site, optimizing SEO and UX to increase sales by 50%.</li>
+                    <li>Implemented automated order processing systems, reducing shipping times by 40%.</li>
+                </ul>`
+        },
     };
 
     buttons.forEach(button => {
@@ -34,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const buttonId = button.id.toLowerCase(); // Ensuring consistency with ID case
             if (buttonDetails[buttonId]) {
                 detailsTitle.innerText = buttonDetails[buttonId].title;
-                detailsContent.innerHTML = buttonDetails[buttonId].content;
+                detailsContent.innerHTML = buttonDetails[buttonId].content; // Using innerHTML to allow HTML tags
             } else {
                 detailsTitle.innerText = button.innerText;
                 detailsContent.innerText = button.getAttribute('data-info');
@@ -57,16 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
         button.dataset.initialTransform = button.style.transform;
 
         button.addEventListener('click', () => {
-            const contentContainer = button.querySelector('.button-content');
-            const buttonId = button.id.toLowerCase();
-
             if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
                 button.style.transform = button.dataset.initialTransform; // Reset to initial state on second click
                 document.body.style.overflow = "hidden"; // Disable scroll on body
             } else {
-                if (!contentContainer.innerHTML) {
-                    contentContainer.innerHTML = buttonDetails[buttonId].content;
-                }
                 if (window.innerWidth <= 768) { // For mobile
                     button.style.transform = "translate(-50%, -50%) scale(12)";
                 } else {

@@ -114,14 +114,19 @@ html, body {
     z-index: 0; /* No z-index overlap */
 }
 
-/* Alternate Title for Opened Button */
+/* Hide Alternate Title when Button is Closed */
+.button-alt-title {
+    display: none; /* Hide by default */
+}
+
+/* Show Alternate Title when Button is Opened */
 .button.open .button-alt-title {
-    display: block;
+    display: block; /* Show alternate title when open */
     position: absolute;
-    top: 18%; /* Adjusted top position for the alternate title */
+    top: 25%; /* Position below the main title */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.5em; /* Adjusted size for the alternate title */
+    font-size: 1.5em; /* Reduced size for the alternate title */
     color: #ffffff;
     z-index: 21;
 }
@@ -129,10 +134,10 @@ html, body {
 /* Title Styles for Opened Button */
 .button.open .button-title {
     position: absolute;
-    top: 12%; /* Keep slightly lower title position */
+    top: 10%; /* Adjusted position */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 8px !important; /* Adjusted title font size */
+    font-size: 3em; /* Adjusted title font size */
     color: #ffffff;
     z-index: 21;
 }

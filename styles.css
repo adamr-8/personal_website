@@ -81,22 +81,22 @@ html, body {
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 15%; /* Position the container higher within the circle */
+    top: 20%; /* Adjusted to bring content lower within the circle */
     left: 50%;
     transform: translate(-50%, 0);
-    width: 70%; /* Smaller width */
-    height: 65%; /* Adjusted height to allow for more text without overlap */
+    width: 70%;
+    height: 60%; /* Reduced height to prevent overlap */
     border-radius: 10px;
     padding: 10px;
     color: #ffffff;
     display: none;
     overflow-y: auto;
-    font-size: 0.25em; /* Adjusted font size for readability */
+    font-size: 0.2em; /* Smaller font size for better fit */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
     background-color: transparent;
     text-align: left;
-    line-height: 1.3; /* Slightly tighter line height */
+    line-height: 1.3;
 }
 
 /* Title Styles for Closed Button */
@@ -112,7 +112,7 @@ html, body {
 /* Title Styles for Opened Button */
 .button.open .button-title {
     position: absolute;
-    top: 5%;
+    top: 8%; /* Lowered title position for better visibility */
     left: 50%;
     transform: translateX(-50%);
     font-size: 0.35em; /* Smaller title font size */

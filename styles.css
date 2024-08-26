@@ -139,17 +139,18 @@ html, body {
     background-color: transparent;
 }
 
+/* Adjusting list items for better readability */
 .button-content ul {
-    padding-left: 1em; /* Adjust this value to align bullets with text area */
-    margin: 0; /* Remove default margin */
-    list-style-type: disc; /* Ensure bullets are shown */
+    padding-left: 3em; /* Adjusted padding for better alignment */
+    margin: 0;
+    list-style-type: disc; /* Standard bullet point */
 }
 
 .button-content li {
-    margin-bottom: 0.5em; /* Adjust spacing between list items */
-    line-height: 1.5; /* Maintain good readability */
+    margin-bottom: 0.5em; /* Space between list items for readability */
+    line-height: 1.5; /* Improve readability with line height */
+    font-size: 0.9em; /* Slightly smaller font size to save space */
 }
-
 
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {

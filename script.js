@@ -12,22 +12,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.zIndex = "0";
                     btn.style.transform = btn.dataset.initialTransform;
                     btn.querySelector('.button-content').style.display = 'none';
+                    btn.classList.remove('open'); // Remove the open class when closing
                 });
                 button.style.zIndex = "1";
                 button.style.transform = "translate(-50%, -50%) scale(8)";
                 button.querySelector('.button-content').style.display = 'block';
+                button.classList.add('open'); // Add the open class when opening
             }
         });
 
         // Handle click to toggle open/close
         button.addEventListener('click', (e) => {
-            e.stopPropagation(); // Ensure the event doesn't propagate beyond the button
+            e.stopPropagation();
 
-            const isOpen = button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)');
+            const isOpen = button.classList.contains('open');
             if (isOpen) {
                 // Close the button
                 button.style.transform = button.dataset.initialTransform;
                 button.querySelector('.button-content').style.display = 'none';
+                button.classList.remove('open');
                 document.body.style.overflow = "";
             } else {
                 // Open the button
@@ -35,18 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.zIndex = "0";
                     btn.style.transform = btn.dataset.initialTransform;
                     btn.querySelector('.button-content').style.display = 'none';
+                    btn.classList.remove('open');
                 });
                 button.style.transform = window.innerWidth <= 768 ? "translate(-50%, -50%) scale(12)" : "translate(-50%, -50%) scale(8)";
                 button.style.zIndex = "1";
                 button.querySelector('.button-content').style.display = 'block';
+                button.classList.add('open');
                 document.body.style.overflow = "hidden";
             }
-        });
-
-        // Ensure clicks on the content close the button too
-        button.querySelector('.button-content').addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent the click event from reaching the body
-            button.click(); // Trigger the button click to close it
         });
 
         if (window.innerWidth <= 768) {
@@ -57,12 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Handle click outside buttons to close any open button
     document.addEventListener('click', () => {
         buttons.forEach(button => {
-            if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
+            if (button.classList.contains('open')) {
                 button.style.transform = button.dataset.initialTransform;
                 button.querySelector('.button-content').style.display = 'none';
+                button.classList.remove('open');
                 document.body.style.overflow = "";
             }
         });

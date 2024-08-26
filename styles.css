@@ -91,7 +91,7 @@ html, body {
     color: #ffffff;
     display: none;
     overflow-y: auto;
-    font-size: 1.2vw; /* Responsive font size based on viewport width */
+    font-size: clamp(10px, 0.3vw, 16px); /* Ensures a min of 10px and max of 16px */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
     background-color: transparent;
@@ -115,7 +115,7 @@ html, body {
     top: 15%; /* Significantly lower title position */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.5vw; /* Responsive title font size */
+    font-size: clamp(12px, 0.7vw, 24px); /* Ensures a min of 12px and max of 24px */
     color: #ffffff;
     z-index: 21; /* Ensure title is above the content */
 }
@@ -137,10 +137,10 @@ html, body {
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     .button-content {
-        font-size: 14px; /* Larger font size for readability on mobile */
+        font-size: clamp(12px, 2vw, 16px); /* Adjusted for readability on mobile */
         height: 70%; /* Adjust container height for mobile */
     }
     .button.open .button-title {
-        font-size: 18px; /* Ensure title is readable on mobile */
+        font-size: clamp(16px, 5vw, 24px); /* Ensure title is readable on mobile */
     }
 }

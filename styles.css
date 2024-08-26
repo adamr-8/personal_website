@@ -126,7 +126,7 @@ html, body {
     top: 25%; /* Position below the main title */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.5em; /* Reduced size for the alternate title */
+    font-size: 1.2em; /* Reduced size for the alternate title */
     color: #ffffff;
     z-index: 21;
 }
@@ -137,9 +137,10 @@ html, body {
     top: 10%; /* Adjusted position */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 3em; /* Adjusted title font size */
+    font-size: 2em; /* Adjusted title font size */
     color: #ffffff;
     z-index: 21;
+    transition: none; /* Remove scaling effect */
 }
 
 /* Custom Scrollbar Styling */

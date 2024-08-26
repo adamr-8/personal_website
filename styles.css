@@ -81,17 +81,17 @@ html, body {
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 25%; 
+    top: 20%; /* Bringing the content container closer to the title */
     left: 50%;
     transform: translate(-50%, 0);
     width: 70%;
-    height: 55%; 
+    height: 60%; /* Adjusted height for better spacing */
     border-radius: 15px 15px 50px 50px;
     padding: 10px;
     color: #ffffff;
     display: none;
     overflow-y: auto;
-    font-size: 4px !important; /* Further reduced font size */
+    font-size: 3px !important; /* Further reduced font size */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
     background-color: transparent;
@@ -101,7 +101,7 @@ html, body {
 
 /* Override any inherited styles for button-content */
 .open .button-content, .button.open .button-content {
-    font-size: 4px !important; /* Significantly reduced font size */
+    font-size: 3px !important; /* Further reduced font size */
 }
 
 /* Title Styles for Closed Button */
@@ -117,10 +117,10 @@ html, body {
 /* Title Styles for Opened Button */
 .button.open .button-title {
     position: absolute;
-    top: 12%; /* Slightly lower title position */
+    top: 12%; /* Keep slightly lower title position */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 8px !important; /* Further reduced title font size */
+    font-size: 8px !important; /* Adjusted title font size */
     color: #ffffff;
     z-index: 21;
 }
@@ -142,7 +142,7 @@ html, body {
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     .button-content {
-        font-size: 6px !important; /* Reduced font size for readability on mobile */
+        font-size: 5px !important; /* Reduced font size for readability on mobile */
         height: 70%; 
     }
     .button.open .button-title {

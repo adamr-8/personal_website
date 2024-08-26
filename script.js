@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.button');
-    const detailsTitle = document.getElementById('details-title');
-    const detailsContent = document.getElementById('details-content');
 
     buttons.forEach(button => {
         // Store initial transform for reset purposes
@@ -14,12 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.zIndex = "0";
                     btn.style.transform = btn.dataset.initialTransform;
                     btn.querySelector('.button-content').style.display = 'none';
-                    btn.querySelector('.button-content').style.pointerEvents = 'none';
                 });
                 button.style.zIndex = "1";
                 button.style.transform = "translate(-50%, -50%) scale(8)";
                 button.querySelector('.button-content').style.display = 'block';
-                button.querySelector('.button-content').style.pointerEvents = 'auto';
             }
         });
 
@@ -27,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', (e) => {
             e.stopPropagation(); // Ensure the event doesn't propagate beyond the button
 
-            // Check if button is already enlarged
             const isOpen = button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)');
             if (isOpen) {
                 // Close the button
@@ -40,14 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.zIndex = "0";
                     btn.style.transform = btn.dataset.initialTransform;
                     btn.querySelector('.button-content').style.display = 'none';
-                    btn.querySelector('.button-content').style.pointerEvents = 'none';
                 });
                 button.style.transform = window.innerWidth <= 768 ? "translate(-50%, -50%) scale(12)" : "translate(-50%, -50%) scale(8)";
                 button.style.zIndex = "1";
                 button.querySelector('.button-content').style.display = 'block';
-                button.querySelector('.button-content').style.pointerEvents = 'auto';
                 document.body.style.overflow = "hidden";
             }
+        });
+
+        // Ensure clicks on the content close the button too
+        button.querySelector('.button-content').addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent the click event from reaching the body
+            button.click(); // Trigger the button click to close it
         });
 
         if (window.innerWidth <= 768) {

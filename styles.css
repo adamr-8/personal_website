@@ -158,6 +158,152 @@ html, body {
     height: 20px; /* Adjust the height as needed for the amount of space */
 }
 
+/* Adding Font Awesome Icons at the Bottom of Each Content Section */
+
+/* Traditional Marketing */
+#traditional .button-content::after {
+    content: "\f0a1"; /* fa-bullhorn */
+    font-family: "Font Awesome 5 Free"; /* Font Awesome font family */
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Sales */
+#sales .button-content::after {
+    content: "\f4c6"; /* fa-handshake */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Product Development */
+#product .button-content::after {
+    content: "\f187"; /* fa-box-open */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Brand Management */
+#brand .button-content::after {
+    content: "\f024"; /* fa-flag */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Automation & CRM */
+#automation .button-content::after {
+    content: "\f085"; /* fa-cogs */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Analytics & Reporting */
+#analytics .button-content::after {
+    content: "\f201"; /* fa-chart-line */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Project Management */
+#projects .button-content::after {
+    content: "\f542"; /* fa-project-diagram */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Startup Experience */
+#startup .button-content::after {
+    content: "\f135"; /* fa-rocket */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Content Creation */
+#content .button-content::after {
+    content: "\f303"; /* fa-pencil-alt */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Digital Marketing */
+#digital .button-content::after {
+    content: "\f108"; /* fa-desktop */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Customer Experience (CX) */
+#cx .button-content::after {
+    content: "\f118"; /* fa-smile */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* E-commerce */
+#ecommerce .button-content::after {
+    content: "\f07a"; /* fa-shopping-cart */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     .button-content {

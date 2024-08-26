@@ -139,6 +139,18 @@ html, body {
     background-color: transparent;
 }
 
+.button-content ul {
+    padding-left: 1em; /* Adjust this value to align bullets with text area */
+    margin: 0; /* Remove default margin */
+    list-style-type: disc; /* Ensure bullets are shown */
+}
+
+.button-content li {
+    margin-bottom: 0.5em; /* Adjust spacing between list items */
+    line-height: 1.5; /* Maintain good readability */
+}
+
+
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     .button-content {

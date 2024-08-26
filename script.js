@@ -20,22 +20,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         button.dataset.initialTransform = button.style.transform;
 
-        button.addEventListener('click', () => {
-            // Close the button when clicking anywhere inside the button, including on the text
+        button.addEventListener('click', (e) => {
+            // Prevent the click from propagating to other elements
+            e.stopPropagation();
+
+            // Toggle the open/close state of the button
             if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
                 button.style.transform = button.dataset.initialTransform;
-                document.body.style.overflow = "hidden";
                 button.querySelector('.button-content').style.display = 'none';
                 button.querySelector('.button-content').style.pointerEvents = 'none';
+                document.body.style.overflow = "";
             } else {
                 if (window.innerWidth <= 768) {
                     button.style.transform = "translate(-50%, -50%) scale(12)";
                 } else {
                     button.style.transform = "translate(-50%, -50%) scale(8)";
                 }
-                document.body.style.overflow = "hidden";
                 button.querySelector('.button-content').style.display = 'block';
                 button.querySelector('.button-content').style.pointerEvents = 'auto';
+                document.body.style.overflow = "hidden";
             }
         });
 
@@ -47,18 +50,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    window.addEventListener('touchmove', (e) => {
-        if (document.body.style.overflow === 'hidden') {
-            e.preventDefault();
-        }
-    }, { passive: false });
-
-    document.addEventListener('click', (e) => {
-        const isAnyButtonEnlarged = [...buttons].some(button => 
-            button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')
-        );
-        if (!isAnyButtonEnlarged) {
-            document.body.style.overflow = "";
-        }
+    // Handle click anywhere on the document to close any open button
+    document.addEventListener('click', () => {
+        buttons.forEach(button => {
+            if (button.style.transform.includes('scale(8)') || button.style.transform.includes('scale(12)')) {
+                button.style.transform = button.dataset.initialTransform;
+                button.querySelector('.button-content').style.display = 'none';
+                button.querySelector('.button-content').style.pointerEvents = 'none';
+                document.body.style.overflow = "";
+            }
+        });
     });
 });

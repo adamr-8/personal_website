@@ -152,6 +152,12 @@ html, body {
     font-size: 0.9em; /* Slightly smaller font size to save space */
 }
 
+.button-content::after {
+    content: "";
+    display: block;
+    height: 20px; /* Adjust the height as needed for the amount of space */
+}
+
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     .button-content {

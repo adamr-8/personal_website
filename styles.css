@@ -99,6 +99,11 @@ html, body {
     line-height: 1.3;
 }
 
+/* Override any inherited styles for button-content */
+.open .button-content, .button.open .button-content {
+    font-size: 10px !important; /* Force small font size with !important */
+}
+
 /* Title Styles for Closed Button */
 .button-title {
     font-size: 1.2em; /* Keep original size for closed buttons */

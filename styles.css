@@ -91,7 +91,7 @@ html, body {
     color: #ffffff;
     display: none;
     overflow-y: auto;
-    font-size: 0.8vw !important; /* Responsive font size based on viewport width */
+    font-size: 12px !important; /* Fixed font size */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
     background-color: transparent;
@@ -101,7 +101,7 @@ html, body {
 
 /* Override any inherited styles for button-content */
 .open .button-content, .button.open .button-content {
-    font-size: 0.8vw !important; /* Enforcing responsive font size */
+    font-size: 12px !important; /* Enforcing fixed font size */
 }
 
 /* Title Styles for Closed Button */
@@ -117,10 +117,10 @@ html, body {
 /* Title Styles for Opened Button */
 .button.open .button-title {
     position: absolute;
-    top: 15%; 
+    top: 10%; /* Adjust title position */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.5vw !important; /* Responsive title font size */
+    font-size: 18px !important; /* Fixed title font size */
     color: #ffffff;
     z-index: 21;
 }
@@ -142,10 +142,10 @@ html, body {
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     .button-content {
-        font-size: 3vw !important; /* Larger font size for readability on mobile */
+        font-size: 14px !important; /* Larger font size for readability on mobile */
         height: 70%; 
     }
     .button.open .button-title {
-        font-size: 4vw !important; /* Larger title font size for readability on mobile */
+        font-size: 20px !important; /* Ensure title is readable on mobile */
     }
 }

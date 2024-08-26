@@ -91,12 +91,26 @@ html, body {
     color: #ffffff; /* White text color */
     display: none; /* Hidden by default */
     overflow-y: auto; /* Allow scrolling if content overflows */
-    font-size: 0.8em; /* Smaller font size for multiple paragraphs */
+    font-size: 0.3em; /* Smaller font size for more content */
     font-family: 'Poppins', sans-serif; /* Poppins font */
     z-index: 20; /* Ensure it's on top of the button */
     background-color: transparent; /* Remove background color */
     text-align: left; /* Align text to the left */
-    line-height: 1.4; /* Tighter line height for readability */
+    line-height: 1.2; /* Tighter line height for readability */
+}
+
+/* Custom Scrollbar Styling */
+.button-content::-webkit-scrollbar {
+    width: 8px; /* Smaller scrollbar width */
+}
+
+.button-content::-webkit-scrollbar-thumb {
+    background-color: #666; /* Darker color for the scrollbar thumb */
+    border-radius: 4px; /* Rounded edges for the scrollbar thumb */
+}
+
+.button-content::-webkit-scrollbar-track {
+    background-color: transparent; /* Transparent scrollbar track */
 }
 
 /* Adjustments for smaller screens */
@@ -104,7 +118,8 @@ html, body {
     .button-content {
         width: 90%;
         height: 70%;
-        font-size: 0.7em; /* Slightly smaller font for mobile */
+        font-size: 0.25em; /* Slightly smaller font for mobile */
     }
 }
+
 

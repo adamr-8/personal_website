@@ -86,15 +86,17 @@ html, body {
     transform: translate(-50%, -50%);
     width: 80%;
     height: 60%;
-    background-color: rgba(255, 255, 255, 0.9); /* Light background to contrast with the button color */
     border-radius: 15px; /* Rounded rectangle */
     padding: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-    color: #333; /* Dark text color for readability */
+    color: #ffffff; /* White text color */
     display: none; /* Hidden by default */
     overflow-y: auto; /* Allow scrolling if content overflows */
-    font-size: 1em; /* Default font size */
+    font-size: 0.8em; /* Smaller font size for multiple paragraphs */
+    font-family: 'Poppins', sans-serif; /* Poppins font */
     z-index: 20; /* Ensure it's on top of the button */
+    background-color: transparent; /* Remove background color */
+    text-align: left; /* Align text to the left */
+    line-height: 1.4; /* Tighter line height for readability */
 }
 
 /* Adjustments for smaller screens */
@@ -102,6 +104,7 @@ html, body {
     .button-content {
         width: 90%;
         height: 70%;
-        font-size: 0.9em; /* Slightly smaller font for mobile */
+        font-size: 0.7em; /* Slightly smaller font for mobile */
     }
 }
+

@@ -78,20 +78,29 @@ html, body {
 #cx { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); }
 #ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); }
 
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .button-content {
+        width: 90%;
+        height: 70%;
+        font-size: 0.25em; /* Slightly smaller font for mobile */
+    }
+}
+
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 20%; /* Adjusted to bring content lower within the circle */
+    top: 25%; /* Further lower the content within the circle */
     left: 50%;
     transform: translate(-50%, 0);
     width: 70%;
-    height: 60%; /* Reduced height to prevent overlap */
-    border-radius: 10px;
+    height: 55%; /* Further reduce height to prevent overlap */
+    border-radius: 15px 15px 50px 50px; /* Slightly rounded bottom */
     padding: 10px;
     color: #ffffff;
     display: none;
     overflow-y: auto;
-    font-size: 0.2em; /* Smaller font size for better fit */
+    font-size: 0.18em; /* Further reduced font size */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
     background-color: transparent;
@@ -112,7 +121,7 @@ html, body {
 /* Title Styles for Opened Button */
 .button.open .button-title {
     position: absolute;
-    top: 8%; /* Lowered title position for better visibility */
+    top: 15%; /* Significantly lower title position */
     left: 50%;
     transform: translateX(-50%);
     font-size: 0.35em; /* Smaller title font size */
@@ -132,13 +141,4 @@ html, body {
 
 .button-content::-webkit-scrollbar-track {
     background-color: transparent;
-}
-
-/* Adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-    .button-content {
-        width: 90%;
-        height: 70%;
-        font-size: 0.25em; /* Slightly smaller font for mobile */
-    }
 }

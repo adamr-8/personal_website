@@ -86,26 +86,27 @@ html, body {
     transform: translate(-50%, -50%);
     width: 80%;
     height: 60%;
-    border-radius: 15px; /* Rounded rectangle */
+    border-radius: 15px;
     padding: 10px;
-    color: #ffffff; /* White text color */
-    display: none; /* Hidden by default */
-    overflow-y: auto; /* Allow scrolling if content overflows */
-    font-size: 0.3em; /* Smaller font size for more content */
-    font-family: 'Poppins', sans-serif; /* Poppins font */
-    z-index: 20; /* Ensure it's on top of the button */
-    background-color: transparent; /* Remove background color */
-    text-align: left; /* Align text to the left */
-    line-height: 1.2; /* Tighter line height for readability */
+    color: #ffffff;
+    display: none;
+    overflow-y: auto;
+    font-size: 0.3em;
+    font-family: 'Poppins', sans-serif;
+    z-index: 20;
+    background-color: transparent;
+    text-align: left;
+    line-height: 1.2;
+    pointer-events: auto; /* Ensure clicks are captured */
 }
 
 /* Custom Scrollbar Styling */
 .button-content::-webkit-scrollbar {
-    width: 8px; /* Smaller scrollbar width */
+    width: 6px; /* Smaller scrollbar width */
 }
 
 .button-content::-webkit-scrollbar-thumb {
-    background-color: #666; /* Darker color for the scrollbar thumb */
+    background-color: #ffffff; /* White color for the scrollbar thumb */
     border-radius: 4px; /* Rounded edges for the scrollbar thumb */
 }
 
@@ -118,8 +119,6 @@ html, body {
     .button-content {
         width: 90%;
         height: 70%;
-        font-size: 0.25em; /* Slightly smaller font for mobile */
+        font-size: 0.25em;
     }
 }
-
-

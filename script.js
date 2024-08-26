@@ -1,59 +1,53 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.button');
+    let activeButton = null;
 
-    buttons.forEach(button => {
-        const buttonId = button.id;
-
-        // Toggle open class on button click
+    buttons.forEach((button) => {
         button.addEventListener('click', () => {
-            const wasOpen = button.classList.contains('open');
-
-            // Close all buttons
-            buttons.forEach(btn => {
-                btn.classList.remove('open');
-                btn.style.zIndex = 1; // Reset z-index to default
-            });
-
-            if (!wasOpen) {
-                // Open the clicked button
-                button.classList.add('open');
-                button.style.zIndex = 10; // Bring the open button to the front
-
-                // Handle specific behavior based on button ID
-                handleButtonClick(buttonId);
+            if (activeButton && activeButton !== button) {
+                closeButton(activeButton);
+            }
+            if (button !== activeButton) {
+                openButton(button);
+                activeButton = button;
+            } else {
+                closeButton(button);
+                activeButton = null;
             }
         });
-
-        // Store initial transform for reset purposes
-        button.dataset.initialTransform = button.style.transform;
 
         button.addEventListener('mouseover', () => {
-            if (button.classList.contains('open')) {
-                // Reset button to initial state if already open
-                button.style.transform = button.dataset.initialTransform;
+            if (!activeButton) {
+                button.classList.add('hover');
             }
         });
 
-        button.addEventListener('mouseleave', () => {
-            if (!button.classList.contains('open')) {
-                button.style.transform = button.dataset.initialTransform;
+        button.addEventListener('mouseout', () => {
+            if (!activeButton) {
+                button.classList.remove('hover');
             }
         });
     });
 
-    function handleButtonClick(buttonId) {
-        // This function can be used to handle specific logic for each button
-        console.log(`Button ${buttonId} clicked`);
-        if (buttonId === 'traditional') {
-            // Specific behavior for Traditional button
-            populateContentForTraditional();
-        }
-        // Add additional conditions for other buttons if needed
+    function openButton(button) {
+        button.classList.add('open');
+        button.style.transform = 'scale(3)';
+        button.style.zIndex = '10';
+        setTimeout(() => {
+            const contentDiv = button.querySelector('.button-content');
+            if (contentDiv) {
+                contentDiv.style.display = 'block';
+            }
+        }, 300); // Delay to show content after button is fully opened
     }
 
-    function populateContentForTraditional() {
-        // Populate content specifically for the Traditional button
-        console.log("Populating content for Traditional Marketing");
-        // Here you can add any additional logic for the content population
+    function closeButton(button) {
+        const contentDiv = button.querySelector('.button-content');
+        if (contentDiv) {
+            contentDiv.style.display = 'none';
+        }
+        button.classList.remove('open');
+        button.style.transform = '';
+        button.style.zIndex = '';
     }
 });

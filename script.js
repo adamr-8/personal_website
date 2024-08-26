@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.classList.remove('open'); // Remove the open class when closing
                 });
                 button.style.zIndex = "1";
-                button.style.transform = "translate(-50%, -50%) scale(8)";
+                button.style.transform = "translate(-50%, -50%) scale(9)"; // Slightly larger scale for opened button
                 button.querySelector('.button-content').style.display = 'block';
                 button.classList.add('open'); // Add the open class when opening
             }
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.querySelector('.button-content').style.display = 'none';
                     btn.classList.remove('open');
                 });
-                button.style.transform = window.innerWidth <= 768 ? "translate(-50%, -50%) scale(12)" : "translate(-50%, -50%) scale(8)";
+                button.style.transform = window.innerWidth <= 768 ? "translate(-50%, -50%) scale(13)" : "translate(-50%, -50%) scale(9)";
                 button.style.zIndex = "1";
                 button.querySelector('.button-content').style.display = 'block';
                 button.classList.add('open');

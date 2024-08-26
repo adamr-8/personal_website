@@ -78,24 +78,30 @@ html, body {
 #cx { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); }
 #ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); }
 
-/* Responsive Design for Smaller Screens */
+/* Content Container Styles */
+.button-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background to contrast with the button color */
+    border-radius: 15px; /* Rounded rectangle */
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    color: #333; /* Dark text color for readability */
+    display: none; /* Hidden by default */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    font-size: 1em; /* Default font size */
+    z-index: 20; /* Ensure it's on top of the button */
+}
+
+/* Adjustments for smaller screens */
 @media screen and (max-width: 768px) {
-    .circle-container {
-        width: 90vmin;
-        height: 90vmin;
-    }
-
-    .button {
-        width: 13vmin; /* Scale buttons slightly */
-        height: 13vmin;
-        font-size: 1em;
-    }
-
-    .button.open {
-        width: 100vmin;
-        height: 100vmin;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .button-content {
+        width: 90%;
+        height: 70%;
+        font-size: 0.9em; /* Slightly smaller font for mobile */
     }
 }

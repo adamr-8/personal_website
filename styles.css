@@ -317,13 +317,18 @@ html, body {
 .button-alt-title {
     display: none; /* Hide alternate title by default */
 }
+/* Adjusted Title Styles for Opened Button */
 .button.open .button-alt-title {
-    display: block; /* Show alternate title when button is expanded */
     position: absolute;
-    top: 50%; /* Adjust position according to your design */
+    top: 30%; /* Adjust position to be between the title and content */
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5em; /* Adjust font size as needed */
-    color: #ffffff; /* Adjust text color as needed */
-    z-index: 21; /* Ensure it appears above other elements */
+    transform: translateX(-50%);
+    font-size: 1.5em; /* Adjusted font size */
+    color: #ffffff;
+    z-index: 21;
+}
+
+/* Ensure that the main title remains at the top */
+.button.open .button-title {
+    top: 10%; /* Adjust position if necessary */
 }

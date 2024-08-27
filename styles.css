@@ -317,3 +317,13 @@ html, body {
 .button-alt-title {
     display: none; /* Hide alternate title by default */
 }
+.button.open .button-alt-title {
+    display: block; /* Show alternate title when button is expanded */
+    position: absolute;
+    top: 50%; /* Adjust position according to your design */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em; /* Adjust font size as needed */
+    color: #ffffff; /* Adjust text color as needed */
+    z-index: 21; /* Ensure it appears above other elements */
+}

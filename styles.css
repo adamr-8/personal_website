@@ -314,3 +314,6 @@ html, body {
         font-size: 10px !important; /* Further reduced title font size for mobile */
     }
 }
+.button-alt-title {
+    display: none; /* Hide alternate title by default */
+}

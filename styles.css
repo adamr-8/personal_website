@@ -78,43 +78,19 @@ html, body {
 #cx { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -30vmin) rotate(-300deg); }
 #ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -30vmin) rotate(-330deg); }
 
-/* Content Wrapper */
-.content-wrapper {
-    position: relative; /* Change to relative */
-    top: 20%; /* Adjust to align correctly */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%; /* Adjust width if necessary */
-    height: auto; /* Let content determine height */
-    overflow-y: auto; /* Allows content to scroll */
-}
-
-/* Adjusted Title Styles for Opened Button */
-.button.open .button-alt-title {
-    position: relative; /* Keep relative within the wrapper */
-    top: 0; /* Positioned within the wrapper */
-    white-space: nowrap; /* Prevent text from wrapping to a new line */
-    font-size: .2em; /* Retain the smaller font size */
-    color: #ffffff;
-    z-index: 21;
-    margin-bottom: 10px; /* Space between the alt title and content */
-}
-
-/* Ensure that the main title remains at the top */
-.button.open .button-title {
-    position: absolute;
-    top: 10%; /* Keep the main title at the top */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 22;
-}
-
 /* Content Container Styles */
 .button-content {
-    width: 100%; /* Full width within the wrapper */
+    position: absolute;
+    top: 20%; /* Bringing the content container closer to the title */
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 70%;
+    height: 60%; /* Adjusted height for better spacing */
+    border-radius: 15px 15px 50px 50px;
     padding: 10px;
     color: #ffffff;
     display: none;
+    overflow-y: auto;
     font-size: 3px !important; /* Further reduced font size */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
@@ -126,8 +102,27 @@ html, body {
 /* Override any inherited styles for button-content */
 .open .button-content, .button.open .button-content {
     font-size: 3px !important; /* Further reduced font size */
-    overflow-y: auto; /* Allow scrolling inside the content */
-    max-height: 40%; /* Ensure content doesn't overflow */
+}
+
+/* Title Styles for Closed Button */
+.button-title {
+    font-size: 1.2em; /* Keep original size for closed buttons */
+    position: relative;
+    top: 0; /* No specific positioning */
+    left: 0;
+    transform: none; /* No transformation */
+    z-index: 0; /* No z-index overlap */
+}
+
+/* Title Styles for Opened Button */
+.button.open .button-title {
+    position: absolute;
+    top: 12%; /* Keep slightly lower title position */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8px !important; /* Adjusted title font size */
+    color: #ffffff;
+    z-index: 21;
 }
 
 /* Custom Scrollbar Styling */
@@ -319,20 +314,21 @@ html, body {
         font-size: 10px !important; /* Further reduced title font size for mobile */
     }
 }
-
 .button-alt-title {
     display: none; /* Hide alternate title by default */
 }
 
 /* Adjusted Title Styles for Opened Button */
 .button.open .button-alt-title {
-    position: relative; /* Keep relative within the wrapper */
-    top: 0; /* Positioned within the wrapper */
+    position: relative; /* Change from absolute to relative */
+    top: 0; /* Set to 0 so it scrolls naturally with content */
+    left: 50%;
+    transform: translateX(-50%);
     white-space: nowrap; /* Prevent text from wrapping to a new line */
     font-size: .2em; /* Retain the smaller font size */
     color: #ffffff;
     z-index: 21;
-    margin-bottom: 10px; /* Space between the alt title and content */
+    margin-bottom: 10px; /* Add some space below the alt title */
 }
 
 /* Ensure that the main title remains at the top */

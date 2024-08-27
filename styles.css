@@ -80,12 +80,12 @@ html, body {
 
 /* Content Wrapper */
 .content-wrapper {
-    position: absolute;
-    top: 25%; /* Adjust to align correctly */
+    position: relative; /* Change to relative */
+    top: 20%; /* Adjust to align correctly */
     left: 50%;
     transform: translateX(-50%);
-    width: 70%; /* Adjust width if necessary */
-    height: 60%; /* Adjust height for better scrolling */
+    width: 80%; /* Adjust width if necessary */
+    height: auto; /* Let content determine height */
     overflow-y: auto; /* Allows content to scroll */
 }
 
@@ -115,7 +115,6 @@ html, body {
     padding: 10px;
     color: #ffffff;
     display: none;
-    overflow-y: auto;
     font-size: 3px !important; /* Further reduced font size */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
@@ -127,16 +126,8 @@ html, body {
 /* Override any inherited styles for button-content */
 .open .button-content, .button.open .button-content {
     font-size: 3px !important; /* Further reduced font size */
-}
-
-/* Title Styles for Closed Button */
-.button-title {
-    font-size: 1.2em; /* Keep original size for closed buttons */
-    position: relative;
-    top: 0; /* No specific positioning */
-    left: 0;
-    transform: none; /* No transformation */
-    z-index: 0; /* No z-index overlap */
+    overflow-y: auto; /* Allow scrolling inside the content */
+    max-height: 40%; /* Ensure content doesn't overflow */
 }
 
 /* Custom Scrollbar Styling */

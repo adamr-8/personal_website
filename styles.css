@@ -81,7 +81,7 @@ html, body {
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 25%; /* Adjusted to create space for alternate title */
+    top: 20%; /* Bringing the content container closer to the title */
     left: 50%;
     transform: translate(-50%, 0);
     width: 70%;
@@ -123,7 +123,7 @@ html, body {
 .button.open .button-alt-title {
     display: block; /* Show alternate title when open */
     position: absolute;
-    top: 12%; /* Position below the main title */
+    top: 20%; /* Position below the main title */
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.2em; /* Reduced size for the alternate title */

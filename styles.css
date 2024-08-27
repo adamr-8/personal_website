@@ -59,7 +59,7 @@ html, body {
 
 /* Adjust hover effect */
 .button:hover {
-    transform: scale(3); /* Increase scale for larger effect */
+    transform: scale(2.5); /* Slightly reduced scaling for better control */
     transition: transform 0.6s ease; /* Slow down animation */
     z-index: 10;
 }
@@ -81,7 +81,7 @@ html, body {
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 20%; /* Bringing the content container closer to the title */
+    top: 25%; /* Adjusted to create space for alternate title */
     left: 50%;
     transform: translate(-50%, 0);
     width: 70%;
@@ -91,7 +91,7 @@ html, body {
     color: #ffffff;
     display: none;
     overflow-y: auto;
-    font-size: 3px !important; /* Further reduced font size */
+    font-size: 1em; /* Adjusted to 1em for better responsiveness */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
     background-color: transparent;
@@ -101,7 +101,7 @@ html, body {
 
 /* Override any inherited styles for button-content */
 .open .button-content, .button.open .button-content {
-    font-size: 3px !important; /* Further reduced font size */
+    font-size: 1em; /* Ensuring consistent font size */
 }
 
 /* Title Styles for Closed Button */
@@ -114,15 +114,33 @@ html, body {
     z-index: 0; /* No z-index overlap */
 }
 
+/* Hide Alternate Title when Button is Closed */
+.button-alt-title {
+    display: none; /* Hide by default */
+}
+
+/* Show Alternate Title when Button is Opened */
+.button.open .button-alt-title {
+    display: block; /* Show alternate title when open */
+    position: absolute;
+    top: 12%; /* Position below the main title */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em; /* Reduced size for the alternate title */
+    color: #ffffff;
+    z-index: 21;
+}
+
 /* Title Styles for Opened Button */
 .button.open .button-title {
     position: absolute;
-    top: 12%; /* Keep slightly lower title position */
+    top: 10%; /* Adjusted position */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 8px !important; /* Adjusted title font size */
+    font-size: 1.5em; /* Reduced title font size */
     color: #ffffff;
     z-index: 21;
+    transition: none; /* Remove scaling effect */
 }
 
 /* Custom Scrollbar Styling */
@@ -149,7 +167,7 @@ html, body {
 .button-content li {
     margin-bottom: 0.5em; /* Space between list items for readability */
     line-height: 1.5; /* Improve readability with line height */
-    font-size: 0.9em; /* Slightly smaller font size to save space */
+    font-size: 1em; /* Slightly smaller font size to save space */
 }
 
 .button-content::after {
@@ -168,7 +186,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Adjusted size for better visibility */
     color: #ffffff;
 }
 
@@ -180,7 +198,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Adjusted size for better visibility */
     color: #ffffff;
 }
 
@@ -192,7 +210,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Adjusted size for better visibility */
     color: #ffffff;
 }
 
@@ -204,7 +222,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Adjusted size for better visibility */
     color: #ffffff;
 }
 
@@ -216,7 +234,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Adjusted size for better visibility */
     color: #ffffff;
 }
 
@@ -228,7 +246,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Adjusted size for better visibility */
     color: #ffffff;
 }
 
@@ -240,7 +258,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Adjusted size for better visibility */
     color: #ffffff;
 }
 
@@ -252,7 +270,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Adjusted size for better visibility */
     color: #ffffff;
 }
 
@@ -264,7 +282,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Adjusted size for better visibility */
     color: #ffffff;
 }
 
@@ -276,7 +294,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Adjusted size for better visibility */
     color: #ffffff;
 }
 
@@ -288,7 +306,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Adjusted size for better visibility */
     color: #ffffff;
 }
 
@@ -300,17 +318,17 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Adjusted size for better visibility */
     color: #ffffff;
 }
 
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     .button-content {
-        font-size: 5px !important; /* Reduced font size for readability on mobile */
+        font-size: 0.8em !important; /* Reduced font size for readability on mobile */
         height: 70%; 
     }
     .button.open .button-title {
-        font-size: 10px !important; /* Further reduced title font size for mobile */
+        font-size: 0.8em !important; /* Further reduced title font size for mobile */
     }
 }

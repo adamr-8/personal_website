@@ -12,11 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.zIndex = "0";
                     btn.style.transform = btn.dataset.initialTransform;
                     btn.querySelector('.button-content').style.display = 'none';
+                    btn.querySelector('.button-alt-title').style.display = 'none'; // Hide alt title
                     btn.classList.remove('open'); // Remove the open class when closing
                 });
                 button.style.zIndex = "1";
                 button.style.transform = "translate(-50%, -50%) scale(9)"; // Slightly larger scale for opened button
                 button.querySelector('.button-content').style.display = 'block';
+                button.querySelector('.button-alt-title').style.display = 'block'; // Show alt title
                 button.classList.add('open'); // Add the open class when opening
             }
         });
@@ -30,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Close the button
                 button.style.transform = button.dataset.initialTransform;
                 button.querySelector('.button-content').style.display = 'none';
+                button.querySelector('.button-alt-title').style.display = 'none'; // Hide alt title
                 button.classList.remove('open');
                 document.body.style.overflow = "";
             } else {
@@ -38,11 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.zIndex = "0";
                     btn.style.transform = btn.dataset.initialTransform;
                     btn.querySelector('.button-content').style.display = 'none';
+                    btn.querySelector('.button-alt-title').style.display = 'none'; // Hide alt title
                     btn.classList.remove('open');
                 });
                 button.style.transform = window.innerWidth <= 768 ? "translate(-50%, -50%) scale(13)" : "translate(-50%, -50%) scale(9)";
                 button.style.zIndex = "1";
                 button.querySelector('.button-content').style.display = 'block';
+                button.querySelector('.button-alt-title').style.display = 'block'; // Show alt title
                 button.classList.add('open');
                 document.body.style.overflow = "hidden";
             }
@@ -61,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (button.classList.contains('open')) {
                 button.style.transform = button.dataset.initialTransform;
                 button.querySelector('.button-content').style.display = 'none';
+                button.querySelector('.button-alt-title').style.display = 'none'; // Hide alt title
                 button.classList.remove('open');
                 document.body.style.overflow = "";
             }

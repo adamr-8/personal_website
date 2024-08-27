@@ -320,14 +320,14 @@ html, body {
 /* Adjusted Title Styles for Opened Button */
 .button.open .button-alt-title {
     position: absolute;
-    top: 30%; /* Adjust position to be between the title and content */
+    top: 20%; /* Adjust position as needed */
     left: 50%;
     transform: translateX(-50%);
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
     font-size: 1.5em; /* Adjusted font size */
     color: #ffffff;
     z-index: 21;
 }
-
 /* Ensure that the main title remains at the top */
 .button.open .button-title {
     top: 10%; /* Adjust position if necessary */

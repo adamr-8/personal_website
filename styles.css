@@ -111,7 +111,7 @@ html, body {
 
 /* Title Styles for Closed Button */
 .button-title {
-    font-size: 1.2em; /* Keep original size for closed buttons */
+    font-size: 1em; /* Slightly smaller size for closed buttons */
     position: relative;
     top: 0; /* No specific positioning */
     left: 0;
@@ -125,7 +125,7 @@ html, body {
     top: 23%; /* Adjusted title position */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.2em !important; /* Reduced title font size to match alt title */
+    font-size: 0.8em !important; /* Reduced title font size to be smaller */
     color: #ffffff;
     z-index: 21;
 }
@@ -138,7 +138,7 @@ html, body {
         top: 27%; /* Position below the main title */
         left: 50%;
         transform: translateX(-50%);
-        font-size: 1.2em !important; /* Kept small size for alt title */
+        font-size: 0.7em !important; /* Kept small size for alt title */
         color: #ffffff;
         z-index: 21;
     }

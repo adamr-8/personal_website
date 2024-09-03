@@ -371,6 +371,12 @@ html, body {
         color: #ffffff;
         z-index: 21;
     }
+
+    .button.open .button-content {
+        top: 20%; /* Adjust top position to avoid overlap */
+        height: 65%; /* Make the content area larger */
+        font-size: 2.5vmin; /* Further reduced font size */
+    }
 }
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */
@@ -383,4 +389,3 @@ html, body {
         height: 80%; /* Increased size for desktop */
     }
 }
-

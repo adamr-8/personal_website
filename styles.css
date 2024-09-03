@@ -125,6 +125,20 @@ html, body {
     z-index: 21;
 }
 
+/* Subtitle (Alt Title) Styles for Opened Button on Desktop */
+@media screen and (min-width: 769px) {
+    .button.open .button-alt-title {
+        display: block !important;
+        position: absolute;
+        top: 33%; /* Position below the main title */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 5px !important; /* Slightly smaller than the title */
+        color: #ffffff;
+        z-index: 21;
+    }
+}
+
 /* Custom Scrollbar Styling */
 .button-content::-webkit-scrollbar {
     width: 2px; /* Smaller scrollbar width */
@@ -353,7 +367,7 @@ html, body {
 /* Ensure Alt Titles Are Never Displayed on Desktop */
 @media screen and (min-width: 769px) {
     .button .button-alt-title {
-        display: none !important; /* Hide alt titles on desktop */
+        display: none !important; /* Hide alt titles on closed buttons on desktop */
     }
     .circle-container {
         width: 80%; /* Increased size for desktop */

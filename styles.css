@@ -1,4 +1,4 @@
-/* Version 9.33.1 */
+/* Updated for better alignment on scroll */
 /* Global Styles */
 html, body {
     margin: 0;
@@ -82,7 +82,7 @@ html, body {
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 28%; /* Adjusted to follow the title's position change */
+    top: 33%; /* Adjusted top position to create space before the alt title */
     left: 50%;
     transform: translate(-50%, 0);
     width: 70%;

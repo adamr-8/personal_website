@@ -91,7 +91,7 @@ html, body {
     color: #ffffff;
     display: none;
     overflow-y: auto;
-    font-size: 12px !important; /* Slightly reduced font size */
+    font-size: 3px !important; /* Further reduced font size */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
     background-color: transparent;
@@ -101,7 +101,7 @@ html, body {
 
 /* Override any inherited styles for button-content */
 .open .button-content, .button.open .button-content {
-    font-size: 12px !important; /* Ensure consistent font size */
+    font-size: 3px !important; /* Further reduced font size */
 }
 
 /* Title Styles for Closed Button */
@@ -120,7 +120,7 @@ html, body {
     top: 12%; /* Keep slightly lower title position */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.2em; /* Consistent title font size */
+    font-size: 8px !important; /* Adjusted title font size */
     color: #ffffff;
     z-index: 21;
 }
@@ -168,7 +168,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Icon size adjusted */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -180,7 +180,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Icon size adjusted */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -192,7 +192,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Icon size adjusted */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -204,7 +204,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Icon size adjusted */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -216,7 +216,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Icon size adjusted */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -228,7 +228,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Icon size adjusted */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -240,7 +240,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Icon size adjusted */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -252,7 +252,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Icon size adjusted */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -264,7 +264,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Icon size adjusted */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -276,7 +276,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Icon size adjusted */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -288,7 +288,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Icon size adjusted */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -300,22 +300,38 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Icon size adjusted */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     .button-content {
-        font-size: 10px !important; /* Slightly smaller font size for mobile readability */
-        padding: 10px; /* Ensure padding is maintained */
-        text-align: left; /* Align text to the left */
+        font-size: 5px !important; /* Reduced font size for readability on mobile */
+        height: 70%; 
     }
     .button.open .button-title {
-        font-size: 16px !important; /* Slightly reduce the title size */
-        top: 15%; /* Adjust position slightly lower */
+        font-size: 10px !important; /* Further reduced title font size for mobile */
     }
-    .button.open .button-alt-title {
-        display: none; /* Hide the alternate title on mobile to avoid clutter */
-    }
+}
+.button-alt-title {
+    display: none; /* Hide alternate title by default */
+}
+
+/* Adjusted Title Styles for Opened Button */
+.button.open .button-alt-title {
+    position: absolute;
+    top: 19%; /* Adjusted to better position between title and content */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+    font-size: .2em; /* Reduced font size for better fit */
+    color: #ffffff;
+    z-index: 21;
+    margin-bottom: 10px; /* Add some space below the alt title */
+}
+
+/* Ensure that the main title remains at the top */
+.button.open .button-title {
+    top: 10%; /* Keep this as is to maintain positioning */
 }

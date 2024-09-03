@@ -96,7 +96,7 @@ html, body {
     color: #ffffff;
     display: none;
     overflow-y: auto;
-    font-size: 3px !important; /* Further reduced font size */
+    font-size: 0.8em; /* Further reduced font size */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
     background-color: transparent;
@@ -106,7 +106,7 @@ html, body {
 
 /* Override any inherited styles for button-content */
 .open .button-content, .button.open .button-content {
-    font-size: 3px !important; /* Further reduced font size */
+    font-size: 0.8em !important; /* Reduced font size */
 }
 
 /* Title Styles for Closed Button */
@@ -125,6 +125,7 @@ html, body {
     top: 23%; /* Adjusted title position */
     left: 50%;
     transform: translateX(-50%);
+    font-size: 6px !important; /* Reduced title font size */
     color: #ffffff;
     z-index: 21;
 }
@@ -353,7 +354,7 @@ html, body {
     
      /* Adjust Title Font Size */
     .button.open .button-title {
-        font-size: .1em !important; /* Set font size for title */
+        font-size: 1em !important; /* Set font size for title */
         top: 10%; /* Set position for title */
         left: 50%;
         transform: translateX(-50%);
@@ -366,7 +367,7 @@ html, body {
         left: 50%;
         transform: translateX(-50%);
         white-space: nowrap;
-        font-size: .1em !important; /* Set font size for alt title */
+        font-size: 1em !important; /* Set font size for alt title */
         color: #ffffff;
         z-index: 21;
     }
@@ -378,6 +379,8 @@ html, body {
         overflow-y: scroll; /* Ensure scrolling on mobile */
     }
 }
+
+
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */
 @media screen and (min-width: 769px) {

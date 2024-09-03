@@ -21,8 +21,8 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%; /* Increased size for desktop */
-    height: 80%; /* Increased size for desktop */
+    width: 80%; /* Increased the size of the container */
+    height: 80%; /* Increased the size of the container */
 }
 
 /* Button Styles */
@@ -55,12 +55,7 @@ html, body {
 #content { background-color: #0073e6; }
 #digital { background-color: #00b3b3; }
 #cx { background-color: #00cc66; }
-#ecommerce { background-color: #99cc00; word-break: break-word; }
-
-/* Fix for E-Com Button Size */
-#ecommerce .button-title {
-    font-size: 1.2em; /* Ensure it matches other buttons */
-}
+#ecommerce { background-color: #99cc00; font-size: 1.0em; word-break: break-word; } /* Adjusted for better fit */
 
 /* Adjust hover effect */
 .button:hover {
@@ -86,7 +81,7 @@ html, body {
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 30%; /* Adjusted top position to avoid overlap */
+    top: 28%; /* Adjusted to follow the title's position change */
     left: 50%;
     transform: translate(-50%, 0);
     width: 70%;
@@ -95,7 +90,7 @@ html, body {
     padding: 10px;
     color: #ffffff;
     display: none;
-    overflow-y: auto;
+    overflow-y: auto; /* Ensure the content can scroll */
     font-size: 3px !important; /* Further reduced font size */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
@@ -371,6 +366,14 @@ html, body {
         color: #ffffff;
         z-index: 21;
     }
+
+    /* Adjust Content Container Position */
+    .button.open .button-content {
+        top: 20%; /* Lowered top position */
+        font-size: 2.5px !important; /* Further reduced content font size */
+        height: calc(70% - 20px); /* Ensure height fits within the screen */
+        overflow-y: auto; /* Enable scrolling for overflowing content */
+    }
 }
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */
@@ -383,4 +386,3 @@ html, body {
         height: 80%; /* Increased size for desktop */
     }
 }
-

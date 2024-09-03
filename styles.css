@@ -327,4 +327,13 @@ html, body {
     .button-alt-title {
         display: none; /* Ensure alt title is hidden by default */
     }
+
+    /* Ensuring alt titles are hidden on load */
+    .button {
+        position: relative;
+    }
+
+    .button.open .button-alt-title {
+        display: none; /* Ensure alt title is only shown on open buttons, and remains hidden otherwise */
+    }
 }

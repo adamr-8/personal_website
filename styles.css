@@ -130,10 +130,10 @@ html, body {
     .button.open .button-alt-title {
         display: block !important;
         position: absolute;
-        top: 33%; /* Position below the main title */
+        top: 28%; /* Position below the main title */
         left: 50%;
         transform: translateX(-50%);
-        font-size: 5px !important; /* Slightly smaller than the title */
+        font-size: 4.5px !important; /* Slightly smaller than the title */
         color: #ffffff;
         z-index: 21;
     }

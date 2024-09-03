@@ -332,3 +332,10 @@ html, body {
         z-index: 21;
     }
 }
+
+/* Ensure Alt Titles Are Never Displayed on Desktop */
+@media screen and (min-width: 769px) {
+    .button .button-alt-title {
+        display: none !important; /* Hide alt titles on desktop */
+    }
+}

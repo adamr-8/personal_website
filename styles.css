@@ -353,7 +353,7 @@ html, body {
     
      /* Adjust Title Font Size */
     .button.open .button-title {
-        font-size: 1em !important; /* Set font size for title */
+        font-size: .1em !important; /* Set font size for title */
         top: 10%; /* Set position for title */
         left: 50%;
         transform: translateX(-50%);
@@ -366,7 +366,7 @@ html, body {
         left: 50%;
         transform: translateX(-50%);
         white-space: nowrap;
-        font-size: 1em !important; /* Set font size for alt title */
+        font-size: .1em !important; /* Set font size for alt title */
         color: #ffffff;
         z-index: 21;
     }

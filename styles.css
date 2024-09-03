@@ -325,7 +325,7 @@ html, body {
         z-index: 21;
     }
     .button-alt-title {
-        display: none; /* Ensure alt title is hidden by default */
+        display: none !important; /* Ensure alt title is hidden by default */
     }
 
     /* Ensuring alt titles are hidden on load */
@@ -334,6 +334,6 @@ html, body {
     }
 
     .button.open .button-alt-title {
-        display: none; /* Ensure alt title is only shown on open buttons, and remains hidden otherwise */
+        display: block !important; /* Ensure alt title is only shown on open buttons */
     }
 }

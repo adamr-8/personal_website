@@ -380,8 +380,6 @@ html, body {
     }
 }
 
-
-
 /* Ensure Alt Titles Are Never Displayed on Desktop */
 @media screen and (min-width: 769px) {
     .button .button-alt-title {

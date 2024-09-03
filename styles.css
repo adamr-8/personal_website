@@ -125,6 +125,7 @@ html, body {
     top: 23%; /* Adjusted title position */
     left: 50%;
     transform: translateX(-50%);
+    font-size: 4px !important; /* Reduced title font size to match alt-title */
     color: #ffffff;
     z-index: 21;
 }

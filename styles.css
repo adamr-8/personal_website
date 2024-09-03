@@ -55,7 +55,12 @@ html, body {
 #content { background-color: #0073e6; }
 #digital { background-color: #00b3b3; }
 #cx { background-color: #00cc66; }
-#ecommerce { background-color: #99cc00; font-size: 0.9em; word-break: break-word; } /* Adjusted for better fit */
+#ecommerce { background-color: #99cc00; word-break: break-word; }
+
+/* Fix for E-Com Button Size */
+#ecommerce .button-title {
+    font-size: 1.2em; /* Ensure it matches other buttons */
+}
 
 /* Adjust hover effect */
 .button:hover {
@@ -81,7 +86,7 @@ html, body {
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 28%; /* Adjusted to follow the title's position change */
+    top: 30%; /* Adjusted top position to avoid overlap */
     left: 50%;
     transform: translate(-50%, 0);
     width: 70%;
@@ -378,3 +383,4 @@ html, body {
         height: 80%; /* Increased size for desktop */
     }
 }
+

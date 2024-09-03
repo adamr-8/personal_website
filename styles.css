@@ -354,8 +354,8 @@ html, body {
     
      /* Adjust Title Font Size */
     .button.open .button-title {
-        font-size: 3vmin !important; /* Significantly reduced font size */
-        top: 5%; /* Adjust position */
+        font-size: 1em !important; /* Set font size for title */
+        top: 10%; /* Set position for title */
         left: 50%;
         transform: translateX(-50%);
     }
@@ -363,22 +363,23 @@ html, body {
     .button.open .button-alt-title {
         display: block !important; /* Show the alt title on mobile when the button is open */
         position: absolute;
-        top: 10%; /* Position alt title */
+        top: 20%; /* Position alt title */
         left: 50%;
         transform: translateX(-50%);
         white-space: nowrap;
-        font-size: 2.5vmin !important; /* Reduce font size */
+        font-size: 1em !important; /* Set font size for alt title */
         color: #ffffff;
         z-index: 21;
     }
 
     .button.open .button-content {
-        top: 25%; /* Adjust top position to avoid overlap */
-        height: 55%; /* Make the content area larger */
-        font-size: 2.5vmin !important; /* Further reduced font size */
+        top: 30%; /* Adjust top position for content */
+        height: 50%; /* Adjust content area size */
+        font-size: 0.8em !important; /* Set font size for content */
         overflow-y: scroll; /* Ensure scrolling on mobile */
     }
 }
+
 
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */

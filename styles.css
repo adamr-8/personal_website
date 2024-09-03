@@ -307,31 +307,22 @@ html, body {
 /* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     .button-content {
-        font-size: 5px !important; /* Reduced font size for readability on mobile */
+        font-size: 10px !important; /* Adjust font size to be slightly smaller */
         height: 70%; 
+        padding: 10px; /* Add padding to ensure the text is not too close to the edges */
     }
     .button.open .button-title {
-        font-size: 10px !important; /* Further reduced title font size for mobile */
+        font-size: 16px !important; /* Slightly reduce the title size */
+        top: 15%; /* Adjust position slightly lower */
     }
-}
-.button-alt-title {
-    display: none; /* Hide alternate title by default */
-}
+    .button.open .button-alt-title {
+        font-size: 12px !important; /* Adjust the alternate title size */
+        top: 25%; /* Adjust position slightly lower */
+    }
 
-/* Adjusted Title Styles for Opened Button */
-.button.open .button-alt-title {
-    position: absolute;
-    top: 19%; /* Adjusted to better position between title and content */
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap; /* Prevent text from wrapping to a new line */
-    font-size: .2em; /* Reduced font size for better fit */
-    color: #ffffff;
-    z-index: 21;
-    margin-bottom: 10px; /* Add some space below the alt title */
-}
-
-/* Ensure that the main title remains at the top */
-.button.open .button-title {
-    top: 10%; /* Keep this as is to maintain positioning */
+    .button.open .button-title, .button.open .button-alt-title {
+        text-align: center; /* Center align the text */
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }

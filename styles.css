@@ -125,7 +125,7 @@ html, body {
     top: 23%; /* Adjusted title position */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.2em !important; /* Adjusted title font size */
+    font-size: 1.2em !important; /* Reduced title font size to match alt title */
     color: #ffffff;
     z-index: 21;
 }
@@ -138,7 +138,7 @@ html, body {
         top: 27%; /* Position below the main title */
         left: 50%;
         transform: translateX(-50%);
-        font-size: 1.2em !important; /* Matched title size */
+        font-size: 1.2em !important; /* Kept small size for alt title */
         color: #ffffff;
         z-index: 21;
     }

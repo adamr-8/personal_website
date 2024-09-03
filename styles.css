@@ -28,7 +28,7 @@ html, body {
 /* Button Styles */
 .button {
     position: absolute;
-    width: 18vmin; /* Original size */
+    width: 18vmin; /* Adjusted size */
     height: 18vmin;
     border-radius: 50%;
     color: #ffffff;
@@ -42,7 +42,6 @@ html, body {
     transition: transform 0.5s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
-
 
 /* Specific Button Colors */
 #traditional { background-color: #ffcc00; }
@@ -79,15 +78,14 @@ html, body {
 #cx { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -40vmin) rotate(-300deg); }
 #ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -40vmin) rotate(-330deg); }
 
-
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 20%; /* Bringing the content container closer to the title */
+    top: 40%; /* Bringing the content container closer to the title */
     left: 50%;
     transform: translate(-50%, 0);
     width: 70%;
-    height: 60%; /* Adjusted height for better spacing */
+    height: 50%; /* Adjusted height for better spacing */
     border-radius: 15px 15px 50px 50px;
     padding: 10px;
     color: #ffffff;
@@ -119,10 +117,10 @@ html, body {
 /* Title Styles for Opened Button */
 .button.open .button-title {
     position: absolute;
-    top: 12%; /* Keep slightly lower title position */
+    top: 32%; /* Lowered title position */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 8px !important; /* Adjusted title font size */
+    font-size: 6px !important; /* Reduced title font size */
     color: #ffffff;
     z-index: 21;
 }
@@ -313,13 +311,11 @@ html, body {
         height: 15vmin;
         font-size: 1.2em; /* Adjusted font size to match the larger button */
     }
-       .circle-container {
+    .circle-container {
         width: 90%; /* Increased size for mobile */
         height: 90%; /* Increased size for mobile */
     }
-
-
-#traditional { transform: translate(-50%, -50%) rotate(0deg) translate(0, -35vmin) rotate(0deg); }
+    #traditional { transform: translate(-50%, -50%) rotate(0deg) translate(0, -35vmin) rotate(0deg); }
     #sales { transform: translate(-50%, -50%) rotate(30deg) translate(0, -35vmin) rotate(-30deg); }
     #product { transform: translate(-50%, -50%) rotate(60deg) translate(0, -35vmin) rotate(-60deg); }
     #brand { transform: translate(-50%, -50%) rotate(90deg) translate(0, -35vmin) rotate(-90deg); }
@@ -331,9 +327,6 @@ html, body {
     #digital { transform: translate(-50%, -50%) rotate(270deg) translate(0, -35vmin) rotate(-270deg); }
     #cx { transform: translate(-50%, -50%) rotate(300deg) translate(0, -35vmin) rotate(-300deg); }
     #ecommerce { transform: translate(-50%, -50%) rotate(330deg) translate(0, -35vmin) rotate(-330deg); }
-}
-
-
 
     /* Alt Title Styles */
     .button .button-alt-title {
@@ -361,7 +354,8 @@ html, body {
 @media screen and (min-width: 769px) {
     .button .button-alt-title {
         display: none !important; /* Hide alt titles on desktop */
-     .circle-container {
+    }
+    .circle-container {
         width: 80%; /* Increased size for desktop */
         height: 80%; /* Increased size for desktop */
     }

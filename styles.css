@@ -354,7 +354,7 @@ html, body {
     
      /* Adjust Title Font Size */
     .button.open .button-title {
-        font-size: 4vmin !important; /* Significantly reduced font size */
+        font-size: 3vmin !important; /* Significantly reduced font size */
         top: 5%; /* Adjust position */
         left: 50%;
         transform: translateX(-50%);
@@ -367,17 +367,19 @@ html, body {
         left: 50%;
         transform: translateX(-50%);
         white-space: nowrap;
-        font-size: 1em;
+        font-size: 2.5vmin !important; /* Reduce font size */
         color: #ffffff;
         z-index: 21;
     }
 
     .button.open .button-content {
-        top: 20%; /* Adjust top position to avoid overlap */
-        height: 65%; /* Make the content area larger */
-        font-size: 2.5vmin; /* Further reduced font size */
+        top: 25%; /* Adjust top position to avoid overlap */
+        height: 55%; /* Make the content area larger */
+        font-size: 2.5vmin !important; /* Further reduced font size */
+        overflow-y: scroll; /* Ensure scrolling on mobile */
     }
 }
+
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */
 @media screen and (min-width: 769px) {

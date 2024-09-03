@@ -64,19 +64,20 @@ html, body {
     z-index: 10;
 }
 
-/* Adjust Button Positioning to Accommodate Larger Size */
-#traditional { top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -28vmin) rotate(0deg); }
-#sales { top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -28vmin) rotate(-30deg); }
-#product { top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -28vmin) rotate(-60deg); }
-#brand { top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -28vmin) rotate(-90deg); }
-#automation { top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -28vmin) rotate(-120deg); }
-#analytics { top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -28vmin) rotate(-150deg); }
-#projects { top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -28vmin) rotate(-180deg); }
-#startup { top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -28vmin) rotate(-210deg); }
-#content { top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -28vmin) rotate(-240deg); }
-#digital { top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -28vmin) rotate(-270deg); }
-#cx { top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -28vmin) rotate(-300deg); }
-#ecommerce { top: 45%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -28vmin) rotate(-330deg); }
+ /* Adjust Button Positioning on Desktop */
+    #traditional { top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -26vmin) rotate(0deg); }
+    #sales { top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -26vmin) rotate(-30deg); }
+    #product { top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -26vmin) rotate(-60deg); }
+    #brand { top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -26vmin) rotate(-90deg); }
+    #automation { top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -26vmin) rotate(-120deg); }
+    #analytics { top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -26vmin) rotate(-150deg); }
+    #projects { top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -26vmin) rotate(-180deg); }
+    #startup { top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -26vmin) rotate(-210deg); }
+    #content { top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -26vmin) rotate(-240deg); }
+    #digital { top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -26vmin) rotate(-270deg); }
+    #cx { top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -26vmin) rotate(-300deg); }
+    #ecommerce { top: 47%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -26vmin) rotate(-330deg); }
+}
 
 /* Content Container Styles */
 .button-content {

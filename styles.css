@@ -310,11 +310,18 @@ html, body {
         font-size: 5px !important; /* Reduced font size for readability on mobile */
         height: 70%; 
     }
+
+    /* Alt Title Styles */
+    .button .button-alt-title {
+        display: none !important; /* Hide the alt title by default */
+    }
+    
     .button.open .button-title {
         display: none; /* Hide the regular title on mobile when open */
     }
+
     .button.open .button-alt-title {
-        display: block; /* Display the alt title when the button is open */
+        display: block !important; /* Show the alt title on mobile when the button is open */
         position: absolute;
         top: 10%; /* Position alt title */
         left: 50%;
@@ -323,17 +330,5 @@ html, body {
         font-size: 1em;
         color: #ffffff;
         z-index: 21;
-    }
-    .button-alt-title {
-        display: none !important; /* Ensure alt title is hidden by default */
-    }
-
-    /* Ensuring alt titles are hidden on load */
-    .button {
-        position: relative;
-    }
-
-    .button.open .button-alt-title {
-        display: block !important; /* Ensure alt title is only shown on open buttons */
     }
 }

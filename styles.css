@@ -81,7 +81,7 @@ html, body {
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 40%; /* Bringing the content container closer to the title */
+    top: 35%; /* Further adjusted the position */
     left: 50%;
     transform: translate(-50%, 0);
     width: 70%;
@@ -117,7 +117,7 @@ html, body {
 /* Title Styles for Opened Button */
 .button.open .button-title {
     position: absolute;
-    top: 32%; /* Lowered title position */
+    top: 28%; /* Further adjusted title position */
     left: 50%;
     transform: translateX(-50%);
     font-size: 6px !important; /* Reduced title font size */

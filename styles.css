@@ -86,7 +86,7 @@ html, body {
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 32%; /* Adjusted top position to avoid overlap */
+    top: 30%; /* Adjusted top position to avoid overlap */
     left: 50%;
     transform: translate(-50%, 0);
     width: 70%;
@@ -96,7 +96,7 @@ html, body {
     color: #ffffff;
     display: none;
     overflow-y: auto;
-    font-size: 0.6em !important; /* Further reduced font size */
+    font-size: 3px !important; /* Further reduced font size */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
     background-color: transparent;
@@ -106,7 +106,7 @@ html, body {
 
 /* Override any inherited styles for button-content */
 .open .button-content, .button.open .button-content {
-    font-size: 0.6em !important; /* Further reduced font size */
+    font-size: 3px !important; /* Further reduced font size */
 }
 
 /* Title Styles for Closed Button */
@@ -122,10 +122,9 @@ html, body {
 /* Title Styles for Opened Button */
 .button.open .button-title {
     position: absolute;
-    top: 20%; /* Adjusted title position */
+    top: 23%; /* Adjusted title position */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 0.8em !important; /* Reduced title font size */
     color: #ffffff;
     z-index: 21;
 }
@@ -135,10 +134,10 @@ html, body {
     .button.open .button-alt-title {
         display: block !important;
         position: absolute;
-        top: 25%; /* Position below the main title */
+        top: 27%; /* Position below the main title */
         left: 50%;
         transform: translateX(-50%);
-        font-size: 0.6em !important; /* Slightly smaller than the title */
+        font-size: 4px !important; /* Slightly smaller than the title */
         color: #ffffff;
         z-index: 21;
     }
@@ -168,7 +167,7 @@ html, body {
 .button-content li {
     margin-bottom: 0.5em; /* Space between list items for readability */
     line-height: 1.5; /* Improve readability with line height */
-    font-size: 0.7em; /* Slightly smaller font size to save space */
+    font-size: 0.9em; /* Slightly smaller font size to save space */
 }
 
 .button-content::after {
@@ -187,7 +186,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -199,7 +198,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -211,7 +210,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -223,7 +222,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -235,7 +234,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -247,7 +246,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -259,7 +258,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -271,7 +270,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -283,7 +282,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -295,7 +294,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -307,7 +306,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -319,7 +318,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 1.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
 
@@ -354,7 +353,7 @@ html, body {
     
      /* Adjust Title Font Size */
     .button.open .button-title {
-        font-size: 0.5em !important; /* Set font size for title */
+        font-size: .1em !important; /* Set font size for title */
         top: 10%; /* Set position for title */
         left: 50%;
         transform: translateX(-50%);
@@ -367,15 +366,15 @@ html, body {
         left: 50%;
         transform: translateX(-50%);
         white-space: nowrap;
-        font-size: 0.4em !important; /* Set font size for alt title */
+        font-size: .1em !important; /* Set font size for alt title */
         color: #ffffff;
         z-index: 21;
     }
 
     .button.open .button-content {
-        top: 35%; /* Adjust top position for content */
-        height: 40%; /* Adjust content area size */
-        font-size: 0.5em !important; /* Set font size for content */
+        top: 30%; /* Adjust top position for content */
+        height: 50%; /* Adjust content area size */
+        font-size: 0.8em !important; /* Set font size for content */
         overflow-y: scroll; /* Ensure scrolling on mobile */
     }
 }

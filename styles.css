@@ -28,8 +28,8 @@ html, body {
 /* Button Styles */
 .button {
     position: absolute;
-    width: 14vmin; /* Original size */
-    height: 14vmin;
+    width: 18vmin; /* Original size */
+    height: 18vmin;
     border-radius: 50%;
     color: #ffffff;
     font-weight: bold;

@@ -379,6 +379,12 @@ html, body {
         overflow-y: scroll; /* Ensure scrolling on mobile */
     }
 
+@media screen and (max-width: 768px) {
+    .button.open .button-content {
+        font-size: 0.5vw !important; /* Use vw to scale with the viewport width */
+    }
+}
+
 }
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */

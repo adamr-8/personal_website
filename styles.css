@@ -379,6 +379,7 @@ html, body {
         overflow-y: scroll; /* Ensure scrolling on mobile */
     }
 
+}
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */
 @media screen and (min-width: 769px) {

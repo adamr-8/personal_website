@@ -372,10 +372,10 @@ html, body {
         z-index: 21;
     }
 
-  .button.open .button-content {
+    .button.open .button-content {
         top: 30%; /* Adjust top position for content */
         height: 50%; /* Adjust content area size */
-        font-size: .5vw !important; /* or use 0.5em for a smaller size */
+        font-size: calc(0.5vw + 0.2rem) !important; /* Hybrid approach to avoid pixelation */
         overflow-y: scroll; /* Ensure scrolling on mobile */
     }
 

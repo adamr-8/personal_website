@@ -375,11 +375,10 @@ html, body {
     .button.open .button-content {
         top: 30%; /* Adjust top position for content */
         height: 50%; /* Adjust content area size */
-        font-size: 0.2rem !important; /* Use rem for consistent scaling */       
+        font-size: 0.2rem !important; /* Use rem for consistent scaling */
         overflow-y: scroll; /* Ensure scrolling on mobile */
     }
 
-}
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */
 @media screen and (min-width: 769px) {

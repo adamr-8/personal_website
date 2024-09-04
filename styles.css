@@ -323,12 +323,13 @@ html, body {
     color: #ffffff;
 }
 
-/* Mobile Adjustments */
+/* Adjust Title and Content for Mobile */
 @media screen and (max-width: 768px) {
-    .button {
-        width: 15vmin; /* Increased size for better readability */
-        height: 15vmin;
-        font-size: 1.2em; /* Adjusted font size to match the larger button */
+    .button.open .button-title {
+        font-size: 0.6rem !important; /* Adjusted title size */
+        top: 10%; /* Set position for title */
+        left: 50%;
+        transform: translateX(-50%);
     }
     .circle-container {
         width: 90%; /* Increased size for mobile */
@@ -360,14 +361,14 @@ html, body {
         transform: translateX(-50%);
     }
 
-    .button.open .button-alt-title {
+   .button.open .button-alt-title {
         display: block !important; /* Show the alt title on mobile when the button is open */
         position: absolute;
         top: 20%; /* Position alt title */
         left: 50%;
         transform: translateX(-50%);
         white-space: nowrap;
-        font-size: .1em !important; /* Set font size for alt title */
+        font-size: 0.5rem !important; /* Adjusted alt title size */
         color: #ffffff;
         z-index: 21;
     }
@@ -375,11 +376,9 @@ html, body {
     .button.open .button-content {
         top: 30%; /* Adjust top position for content */
         height: 50%; /* Adjust content area size */
-        font-size: 1.75vw !important; /* Use rem for consistent scaling */
+        font-size: 0.45rem !important; /* Further reduce the content size */
         overflow-y: scroll; /* Ensure scrolling on mobile */
     }
-
-
 }
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */

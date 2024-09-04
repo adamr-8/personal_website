@@ -381,7 +381,7 @@ html, body {
 
 @media screen and (max-width: 768px) {
     .button.open .button-content {
-        font-size: 0.7vw !important; /* Use vw to scale with the viewport width */
+        font-size: 1vw !important; /* Use vw to scale with the viewport width */
     }
 }
 

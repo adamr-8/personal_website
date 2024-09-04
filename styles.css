@@ -375,14 +375,10 @@ html, body {
     .button.open .button-content {
         top: 30%; /* Adjust top position for content */
         height: 50%; /* Adjust content area size */
-        font-size: 0.2rem !important; /* Use rem for consistent scaling */
+        font-size: 0.75vw !important; /* Use rem for consistent scaling */
         overflow-y: scroll; /* Ensure scrolling on mobile */
     }
 
-@media screen and (max-width: 768px) {
-    .button.open .button-content {
-        font-size: 1vw !important; /* Use vw to scale with the viewport width */
-    }
 }
 
 }

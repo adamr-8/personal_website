@@ -106,8 +106,9 @@ html, body {
 
 /* Override any inherited styles for button-content */
 .open .button-content, .button.open .button-content {
-    font-size: 3px !important; /* Further reduced font size */
+    font-size: 1rem !important; /* Responsive font size */
 }
+
 
 /* Title Styles for Closed Button */
 .button-title {

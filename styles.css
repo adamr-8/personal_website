@@ -381,7 +381,17 @@ html, body {
     padding-right: 5%; /* Add padding to the right */
     box-sizing: border-box; /* Ensure padding is included in width calculation */
 }
-
+@media screen and (min-width: 769px) {
+    .button.open .button-content {
+        top: 25%; /* Adjust top position for content */
+        height: 50%; /* Adjust content area size */
+        font-size: 0.8rem !important; /* Smaller font size for desktop */
+        overflow-y: auto; /* Allow scrolling on desktop if needed */
+        width: 80%; /* Slightly wider for desktop */
+        padding-left: 10%; /* Ensure some padding on desktop */
+        padding-right: 10%;
+    }
+}
 }
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */

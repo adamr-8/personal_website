@@ -371,17 +371,18 @@ html, body {
 
 .button.open .button-content {
     top: 25%; /* Adjust top position for content */
-    height: 50%; /* Adjust content area size */
-    font-size: 0.2rem !important; /* Further reduce the content size for mobile */
+    height: 45%; /* Slightly smaller to fit inside the curve */
+    width: 75%; /* Reduce the width to fit inside the button */
+    font-size: 0.2rem !important; /* Smaller font for mobile */
     overflow-y: scroll; /* Ensure scrolling on mobile */
-    width: 90%; /* Limit the width to 90% of the screen */
-    max-width: 100%; /* Prevent the content from going beyond the screen width */
-    left: 50%; /* Keep the content centered */
-    transform: translateX(-50%); /* Ensure centering */
-    padding-left: 5%; /* Add padding to the left */
-    padding-right: 5%; /* Add padding to the right */
-    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    left: 50%; /* Center the content */
+    transform: translateX(-50%); /* Center horizontally */
+    padding: 10px; /* Padding for readability */
+    border-radius: 50px 50px 100px 100px; /* Create the curved effect */
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background for better visual appeal */
 }
+
 @media screen and (min-width: 769px) {
     .button.open .button-content {
         top: 25%; /* Adjust top position for content */

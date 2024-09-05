@@ -357,32 +357,36 @@ html, body {
         transform: translateX(-50%);
     }
 
-   .button.open .button-alt-title {
-        display: none !important; /* Show the alt title on mobile when the button is open */
-        position: absolute;
-        top: 20%; /* Position alt title */
-        left: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
-        font-size: 0.5rem !important; /* Adjusted alt title size */
-        color: #ffffff;
-        z-index: 21;
-    }
 
-.button.open .button-content {
-    top: 5%; /* Restore top position from the deleted code */
-    height: 90%; /* Original height for better fit within the circle */
-    width: 90%; /* Keep width inside the circle */
-    font-size: 0.2rem !important; /* Revert to smaller font size for better fit */
-    overflow-y: scroll; /* Ensure content scrolls if necessary */
-    left: 50%; /* Center content horizontally */
-    transform: translateX(-50%); /* Center the content */
-    padding: 16%; /* Add padding for spacing */
-    border-radius: 50%; /* Keep a circular shape */
-    box-sizing: border-box; /* Include padding in size calculations */
-    background-color: rgba(0, 0, 0, 0.5); /* Keep background semi-transparent */
+/* Alt Title Styling */
+.button.open .button-alt-title {
+    display: none !important; /* Hide the alt title on mobile */
+    position: absolute;
+    top: 20%; /* Adjust position */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 0.5rem !important; /* Adjusted font size */
+    color: #ffffff;
+    z-index: 21; /* Ensure title is above content */
 }
 
+.button.open .button-content {
+    position: absolute;
+    top: 20%; /* Adjust position */
+    height: 75%; /* Adjust height */
+    width: 85%; /* Maintain width inside the button */
+    font-size: 0.2rem !important; /* Smaller font size for readability */
+    overflow-y: scroll; /* Enable scrolling */
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 10%; /* Add buffer between title and content */
+    padding: 5px;
+    border-radius: 0 0 50% 50%; /* Straight top, rounded bottom */
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+    z-index: 5; /* Keep content under the title */
+    box-sizing: border-box;
+}
 
 
 @media screen and (min-width: 769px) {

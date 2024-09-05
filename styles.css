@@ -319,32 +319,18 @@ html, body {
     color: #ffffff;
 }
 
-/* Adjust Font Sizes for Mobile */
+/* Adjust Title and Content for Mobile */
 @media screen and (max-width: 768px) {
     .button.open .button-title {
-        font-size: 0.5rem !important; /* Reduce title size for mobile */
+        font-size: 0.6rem !important; /* Adjusted title size */
         top: 10%; /* Set position for title */
         left: 50%;
         transform: translateX(-50%);
     }
-
-    .button.open .button-content {
-        top: 30%; /* Adjust top position for content */
-        height: 50%; /* Adjust content area size */
-        font-size: 0.3rem !important; /* Smaller content font for mobile */
-        overflow-y: scroll; /* Ensure scrolling on mobile */
-        padding: 10px; /* Keep the padding */
-        width: 85%; /* Keep the width contained */
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 50%; /* Ensure the content fits in the circular button */
-    }
-
     .circle-container {
-        width: 90%; /* Adjust size for mobile */
-        height: 90%; /* Adjust size for mobile */
+        width: 90%; /* Increased size for mobile */
+        height: 90%; /* Increased size for mobile */
     }
-}
     #traditional { transform: translate(-50%, -50%) rotate(0deg) translate(0, -35vmin) rotate(0deg); }
     #sales { transform: translate(-50%, -50%) rotate(30deg) translate(0, -35vmin) rotate(-30deg); }
     #product { transform: translate(-50%, -50%) rotate(60deg) translate(0, -35vmin) rotate(-60deg); }
@@ -366,13 +352,13 @@ html, body {
      /* Adjust Title Font Size */
     .button.open .button-title {
         font-size: .1em !important; /* Set font size for title */
-        top: 10%; /* Set position for title */
+        top: 8%; /* Set position for title */
         left: 50%;
         transform: translateX(-50%);
     }
 
    .button.open .button-alt-title {
-        display: block !important; /* Show the alt title on mobile when the button is open */
+        display: none !important; /* Show the alt title on mobile when the button is open */
         position: absolute;
         top: 20%; /* Position alt title */
         left: 50%;
@@ -384,14 +370,14 @@ html, body {
     }
 
 .button.open .button-content {
-    top: 30%; /* Restore top position from the deleted code */
-    height: 50%; /* Original height for better fit within the circle */
-    width: 80%; /* Keep width inside the circle */
-    font-size: 0.45rem !important; /* Revert to smaller font size for better fit */
+    top: 5%; /* Restore top position from the deleted code */
+    height: 90%; /* Original height for better fit within the circle */
+    width: 90%; /* Keep width inside the circle */
+    font-size: 0.2rem !important; /* Revert to smaller font size for better fit */
     overflow-y: scroll; /* Ensure content scrolls if necessary */
     left: 50%; /* Center content horizontally */
     transform: translateX(-50%); /* Center the content */
-    padding: 3%; /* Add padding for spacing */
+    padding: 16%; /* Add padding for spacing */
     border-radius: 50%; /* Keep a circular shape */
     box-sizing: border-box; /* Include padding in size calculations */
     background-color: rgba(0, 0, 0, 0.5); /* Keep background semi-transparent */

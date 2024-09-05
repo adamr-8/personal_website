@@ -419,20 +419,3 @@ html, body {
         height: 80%; /* Increased size for desktop */
     }
 }
-/* Make the alt title smaller and integrate it with the body */
-@media screen and (max-width: 768px) {
-    .button.open .button-alt-title {
-        font-size: 0.3rem !important; /* Make the alt title smaller */
-        top: 5%; /* Position it closer to the body content */
-        left: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
-        color: #ffffff;
-        z-index: 21;
-    }
-    
-    /* Add some margin to the top of the content to make space */
-    .button.open .button-content {
-        margin-top: 5%; /* Make space for the alt title */
-    }
-}

@@ -319,18 +319,32 @@ html, body {
     color: #ffffff;
 }
 
-/* Adjust Title and Content for Mobile */
+/* Adjust Font Sizes for Mobile */
 @media screen and (max-width: 768px) {
     .button.open .button-title {
-        font-size: 0.6rem !important; /* Adjusted title size */
+        font-size: 0.5rem !important; /* Reduce title size for mobile */
         top: 10%; /* Set position for title */
         left: 50%;
         transform: translateX(-50%);
     }
-    .circle-container {
-        width: 90%; /* Increased size for mobile */
-        height: 90%; /* Increased size for mobile */
+
+    .button.open .button-content {
+        top: 30%; /* Adjust top position for content */
+        height: 50%; /* Adjust content area size */
+        font-size: 0.3rem !important; /* Smaller content font for mobile */
+        overflow-y: scroll; /* Ensure scrolling on mobile */
+        padding: 10px; /* Keep the padding */
+        width: 85%; /* Keep the width contained */
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%; /* Ensure the content fits in the circular button */
     }
+
+    .circle-container {
+        width: 90%; /* Adjust size for mobile */
+        height: 90%; /* Adjust size for mobile */
+    }
+}
     #traditional { transform: translate(-50%, -50%) rotate(0deg) translate(0, -35vmin) rotate(0deg); }
     #sales { transform: translate(-50%, -50%) rotate(30deg) translate(0, -35vmin) rotate(-30deg); }
     #product { transform: translate(-50%, -50%) rotate(60deg) translate(0, -35vmin) rotate(-60deg); }

@@ -370,17 +370,17 @@ html, body {
     }
 
 .button.open .button-content {
-    top: 25%; /* Adjust top position for content */
-    height: 45%; /* Slightly smaller to fit inside the curve */
-    width: 75%; /* Reduce the width to fit inside the button */
+    top: 25%; /* Position content lower to fit within the circle */
+    height: 50%; /* Constrain the height */
+    width: 80%; /* Adjust width to better fit within the button */
     font-size: 0.2rem !important; /* Smaller font for mobile */
-    overflow-y: scroll; /* Ensure scrolling on mobile */
-    left: 50%; /* Center the content */
-    transform: translateX(-50%); /* Center horizontally */
-    padding: 10px; /* Padding for readability */
-    border-radius: 50px 50px 100px 100px; /* Create the curved effect */
-    box-sizing: border-box; /* Ensure padding is included in the width/height */
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent background for better visual appeal */
+    overflow-y: scroll; /* Ensure scrolling */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Keep the content centered */
+    padding: 10px; /* Add padding */
+    border-radius: 50%; /* Match the button's circular shape */
+    box-sizing: border-box; /* Include padding in width and height calculations */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background for better contrast */
 }
 
 @media screen and (min-width: 769px) {

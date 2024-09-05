@@ -327,8 +327,6 @@ html, body {
         left: 50%;
         transform: translateX(-50%);
     }
-}
-
     .circle-container {
         width: 90%; /* Increased size for mobile */
         height: 90%; /* Increased size for mobile */

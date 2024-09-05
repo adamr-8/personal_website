@@ -117,25 +117,86 @@ html, body {
 /* Title Styles for Opened Button */
 .button.open .button-title {
     position: absolute;
-    top: 23%; /* Adjusted title position */
+    top: 5%; /* Adjusted title position for desktop */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 4px !important; /* Reduced title font size to match alt-title */
+    font-size: 1.5rem !important; /* Appropriate title size for desktop */
     color: #ffffff;
     z-index: 21;
 }
 
 /* Subtitle (Alt Title) Styles for Opened Button on Desktop */
 @media screen and (min-width: 769px) {
+    /* Hide Alt Titles on Unopened Buttons */
+    .button .button-alt-title {
+        display: none !important;
+    }
+    
+    /* Show Alt Title for Opened Buttons */
     .button.open .button-alt-title {
         display: block !important;
         position: absolute;
-        top: 27%; /* Position below the main title */
+        top: 15%; /* Adjust position to be below main title */
         left: 50%;
         transform: translateX(-50%);
-        font-size: 4px !important; /* Slightly smaller than the title */
+        font-size: 1rem !important; /* Proper size for desktop */
         color: #ffffff;
         z-index: 21;
+    }
+
+    /* Fix Title Location for Opened Buttons on Desktop */
+    .button.open .button-title {
+        position: absolute;
+        top: 5%; /* Adjust title to be within the top of the circle */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem !important; /* Adjusted title size for desktop */
+        color: #ffffff;
+        z-index: 21;
+    }
+
+    /* Circle container size for desktop */
+    .circle-container {
+        width: 80%; /* Desktop size */
+        height: 80%;
+    }
+
+    .button.open .button-content {
+        top: 25%; /* Desktop-specific position */
+        height: 50%; /* Desktop-specific height */
+        font-size: 0.8rem !important; /* Slightly larger size for desktop */
+        overflow-y: auto; /* Allow scrolling on desktop */
+        padding-left: 10%; /* Ensure padding on desktop */
+        padding-right: 10%;
+        border-radius: 50%; /* Ensure the content fits in the circular button */
+        box-sizing: border-box;
+    }
+}
+
+/* Mobile-specific Styles */
+@media screen and (max-width: 768px) {
+    .button.open .button-title {
+        font-size: 0.5rem !important; /* Reduce title size for mobile */
+        top: 10%; /* Set position for title */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .button.open .button-content {
+        top: 30%; /* Adjust top position for content */
+        height: 50%; /* Adjust content area size */
+        font-size: 0.3rem !important; /* Smaller content font for mobile */
+        overflow-y: scroll; /* Ensure scrolling on mobile */
+        padding: 10px; /* Keep the padding */
+        width: 85%; /* Keep the width contained */
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%; /* Ensure the content fits in the circular button */
+    }
+
+    .circle-container {
+        width: 90%; /* Adjust size for mobile */
+        height: 90%; /* Adjust size for mobile */
     }
 }
 
@@ -185,24 +246,3 @@ html, body {
 #digital .button-content::after { content: "\f108"; } /* fa-desktop */
 #cx .button-content::after { content: "\f118"; } /* fa-smile */
 #ecommerce .button-content::after { content: "\f07a"; } /* fa-shopping-cart */
-
-/* Mobile-specific Styles */
-@media screen and (max-width: 768px) {
-    .button.open .button-title {
-        font-size: 0.6rem !important; /* Adjusted title size */
-        top: 10%; /* Set position for title */
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .button.open .button-content {
-        font-size: 0.45rem !important; /* Further reduce the content size */
-        overflow-y: scroll; /* Ensure scrolling on mobile */
-        height: 50%;
-    }
-
-    .circle-container {
-        width: 90%; /* Increased size for mobile */
-        height: 90%; /* Increased size for mobile */
-    }
-}

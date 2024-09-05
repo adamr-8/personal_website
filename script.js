@@ -25,7 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handle click to toggle open/close
         button.addEventListener('click', (e) => {
-            e.stopPropagation();
+            // Check if the click is inside the button content area to allow scroll
+            if (e.target.closest('.button-content')) {
+                // Allow scrolling inside the content
+                return;
+            }
 
             const isOpen = button.classList.contains('open');
             if (isOpen) {
@@ -53,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Handle touchstart event for mobile devices
         if (window.innerWidth <= 768) {
             button.addEventListener('touchstart', (e) => {
                 e.preventDefault();
@@ -61,15 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    document.addEventListener('click', () => {
-        buttons.forEach(button => {
-            if (button.classList.contains('open')) {
-                button.style.transform = button.dataset.initialTransform;
-                button.querySelector('.button-content').style.display = 'none';
-                button.querySelector('.button-alt-title').style.display = 'none'; // Hide alt title
-                button.classList.remove('open');
-                document.body.style.overflow = "";
-            }
-        });
+    // Close any open buttons only if the click is outside the content
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.button-content')) {
+            buttons.forEach(button => {
+                if (button.classList.contains('open')) {
+                    button.style.transform = button.dataset.initialTransform;
+                    button.querySelector('.button-content').style.display = 'none';
+                    button.querySelector('.button-alt-title').style.display = 'none'; // Hide alt title
+                    button.classList.remove('open');
+                    document.body.style.overflow = "";
+                }
+            });
+        }
     });
 });

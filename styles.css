@@ -381,7 +381,7 @@ html, body {
     left: 50%;
     transform: translateX(-50%);
     padding-top: 10%; /* Add buffer between title and content */
-    padding: 5px;
+    padding: 16px;
     border-radius: 0 0 50% 50%; /* Straight top, rounded bottom */
     background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
     z-index: 5; /* Keep content under the title */

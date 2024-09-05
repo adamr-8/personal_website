@@ -327,6 +327,16 @@ html, body {
         left: 50%;
         transform: translateX(-50%);
     }
+}
+/* For Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    .button.open .button-content {
+        top: 30%; /* Keep mobile-specific positioning */
+        height: 50%; /* Keep mobile-specific content height */
+        font-size: 0.45rem !important; /* Smaller size for mobile readability */
+    }
+}
+
     .circle-container {
         width: 90%; /* Increased size for mobile */
         height: 90%; /* Increased size for mobile */
@@ -370,16 +380,16 @@ html, body {
     }
 
 .button.open .button-content {
-    top: 7%; /* Move content slightly higher */
-    height: 85%; /* Adjust height to fit the content better */
-    width: 82%; /* Maintain the width inside the circle */
-    font-size: 0.2rem !important; /* Maintain smaller font for readability */
-    overflow-y: scroll; /* Ensure scrolling if content overflows */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Keep the content centered */
-    padding: 10px; /* Add padding for better spacing */
-    border-radius: 50% / 50%; /* Adjust the top and bottom curve to match the circle */
-    box-sizing: border-box; /* Ensure padding is calculated in the width/height */
+    top: 30%; /* Restore top position from the deleted code */
+    height: 50%; /* Original height for better fit within the circle */
+    width: 80%; /* Keep width inside the circle */
+    font-size: 0.45rem !important; /* Revert to smaller font size for better fit */
+    overflow-y: scroll; /* Ensure content scrolls if necessary */
+    left: 50%; /* Center content horizontally */
+    transform: translateX(-50%); /* Center the content */
+    padding: 3%; /* Add padding for spacing */
+    border-radius: 50%; /* Keep a circular shape */
+    box-sizing: border-box; /* Include padding in size calculations */
     background-color: rgba(0, 0, 0, 0.5); /* Keep background semi-transparent */
 }
 

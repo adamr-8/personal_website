@@ -370,18 +370,19 @@ html, body {
     }
 
 .button.open .button-content {
-    top: 20%; /* Move content slightly higher */
-    height: 55%; /* Adjust height to spread the content vertically */
-    width: 80%; /* Keep width constrained within the circle */
+    top: 7%; /* Move content slightly higher */
+    height: 85%; /* Adjust height to fit the content better */
+    width: 82%; /* Maintain the width inside the circle */
     font-size: 0.2rem !important; /* Maintain smaller font for readability */
-    overflow-y: scroll; /* Ensure scrolling for overflow content */
-    left: 50%; /* Center the content horizontally */
-    transform: translateX(-50%); /* Keep centered */
-    padding: 10px; /* Add padding for readability */
-    border-radius: 50% / 30%; /* Control the top and bottom curve while keeping sides straight */
-    box-sizing: border-box; /* Ensure padding is part of the dimensions */
+    overflow-y: scroll; /* Ensure scrolling if content overflows */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Keep the content centered */
+    padding: 10px; /* Add padding for better spacing */
+    border-radius: 50% / 50%; /* Adjust the top and bottom curve to match the circle */
+    box-sizing: border-box; /* Ensure padding is calculated in the width/height */
     background-color: rgba(0, 0, 0, 0.5); /* Keep background semi-transparent */
 }
+
 
 
 @media screen and (min-width: 769px) {

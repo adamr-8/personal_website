@@ -70,18 +70,18 @@ html, body {
 }
 
 /* Positioning of buttons around the circle */
-#traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -40vmin) rotate(0deg); }
-#sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -40vmin) rotate(-30deg); }
-#product { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -40vmin) rotate(-60deg); }
-#brand { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(90deg) translate(0, -40vmin) rotate(-90deg); }
-#automation { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translate(0, -40vmin) rotate(-120deg); }
-#analytics { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(150deg) translate(0, -40vmin) rotate(-150deg); }
-#projects { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translate(0, -40vmin) rotate(-180deg); }
-#startup { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(210deg) translate(0, -40vmin) rotate(-210deg); }
-#content { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translate(0, -40vmin) rotate(-240deg); }
-#digital { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(270deg) translate(0, -40vmin) rotate(-270deg); }
-#cx { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translate(0, -40vmin) rotate(-300deg); }
-#ecommerce { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(330deg) translate(0, -40vmin) rotate(-330deg); }
+#traditional { transform: translate(-50%, -50%) rotate(0deg) translate(0, -40vmin) rotate(0deg); }
+#sales { transform: translate(-50%, -50%) rotate(30deg) translate(0, -40vmin) rotate(-30deg); }
+#product { transform: translate(-50%, -50%) rotate(60deg) translate(0, -40vmin) rotate(-60deg); }
+#brand { transform: translate(-50%, -50%) rotate(90deg) translate(0, -40vmin) rotate(-90deg); }
+#automation { transform: translate(-50%, -50%) rotate(120deg) translate(0, -40vmin) rotate(-120deg); }
+#analytics { transform: translate(-50%, -50%) rotate(150deg) translate(0, -40vmin) rotate(-150deg); }
+#projects { transform: translate(-50%, -50%) rotate(180deg) translate(0, -40vmin) rotate(-180deg); }
+#startup { transform: translate(-50%, -50%) rotate(210deg) translate(0, -40vmin) rotate(-210deg); }
+#content { transform: translate(-50%, -50%) rotate(240deg) translate(0, -40vmin) rotate(-240deg); }
+#digital { transform: translate(-50%, -50%) rotate(270deg) translate(0, -40vmin) rotate(-270deg); }
+#cx { transform: translate(-50%, -50%) rotate(300deg) translate(0, -40vmin) rotate(-300deg); }
+#ecommerce { transform: translate(-50%, -50%) rotate(330deg) translate(0, -40vmin) rotate(-330deg); }
 
 /* Content Container Styles */
 .button-content {
@@ -103,7 +103,6 @@ html, body {
     text-align: left;
     line-height: 1.3;
 }
-
 
 /* Title Styles for Closed Button */
 .button-title {
@@ -173,153 +172,21 @@ html, body {
     height: 20px; /* Adjust the height as needed for the amount of space */
 }
 
-/* Adding Font Awesome Icons at the Bottom of Each Content Section */
+/* Font Awesome Icons for Each Button's Content Section */
+#traditional .button-content::after { content: "\f0a1"; } /* fa-bullhorn */
+#sales .button-content::after { content: "\f4c6"; } /* fa-handshake */
+#product .button-content::after { content: "\f187"; } /* fa-box-open */
+#brand .button-content::after { content: "\f024"; } /* fa-flag */
+#automation .button-content::after { content: "\f085"; } /* fa-cogs */
+#analytics .button-content::after { content: "\f201"; } /* fa-chart-line */
+#projects .button-content::after { content: "\f542"; } /* fa-project-diagram */
+#startup .button-content::after { content: "\f135"; } /* fa-rocket */
+#content .button-content::after { content: "\f303"; } /* fa-pencil-alt */
+#digital .button-content::after { content: "\f108"; } /* fa-desktop */
+#cx .button-content::after { content: "\f118"; } /* fa-smile */
+#ecommerce .button-content::after { content: "\f07a"; } /* fa-shopping-cart */
 
-/* Traditional Marketing */
-#traditional .button-content::after {
-    content: "\f0a1"; /* fa-bullhorn */
-    font-family: "Font Awesome 5 Free"; /* Font Awesome font family */
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
-    color: #ffffff;
-}
-
-/* Sales */
-#sales .button-content::after {
-    content: "\f4c6"; /* fa-handshake */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
-    color: #ffffff;
-}
-
-/* Product Development */
-#product .button-content::after {
-    content: "\f187"; /* fa-box-open */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
-    color: #ffffff;
-}
-
-/* Brand Management */
-#brand .button-content::after {
-    content: "\f024"; /* fa-flag */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
-    color: #ffffff;
-}
-
-/* Automation & CRM */
-#automation .button-content::after {
-    content: "\f085"; /* fa-cogs */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
-    color: #ffffff;
-}
-
-/* Analytics & Reporting */
-#analytics .button-content::after {
-    content: "\f201"; /* fa-chart-line */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
-    color: #ffffff;
-}
-
-/* Project Management */
-#projects .button-content::after {
-    content: "\f542"; /* fa-project-diagram */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
-    color: #ffffff;
-}
-
-/* Startup Experience */
-#startup .button-content::after {
-    content: "\f135"; /* fa-rocket */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
-    color: #ffffff;
-}
-
-/* Content Creation */
-#content .button-content::after {
-    content: "\f303"; /* fa-pencil-alt */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
-    color: #ffffff;
-}
-
-/* Digital Marketing */
-#digital .button-content::after {
-    content: "\f108"; /* fa-desktop */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
-    color: #ffffff;
-}
-
-/* Customer Experience (CX) */
-#cx .button-content::after {
-    content: "\f118"; /* fa-smile */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
-    color: #ffffff;
-}
-
-/* E-commerce */
-#ecommerce .button-content::after {
-    content: "\f07a"; /* fa-shopping-cart */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
-    color: #ffffff;
-}
-
-/* Adjust Title and Content for Mobile */
+/* Mobile-specific Styles */
 @media screen and (max-width: 768px) {
     .button.open .button-title {
         font-size: 0.6rem !important; /* Adjusted title size */
@@ -327,112 +194,15 @@ html, body {
         left: 50%;
         transform: translateX(-50%);
     }
-}
-/* For Mobile Adjustments */
-@media screen and (max-width: 768px) {
+
     .button.open .button-content {
-        top: 30%; /* Keep mobile-specific positioning */
-        height: 50%; /* Keep mobile-specific content height */
-        font-size: 0.45rem !important; /* Smaller size for mobile readability */
+        font-size: 0.45rem !important; /* Further reduce the content size */
+        overflow-y: scroll; /* Ensure scrolling on mobile */
+        height: 50%;
     }
-}
 
     .circle-container {
         width: 90%; /* Increased size for mobile */
         height: 90%; /* Increased size for mobile */
-    }
-    #traditional { transform: translate(-50%, -50%) rotate(0deg) translate(0, -35vmin) rotate(0deg); }
-    #sales { transform: translate(-50%, -50%) rotate(30deg) translate(0, -35vmin) rotate(-30deg); }
-    #product { transform: translate(-50%, -50%) rotate(60deg) translate(0, -35vmin) rotate(-60deg); }
-    #brand { transform: translate(-50%, -50%) rotate(90deg) translate(0, -35vmin) rotate(-90deg); }
-    #automation { transform: translate(-50%, -50%) rotate(120deg) translate(0, -35vmin) rotate(-120deg); }
-    #analytics { transform: translate(-50%, -50%) rotate(150deg) translate(0, -35vmin) rotate(-150deg); }
-    #projects { transform: translate(-50%, -50%) rotate(180deg) translate(0, -35vmin) rotate(-180deg); }
-    #startup { transform: translate(-50%, -50%) rotate(210deg) translate(0, -35vmin) rotate(-210deg); }
-    #content { transform: translate(-50%, -50%) rotate(240deg) translate(0, -35vmin) rotate(-240deg); }
-    #digital { transform: translate(-50%, -50%) rotate(270deg) translate(0, -35vmin) rotate(-270deg); }
-    #cx { transform: translate(-50%, -50%) rotate(300deg) translate(0, -35vmin) rotate(-300deg); }
-    #ecommerce { transform: translate(-50%, -50%) rotate(330deg) translate(0, -35vmin) rotate(-330deg); }
-
-    /* Alt Title Styles */
-    .button .button-alt-title {
-        display: none !important; /* Hide the alt title by default */
-    }
-    
-     /* Adjust Title Font Size */
-    .button.open .button-title {
-        font-size: .1em !important; /* Set font size for title */
-        top: 10%; /* Set position for title */
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-   .button.open .button-alt-title {
-        display: block !important; /* Show the alt title on mobile when the button is open */
-        position: absolute;
-        top: 20%; /* Position alt title */
-        left: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
-        font-size: 0.5rem !important; /* Adjusted alt title size */
-        color: #ffffff;
-        z-index: 21;
-    }
-
-.button.open .button-content {
-    top: 30%; /* Restore top position from the deleted code */
-    height: 50%; /* Original height for better fit within the circle */
-    width: 80%; /* Keep width inside the circle */
-    font-size: 0.45rem !important; /* Revert to smaller font size for better fit */
-    overflow-y: scroll; /* Ensure content scrolls if necessary */
-    left: 50%; /* Center content horizontally */
-    transform: translateX(-50%); /* Center the content */
-    padding: 3%; /* Add padding for spacing */
-    border-radius: 50%; /* Keep a circular shape */
-    box-sizing: border-box; /* Include padding in size calculations */
-    background-color: rgba(0, 0, 0, 0.5); /* Keep background semi-transparent */
-}
-
-
-
-@media screen and (min-width: 769px) {
-    .button.open .button-content {
-        top: 25%; /* Adjust top position for content */
-        height: 50%; /* Adjust content area size */
-        font-size: 0.8rem !important; /* Smaller font size for desktop */
-        overflow-y: auto; /* Allow scrolling on desktop if needed */
-        width: 80%; /* Slightly wider for desktop */
-        max-width: 100%; /* Prevent overflow beyond the screen width */
-        padding-left: 10%; /* Ensure some padding on desktop */
-        padding-right: 10%;
-    }
-}
-}
-
-/* Ensure Alt Titles Are Never Displayed on Desktop */
-@media screen and (min-width: 769px) {
-    .button .button-alt-title {
-        display: none !important; /* Hide alt titles on closed buttons on desktop */
-    }
-    .circle-container {
-        width: 80%; /* Increased size for desktop */
-        height: 80%; /* Increased size for desktop */
-    }
-}
-/* Make the alt title smaller and integrate it with the body */
-@media screen and (max-width: 768px) {
-    .button.open .button-alt-title {
-        font-size: 0.3rem !important; /* Make the alt title smaller */
-        top: 5%; /* Position it closer to the body content */
-        left: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
-        color: #ffffff;
-        z-index: 21;
-    }
-    
-    /* Add some margin to the top of the content to make space */
-    .button.open .button-content {
-        margin-top: 5%; /* Make space for the alt title */
     }
 }

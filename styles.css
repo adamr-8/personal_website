@@ -328,14 +328,6 @@ html, body {
         transform: translateX(-50%);
     }
 }
-/* For Mobile Adjustments */
-@media screen and (max-width: 768px) {
-    .button.open .button-content {
-        top: 30%; /* Keep mobile-specific positioning */
-        height: 50%; /* Keep mobile-specific content height */
-        font-size: 0.45rem !important; /* Smaller size for mobile readability */
-    }
-}
 
     .circle-container {
         width: 90%; /* Increased size for mobile */

@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.querySelector('.button-alt-title').style.display = 'none'; // Hide alt title
                     btn.classList.remove('open');
                 });
-                button.style.transform = window.innerWidth <= 768 ? "translate(-50%, -50%) scale(13)" : "translate(-50%, -50%) scale(9)";
+                button.style.transform = window.innerWidth <= 768 ? "translate(-50%, -50%) scale(11)" : "translate(-50%, -50%) scale(9)";
                 button.style.zIndex = "1";
                 button.querySelector('.button-content').style.display = 'block';
                 button.querySelector('.button-alt-title').style.display = 'block'; // Show alt title

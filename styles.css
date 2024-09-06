@@ -41,6 +41,9 @@ html, body {
     font-size: 1.2em;
     transition: transform 0.5s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    will-change: transform; /* Added for smoother transitions */
+    backface-visibility: hidden; /* Improves performance and reduces blurriness */
+    transform: translateZ(0); /* Forces hardware acceleration */
 }
 
 /* Specific Button Colors */
@@ -357,55 +360,39 @@ html, body {
         transform: translateX(-50%);
     }
 
-
-/* Alt Title Styling */
-.button.open .button-alt-title {
-    display: none !important; /* Hide the alt title on mobile */
-    position: absolute;
-    top: 20%; /* Adjust position */
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    font-size: 0.5rem !important; /* Adjusted font size */
-    color: #ffffff;
-    z-index: 21; /* Ensure title is above content */
-}
-
-.button.open .button-content {
-    position: absolute;
-    top: 20%; /* Keep the content positioned below the title */
-    height: 78%; /* Adjust height to fill the lower part */
-    width: 96%; /* Maintain width inside the button */
-    font-size: 0.2rem !important; /* Smaller font size for readability */
-    overflow-y: scroll; /* Enable scrolling */
-    left: 50%; /* Ensure the content stays centered */
-    transform: translateX(-50%);
-    padding-top: 14%; /* Add buffer between title and content */
-    padding: 14px;
-    border-radius: 0 0 50% 50%; /* Fix the bottom curve to be fully rounded */
-    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
-    z-index: 5; /* Keep content under the title */
-    box-sizing: border-box;
-}
-
-@media screen and (max-width: 768px) {
-    .button.open {
-        transform: translate(-50%, -50%) scale(9); /* Reduced from scale(9) */
+    /* Alt Title Styling */
+    .button.open .button-alt-title {
+        display: none !important; /* Hide the alt title on mobile */
+        position: absolute;
+        top: 20%; /* Adjust position */
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-size: 0.5rem !important; /* Adjusted font size */
+        color: #ffffff;
+        z-index: 21; /* Ensure title is above content */
     }
-}
 
-@media screen and (min-width: 769px) {
     .button.open .button-content {
-        top: 25%; /* Adjust top position for content */
-        height: 50%; /* Adjust content area size */
-        font-size: 0.8rem !important; /* Smaller font size for desktop */
-        overflow-y: auto; /* Allow scrolling on desktop if needed */
-        width: 80%; /* Slightly wider for desktop */
-        max-width: 100%; /* Prevent overflow beyond the screen width */
-        padding-left: 10%; /* Ensure some padding on desktop */
-        padding-right: 10%;
+        position: absolute;
+        top: 20%; /* Keep the content positioned below the title */
+        height: 78%; /* Adjust height to fill the lower part */
+        width: 96%; /* Maintain width inside the button */
+        font-size: 0.2rem !important; /* Smaller font size for readability */
+        overflow-y: scroll; /* Enable scrolling */
+        left: 50%; /* Ensure the content stays centered */
+        transform: translateX(-50%);
+        padding-top: 14%; /* Add buffer between title and content */
+        padding: 14px;
+        border-radius: 0 0 50% 50%; /* Fix the bottom curve to be fully rounded */
+        background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+        z-index: 5; /* Keep content under the title */
+        box-sizing: border-box;
     }
-}
+
+    .button.open {
+        transform: translate(-50%, -50%) scale(6); /* Reduced from scale(9) to minimize pixelation */
+    }
 }
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */

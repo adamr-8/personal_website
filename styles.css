@@ -86,7 +86,7 @@ html, body {
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 35%; /* Adjusted top position to avoid overlap */
+    top: 35%; /* Keep the starting position */
     left: 50%;
     transform: translate(-50%, 0);
     width: 80%;
@@ -95,13 +95,14 @@ html, body {
     padding: 10px;
     color: #ffffff;
     display: none;
-    overflow-y: auto;
+    overflow-y: auto; /* Ensure the content is scrollable */
     font-size: 3px !important; /* Further reduced font size */
     font-family: 'Poppins', sans-serif;
     z-index: 20;
     background-color: transparent;
     text-align: left;
     line-height: 1.3;
+    scroll-padding-top: 50px; /* Add some scroll padding at the top */
 }
 
 /* Custom bullet point styling */
@@ -118,13 +119,17 @@ html, body {
 
 /* Adjust bullet spacing for mobile */
 @media screen and (max-width: 768px) {
+    .button-content {
+        top: 40%; /* Slightly adjust for mobile */
+        height: 50%; /* Larger height to show more content on mobile */
+    }
+
     .button-content ul {
         padding-left: 0.5em; /* Further reduce the indent for bullets on mobile */
     }
 
     .button-content li {
         margin-bottom: 0.5em;
-        line-height: 1.5;
         font-size: 0.8em; /* Adjust font size for mobile */
     }
 }
@@ -142,10 +147,10 @@ html, body {
 /* Title Styles for Opened Button */
 .button.open .button-title {
     position: absolute;
-    top: 23%; /* Adjusted title position */
+    top: 20%; /* Adjusted title position */
     left: 50%;
     transform: translateX(-50%);
-    font-size: 4px !important; /* Reduced title font size to match alt-title */
+    font-size: 1.5em; /* Control title size here */
     color: #ffffff;
     z-index: 21;
 }
@@ -178,25 +183,6 @@ html, body {
     background-color: transparent;
 }
 
-/* Adjusting list items for better readability */
-.button-content ul {
-    padding-left: 3em; /* Adjusted padding for better alignment */
-    margin: 0;
-    list-style-type: disc; /* Standard bullet point */
-}
-
-.button-content li {
-    margin-bottom: 0.5em; /* Space between list items for readability */
-    line-height: 1.5; /* Improve readability with line height */
-    font-size: 0.9em; /* Slightly smaller font size to save space */
-}
-
-.button-content::after {
-    content: "";
-    display: block;
-    height: 20px; /* Adjust the height as needed for the amount of space */
-}
-
 /* Adding Font Awesome Icons at the Bottom of Each Content Section */
 
 /* Traditional Marketing */
@@ -207,7 +193,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Icon size */
     color: #ffffff;
 }
 
@@ -219,7 +205,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Icon size */
     color: #ffffff;
 }
 
@@ -231,7 +217,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Icon size */
     color: #ffffff;
 }
 
@@ -243,7 +229,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Icon size */
     color: #ffffff;
 }
 
@@ -255,7 +241,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Icon size */
     color: #ffffff;
 }
 
@@ -267,7 +253,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Icon size */
     color: #ffffff;
 }
 
@@ -279,7 +265,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Icon size */
     color: #ffffff;
 }
 
@@ -291,7 +277,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Icon size */
     color: #ffffff;
 }
 
@@ -303,7 +289,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Icon size */
     color: #ffffff;
 }
 
@@ -315,7 +301,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Icon size */
     color: #ffffff;
 }
 
@@ -327,7 +313,7 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Icon size */
     color: #ffffff;
 }
 
@@ -339,92 +325,23 @@ html, body {
     display: block;
     text-align: center;
     margin-top: 20px;
-    font-size: 2.5em; /* Changed to 1em for better responsiveness */
+    font-size: 2.5em; /* Icon size */
     color: #ffffff;
 }
 
 /* Adjust Title and Content for Mobile */
 @media screen and (max-width: 768px) {
     .button.open .button-title {
-        font-size: 0.6rem !important; /* Adjusted title size */
+        font-size: 1em; /* Adjust title size on mobile */
         top: 10%; /* Set position for title */
         left: 50%;
         transform: translateX(-50%);
     }
+
     .circle-container {
-        width: 90%; /* Increased size for mobile */
-        height: 90%; /* Increased size for mobile */
+        width: 90%; /* Adjust container size */
+        height: 90%;
     }
-    #traditional { transform: translate(-50%, -50%) rotate(0deg) translate(0, -35vmin) rotate(0deg); }
-    #sales { transform: translate(-50%, -50%) rotate(30deg) translate(0, -35vmin) rotate(-30deg); }
-    #product { transform: translate(-50%, -50%) rotate(60deg) translate(0, -35vmin) rotate(-60deg); }
-    #brand { transform: translate(-50%, -50%) rotate(90deg) translate(0, -35vmin) rotate(-90deg); }
-    #automation { transform: translate(-50%, -50%) rotate(120deg) translate(0, -35vmin) rotate(-120deg); }
-    #analytics { transform: translate(-50%, -50%) rotate(150deg) translate(0, -35vmin) rotate(-150deg); }
-    #projects { transform: translate(-50%, -50%) rotate(180deg) translate(0, -35vmin) rotate(-180deg); }
-    #startup { transform: translate(-50%, -50%) rotate(210deg) translate(0, -35vmin) rotate(-210deg); }
-    #content { transform: translate(-50%, -50%) rotate(240deg) translate(0, -35vmin) rotate(-240deg); }
-    #digital { transform: translate(-50%, -50%) rotate(270deg) translate(0, -35vmin) rotate(-270deg); }
-    #cx { transform: translate(-50%, -50%) rotate(300deg) translate(0, -35vmin) rotate(-300deg); }
-    #ecommerce { transform: translate(-50%, -50%) rotate(330deg) translate(0, -35vmin) rotate(-330deg); }
-
-    /* Alt Title Styles */
-    .button .button-alt-title {
-        display: none !important; /* Hide the alt title by default */
-    }
-    
-     /* Adjust Title Font Size */
-    .button.open .button-title {
-        font-size: .1em !important; /* Set font size for title */
-        top: 8%; /* Set position for title */
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-
-/* Alt Title Styling */
-.button.open .button-alt-title {
-    display: none !important; /* Hide the alt title on mobile */
-    position: absolute;
-    top: 20%; /* Adjust position */
-    left: 50%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    font-size: 0.5rem !important; /* Adjusted font size */
-    color: #ffffff;
-    z-index: 21; /* Ensure title is above content */
-}
-
-.button.open .button-content {
-    position: absolute;
-    top: 20%; /* Adjust position */
-    height: 75%; /* Adjust height */
-    width: 85%; /* Maintain width inside the button */
-    font-size: 0.2rem !important; /* Smaller font size for readability */
-    overflow-y: scroll; /* Enable scrolling */
-    left: 50%;
-    transform: translateX(-50%);
-    padding-top: 10%; /* Add buffer between title and content */
-    padding: 16px;
-    border-radius: 0 0 50% 50%; /* Straight top, rounded bottom */
-    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
-    z-index: 5; /* Keep content under the title */
-    box-sizing: border-box;
-}
-
-
-@media screen and (min-width: 769px) {
-    .button.open .button-content {
-        top: 25%; /* Adjust top position for content */
-        height: 50%; /* Adjust content area size */
-        font-size: 0.8rem !important; /* Smaller font size for desktop */
-        overflow-y: auto; /* Allow scrolling on desktop if needed */
-        width: 80%; /* Slightly wider for desktop */
-        max-width: 100%; /* Prevent overflow beyond the screen width */
-        padding-left: 10%; /* Ensure some padding on desktop */
-        padding-right: 10%;
-    }
-}
 }
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */

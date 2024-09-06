@@ -164,7 +164,7 @@ html, body {
 .button-content li {
     margin-bottom: 0.5em; /* Space between list items for readability */
     line-height: 1.3; /* Improve readability with line height */
-    font-size: 0.7em; /* Slightly smaller font size to save space */
+    font-size: 0.9em; /* Slightly smaller font size to save space */
 }
 
 .button-content::after {

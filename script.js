@@ -23,12 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Handle click to toggle open/close
+        // Handle click to toggle open/close (Desktop and Mobile)
         button.addEventListener('click', (e) => {
-            // Check if the click is inside the button content area to allow scroll
+            // Prevent button from closing if tapping inside content
             if (e.target.closest('.button-content')) {
-                // Allow scrolling inside the content
-                return;
+                return; // Don't close the button if tapping inside content
             }
 
             const isOpen = button.classList.contains('open');
@@ -48,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.querySelector('.button-alt-title').style.display = 'none'; // Hide alt title
                     btn.classList.remove('open');
                 });
-                button.style.transform = window.innerWidth <= 768 ? "translate(-50%, -50%) scale(9)" : "translate(-50%, -50%) scale(9)";
+                button.style.transform = "translate(-50%, -50%) scale(9)";
                 button.style.zIndex = "1";
                 button.querySelector('.button-content').style.display = 'block';
                 button.querySelector('.button-alt-title').style.display = 'block'; // Show alt title
@@ -57,16 +56,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Handle touchstart event for mobile devices
-        if (window.innerWidth <= 768) {
-            button.addEventListener('touchstart', (e) => {
-                e.preventDefault();
-                button.click();
-            }, { passive: false });
-        }
+        // Mobile: Handle touchstart to open/close buttons
+        button.addEventListener('touchstart', (e) => {
+            // Prevent scroll-related touch events from closing the button
+            if (e.target.closest('.button-content')) {
+                return; // Allow scrolling in content area
+            }
+
+            button.click(); // Trigger click for mobile behavior
+        }, { passive: true });
     });
 
-    // Close any open buttons only if the click is outside the content
+    // Close any open buttons when clicking outside the button content
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.button-content')) {
             buttons.forEach(button => {

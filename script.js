@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handle click to toggle open/close (Desktop and Mobile)
         button.addEventListener('click', (e) => {
-            // Prevent button from closing if tapping inside content
-            if (e.target.closest('.button-content')) {
-                return; // Don't close the button if tapping inside content
+            // If the button is already open and user clicks inside the content, allow scrolling
+            if (button.classList.contains('open') && e.target.closest('.button-content')) {
+                return; // Prevent closing when tapping inside the content
             }
 
             const isOpen = button.classList.contains('open');

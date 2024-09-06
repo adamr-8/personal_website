@@ -86,10 +86,10 @@ html, body {
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 32%; /* Adjusted top position to avoid overlap */
+    top: 35%; /* Adjusted top position to avoid overlap */
     left: 50%;
     transform: translate(-50%, 0);
-    width: 77%;
+    width: 78%;
     height: 50%; /* Adjusted height for better spacing */
     border-radius: 15px 15px 50px 50px;
     padding: 10px;
@@ -156,7 +156,7 @@ html, body {
 
 /* Adjusting list items for better readability */
 .button-content ul {
-    padding-left: 1em; /* Adjusted padding for better alignment */
+    padding-left: .2em; /* Adjusted padding for better alignment */
     margin: 0;
     list-style-type: disc; /* Standard bullet point */
 }
@@ -314,7 +314,7 @@ html, body {
     font-weight: 900;
     display: block;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }

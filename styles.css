@@ -390,7 +390,7 @@ html, body {
 
 @media screen and (max-width: 768px) {
     .button.open {
-        transform: translate(-50%, -50%) scale(6); /* Reduced from scale(9) */
+        transform: translate(-50%, -50%) scale(9); /* Reduced from scale(9) */
     }
 }
 

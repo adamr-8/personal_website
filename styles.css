@@ -388,7 +388,11 @@ html, body {
     box-sizing: border-box;
 }
 
-
+@media screen and (max-width: 768px) {
+    .button.open {
+        transform: translate(-50%, -50%) scale(6); /* Reduced from scale(9) */
+    }
+}
 
 @media screen and (min-width: 769px) {
     .button.open .button-content {

@@ -5,12 +5,27 @@ document.addEventListener('DOMContentLoaded', () => {
         // Store initial transform for reset purposes
         button.dataset.initialTransform = button.style.transform;
 
-        // Handle opening/closing on mobile and desktop
-        const toggleButton = (e) => {
-            // Ignore if the tap/click is inside the content area to allow scrolling
-            if (e.target.closest('.button-content')) {
-                return;
+        // Handle hover to open button (Desktop Only)
+        button.addEventListener('mouseover', () => {
+            if (window.innerWidth > 768) { // Desktop behavior
+                buttons.forEach(btn => {
+                    btn.style.zIndex = "0";
+                    btn.style.transform = btn.dataset.initialTransform;
+                    btn.querySelector('.button-content').style.display = 'none';
+                    btn.querySelector('.button-alt-title').style.display = 'none'; // Hide alt title
+                    btn.classList.remove('open'); // Remove the open class when closing
+                });
+                button.style.zIndex = "1";
+                button.style.transform = "translate(-50%, -50%) scale(9)"; // Slightly larger scale for opened button
+                button.querySelector('.button-content').style.display = 'block';
+                button.querySelector('.button-alt-title').style.display = 'block'; // Show alt title
+                button.classList.add('open'); // Add the open class when opening
             }
+        });
+
+        // Handle click to toggle open/close
+        button.addEventListener('click', (e) => {
+            e.stopPropagation();
 
             const isOpen = button.classList.contains('open');
             if (isOpen) {
@@ -21,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 button.classList.remove('open');
                 document.body.style.overflow = "";
             } else {
-                // Close other open buttons
+                // Open the button
                 buttons.forEach(btn => {
                     btn.style.zIndex = "0";
                     btn.style.transform = btn.dataset.initialTransform;
@@ -29,39 +44,38 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.querySelector('.button-alt-title').style.display = 'none'; // Hide alt title
                     btn.classList.remove('open');
                 });
-
-                // Open the button
+                button.style.transform = window.innerWidth <= 768 ? "translate(-50%, -50%) scale(9)" : "translate(-50%, -50%) scale(9)";
                 button.style.zIndex = "1";
-                button.style.transform = "translate(-50%, -50%) scale(9)";
                 button.querySelector('.button-content').style.display = 'block';
                 button.querySelector('.button-alt-title').style.display = 'block'; // Show alt title
                 button.classList.add('open');
                 document.body.style.overflow = "hidden";
             }
-        };
+        });
 
-        // Handle clicks and taps on the button
-        button.addEventListener('click', toggleButton);
-
-        // Mobile: Handle touchstart to simulate click
-        button.addEventListener('touchstart', (e) => {
-            e.preventDefault(); // Prevent touch from triggering unintended behavior
-            toggleButton(e); // Simulate click behavior
-        }, { passive: false }); // Set passive to false to allow preventDefault
+        // For mobile: Handle touchstart to open/close buttons
+        if (window.innerWidth <= 768) {
+            button.addEventListener('touchstart', (e) => {
+                // Prevent closing the button if the user is scrolling inside the content
+                if (e.target.closest('.button-content')) {
+                    return; // Allow scrolling inside the content
+                }
+                e.preventDefault();
+                button.click();
+            }, { passive: false });
+        }
     });
 
-    // Close any open buttons when clicking outside the button content
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.button-content')) {
-            buttons.forEach(button => {
-                if (button.classList.contains('open')) {
-                    button.style.transform = button.dataset.initialTransform;
-                    button.querySelector('.button-content').style.display = 'none';
-                    button.querySelector('.button-alt-title').style.display = 'none'; // Hide alt title
-                    button.classList.remove('open');
-                    document.body.style.overflow = "";
-                }
-            });
-        }
+    // Close buttons when clicking outside of them
+    document.addEventListener('click', () => {
+        buttons.forEach(button => {
+            if (button.classList.contains('open')) {
+                button.style.transform = button.dataset.initialTransform;
+                button.querySelector('.button-content').style.display = 'none';
+                button.querySelector('.button-alt-title').style.display = 'none'; // Hide alt title
+                button.classList.remove('open');
+                document.body.style.overflow = "";
+            }
+        });
     });
 });

@@ -373,20 +373,21 @@ html, body {
 
 .button.open .button-content {
     position: absolute;
-    top: 20%; /* Adjust position */
-    height: 73%; /* Adjust height */
+    top: 20%; /* Keep the content positioned below the title */
+    height: 73%; /* Adjust height to fill the lower part */
     width: 85%; /* Maintain width inside the button */
     font-size: 0.2rem !important; /* Smaller font size for readability */
     overflow-y: scroll; /* Enable scrolling */
-    left: 44%;
+    left: 44%; /* Ensure the content stays centered */
     transform: translateX(-50%);
-    padding-top: 12%; /* Add buffer between title and content */
+    padding-top: 14%; /* Add buffer between title and content */
     padding: 15px;
-    border-radius: 0 0 50% 50%; /* Straight top, rounded bottom */
+    border-radius: 0 0 50% 50%; /* Fix the bottom curve to be fully rounded */
     background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
     z-index: 5; /* Keep content under the title */
     box-sizing: border-box;
 }
+
 
 
 @media screen and (min-width: 769px) {

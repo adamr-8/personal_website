@@ -86,7 +86,7 @@ html, body {
 /* Content Container Styles */
 .button-content {
     position: absolute;
-    top: 40%; /* Adjusted top position to avoid overlap */
+    top: 35%; /* Adjusted top position to avoid overlap */
     left: 50%;
     transform: translate(-50%, 0);
     width: 80%;
@@ -106,7 +106,7 @@ html, body {
 
 /* Custom bullet point styling */
 .button-content ul {
-    padding-left: 0.8em; /* Reduce the indent for bullets */
+    padding-left: 1em; /* Reduce the indent for bullets */
     list-style-type: disc; /* Keep the bullet point */
 }
 
@@ -118,19 +118,14 @@ html, body {
 
 /* Adjust bullet spacing for mobile */
 @media screen and (max-width: 768px) {
-    .button-content {
-        top: 45%; /* Move content further down on mobile */
-        width: 85%; /* Slightly narrower on mobile */
-    }
-
     .button-content ul {
         padding-left: 0.5em; /* Further reduce the indent for bullets on mobile */
     }
 
     .button-content li {
-        margin-bottom: 0.3em;
+        margin-bottom: 0.5em;
+        line-height: 1.5;
         font-size: 0.8em; /* Adjust font size for mobile */
-        line-height: 1.4; /* Reduce line height slightly for compactness */
     }
 }
 
@@ -386,34 +381,50 @@ html, body {
         transform: translateX(-50%);
     }
 
-    .button.open .button-alt-title {
-        display: none !important; /* Hide the alt title on mobile */
-        position: absolute;
-        top: 20%; /* Adjust position */
-        left: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
-        font-size: 0.5rem !important; /* Adjusted font size */
-        color: #ffffff;
-        z-index: 21; /* Ensure title is above content */
-    }
 
+/* Alt Title Styling */
+.button.open .button-alt-title {
+    display: none !important; /* Hide the alt title on mobile */
+    position: absolute;
+    top: 20%; /* Adjust position */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 0.5rem !important; /* Adjusted font size */
+    color: #ffffff;
+    z-index: 21; /* Ensure title is above content */
+}
+
+.button.open .button-content {
+    position: absolute;
+    top: 20%; /* Adjust position */
+    height: 75%; /* Adjust height */
+    width: 85%; /* Maintain width inside the button */
+    font-size: 0.2rem !important; /* Smaller font size for readability */
+    overflow-y: scroll; /* Enable scrolling */
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 10%; /* Add buffer between title and content */
+    padding: 16px;
+    border-radius: 0 0 50% 50%; /* Straight top, rounded bottom */
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+    z-index: 5; /* Keep content under the title */
+    box-sizing: border-box;
+}
+
+
+@media screen and (min-width: 769px) {
     .button.open .button-content {
-        position: absolute;
-        top: 45%; /* Adjust position */
-        height: 75%; /* Adjust height */
-        width: 85%; /* Maintain width inside the button */
-        font-size: 0.2rem !important; /* Smaller font size for readability */
-        overflow-y: scroll; /* Enable scrolling */
-        left: 50%;
-        transform: translateX(-50%);
-        padding-top: 10%; /* Add buffer between title and content */
-        padding: 16px;
-        border-radius: 0 0 50% 50%; /* Straight top, rounded bottom */
-        background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
-        z-index: 5; /* Keep content under the title */
-        box-sizing: border-box;
+        top: 25%; /* Adjust top position for content */
+        height: 50%; /* Adjust content area size */
+        font-size: 0.8rem !important; /* Smaller font size for desktop */
+        overflow-y: auto; /* Allow scrolling on desktop if needed */
+        width: 80%; /* Slightly wider for desktop */
+        max-width: 100%; /* Prevent overflow beyond the screen width */
+        padding-left: 10%; /* Ensure some padding on desktop */
+        padding-right: 10%;
     }
+}
 }
 
 /* Ensure Alt Titles Are Never Displayed on Desktop */

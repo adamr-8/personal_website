@@ -162,9 +162,9 @@ html, body {
 }
 
 .button-content li {
-    margin-bottom: 3em; /* Space between list items for readability */
-    line-height: 1.2; /* Improve readability with line height */
-    font-size: .8em; /* Slightly smaller font size to save space */
+    margin-bottom: 4em; /* Space between list items for readability */
+    line-height: 1.5; /* Improve readability with line height */
+    font-size: .9em; /* Slightly smaller font size to save space */
 }
 
 .button-content::after {
@@ -374,14 +374,14 @@ html, body {
 .button.open .button-content {
     position: absolute;
     top: 20%; /* Keep the content positioned below the title */
-    height: 73%; /* Adjust height to fill the lower part */
-    width: 85%; /* Maintain width inside the button */
+    height: 78%; /* Adjust height to fill the lower part */
+    width: 96%; /* Maintain width inside the button */
     font-size: 0.2rem !important; /* Smaller font size for readability */
     overflow-y: scroll; /* Enable scrolling */
     left: 50%; /* Ensure the content stays centered */
     transform: translateX(-50%);
     padding-top: 14%; /* Add buffer between title and content */
-    padding: 15px;
+    padding: 14px;
     border-radius: 0 0 50% 50%; /* Fix the bottom curve to be fully rounded */
     background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
     z-index: 5; /* Keep content under the title */

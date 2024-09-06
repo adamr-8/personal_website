@@ -164,7 +164,7 @@ html, body {
 .button-content li {
     margin-bottom: 0.5em; /* Space between list items for readability */
     line-height: 1.3; /* Improve readability with line height */
-    font-size: 0.8em; /* Slightly smaller font size to save space */
+    font-size: 0.7em; /* Slightly smaller font size to save space */
 }
 
 .button-content::after {
@@ -314,7 +314,7 @@ html, body {
     font-weight: 900;
     display: block;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 2.5em; /* Changed to 1em for better responsiveness */
     color: #ffffff;
 }
@@ -374,14 +374,14 @@ html, body {
 .button.open .button-content {
     position: absolute;
     top: 20%; /* Adjust position */
-    height: 75%; /* Adjust height */
+    height: 73%; /* Adjust height */
     width: 85%; /* Maintain width inside the button */
     font-size: 0.2rem !important; /* Smaller font size for readability */
     overflow-y: scroll; /* Enable scrolling */
-    left: 50%;
+    left: 44%;
     transform: translateX(-50%);
-    padding-top: 10%; /* Add buffer between title and content */
-    padding: 16px;
+    padding-top: 12%; /* Add buffer between title and content */
+    padding: 15px;
     border-radius: 0 0 50% 50%; /* Straight top, rounded bottom */
     background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
     z-index: 5; /* Keep content under the title */

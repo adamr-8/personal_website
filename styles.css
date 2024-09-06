@@ -156,15 +156,15 @@ html, body {
 
 /* Adjusting list items for better readability */
 .button-content ul {
-    padding-left: .5em; /* Adjusted padding for better alignment */
+    padding-left: .1em; /* Adjusted padding for better alignment */
     margin: 0;
     list-style-type: disc; /* Standard bullet point */
 }
 
 .button-content li {
-    margin-bottom: 1.4em; /* Space between list items for readability */
+    margin-bottom: 3em; /* Space between list items for readability */
     line-height: 1.2; /* Improve readability with line height */
-    font-size: 0.7em; /* Slightly smaller font size to save space */
+    font-size: .8em; /* Slightly smaller font size to save space */
 }
 
 .button-content::after {
@@ -378,7 +378,7 @@ html, body {
     width: 85%; /* Maintain width inside the button */
     font-size: 0.2rem !important; /* Smaller font size for readability */
     overflow-y: scroll; /* Enable scrolling */
-    left: 44%; /* Ensure the content stays centered */
+    left: 50%; /* Ensure the content stays centered */
     transform: translateX(-50%);
     padding-top: 14%; /* Add buffer between title and content */
     padding: 15px;

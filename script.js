@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handle click to toggle open/close (Desktop and Mobile)
         button.addEventListener('click', (e) => {
-            // If the button is already open and user clicks inside the content, allow scrolling
-            if (button.classList.contains('open') && e.target.closest('.button-content')) {
-                return; // Prevent closing when tapping inside the content
+            // Ignore click inside content area to allow scrolling
+            if (e.target.closest('.button-content')) {
+                return; // Don't close the button if tapping inside content
             }
 
             const isOpen = button.classList.contains('open');
@@ -56,14 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Mobile: Handle touchstart to open/close buttons
+        // Mobile: Use touchstart to open/close buttons without preventing default behavior
         button.addEventListener('touchstart', (e) => {
-            // Prevent scroll-related touch events from closing the button
+            // If the touch is inside the content, do nothing (allow scrolling)
             if (e.target.closest('.button-content')) {
-                return; // Allow scrolling in content area
+                return;
             }
-
-            button.click(); // Trigger click for mobile behavior
+            // Otherwise, open/close the button
+            button.click(); // Simulate the click event
         }, { passive: true });
     });
 

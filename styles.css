@@ -67,12 +67,16 @@ html, body {
 
 /* Adjust hover effect */
 .button:hover {
-    transform: scale(3); /* Increase scale for larger effect */
-    transition: transform 0.6s ease; /* Slow down animation */
+    transform: scale(1.1); /* Keep scale limited to avoid overlap */
     z-index: 10;
 }
 
-/* Positioning of buttons around the circle */
+/* Prevent piling up */
+.circle-container .button.open {
+    transform: translate(-50%, -50%) scale(1.2) !important; /* Slightly larger for open state */
+}
+
+/* Positioning of buttons around the circle with better spacing */
 #traditional { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg) translate(0, -40vmin) rotate(0deg); }
 #sales { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(30deg) translate(0, -40vmin) rotate(-30deg); }
 #product { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translate(0, -40vmin) rotate(-60deg); }
@@ -412,21 +416,22 @@ html, body {
 
 /* Applying Orbit Animation to Each Button */
 .button {
-  animation: orbit 20s linear infinite;
+  animation: orbit 60s linear infinite; /* Slower animation to prevent overlap */
 }
 
+/* Delay for each button's orbit animation */
 #traditional { animation-delay: 0s; }
-#sales { animation-delay: 1s; }
-#product { animation-delay: 2s; }
-#brand { animation-delay: 3s; }
-#automation { animation-delay: 4s; }
-#analytics { animation-delay: 5s; }
-#projects { animation-delay: 6s; }
-#startup { animation-delay: 7s; }
-#content { animation-delay: 8s; }
-#digital { animation-delay: 9s; }
-#cx { animation-delay: 10s; }
-#ecommerce { animation-delay: 11s; }
+#sales { animation-delay: 5s; }
+#product { animation-delay: 10s; }
+#brand { animation-delay: 15s; }
+#automation { animation-delay: 20s; }
+#analytics { animation-delay: 25s; }
+#projects { animation-delay: 30s; }
+#startup { animation-delay: 35s; }
+#content { animation-delay: 40s; }
+#digital { animation-delay: 45s; }
+#cx { animation-delay: 50s; }
+#ecommerce { animation-delay: 55s; }
 
 /* 3D Lighting Effect for Buttons */
 .button {

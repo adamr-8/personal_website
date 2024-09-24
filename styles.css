@@ -21,8 +21,8 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%; /* Increased size for desktop */
-    height: 80%; /* Increased size for desktop */
+    width: 80%;
+    height: 80%;
 }
 
 /* Button Styles */
@@ -67,7 +67,7 @@ html, body {
 
 /* Adjust hover effect */
 .button:hover {
-    transform: scale(1.1); /* Keep scale limited to avoid overlap */
+    transform: scale(1.4); /* Slightly increase scale for hover */
     z-index: 10;
 }
 

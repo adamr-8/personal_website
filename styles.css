@@ -107,7 +107,6 @@ html, body {
     line-height: 1.3;
 }
 
-
 /* Title Styles for Closed Button */
 .button-title {
     font-size: 1.2em; /* Keep original size for closed buttons */
@@ -177,8 +176,6 @@ html, body {
 }
 
 /* Adding Font Awesome Icons at the Bottom of Each Content Section */
-
-/* Traditional Marketing */
 #traditional .button-content::after {
     content: "\f0a1"; /* fa-bullhorn */
     font-family: "Font Awesome 5 Free"; /* Font Awesome font family */
@@ -190,7 +187,6 @@ html, body {
     color: #ffffff;
 }
 
-/* Sales */
 #sales .button-content::after {
     content: "\f4c6"; /* fa-handshake */
     font-family: "Font Awesome 5 Free";
@@ -202,7 +198,6 @@ html, body {
     color: #ffffff;
 }
 
-/* Product Development */
 #product .button-content::after {
     content: "\f187"; /* fa-box-open */
     font-family: "Font Awesome 5 Free";
@@ -214,7 +209,6 @@ html, body {
     color: #ffffff;
 }
 
-/* Brand Management */
 #brand .button-content::after {
     content: "\f024"; /* fa-flag */
     font-family: "Font Awesome 5 Free";
@@ -404,4 +398,57 @@ html, body {
         width: 80%; /* Increased size for desktop */
         height: 80%; /* Increased size for desktop */
     }
+}
+
+/* Orbit Animation for Buttons */
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+/* Applying Orbit Animation to Each Button */
+.button {
+  animation: orbit 20s linear infinite;
+}
+
+#traditional { animation-delay: 0s; }
+#sales { animation-delay: 1s; }
+#product { animation-delay: 2s; }
+#brand { animation-delay: 3s; }
+#automation { animation-delay: 4s; }
+#analytics { animation-delay: 5s; }
+#projects { animation-delay: 6s; }
+#startup { animation-delay: 7s; }
+#content { animation-delay: 8s; }
+#digital { animation-delay: 9s; }
+#cx { animation-delay: 10s; }
+#ecommerce { animation-delay: 11s; }
+
+/* 3D Lighting Effect for Buttons */
+.button {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.1) translateZ(50px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  perspective: 1000px;
+}
+
+/* Canvas for Particle Effects */
+#particleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place it behind the buttons */
 }

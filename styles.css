@@ -67,7 +67,7 @@ html, body {
 
 /* Adjust hover effect */
 .button:hover {
-    transform: scale(1.4); /* Slightly increase scale for hover */
+    transform: scale(5.2); /* Slightly increase scale for hover */
     z-index: 10;
 }
 
